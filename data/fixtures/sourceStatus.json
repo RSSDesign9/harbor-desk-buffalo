@@ -1,0 +1,15 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "SST-001",
+   "sourceId": "C-04",
+   "status": "offline",
+   "at": "2026-07-15T11:05:00Z",
+   "provenance": "SIM"
+  }
+ ]
+}

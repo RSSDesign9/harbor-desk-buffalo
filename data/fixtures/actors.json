@@ -1,0 +1,26 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "ACT-DOCKMASTER",
+   "label": "Demo dockmaster",
+   "role": "dockmaster",
+   "provenance": "SIM"
+  },
+  {
+   "id": "ACT-STAFF",
+   "label": "Demo dock staff",
+   "role": "dock-staff",
+   "provenance": "SIM"
+  },
+  {
+   "id": "ACT-SYSTEM",
+   "label": "Harbor Desk (simulated rules)",
+   "role": "system",
+   "provenance": "SIM"
+  }
+ ]
+}

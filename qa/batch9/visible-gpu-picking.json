@@ -1,0 +1,7 @@
+{
+  "browser": "159.0.8154.6",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+  "viewport": "1440x900",
+  "headless": false,
+  "passed": true
+}

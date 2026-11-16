@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+  <!-- Harbor Desk vessel-type icons. 20 px grid, 1.5 px stroke, round caps and joins, currentColor.
+       Drawn 14 Nov 2026 to match the Phosphor-regular stroke weight recommended in DESIGN.md.
+       Use: <svg width="20" height="20"><use href="icons-vessels.svg#v-sail"/></svg>
+       The waterline is the same three-bar idea as the logo, reduced to one line. -->
+  <defs>
+    <symbol id="v-sail" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Sailboat</title>
+      <path d="M10 2v11"/>
+      <path d="M10 3l5.5 8.5H10z"/>
+      <path d="M10 6.5L5.5 11.5H10"/>
+      <path d="M3.5 14h13l-1.5 2.5h-10z"/>
+    </symbol>
+    <symbol id="v-power" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Powerboat</title>
+      <path d="M3 13.5h12.5l2-3H6.5z"/>
+      <path d="M7 10.5V7.5h4.5l2 3"/>
+      <path d="M3 16.5c1.2.8 2.4.8 3.6 0s2.4-.8 3.6 0 2.4.8 3.6 0 2.4-.8 3.6 0"/>
+    </symbol>
+    <symbol id="v-pontoon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Pontoon</title>
+      <rect x="4" y="6" width="12" height="4" rx="1"/>
+      <path d="M6 10v2.5M14 10v2.5"/>
+      <path d="M2.5 13h15"/>
+      <path d="M3 16.5c1.2.8 2.4.8 3.6 0s2.4-.8 3.6 0 2.4.8 3.6 0 2.4-.8 3.6 0"/>
+    </symbol>
+    <symbol id="v-pwc" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Personal watercraft</title>
+      <path d="M3.5 13.5h10.5l2.5-2.5H7z"/>
+      <path d="M9 11l1.5-3h3"/>
+      <path d="M3 16.5c1.2.8 2.4.8 3.6 0s2.4-.8 3.6 0 2.4.8 3.6 0 2.4-.8 3.6 0"/>
+    </symbol>
+    <symbol id="v-workboat" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Workboat / tug</title>
+      <path d="M3 13.5h14l-2 3H5z"/>
+      <path d="M5.5 13.5v-4h7v4"/>
+      <path d="M8 9.5V6.5h2.5v3"/>
+      <path d="M10.5 6.5V4.5"/>
+    </symbol>
+    <symbol id="v-trailer" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <title>Hauled out / on trailer</title>
+      <path d="M4 9.5h11l-1.5 3h-8z"/>
+      <path d="M2.5 15.5h15"/>
+      <circle cx="6.5" cy="15.5" r="1.5"/>
+      <circle cx="13.5" cy="15.5" r="1.5"/>
+    </symbol>
+  </defs>
+</svg>

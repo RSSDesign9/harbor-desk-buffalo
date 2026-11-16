@@ -1,0 +1,20 @@
+
+> harbor-desk@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 668 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        1.14 kB │ gzip:   0.62 kB
+dist/assets/Gallery-BpF3m_iK.css       1.27 kB │ gzip:   0.52 kB
+dist/assets/PlanView-B4ZuIBwM.css      2.79 kB │ gzip:   0.95 kB
+dist/assets/index-D9UHpMN3.css        38.27 kB │ gzip:   8.28 kB
+dist/assets/PlanView-DZ-4OHsg.js       3.66 kB │ gzip:   1.60 kB │ map:    11.95 kB
+dist/assets/Gallery-_EJGIROI.js        7.74 kB │ gzip:   2.53 kB │ map:    18.99 kB
+dist/assets/layout-QX3GhP0X.js        37.53 kB │ gzip:  12.97 kB │ map:    18.92 kB
+dist/assets/index-DGtlgRVx.js        538.60 kB │ gzip: 120.01 kB │ map: 1,380.39 kB
+dist/assets/SceneRoot-B2pr0Iju.js  1,069.27 kB │ gzip: 291.06 kB │ map: 4,803.69 kB
+
+✓ built in 319ms

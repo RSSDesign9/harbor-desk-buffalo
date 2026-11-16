@@ -1,0 +1,74 @@
+{
+ "desktop-1440": {
+  "layout": "desktop",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1440,
+   900,
+   1
+  ]
+ },
+ "desktop-1280": {
+  "layout": "desktop",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1280,
+   800,
+   1
+  ]
+ },
+ "tablet-1024": {
+  "layout": "tablet",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1024,
+   768,
+   1
+  ]
+ },
+ "tablet-768": {
+  "layout": "tablet",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   768,
+   1024,
+   1
+  ]
+ },
+ "mobile-390": {
+  "layout": "mobile",
+  "map": "plan",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   390,
+   844,
+   2
+  ]
+ },
+ "zoom200-1440": {
+  "layout": "mobile",
+  "map": "plan",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   720,
+   450,
+   2
+  ]
+ }
+}

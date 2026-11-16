@@ -1,0 +1,158 @@
+{
+  "measuredAt": "2026-11-14T23:22:46.015Z",
+  "build": {
+    "url": "http://127.0.0.1:4719",
+    "mode": "production build served by `vite preview`",
+    "git": "6a7bf53d + uncommitted changes"
+  },
+  "device": {
+    "cpu": "Apple M3 Max",
+    "cores": 14,
+    "memoryGB": 36,
+    "platform": "darwin arm64 23.4.0"
+  },
+  "browser": "Chromium 159.0.8154.6 (Playwright, headless)",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+  "gpuFlag": true,
+  "viewport": "1440x900",
+  "deviceScaleFactor": 1,
+  "canvasDprAtEnd": 1,
+  "warmUp": "30 back-to-back frames in the overview before recording",
+  "method": "requestAnimationFrame spacing for every frame of the run; the camera is moved every frame, so every frame renders",
+  "wallSeconds": 60.11,
+  "summary": {
+    "seconds": 60.08,
+    "frames": 3604,
+    "medianFps": 59.88,
+    "medianFrameMs": 16.7,
+    "p95FrameMs": 16.7,
+    "p99FrameMs": 16.8,
+    "maxFrameMs": 33.3,
+    "framesOver33ms": 0,
+    "target": {
+      "medianFpsAtLeast": 55,
+      "p95FrameMsAtMost": 33.3
+    },
+    "meetsTargetOnThisDevice": true
+  },
+  "phases": [
+    {
+      "label": "overview",
+      "seconds": 10,
+      "drawCalls": 262,
+      "triangles": 512540,
+      "hullLods": {
+        "lod2": 40
+      },
+      "dpr": 1
+    },
+    {
+      "label": "dock-b preset",
+      "seconds": 10,
+      "drawCalls": 97,
+      "triangles": 621170,
+      "hullLods": {
+        "lod1": 29,
+        "lod2": 11
+      },
+      "dpr": 1
+    },
+    {
+      "label": "select B-12",
+      "seconds": 12,
+      "drawCalls": 79,
+      "triangles": 695512,
+      "hullLods": {
+        "lod1": 16,
+        "lod0": 15,
+        "lod2": 9
+      },
+      "dpr": 1
+    },
+    {
+      "label": "select D-10",
+      "seconds": 8,
+      "drawCalls": 55,
+      "triangles": 613145,
+      "hullLods": {
+        "lod2": 11,
+        "lod1": 22,
+        "lod0": 7
+      },
+      "dpr": 1
+    },
+    {
+      "label": "select A-05",
+      "seconds": 6,
+      "drawCalls": 51,
+      "triangles": 590796,
+      "hullLods": {
+        "lod0": 6,
+        "lod1": 14,
+        "lod2": 20
+      },
+      "dpr": 1
+    },
+    {
+      "label": "top-down",
+      "seconds": 6,
+      "drawCalls": 246,
+      "triangles": 513326,
+      "hullLods": {
+        "lod2": 40
+      },
+      "dpr": 1
+    },
+    {
+      "label": "overview again",
+      "seconds": 8,
+      "drawCalls": 263,
+      "triangles": 512564,
+      "hullLods": {
+        "lod2": 40
+      },
+      "dpr": 1
+    }
+  ],
+  "selectionFeedbackMs": {
+    "B-12": 15.6,
+    "D-10": 15.5,
+    "A-05": 14.5
+  },
+  "backToBackFrameCost": {
+    "overview": {
+      "medianMs": 3.3,
+      "p95Ms": 5.6,
+      "maxMs": 7.4,
+      "drawCalls": 252,
+      "triangles": 509450
+    },
+    "dock-b": {
+      "medianMs": 4.9,
+      "p95Ms": 7,
+      "maxMs": 7.9,
+      "drawCalls": 106,
+      "triangles": 619842
+    },
+    "b12-selected": {
+      "medianMs": 2.4,
+      "p95Ms": 6.6,
+      "maxMs": 7.1,
+      "drawCalls": 83,
+      "triangles": 689008
+    }
+  },
+  "rendererMemory": {
+    "before": {
+      "geometries": 233,
+      "textures": 6,
+      "programs": 14
+    },
+    "after": {
+      "geometries": 295,
+      "textures": 6,
+      "programs": 15
+    }
+  },
+  "targetHardware": "PRD §11 names an M1 MacBook Air. This run is NOT on that device unless `device` says so."
+}

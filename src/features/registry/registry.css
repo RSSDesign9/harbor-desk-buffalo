@@ -1,0 +1,49 @@
+/* Rail, inspector and fact layout live in src/app/shell.css (T17: one source for layout zones). */
+
+.registry { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; padding: var(--s-4); }
+.registry:has(.registry-body[hidden]) { flex: 0 0 auto; }
+/* With details open, the inspector gets priority; the list keeps a scrollable strip (or can be hidden). */
+.rail:has(.inspector) .registry { flex: 0 0 auto; max-height: 30%; } /* never squeezed by a long inspector */
+.registry-head { display: flex; align-items: center; gap: var(--s-1) var(--s-2); flex-wrap: wrap; }
+.registry-head .panel-title { margin-right: auto; }
+.registry-head .btn-ghost { padding: 0 var(--s-2); min-height: 32px; }
+.registry-body[hidden] { display: none; }
+.registry-body { display: flex; flex-direction: column; min-height: 0; flex: 1; gap: var(--s-2); margin-top: var(--s-2); }
+.registry-filters { display: flex; gap: var(--s-4); align-items: center; }
+.filter-select { display: flex; gap: var(--s-2); align-items: center; }
+.filter-select .input { width: auto; min-height: 36px; }
+.registry-filters .checkbox { min-height: 36px; padding: 0; align-items: center; }
+.registry-filters .checkbox input { margin: 0; }
+.registry-list { flex: 1; min-height: 0; overflow: auto; border-radius: var(--r-sm); }
+.registry-list:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; box-shadow: 0 0 0 2px var(--focus-halo); }
+.registry-row {
+  display: grid; grid-template-columns: 52px 1fr auto; gap: var(--s-2); align-items: center; min-height: var(--sz-row);
+  padding: 0 var(--s-2); border-radius: var(--r-sm); cursor: pointer; font-size: var(--fs-body-sm);
+}
+.registry-row:hover { background: var(--bg-row-hover); }
+.registry-row.is-selected { background: rgba(255, 77, 0, 0.16); }
+.registry-list:focus-visible .registry-row.is-active { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
+.row-id { font-family: var(--f-mono); font-weight: var(--fw-medium); }
+.row-name { display: inline-flex; gap: var(--s-2); align-items: center; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-pills { display: inline-flex; gap: 4px; align-items: center; }
+.row-slip { font-family: var(--f-mono); font-size: var(--fs-label); color: var(--text-secondary); }
+.registry-row .pill { padding: 2px 7px 2px 6px; }
+
+/* Scene markers (DESIGN §8): pill above the object; never reveal an unverified identity. */
+.scene-marker {
+  font-family: var(--f-mono); font-size: var(--fs-label); font-weight: var(--fw-medium); white-space: nowrap;
+  padding: 4px 10px; border-radius: var(--r-pill); background: var(--bg-panel-solid); color: var(--text-primary);
+  border: 1px solid var(--border-hairline); transform: translateY(-14px); box-shadow: var(--shadow-panel);
+}
+.scene-marker-selected { border-color: var(--c-signal); }
+.scene-marker-hover { border-color: var(--c-chart-cyan); }
+
+.view-controls {
+  position: absolute; bottom: var(--inset-app); right: calc(var(--inset-app) + var(--sz-inspector) + var(--s-4));
+  display: flex; gap: var(--s-2); align-items: center; padding: var(--s-2); border-radius: var(--r-pill); z-index: 4;
+}
+/* Floating camera bar: labels are scanned, not read, and the bar has a 480 px layout budget (shell.css). */
+.view-controls .segment, .view-controls .motion-toggle { font-size: var(--fs-control); }
+.top-search { flex: 0 1 340px; min-width: 220px; }
+.top-search .input { min-height: 36px; }
+.scene-marker-review { border-color: var(--state-review); border-style: dashed; }

@@ -1,0 +1,160 @@
+{
+  "measuredAt": "2026-11-14T23:37:58.716Z",
+  "method": "Production build via vite preview; cold context, 2x display, full B-12 scenario and replay. Compressed sizes computed from dist/ with gzip -9 and brotli 11 for text; fonts and images at file size.",
+  "requestedFromOtherOrigins": [],
+  "failedRequests": [],
+  "requested": {
+    "files": 12,
+    "diskBytes": 1946312,
+    "gzipBytes": 708977,
+    "brotliBytes": 635434,
+    "byKind": {
+      "script": {
+        "files": 2,
+        "diskBytes": 1625352,
+        "gzipBytes": 412565,
+        "brotliBytes": 340059
+      },
+      "image": {
+        "files": 3,
+        "diskBytes": 120636,
+        "gzipBytes": 118779,
+        "brotliBytes": 118660
+      },
+      "style": {
+        "files": 1,
+        "diskBytes": 28732,
+        "gzipBytes": 6554,
+        "brotliBytes": 5847
+      },
+      "font": {
+        "files": 5,
+        "diskBytes": 170448,
+        "gzipBytes": 170448,
+        "brotliBytes": 170448
+      },
+      "document": {
+        "files": 1,
+        "diskBytes": 1144,
+        "gzipBytes": 631,
+        "brotliBytes": 420
+      }
+    }
+  },
+  "fonts": {
+    "files": [
+      "fonts/GeneralSans-Semibold.woff (27972 B)",
+      "fonts/IBMPlexMono-Medium.woff2 (50400 B)",
+      "fonts/IBMPlexMono-Regular.woff2 (49248 B)",
+      "fonts/Switzer-Regular.woff (19240 B)",
+      "fonts/Switzer-Semibold.woff (23588 B)"
+    ],
+    "transferredBytes": 170448,
+    "budgetBytes": 200000,
+    "pass": true
+  },
+  "budget": {
+    "compressedBytes": 6000000,
+    "gzipPass": true
+  },
+  "wholeDist": {
+    "files": 18,
+    "diskBytes": 1996394,
+    "gzipBytes": 750110,
+    "brotliBytes": 675443
+  },
+  "notRequested": [
+    "assets/Gallery-BDHK46ol.js (7741 B)",
+    "assets/Gallery-BpF3m_iK.css (1273 B)",
+    "assets/evidence/ev-7k2q.webp (27330 B)",
+    "assets/evidence/ev-p3m8.webp (8250 B)",
+    "favicon.svg (1032 B)",
+    "fonts/IBM-Plex-OFL.txt (4456 B)"
+  ],
+  "files": [
+    {
+      "file": "assets/SceneRoot-Cel0tmVD.js",
+      "kind": "script",
+      "diskBytes": 1103677,
+      "gzipBytes": 299491,
+      "brotliBytes": 246082
+    },
+    {
+      "file": "assets/index-DXGkHr9s.js",
+      "kind": "script",
+      "diskBytes": 521675,
+      "gzipBytes": 113074,
+      "brotliBytes": 93977
+    },
+    {
+      "file": "assets/evidence/ev-7k2q@2x.webp",
+      "kind": "image",
+      "diskBytes": 100830,
+      "gzipBytes": 100830,
+      "brotliBytes": 100830
+    },
+    {
+      "file": "fonts/IBMPlexMono-Medium.woff2",
+      "kind": "font",
+      "diskBytes": 50400,
+      "gzipBytes": 50400,
+      "brotliBytes": 50400
+    },
+    {
+      "file": "fonts/IBMPlexMono-Regular.woff2",
+      "kind": "font",
+      "diskBytes": 49248,
+      "gzipBytes": 49248,
+      "brotliBytes": 49248
+    },
+    {
+      "file": "fonts/GeneralSans-Semibold.woff",
+      "kind": "font",
+      "diskBytes": 27972,
+      "gzipBytes": 27972,
+      "brotliBytes": 27972
+    },
+    {
+      "file": "fonts/Switzer-Semibold.woff",
+      "kind": "font",
+      "diskBytes": 23588,
+      "gzipBytes": 23588,
+      "brotliBytes": 23588
+    },
+    {
+      "file": "fonts/Switzer-Regular.woff",
+      "kind": "font",
+      "diskBytes": 19240,
+      "gzipBytes": 19240,
+      "brotliBytes": 19240
+    },
+    {
+      "file": "assets/evidence/ev-p3m8@2x.webp",
+      "kind": "image",
+      "diskBytes": 17144,
+      "gzipBytes": 17144,
+      "brotliBytes": 17144
+    },
+    {
+      "file": "assets/index-B1Z4CNqK.css",
+      "kind": "style",
+      "diskBytes": 28732,
+      "gzipBytes": 6554,
+      "brotliBytes": 5847
+    },
+    {
+      "file": "assets/icons-vessels.svg",
+      "kind": "image",
+      "diskBytes": 2662,
+      "gzipBytes": 805,
+      "brotliBytes": 686
+    },
+    {
+      "file": "index.html",
+      "kind": "document",
+      "diskBytes": 1144,
+      "gzipBytes": 631,
+      "brotliBytes": 420
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+ "requested": {
+  "files": 12,
+  "diskBytes": 2310882,
+  "gzipBytes": 821286,
+  "brotliBytes": 736529,
+  "byKind": {
+   "script": {
+    "files": 3,
+    "diskBytes": 1914012,
+    "gzipBytes": 464481,
+    "brotliBytes": 381116
+   },
+   "image": {
+    "files": 4,
+    "diskBytes": 251826,
+    "gzipBytes": 249969,
+    "brotliBytes": 249850
+   },
+   "style": {
+    "files": 1,
+    "diskBytes": 47281,
+    "gzipBytes": 9822,
+    "brotliBytes": 8778
+   },
+   "font": {
+    "files": 3,
+    "diskBytes": 96212,
+    "gzipBytes": 96212,
+    "brotliBytes": 96212
+   },
+   "document": {
+    "files": 1,
+    "diskBytes": 1551,
+    "gzipBytes": 802,
+    "brotliBytes": 573
+   }
+  }
+ },
+ "fonts": {
+  "files": [
+   "fonts/AtkinsonHyperlegibleMono-Variable.woff2 (15508 B)",
+   "fonts/Commissioner-Variable.woff2 (47528 B)",
+   "fonts/WorkSans-Variable.woff2 (33176 B)"
+  ],
+  "transferredBytes": 96212,
+  "budgetBytes": 200000,
+  "pass": true
+ },
+ "budget": {
+  "compressedBytes": 6000000,
+  "gzipPass": true
+ },
+ "wholeDist": {
+  "files": 24,
+  "diskBytes": 2462869,
+  "gzipBytes": 939160,
+  "brotliBytes": 851370
+ },
+ "external": [],
+ "failed": [],
+ "notRequested": 12
+}
+wrote qa/batch13/transfer.json

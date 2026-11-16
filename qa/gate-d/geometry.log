@@ -1,0 +1,35 @@
+
+> harbor-desk@0.1.0 geometry
+> node scripts/inspect-geometry.ts && node scripts/render-plan.ts && node scripts/build-site-runtime.ts
+
+Geometry inspection: 23/27 checks pass.
+PASS  osm.count                    146 features
+PASS  osm.provenance               0 without DOC
+FLAG  osm.slipway-934085281        Not present. Only slipway in file is OSM 1073540134 (between headwalks D and C). Recorded, not fabricated.
+PASS  slips.count                  126
+PASS  slips.per-dock               {"A":39,"B":37,"C":18,"D":22,"E":10}
+PASS  slips.ids-unique             no duplicates
+PASS  slips.numbering-contiguous   contiguous
+PASS  slips.canonical              checked by id
+PASS  slips.structure              all 126 pass
+PASS  slips.dimensions             max relative error 0.38%
+PASS  slips.rectangular            max deviation 0.51°
+PASS  slips.headwalk-gap           max gap 0.6 m
+PASS  slips.overlap                0 overlapping pairs
+PASS  slips.spacing                {"A":{"min":3.03,"max":3.05,"widthM":3.05},"B":{"min":3.34,"max":20.32,"widthM":3.35},"C":{"min":3.8,"max":13.32,"widthM":3.81},"D":{"min":4.25,"max":4.27,"widthM":4.27},"E":{"min":4.87,"max":4.88,"widthM":4.88}}
+PASS  slips.land                   0 overlaps
+FLAG  water.coverage               68 slips (B-20…E-10) lie in OSM 31752570 “City Ship Canal”; 58 (A-01…B-19, incl. B-12) face the Buffalo River mouth, which the supplied file maps only as a centreline (OSM 1216155152, 1517089936, 1517089942, 1517089941, 1517089940, 1517089939, 1517089937). Repair: water plane + authored land masks; never close a partial polygon.
+FLAG  docks.order                  Actual order NW→SE: A → B → D → C → E. IDs stay canonical; the lettering rule in SLIPS.md is not what the generated data does.
+FLAG  docks.numbering-direction    A: 01 at NW (downstream) end; B: 01 at NW (downstream) end; D: 01 at NW (downstream) end; C: 01 at NW (downstream) end; E: 01 at SE (upstream) end
+PASS  anchors.fit                  R1 3.2 m, R2 5 m, R3 1.8 m; scale 1.63 px/m; map “up” points to bearing 58.7° (NE)
+PASS  docks.headwalk-lengths       {"A":{"osm_m":168.2,"osm_ft":552,"slipsMd_ft":"410"},"B":{"osm_m":216.5,"osm_ft":710,"slipsMd_ft":"234 + 226"},"C":{"osm_m":107.2,"osm_ft":352,"slipsMd_ft":"140 + 147"},"D":{"osm_m":151.9,"osm_ft":498,"slipsMd_ft":"349"},"E":{"osm_m":110.5,"osm_ft":362,"slipsMd_ft":"203"}}; main runs and slip spans {"A":{"mainRun_m":158,"slipSpan_m":118.7},"B":{"mainRun_m":205.2,"slipSpan_m":141},"D":{"mainRun_m":121.2,"slipSpan_m":93.8},"C":{"mainRun_m":87.5,"slipSpan_m":78},"E":{"mainRun_m":100.8,"slipSpan_m":48.8}}. SLIPS.md’s stated lengths do not match OSM; slips occupy part of each run.
+PASS  yard.within-land             0 of 50 vertices fall on the water side (authored offsets A 1 m, B 3 m; canal west edge used south-east of the mouth)
+PASS  water.mask-clear             0 slips touched
+PASS  water.river-open             0 centreline vertices under land
+PASS  water.canal-open             0 of 3989 4 m samples under land (0.0%)
+PASS  water.other-open             none covered; holes {"land-west":[1073603319],"land-east":[158778752],"land-north":[371587071,449798165,1072510134]}
+PASS  slips.water-side             all 126 open into water
+PASS  b12.context                  B-12 centroid {"east":-4.88,"north":-1.27} m, heading 59°, gap to headwalk 0.6 m; ≈33.4 m from the marker-5 gangway; ≈153.6 m to the schematic river centreline; faces the river mouth, just north of the City Ship Canal polygon
+Outputs: data/derived/site-local.json, data/derived/geometry-report.json, data/derived/site-plan-annotated.svg
+Wrote /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/data/derived/site-plan-annotated.png
+Wrote /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/data/derived/site-runtime.json (35.1 KB)

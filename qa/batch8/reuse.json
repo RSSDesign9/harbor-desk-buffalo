@@ -1,0 +1,65 @@
+{
+  "measuredAt": "2026-11-15T02:50:35.127Z",
+  "url": "http://127.0.0.1:4719",
+  "note": "Counts after each full cycle (5 selections, full B-12 resolution, replay backward, 3 presets, restart; DOM counters after forced GC). Flat counts indicate bounded renderer/DOM resources over this procedure, not a proof of all long-duration memory behavior.",
+  "cycles": [
+    {
+      "cycle": 1,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15,
+      "dom": {
+        "documents": 1,
+        "nodes": 1933,
+        "jsEventListeners": 637
+      }
+    },
+    {
+      "cycle": 2,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15,
+      "dom": {
+        "documents": 1,
+        "nodes": 1933,
+        "jsEventListeners": 637
+      }
+    },
+    {
+      "cycle": 3,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15,
+      "dom": {
+        "documents": 1,
+        "nodes": 1933,
+        "jsEventListeners": 637
+      }
+    },
+    {
+      "cycle": 4,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15,
+      "dom": {
+        "documents": 1,
+        "nodes": 1933,
+        "jsEventListeners": 637
+      }
+    },
+    {
+      "cycle": 5,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15,
+      "dom": {
+        "documents": 1,
+        "nodes": 1933,
+        "jsEventListeners": 637
+      }
+    }
+  ],
+  "buildSha256": "8351b7b5e1fe7d8b05c909aefdbe5975e65fb3b3ee428a2b27bd9f893547b040",
+  "browser": "Chromium 159.0.8154.6, visible Metal GPU window, Apple M3 Max",
+  "viewport": "1440x900, DPR 1"
+}

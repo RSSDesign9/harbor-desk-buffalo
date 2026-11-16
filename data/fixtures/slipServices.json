@@ -1,0 +1,1570 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "SVC-A-01",
+   "slipId": "A-01",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-02",
+   "slipId": "A-02",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-03",
+   "slipId": "A-03",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-04",
+   "slipId": "A-04",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-05",
+   "slipId": "A-05",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-06",
+   "slipId": "A-06",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-07",
+   "slipId": "A-07",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-08",
+   "slipId": "A-08",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-09",
+   "slipId": "A-09",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-10",
+   "slipId": "A-10",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-11",
+   "slipId": "A-11",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-12",
+   "slipId": "A-12",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-13",
+   "slipId": "A-13",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-14",
+   "slipId": "A-14",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-15",
+   "slipId": "A-15",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-16",
+   "slipId": "A-16",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-17",
+   "slipId": "A-17",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-18",
+   "slipId": "A-18",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-19",
+   "slipId": "A-19",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-20",
+   "slipId": "A-20",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-21",
+   "slipId": "A-21",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-22",
+   "slipId": "A-22",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-23",
+   "slipId": "A-23",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-24",
+   "slipId": "A-24",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-25",
+   "slipId": "A-25",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-26",
+   "slipId": "A-26",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-27",
+   "slipId": "A-27",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-28",
+   "slipId": "A-28",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-29",
+   "slipId": "A-29",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-30",
+   "slipId": "A-30",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-31",
+   "slipId": "A-31",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-32",
+   "slipId": "A-32",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-33",
+   "slipId": "A-33",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-34",
+   "slipId": "A-34",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-35",
+   "slipId": "A-35",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-36",
+   "slipId": "A-36",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-37",
+   "slipId": "A-37",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-38",
+   "slipId": "A-38",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-A-39",
+   "slipId": "A-39",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": 3.5,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-01",
+   "slipId": "B-01",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-02",
+   "slipId": "B-02",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-03",
+   "slipId": "B-03",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-04",
+   "slipId": "B-04",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-05",
+   "slipId": "B-05",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-06",
+   "slipId": "B-06",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-07",
+   "slipId": "B-07",
+   "depth_ft": 8,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-08",
+   "slipId": "B-08",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-09",
+   "slipId": "B-09",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-10",
+   "slipId": "B-10",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-11",
+   "slipId": "B-11",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-12",
+   "slipId": "B-12",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-13",
+   "slipId": "B-13",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-14",
+   "slipId": "B-14",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-15",
+   "slipId": "B-15",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-16",
+   "slipId": "B-16",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-17",
+   "slipId": "B-17",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-18",
+   "slipId": "B-18",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-19",
+   "slipId": "B-19",
+   "depth_ft": 7.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "open",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-20",
+   "slipId": "B-20",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-21",
+   "slipId": "B-21",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-22",
+   "slipId": "B-22",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-23",
+   "slipId": "B-23",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-24",
+   "slipId": "B-24",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-25",
+   "slipId": "B-25",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-26",
+   "slipId": "B-26",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-27",
+   "slipId": "B-27",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-28",
+   "slipId": "B-28",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-29",
+   "slipId": "B-29",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-30",
+   "slipId": "B-30",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-31",
+   "slipId": "B-31",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-32",
+   "slipId": "B-32",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-33",
+   "slipId": "B-33",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-34",
+   "slipId": "B-34",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-35",
+   "slipId": "B-35",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-36",
+   "slipId": "B-36",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-B-37",
+   "slipId": "B-37",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-01",
+   "slipId": "C-01",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-02",
+   "slipId": "C-02",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-03",
+   "slipId": "C-03",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-04",
+   "slipId": "C-04",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-05",
+   "slipId": "C-05",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-06",
+   "slipId": "C-06",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-07",
+   "slipId": "C-07",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-08",
+   "slipId": "C-08",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-09",
+   "slipId": "C-09",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-10",
+   "slipId": "C-10",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-11",
+   "slipId": "C-11",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-12",
+   "slipId": "C-12",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-13",
+   "slipId": "C-13",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-14",
+   "slipId": "C-14",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-15",
+   "slipId": "C-15",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-16",
+   "slipId": "C-16",
+   "depth_ft": 5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-17",
+   "slipId": "C-17",
+   "depth_ft": 5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-C-18",
+   "slipId": "C-18",
+   "depth_ft": 5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-01",
+   "slipId": "D-01",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-02",
+   "slipId": "D-02",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-03",
+   "slipId": "D-03",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-04",
+   "slipId": "D-04",
+   "depth_ft": 7,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-05",
+   "slipId": "D-05",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-06",
+   "slipId": "D-06",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-07",
+   "slipId": "D-07",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-08",
+   "slipId": "D-08",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-09",
+   "slipId": "D-09",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-10",
+   "slipId": "D-10",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-11",
+   "slipId": "D-11",
+   "depth_ft": 6.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-12",
+   "slipId": "D-12",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-13",
+   "slipId": "D-13",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-14",
+   "slipId": "D-14",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-15",
+   "slipId": "D-15",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-16",
+   "slipId": "D-16",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-17",
+   "slipId": "D-17",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-18",
+   "slipId": "D-18",
+   "depth_ft": 6,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-19",
+   "slipId": "D-19",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-20",
+   "slipId": "D-20",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-21",
+   "slipId": "D-21",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-D-22",
+   "slipId": "D-22",
+   "depth_ft": 5.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": null,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-01",
+   "slipId": "E-01",
+   "depth_ft": 10,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-02",
+   "slipId": "E-02",
+   "depth_ft": 10,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-03",
+   "slipId": "E-03",
+   "depth_ft": 9.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-04",
+   "slipId": "E-04",
+   "depth_ft": 9.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-05",
+   "slipId": "E-05",
+   "depth_ft": 9.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-06",
+   "slipId": "E-06",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-07",
+   "slipId": "E-07",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-08",
+   "slipId": "E-08",
+   "depth_ft": 9,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-09",
+   "slipId": "E-09",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "SVC-E-10",
+   "slipId": "E-10",
+   "depth_ft": 8.5,
+   "shorePowerA": [
+    30,
+    50
+   ],
+   "exposure": "sheltered",
+   "deckFreeboard_ft": 4,
+   "basis": "SRC-SERVICES: round demo numbers by dock and position along the run. SRC-LAKE: exposure and fixed-deck height.",
+   "provenance": "ASSUME"
+  }
+ ]
+}

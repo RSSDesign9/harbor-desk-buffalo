@@ -1,0 +1,248 @@
+<div id="harbor-storyboard">
+  <style>
+    #harbor-storyboard { --paper:light-dark(#ffffff,#172225); --ink:light-dark(#19363b,#e3eeed); --quiet:light-dark(#526a6e,#a9bdbf); --line:light-dark(#d5e0df,#3a5055); --wash:light-dark(#f1f5f3,#1d2d31); --water:light-dark(#dcebec,#223e46); --water-line:light-dark(#c6dcdf,#34545e); --land:light-dark(#e7e6da,#42483f); --dock:light-dark(#f4efe1,#8c9184); --dock-side:light-dark(#b5b9aa,#626e65); --boat:light-dark(#fcfdfb,#d6e2dc); --boat-side:light-dark(#b2c2c4,#95aaa9); --glass:light-dark(#4f7884,#365964); --teal:light-dark(#14675d,#8ed5c4); --teal-wash:light-dark(#e4f3ec,#213f37); --amber:light-dark(#8b500b,#f2c07a); --amber-wash:light-dark(#fff1dc,#433728); font-family:Inter,ui-sans-serif,system-ui,sans-serif; color:var(--ink); font-size:14px; line-height:1.45; }
+    #harbor-storyboard * { box-sizing:border-box; }
+    #harbor-storyboard button { font:inherit; cursor:pointer; color:inherit; }
+    #harbor-storyboard button:focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+    #harbor-storyboard .story-title { margin:0 110px 4px 0; font-size:22px; font-weight:600; letter-spacing:-.025em; }
+    #harbor-storyboard .subtle { color:var(--quiet); font-size:12px; }
+    #harbor-storyboard .story-frames { display:grid; grid-template-columns:1fr 30px 1fr 30px 1fr; align-items:center; gap:4px; margin:18px 0; }
+    #harbor-storyboard .frame { border:1px solid var(--line); background:var(--paper); text-align:left; padding:10px 12px; border-radius:9px; min-width:0; }
+    #harbor-storyboard .frame[aria-pressed="true"] { border:2px solid var(--teal); padding:9px 11px; background:var(--teal-wash); }
+    #harbor-storyboard .frame-head { display:flex; gap:8px; justify-content:space-between; align-items:center; font-weight:600; }
+    #harbor-storyboard .frame-art { display:block; width:100%; height:54px; margin:7px 0; }
+    #harbor-storyboard .frame-cue { font-size:12px; color:var(--quiet); display:block; }
+    #harbor-storyboard .flow-arrow { width:100%; height:20px; color:var(--quiet); }
+    #harbor-storyboard .app { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--paper); }
+    #harbor-storyboard .app-header { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; padding:14px 18px; border-bottom:1px solid var(--line); }
+    #harbor-storyboard .brand { font-weight:600; font-size:16px; }
+    #harbor-storyboard .app-heading { display:flex; flex-wrap:wrap; align-items:baseline; gap:12px; }
+    #harbor-storyboard .demo-label { font-size:11px; letter-spacing:.03em; color:var(--quiet); }
+    #harbor-storyboard .workspace { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr); }
+    #harbor-storyboard .spatial { background:var(--water); min-width:0; position:relative; display:flex; flex-direction:column; }
+    #harbor-storyboard .map-head { display:flex; justify-content:space-between; align-items:start; gap:10px; padding:16px 16px 0; }
+    #harbor-storyboard .map-title { font-weight:600; }
+    #harbor-storyboard .map-view { padding:5px 9px; border:1px solid var(--line); border-radius:6px; background:var(--paper); font-size:12px; white-space:nowrap; }
+    #harbor-storyboard .map-view:hover { background:var(--wash); }
+    #harbor-storyboard #harbor-scene { display:block; width:100%; height:330px; }
+    #harbor-storyboard .scene-status { margin:0 16px 14px; display:flex; align-items:center; flex-wrap:wrap; gap:8px; min-height:22px; font-size:12px; }
+    #harbor-storyboard .dot { width:7px; height:7px; border-radius:50%; display:inline-block; background:var(--teal); }
+    #harbor-storyboard .scene-status.warn .dot { background:var(--amber); }
+    #harbor-storyboard .slip-list { display:flex; gap:7px; padding:0 16px 16px; flex-wrap:wrap; }
+    #harbor-storyboard .slip { border:1px solid var(--line); border-radius:6px; background:var(--paper); padding:7px 10px; font-size:12px; }
+    #harbor-storyboard .slip[aria-pressed="true"] { border-color:var(--teal); background:var(--ink); color:var(--paper); }
+    #harbor-storyboard .state-strip { margin-top:auto; padding:13px 16px; border-top:1px solid var(--water-line); display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; background:var(--paper); }
+    #harbor-storyboard .state-strip span { display:block; color:var(--quiet); font-size:11px; margin-bottom:3px; }
+    #harbor-storyboard .state-strip strong { font-size:12px; font-weight:600; }
+    #harbor-storyboard .details { padding:18px; min-width:0; border-left:1px solid var(--line); }
+    #harbor-storyboard .detail-top { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:12px; }
+    #harbor-storyboard .detail-top h3 { margin:0; font-size:18px; letter-spacing:-.02em; }
+    #harbor-storyboard .status { font-size:11px; font-weight:600; border-radius:4px; padding:4px 7px; color:var(--teal); background:var(--teal-wash); white-space:nowrap; }
+    #harbor-storyboard .status.warn { color:var(--amber); background:var(--amber-wash); }
+    #harbor-storyboard .section-label { color:var(--quiet); font-size:11px; margin-bottom:6px; }
+    #harbor-storyboard .record-name { display:flex; justify-content:space-between; gap:8px; align-items:center; font-weight:600; font-size:17px; }
+    #harbor-storyboard .vessel-glyph { width:54px; height:30px; }
+    #harbor-storyboard .specs { font-size:12px; color:var(--quiet); margin-top:3px; }
+    #harbor-storyboard .facts { display:grid; grid-template-columns:1fr auto; gap:7px 10px; margin:12px 0 0; font-size:12px; }
+    #harbor-storyboard .facts dt { color:var(--quiet); }
+    #harbor-storyboard .facts dd { margin:0; text-align:right; }
+    #harbor-storyboard .divider { border:0; border-top:1px solid var(--line); margin:16px 0; }
+    #harbor-storyboard .observation { background:var(--wash); border-radius:7px; padding:11px; }
+    #harbor-storyboard .observation-head { display:flex; gap:8px; justify-content:space-between; align-items:center; margin-bottom:6px; font-size:12px; font-weight:600; }
+    #harbor-storyboard .evidence { display:flex; gap:10px; align-items:center; margin-top:9px; font-size:12px; }
+    #harbor-storyboard .evidence svg { flex:0 0 82px; width:82px; height:56px; background:var(--water); border-radius:4px; }
+    #harbor-storyboard .evidence span { display:block; }
+    #harbor-storyboard .evidence-note { color:var(--quiet); font-size:11px; margin-top:2px; }
+    #harbor-storyboard .decision { margin-top:15px; }
+    #harbor-storyboard .action { display:block; width:100%; border:1px solid var(--line); border-radius:6px; padding:9px 11px; background:var(--paper); font-size:12px; font-weight:500; margin-top:7px; }
+    #harbor-storyboard .action:hover { background:var(--wash); }
+    #harbor-storyboard .action.primary { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    #harbor-storyboard .action.primary:hover { opacity:.9; }
+    #harbor-storyboard .action:disabled { opacity:.55; cursor:default; }
+    #harbor-storyboard .verification { border-top:1px solid var(--line); margin-top:12px; padding-top:12px; }
+    #harbor-storyboard .verification label { display:flex; gap:9px; align-items:flex-start; font-size:12px; }
+    #harbor-storyboard .verification input { accent-color:var(--teal); margin-top:3px; flex-shrink:0; }
+    #harbor-storyboard .audit { font-size:12px; display:grid; grid-template-columns:38px 1fr; gap:8px; margin-top:11px; }
+    #harbor-storyboard .audit time { color:var(--quiet); font-variant-numeric:tabular-nums; }
+    #harbor-storyboard .notice { font-size:12px; color:var(--teal); margin-top:10px; }
+    #harbor-storyboard .app-footer { border-top:1px solid var(--line); padding:10px 18px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:11px; color:var(--quiet); }
+    #harbor-storyboard .story-controls { margin-top:12px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    #harbor-storyboard .step-button { border:1px solid var(--line); border-radius:6px; padding:7px 12px; background:var(--paper); font-size:12px; }
+    #harbor-storyboard .step-button:disabled { opacity:.4; cursor:default; }
+    #harbor-storyboard .step-caption { flex:1; min-width:180px; font-size:12px; color:var(--quiet); }
+    #harbor-storyboard .sr { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:700px) { #harbor-storyboard .workspace { grid-template-columns:1fr; } #harbor-storyboard .details { border-left:0; border-top:1px solid var(--line); } #harbor-storyboard #harbor-scene { height:285px; } #harbor-storyboard .story-frames { grid-template-columns:1fr 14px 1fr 14px 1fr; gap:2px; } #harbor-storyboard .frame { padding:8px; } #harbor-storyboard .frame[aria-pressed="true"] { padding:7px; } #harbor-storyboard .frame-head { display:block; font-size:12px; } #harbor-storyboard .frame-head time { display:block; margin-top:3px; } #harbor-storyboard .frame-cue { font-size:11px; } #harbor-storyboard .frame-art { height:40px; } }
+    @media(max-width:380px) { #harbor-storyboard .story-title { font-size:19px; } #harbor-storyboard .app-header { padding:12px; } #harbor-storyboard .details { padding:14px; } #harbor-storyboard .frame-art { height:32px; } #harbor-storyboard .frame-cue { min-height:48px; } }
+    @media(pointer:coarse) { #harbor-storyboard button { min-height:44px; } }
+  </style>
+  <h2 class="story-title">One slip. Three states.</h2>
+  <div class="subtle">Slip-mismatch storyboard · First Buffalo River Marina concept</div>
+  <div class="story-frames" aria-label="Storyboard frames">
+    <button type="button" class="frame" data-step="0" aria-pressed="true"><span class="frame-head">1. Normal <time class="subtle">08:45</time></span><svg class="frame-art" viewBox="0 0 180 54" aria-hidden="true"><path d="M5 8h100v36H5z M111 8h64v36h-64z" fill="var(--wash)" stroke="var(--line)"/><path d="M20 16h70v5H20z M35 21v17 M65 21v17" fill="var(--dock)" stroke="var(--dock-side)"/><path d="M45 24h12v13H45z" fill="none" stroke="var(--teal)" stroke-dasharray="3 2"/><path d="M120 18h43 M120 25h32 M120 34h39" stroke="var(--quiet)" fill="none"/></svg><span class="frame-cue">Empty · still assigned</span></button>
+    <svg class="flow-arrow" aria-hidden="true" viewBox="0 0 30 20"><path d="M2 10h23m-6-5 6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <button type="button" class="frame" data-step="1" aria-pressed="false"><span class="frame-head">2. Uncertain <time class="subtle">09:12</time></span><svg class="frame-art" viewBox="0 0 180 54" aria-hidden="true"><path d="M5 8h100v36H5z M111 8h64v36h-64z" fill="var(--wash)" stroke="var(--line)"/><path d="M20 16h70v5H20z M35 21v17 M65 21v17" fill="var(--dock)" stroke="var(--dock-side)"/><path d="M47 36V26l4-5 5 5v10z" fill="var(--boat)" stroke="var(--amber)"/><path d="M43 20h17v20H43z" fill="none" stroke="var(--amber)" stroke-dasharray="3 2"/><path d="M120 18h43 M120 25h32" stroke="var(--quiet)" fill="none"/><path d="M120 33h43v5h-43z" fill="var(--amber)"/></svg><span class="frame-cue">Present · identity unverified</span></button>
+    <svg class="flow-arrow" aria-hidden="true" viewBox="0 0 30 20"><path d="M2 10h23m-6-5 6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <button type="button" class="frame" data-step="2" aria-pressed="false"><span class="frame-head">3. Resolved <time class="subtle">09:20</time></span><svg class="frame-art" viewBox="0 0 180 54" aria-hidden="true"><path d="M5 8h100v36H5z M111 8h64v36h-64z" fill="var(--wash)" stroke="var(--line)"/><path d="M20 16h70v5H20z M35 21v17 M65 21v17" fill="var(--dock)" stroke="var(--dock-side)"/><path d="M47 36V26l4-5 5 5v10z" fill="var(--boat)" stroke="var(--teal)"/><path d="M120 18h43 M120 25h32" stroke="var(--quiet)" fill="none"/><path d="m122 34 4 4 9-9" fill="none" stroke="var(--teal)" stroke-width="2"/></svg><span class="frame-cue">Verified · record reconciled</span></button>
+  </div>
+  <div class="app">
+    <header class="app-header"><div class="app-heading"><span class="brand">Harbor Desk</span><span class="subtle">First Buffalo River Marina / Dock B</span></div><span class="demo-label">FICTIONAL RECORDS · SIMULATED EVENTS</span></header>
+    <div class="workspace">
+      <section class="spatial" aria-label="Marina spatial view">
+        <div class="map-head"><div><div class="map-title" id="map-title">Dock B · Slip B-12</div><div class="subtle" id="map-time">Snapshot · 08:45</div></div><button type="button" class="map-view" id="view-toggle">Top-down view</button></div>
+        <svg id="harbor-scene" role="img" aria-label="Isometric diagram of Dock B with slip B-12 selected"></svg>
+        <div class="scene-status" id="scene-status"><span class="dot"></span><span>Assigned boat is away</span></div>
+        <div class="slip-list" aria-label="Select a slip"><button type="button" class="slip" data-slip="B-10" aria-pressed="false">B-10</button><button type="button" class="slip" data-slip="B-12" aria-pressed="true">B-12 · selected</button><button type="button" class="slip" data-slip="B-14" aria-pressed="false">B-14</button></div>
+        <div class="state-strip" id="state-strip"><div><span>Physical presence</span><strong>Empty</strong></div><div><span>Slip agreement</span><strong>Assigned</strong></div><div><span>Bookable now</span><strong>No</strong></div></div>
+      </section>
+      <aside class="details" id="boat-details" aria-label="Selected slip and vessel information"></aside>
+    </div>
+    <footer class="app-footer"><span>Spatial sketch · illustrative dock geometry</span><span id="footer-status">Agreement and physical presence are separate records.</span></footer>
+  </div>
+  <div class="story-controls"><button type="button" class="step-button" id="previous-step" disabled>Previous</button><span class="step-caption" id="step-caption">Normal: the boat is away; its slip remains assigned.</span><button type="button" class="step-button" id="next-step">Next state</button></div>
+  <div class="sr" id="story-announcement" role="status" aria-live="polite"></div>
+  <script>
+  (() => {
+    const root = document.getElementById('harbor-storyboard');
+    const q = s => root.querySelector(s);
+    let state = { step:0, slip:'B-12', top:false, verify:false, checked:false, task:false };
+    const validSlips = ['B-10','B-12','B-14'];
+    const names = ['Normal','Uncertain','Resolved'];
+    const times = ['08:45','09:12','09:20'];
+    const captions = ['Normal: the boat is away; its slip remains assigned.','Uncertain: select the highlighted boat to compare the observation with its assigned record.','Resolved: staff corrected the identity link; the slip agreement did not change.'];
+    function applySaved(saved) {
+      if (!saved || !saved.privateContent) return;
+      const p=saved.privateContent;
+      if (Number.isInteger(p.step) && p.step>=0 && p.step<=2) state.step=p.step;
+      if (validSlips.includes(p.slip)) state.slip=p.slip;
+      for (const key of ['top','verify','checked','task']) if (typeof p[key]==='boolean') state[key]=p[key];
+    }
+    applySaved(window.openai && window.openai.widgetState);
+    function save() {
+      if(window.openai && window.openai.setWidgetState) window.openai.setWidgetState({modelContent:{storyboard:'Buffalo marina slip mismatch',frame:names[state.step],selectedSlip:state.slip,dockCheckRequested:state.task,verificationReviewed:state.checked},privateContent:{...state}}).catch(()=>{});
+    }
+    function announce(text) { q('#story-announcement').textContent=text; }
+    const glyph = '<svg class="vessel-glyph" viewBox="0 0 70 35" aria-hidden="true"><path d="M4 21h60l-9 9H13z" fill="var(--boat-side)"/><path d="M17 21V11h28l9 10z" fill="var(--boat)" stroke="var(--dock-side)"/><path d="M23 13h17l7 8H23z" fill="var(--glass)"/></svg>';
+    const evidence = '<svg viewBox="0 0 100 65" role="img" aria-label="Illustrated camera observation; vessel name obscured"><path d="M0 49h100 M0 56h100" stroke="var(--water-line)"/><path d="M12 37h77L77 48H23z" fill="var(--boat)" stroke="var(--boat-side)"/><path d="M29 36V24h30l13 12z" fill="var(--glass)"/><path d="M27 24h36l7 5H27z" fill="var(--glass)"/><path d="M6 8v10 M6 8h10 M94 8H84 M94 8v10 M6 58V48 M6 58h10 M94 58H84 M94 58V48" stroke="var(--quiet)" fill="none"/></svg>';
+    function facts(items) { return '<dl class="facts">'+items.map(([k,v])=>'<dt>'+k+'</dt><dd>'+v+'</dd>').join('')+'</dl>'; }
+    function renderDetails() {
+      const panel=q('#boat-details');
+      if(state.slip!=='B-12') {
+        const b10=state.slip==='B-10';
+        panel.innerHTML='<div class="detail-top"><h3>Slip '+state.slip+'</h3><span class="status">'+(b10?'Recorded':'Away')+'</span></div><div class="section-label">Assigned vessel · registry</div><div class="record-name">'+(b10?'River Run':'Harbor Light')+glyph+'</div><div class="specs">'+(b10?'24 ft · center console':'27 ft · cabin cruiser')+'</div>'+facts([['Agreement','Seasonal'],['Physical presence',b10?'Present':'Last confirmed away'],['Source',b10?'Staff dock walk · 08:40':'Staff departure log · 08:30'],['Bookable now','No — assigned']])+ '<hr class="divider"><div class="subtle">'+(b10?'No issue recorded for this slip.':state.step===1?'Harbor Light is a possible visual match at B-12. This record has not been moved or updated.':'Harbor Light remains assigned here. No verified location change.')+'</div><button type="button" class="action" data-action="return">Return to B-12 workflow</button>';
+        return;
+      }
+      let html='<div class="detail-top"><h3>Slip B-12</h3><span class="status '+(state.step===1?'warn':'')+'">'+['Assigned · away','Needs review','Resolved'][state.step]+'</span></div><div class="section-label">Assigned vessel · registry</div><div class="record-name">Lake Effect'+glyph+'</div><div class="specs">29 ft · cabin cruiser · vessel V-021</div>'+facts([['Registration','On file · ending 42 AB'],['Agreement','Seasonal · B-12'],['Documents','Reviewed · current']]);
+      if(state.step===0) {
+        html+='<hr class="divider"><div class="section-label">Latest confirmed activity</div><div class="observation"><div class="observation-head"><span>Departed this morning</span><time>08:10</time></div><div class="subtle">Staff departure log · dockmaster</div></div>'+facts([['Latest slip observation','Empty · 08:45'],['Source','Simulated camera C-02'],['Bookable now','No — assigned']])+'<div class="decision"><button type="button" class="action primary" data-action="simulate">View 09:12 observation</button></div>';
+      } else if(state.step===1) {
+        html+='<hr class="divider"><div class="section-label">Observation · separate from the registry</div><div class="observation"><div class="observation-head"><span>Vessel present · identity unverified</span></div><div class="subtle">Camera C-02 · 09:12 · simulated</div><div class="evidence">'+evidence+'<div><span>Possible match: Harbor Light</span><span class="evidence-note">Name obscured; cover differs from registry photo.</span></div></div></div><div class="subtle" style="margin-top:9px">Candidate only. No vessel or agreement record has changed.</div>';
+        if(state.verify) {
+          html+='<div class="verification"><div class="observation-head"><span>Staff dock check · 09:18</span></div><div class="subtle">Demo evidence: boat name and registration ending 42 AB match Lake Effect. A new canvas cover caused the visual mismatch.</div><label style="margin-top:11px"><input type="checkbox" id="identity-checked" '+(state.checked?'checked':'')+'><span>I verified Lake Effect at B-12 against the registration on file.</span></label><button type="button" class="action primary" data-action="confirm" '+(state.checked?'':'disabled')+'>Confirm identity & resolve</button><button type="button" class="action" data-action="cancel">Back to observation</button></div>';
+        } else {
+          html+='<div class="decision"><button type="button" class="action primary" data-action="verify">Review staff verification</button><button type="button" class="action" data-action="task">'+(state.task?'Dock check requested':'Cannot verify — request dock check')+'</button></div>';
+          if(state.task) html+='<div class="notice" role="status">Demo task created for dock staff. Identity remains unverified; issue stays open.</div>';
+        }
+      } else {
+        html+='<hr class="divider"><div class="observation"><div class="observation-head"><span>Lake Effect confirmed at B-12</span></div><div class="subtle">Staff dock check · 09:18</div></div>'+facts([['Physical presence','Present · staff verified'],['Slip agreement','Unchanged · B-12'],['Bookable now','No — assigned']])+'<hr class="divider"><div class="section-label">Activity trail</div><div class="audit"><time>09:12</time><span>Possible mismatch flagged. Camera observation retained.</span><time>09:18</time><span>Staff verified boat name and registration.</span><time>09:20</time><span>Dockmaster corrected identity link and closed issue.</span></div><div class="notice">'+(state.task?'Linked dock-check task completed. ':'')+'Harbor Light’s record was never reassigned.</div><button type="button" class="action" data-action="replay">Replay uncertainty</button>';
+      }
+      panel.innerHTML=html;
+    }
+    function drawScene() {
+      const svg=q('#harbor-scene');
+      const w=Math.max(280,svg.clientWidth), h=svg.clientHeight||330;
+      svg.setAttribute('viewBox','0 0 '+w+' '+h);
+      const scale=Math.min((w-24)/650,(h-30)/330);
+      const ox=(w-650*scale)/2, oy=(h-330*scale)/2;
+      const P=(x,y,z=0)=>state.top?[ox+(70+x)*scale,oy+(y*.84+10)*scale]:[ox+(245+x*.83-y*.52)*scale,oy+(18+x*.27+y*.53-z)*scale];
+      const pts=arr=>arr.map(a=>P(...a).map(n=>n.toFixed(2)).join(',')).join(' ');
+      const polygon=(arr,fill,stroke='none',extra='')=>'<polygon points="'+pts(arr)+'" fill="'+fill+'" stroke="'+stroke+'" stroke-linejoin="round" '+extra+'/>';
+      const path=(arr,stroke,extra='')=>'<polyline points="'+pts(arr)+'" fill="none" stroke="'+stroke+'" '+extra+'/>';
+      function box(x,y,ww,hh,z,fill) {
+        return polygon([[x,y+hh,0],[x+ww,y+hh,0],[x+ww,y+hh,z],[x,y+hh,z]],'var(--dock-side)')+polygon([[x+ww,y,0],[x+ww,y+hh,0],[x+ww,y+hh,z],[x+ww,y,z]],'var(--dock-side)')+polygon([[x,y,z],[x+ww,y,z],[x+ww,y+hh,z],[x,y+hh,z]],fill,'var(--dock-side)','stroke-width=".6"');
+      }
+      function boat(x,y,len,beam,unknown=false) {
+        const hull=[[x,y+len,4],[x+beam,y+len,4],[x+beam,y+22,4],[x+beam*.7,y+5,4],[x+beam*.5,y,4],[x+beam*.3,y+5,4],[x,y+22,4]];
+        const top=hull.map(a=>[a[0],a[1],11]);
+        let b=polygon([[x,y+len+6,0],[x+beam+5,y+len+6,0],[x+beam+5,y+18,0],[x+beam*.5,y-5,0],[x-5,y+18,0]],'var(--water-line)');
+        b+=polygon([hull[0],hull[1],top[1],top[0]],'var(--boat-side)');
+        b+=polygon([hull[1],hull[2],hull[3],hull[4],top[4],top[3],top[2],top[1]],'var(--boat-side)');
+        b+=polygon(top,'var(--boat)','var(--boat-side)','stroke-width=".7"');
+        b+=box(x+beam*.16,y+len*.33,beam*.68,len*.35,20,unknown?'var(--glass)':'var(--boat)');
+        b+=polygon([[x+beam*.19,y+len*.33,21],[x+beam*.81,y+len*.33,21],[x+beam*.81,y+len*.47,21],[x+beam*.19,y+len*.47,21]],'var(--glass)');
+        return b;
+      }
+      let s='<title>Dock B, '+names[state.step]+' state</title><desc>Illustrative marina geometry. '+(state.step===0?'B-12 is empty but assigned to Lake Effect.':state.step===1?'A vessel at B-12 has unverified identity.':'Lake Effect is confirmed at B-12.')+' Select B-10, B-12 or B-14 with the buttons below.</desc>';
+      for(let y=35;y<400;y+=50) s+=path([[-25,y,0],[515,y,0]],'var(--water-line)','stroke-width=".7"');
+      s+=box(10,5,490,58,12,'var(--land)');
+      s+=box(30,70,450,21,10,'var(--dock)');
+      for(const x of [86,215,344,465]) s+=box(x,90,12,214,9,'var(--dock)');
+      const slipInfo=[{id:'B-10',x:99,cx:128},{id:'B-12',x:228,cx:257},{id:'B-14',x:357,cx:386}];
+      for(const slot of slipInfo) {
+        const chosen=state.slip===slot.id;
+        const col=slot.id==='B-12'&&state.step===1?'var(--amber)':'var(--teal)';
+        if(chosen) s+=polygon([[slot.x,106,1],[slot.x+102,106,1],[slot.x+102,299,1],[slot.x,299,1]],state.step===1&&slot.id==='B-12'?'color-mix(in srgb,var(--amber) 9%,var(--water))':'color-mix(in srgb,var(--teal) 9%,var(--water))',col,'stroke-width="1.5" '+(state.step===1&&slot.id==='B-12'?'stroke-dasharray="5 4"':''));
+        if(slot.id==='B-10') s+=boat(slot.cx,145,111,44);
+        if(slot.id==='B-12'&&state.step>0) s+=boat(slot.cx-2,137,132,49,true);
+        const [lx,ly]=P(slot.x+53,330,0);
+        s+='<rect x="'+(lx-25)+'" y="'+(ly-11)+'" width="50" height="22" rx="4" fill="'+(chosen?'var(--ink)':'var(--paper)')+'"/><text x="'+lx+'" y="'+(ly+4)+'" text-anchor="middle" fill="'+(chosen?'var(--paper)':'var(--ink)')+'" font-family="inherit" font-size="12">'+slot.id+'</text>';
+        s+='<polygon data-scene-slip="'+slot.id+'" class="cursor-interaction" points="'+pts([[slot.x,106,24],[slot.x+102,106,24],[slot.x+102,299,24],[slot.x,299,24]])+'" fill="transparent" aria-hidden="true"/>';
+      }
+      const [dx,dy]=P(40,38,14);
+      s+='<text x="'+dx+'" y="'+dy+'" fill="var(--quiet)" font-size="11" font-family="inherit">DOCK B</text>';
+      const [tx,ty]=P(285,110,24);
+      if(state.slip==='B-12') {
+        const label=state.step===0?'B-12 · reserved for Lake Effect':state.step===1?'B-12 · identity unverified':'B-12 · Lake Effect';
+        const labelWidth=Math.min(w-24,state.step===0?202:state.step===1?182:144);
+        const left=Math.max(12,Math.min(w-labelWidth-12,tx-labelWidth/2));
+        const top=Math.max(12,ty-50);
+        s+='<path d="M'+tx+','+(top+27)+'V'+ty+'" fill="none" stroke="'+(state.step===1?'var(--amber)':'var(--teal)')+'" stroke-width="1.2"/><rect x="'+left+'" y="'+top+'" width="'+labelWidth+'" height="27" rx="5" fill="var(--paper)"/><text x="'+(left+labelWidth/2)+'" y="'+(top+18)+'" text-anchor="middle" font-family="inherit" font-size="12" fill="var(--ink)">'+label+'</text>';
+      }
+      svg.innerHTML=s;
+      svg.setAttribute('aria-label',(state.top?'Top-down':'Isometric')+' marina diagram, '+state.slip+' selected, '+names[state.step]+' state');
+    }
+    function render() {
+      root.querySelectorAll('[data-step]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.step)===state.step)));
+      root.querySelectorAll('[data-slip]').forEach(b=>{const chosen=b.dataset.slip===state.slip;b.setAttribute('aria-pressed',String(chosen));b.textContent=b.dataset.slip+(chosen?' · selected':'');});
+      q('#map-title').textContent='Dock B · Slip '+state.slip;
+      q('#map-time').textContent='Storyboard snapshot · '+times[state.step];
+      q('#view-toggle').textContent=state.top?'3D storyboard view':'Top-down view';
+      const b12=state.slip==='B-12';
+      const presence=b12?['Empty','Present · unverified','Present · verified'][state.step]:state.slip==='B-10'?'Present':'Last confirmed away';
+      q('#state-strip').innerHTML='<div><span>Physical presence</span><strong>'+presence+'</strong></div><div><span>Slip agreement</span><strong>Assigned</strong></div><div><span>Bookable now</span><strong>No</strong></div>';
+      q('#scene-status').className='scene-status'+(b12&&state.step===1?' warn':'');
+      q('#scene-status').innerHTML='<span class="dot"></span><span>'+(b12?['Assigned boat is away · staff departure log','Possible mismatch · observation needs review','Identity verified by staff · issue closed'][state.step]:state.slip==='B-10'?'River Run · last staff check 08:40':'Harbor Light · last confirmed away 08:30')+'</span>';
+      q('#step-caption').textContent=captions[state.step];
+      q('#previous-step').disabled=state.step===0;
+      q('#next-step').disabled=state.step===2;
+      q('#next-step').textContent=state.step===1?'Preview resolved state':'Next state';
+      q('#footer-status').textContent=state.step===1?'No automatic identity or agreement changes.':state.step===2?'Original observation retained; correction is auditable.':'Agreement and physical presence are separate records.';
+      renderDetails(); drawScene();
+    }
+    function go(step) {state.step=step;state.slip='B-12';state.verify=false;state.checked=false;render();save();announce(names[step]+' storyboard state. '+captions[step]);}
+    root.addEventListener('click',e=>{
+      const b=e.target.closest('button');
+      const mark=e.target.closest('[data-scene-slip]');
+      if(mark) {state.slip=mark.dataset.sceneSlip;render();save();announce(state.slip+' selected. Boat details updated.');return;}
+      if(!b || b.disabled) return;
+      if(b.hasAttribute('data-step')) {go(Number(b.dataset.step));return;}
+      if(b.hasAttribute('data-slip')) {state.slip=b.dataset.slip;render();save();announce(state.slip+' selected. Boat details updated.');return;}
+      if(b.id==='view-toggle') {state.top=!state.top;render();save();return;}
+      if(b.id==='previous-step') {go(Math.max(0,state.step-1));return;}
+      if(b.id==='next-step') {go(Math.min(2,state.step+1));return;}
+      const a=b.dataset.action;
+      if(a==='simulate'||a==='replay') {go(1);return;}
+      if(a==='return') state.slip='B-12';
+      if(a==='verify') state.verify=true;
+      if(a==='cancel') {state.verify=false;state.checked=false;}
+      if(a==='task') {state.task=true;announce('Dock check requested. Issue remains open.');}
+      if(a==='confirm'&&state.checked) {go(2);announce('Lake Effect confirmed at B-12. Identity link corrected. Agreement unchanged.');return;}
+      render();save();
+      if(a==='verify') q('#identity-checked').focus();
+    });
+    root.addEventListener('change',e=>{if(e.target.id==='identity-checked'){state.checked=e.target.checked;const confirm=q('[data-action="confirm"]');confirm.disabled=!state.checked;save();}});
+    window.addEventListener('openai:set_globals',e=>{if(e.detail&&e.detail.globals&&e.detail.globals.widgetState){applySaved(e.detail.globals.widgetState);render();}});
+    render();
+    new ResizeObserver(()=>drawScene()).observe(q('#harbor-scene'));
+  })();
+  </script>
+</div>

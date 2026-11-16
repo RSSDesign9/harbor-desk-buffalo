@@ -1,0 +1,298 @@
+{
+  "measuredAt": "2026-11-16T18:10:59.398Z",
+  "buildId": "1a1680cbf552126231b814af9e94a13ce86ee2c5b0f976af5add4fd473f471b7",
+  "device": {
+    "cpu": "Apple M3 Max",
+    "cores": 14,
+    "memoryGB": 36,
+    "os": "23.4.0"
+  },
+  "browser": "159.0.8154.6",
+  "headed": true,
+  "viewport": "1440x900",
+  "network": "10 Mbps down/up, 100 ms latency (CDP), no CPU throttling; actual gzip level 6 HTTP responses",
+  "coldCache": "Each sample is a fresh context with network cache disabled; shared browser/GPU process (no driver-cache flush); no app warm-up",
+  "readiness": "In-page animation-frame observer: search + domain store + (list options or four valued KPI tiles, since T25 closes the desktop list); initial 3D = camera ready and >=2 rendered frames with draw calls",
+  "samples": [
+    {
+      "run": 1,
+      "dpr": 1,
+      "shell": 535.8000000119209,
+      "scene": 1607.800000011921,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)"
+    },
+    {
+      "run": 2,
+      "dpr": 1,
+      "shell": 455.69999998807907,
+      "scene": 1461,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)"
+    },
+    {
+      "run": 3,
+      "dpr": 1,
+      "shell": 451,
+      "scene": 1444.5999999940395,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)"
+    },
+    {
+      "run": 4,
+      "dpr": 2,
+      "shell": 495.59999999403954,
+      "scene": 1531.0999999940395,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)"
+    }
+  ],
+  "transfer": {
+    "encodedBodyBytes": 924214,
+    "resourceTimingEncodedBodyBytes": 924214,
+    "servedResponses": [
+      {
+        "path": "/",
+        "encodedBodySize": 800,
+        "decodedBodySize": 1551
+      },
+      {
+        "path": "/assets/poster/harbor-1600.webp",
+        "encodedBodySize": 62218,
+        "decodedBodySize": 62218
+      },
+      {
+        "path": "/assets/index-CRTKMc5a.css",
+        "encodedBodySize": 9491,
+        "decodedBodySize": 45385
+      },
+      {
+        "path": "/assets/index-B1m5thBV.js",
+        "encodedBodySize": 135065,
+        "decodedBodySize": 682573
+      },
+      {
+        "path": "/assets/SceneRoot-DBywsQsv.js",
+        "encodedBodySize": 313121,
+        "decodedBodySize": 1135330
+      },
+      {
+        "path": "/assets/layout-BQuHJS07.js",
+        "encodedBodySize": 12735,
+        "decodedBodySize": 37530
+      },
+      {
+        "path": "/fonts/WorkSans-Variable.woff2",
+        "encodedBodySize": 33176,
+        "decodedBodySize": 33176
+      },
+      {
+        "path": "/fonts/Commissioner-Variable.woff2",
+        "encodedBodySize": 47528,
+        "decodedBodySize": 47528
+      },
+      {
+        "path": "/fonts/AtkinsonHyperlegibleMono-Variable.woff2",
+        "encodedBodySize": 15508,
+        "decodedBodySize": 15508
+      },
+      {
+        "path": "/favicon.svg",
+        "encodedBodySize": 510,
+        "decodedBodySize": 1032
+      },
+      {
+        "path": "/assets/icons-vessels.svg",
+        "encodedBodySize": 806,
+        "decodedBodySize": 2662
+      },
+      {
+        "path": "/assets/evidence/ev-7k2q.webp",
+        "encodedBodySize": 30578,
+        "decodedBodySize": 30578
+      },
+      {
+        "path": "/assets/evidence/ev-p3m8.webp",
+        "encodedBodySize": 10960,
+        "decodedBodySize": 10960
+      },
+      {
+        "path": "/assets/PlanView-B4ZuIBwM.css",
+        "encodedBodySize": 952,
+        "decodedBodySize": 2798
+      },
+      {
+        "path": "/assets/PlanView-YcjtMZX3.js",
+        "encodedBodySize": 1602,
+        "decodedBodySize": 3665
+      },
+      {
+        "path": "/assets/poster/harbor-2400.webp",
+        "encodedBodySize": 116010,
+        "decodedBodySize": 116010
+      },
+      {
+        "path": "/assets/evidence/ev-7k2q@2x.webp",
+        "encodedBodySize": 109916,
+        "decodedBodySize": 109916
+      },
+      {
+        "path": "/assets/evidence/ev-p3m8@2x.webp",
+        "encodedBodySize": 23238,
+        "decodedBodySize": 23238
+      }
+    ],
+    "resourceTimingTransferBytes": 929614,
+    "decodedBodyBytes": 2361658,
+    "fontBodyBytes": 96212,
+    "fontTransferBytes": 97112,
+    "resources": [
+      {
+        "path": "/",
+        "encodedBodySize": 800,
+        "transferSize": 1100,
+        "decodedBodySize": 1551
+      },
+      {
+        "path": "/assets/poster/harbor-1600.webp",
+        "encodedBodySize": 62218,
+        "transferSize": 62518,
+        "decodedBodySize": 62218
+      },
+      {
+        "path": "/assets/index-B1m5thBV.js",
+        "encodedBodySize": 135065,
+        "transferSize": 135365,
+        "decodedBodySize": 682573
+      },
+      {
+        "path": "/assets/index-CRTKMc5a.css",
+        "encodedBodySize": 9491,
+        "transferSize": 9791,
+        "decodedBodySize": 45385
+      },
+      {
+        "path": "/assets/SceneRoot-DBywsQsv.js",
+        "encodedBodySize": 313121,
+        "transferSize": 313421,
+        "decodedBodySize": 1135330
+      },
+      {
+        "path": "/assets/layout-BQuHJS07.js",
+        "encodedBodySize": 12735,
+        "transferSize": 13035,
+        "decodedBodySize": 37530
+      },
+      {
+        "path": "/fonts/WorkSans-Variable.woff2",
+        "encodedBodySize": 33176,
+        "transferSize": 33476,
+        "decodedBodySize": 33176
+      },
+      {
+        "path": "/fonts/Commissioner-Variable.woff2",
+        "encodedBodySize": 47528,
+        "transferSize": 47828,
+        "decodedBodySize": 47528
+      },
+      {
+        "path": "/fonts/AtkinsonHyperlegibleMono-Variable.woff2",
+        "encodedBodySize": 15508,
+        "transferSize": 15808,
+        "decodedBodySize": 15508
+      },
+      {
+        "path": "/favicon.svg",
+        "encodedBodySize": 510,
+        "transferSize": 810,
+        "decodedBodySize": 1032
+      },
+      {
+        "path": "/assets/icons-vessels.svg",
+        "encodedBodySize": 806,
+        "transferSize": 1106,
+        "decodedBodySize": 2662
+      },
+      {
+        "path": "/assets/evidence/ev-7k2q.webp",
+        "encodedBodySize": 30578,
+        "transferSize": 30878,
+        "decodedBodySize": 30578
+      },
+      {
+        "path": "/assets/evidence/ev-p3m8.webp",
+        "encodedBodySize": 10960,
+        "transferSize": 11260,
+        "decodedBodySize": 10960
+      },
+      {
+        "path": "/assets/PlanView-YcjtMZX3.js",
+        "encodedBodySize": 1602,
+        "transferSize": 1902,
+        "decodedBodySize": 3665
+      },
+      {
+        "path": "/assets/PlanView-B4ZuIBwM.css",
+        "encodedBodySize": 952,
+        "transferSize": 1252,
+        "decodedBodySize": 2798
+      },
+      {
+        "path": "/assets/poster/harbor-2400.webp",
+        "encodedBodySize": 116010,
+        "transferSize": 116310,
+        "decodedBodySize": 116010
+      },
+      {
+        "path": "/assets/evidence/ev-7k2q@2x.webp",
+        "encodedBodySize": 109916,
+        "transferSize": 110216,
+        "decodedBodySize": 109916
+      },
+      {
+        "path": "/assets/evidence/ev-p3m8@2x.webp",
+        "encodedBodySize": 23238,
+        "transferSize": 23538,
+        "decodedBodySize": 23238
+      }
+    ],
+    "wholeDistGzipBytesWithoutMaps": 935277,
+    "note": "Union of actual requested paths across complete demo at DPR 1 and 2, including both evidence densities and deferred mobile plan; Server-recorded compressed response bodies include browser favicon requests absent from Resource Timing; Resource Timing transfer includes standardized header overhead. Licenses and unlinked authoring gallery are separately included in whole dist."
+  },
+  "disk": {
+    "allBytes": 8974609,
+    "withoutSourceMapsBytes": 2402392,
+    "files": [
+      "THIRD-PARTY-NOTICES.txt",
+      "assets/Gallery-BVxVBkW2.js",
+      "assets/Gallery-BVxVBkW2.js.map",
+      "assets/Gallery-BpF3m_iK.css",
+      "assets/PlanView-B4ZuIBwM.css",
+      "assets/PlanView-YcjtMZX3.js",
+      "assets/PlanView-YcjtMZX3.js.map",
+      "assets/SceneRoot-DBywsQsv.js",
+      "assets/SceneRoot-DBywsQsv.js.map",
+      "assets/evidence/ev-7k2q.webp",
+      "assets/evidence/ev-7k2q@2x.webp",
+      "assets/evidence/ev-p3m8.webp",
+      "assets/evidence/ev-p3m8@2x.webp",
+      "assets/icons-vessels.svg",
+      "assets/index-B1m5thBV.js",
+      "assets/index-B1m5thBV.js.map",
+      "assets/index-CRTKMc5a.css",
+      "assets/layout-BQuHJS07.js",
+      "assets/layout-BQuHJS07.js.map",
+      "assets/poster/harbor-1600.webp",
+      "assets/poster/harbor-2400.webp",
+      "favicon.svg",
+      "fonts/AtkinsonHyperlegibleMono-OFL.txt",
+      "fonts/AtkinsonHyperlegibleMono-Variable.woff2",
+      "fonts/Commissioner-OFL.txt",
+      "fonts/Commissioner-Variable.woff2",
+      "fonts/WorkSans-OFL.txt",
+      "fonts/WorkSans-Variable.woff2",
+      "index.html"
+    ]
+  },
+  "errors": [],
+  "external": [],
+  "failed": [],
+  "serverMissing": [],
+  "offlineWorkflow": "Both direct mobile workflows completed after turning network offline; no reload/offline-install claim"
+}

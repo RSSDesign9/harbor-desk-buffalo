@@ -1,0 +1,8305 @@
+{
+ "schema": "harbor-desk/site-local@1",
+ "generated_at": "2026-11-14",
+ "generator": "scripts/inspect-geometry.ts",
+ "frame": {
+  "origin": {
+   "lat": 42.8742,
+   "lon": -78.8806,
+   "note": "Rounded WGS84 point near slip B-12; chosen for readability, not a surveyed control point."
+  },
+  "units": "metres",
+  "axes": "east (+x scene), north (−z scene), up (+y scene)",
+  "projection": "Local tangent plane: equirectangular with WGS84 meridian/prime-vertical radii at origin latitude. Few-cm error over the working area; not a survey datum."
+ },
+ "provenance_note": "Headwalks, river centreline and OSM polygons: DOC (OpenStreetMap, ODbL, fetched 2026-11-14) — documented source, not current survey. Slips: ASSUME (generated). Masses, bank, land masks and map-derived features: ASSUME (digitized from the 1 June 2022 ESD site map via a 3-anchor similarity fit; ±10 m).",
+ "sources": [
+  {
+   "id": "osm-harbor",
+   "path": "data/buffalo-river-features.geojson",
+   "provenance": "DOC"
+  },
+  {
+   "id": "slips",
+   "path": "data/slips.geojson",
+   "provenance": "ASSUME"
+  },
+  {
+   "id": "esd-site-map-2022",
+   "path": "data/reference/first-buffalo-site-map-2022.pdf",
+   "url": "https://www.esd.ny.gov/sites/default/files/rfp/Exhibit-A-Site-Map-First-Buffalo-Marina-Operator.pdf",
+   "date": "2022-06-01",
+   "provenance": "DOC"
+  }
+ ],
+ "mapFit": {
+  "anchors": [
+   {
+    "id": "R1",
+    "name": "Dock A headwalk NW end ↔ headwalk at the 2022 site-boundary corner (map marker 2)",
+    "local": {
+     "east": -130.18,
+     "north": 203.44
+    },
+    "map_px": [
+     640,
+     657.5
+    ],
+    "residual_m": 3.2
+   },
+   {
+    "id": "R2",
+    "name": "Gap between Dock B’s two runs ↔ gangway at map marker 5",
+    "local": {
+     "east": 8.1,
+     "north": -32.46
+    },
+    "map_px": [
+     1075,
+     657.5
+    ],
+    "residual_m": 5
+   },
+   {
+    "id": "R3",
+    "name": "Dock E headwalk SE end ↔ dock line end in the Skyway shadow (map marker 10)",
+    "local": {
+     "east": 261.87,
+     "north": -426.84
+    },
+    "map_px": [
+     1850,
+     643.5
+    ],
+    "residual_m": 1.8
+   }
+  ],
+  "independentChecks": [
+   {
+    "id": "C1",
+    "name": "Mid-river on the map (between Canalside wharf edge and the dock line at x=850 px) vs OSM river centreline",
+    "residual_m": 17.9,
+    "verdict": "consistent"
+   },
+   {
+    "id": "C2",
+    "name": "Candidate Commercial Slip mouth on the map (680,160 px) vs southern end of OSM 371587071 “Commercial Slip”",
+    "residual_m": 84.9,
+    "verdict": "unresolved — identification of the map channel is uncertain; north-bank context stays approximate"
+   }
+  ],
+  "pxPerMetre": 1.63,
+  "note": "Similarity transform local metres → 2400-px render (y up). Used only to place approximate context."
+ },
+ "headwalks": {
+  "A": {
+   "osm_way": 934085283,
+   "kind": "fixed",
+   "provenance": "DOC",
+   "line": [
+    {
+     "east": -130.18,
+     "north": 203.44
+    },
+    {
+     "east": -67.74,
+     "north": 95.19
+    },
+    {
+     "east": -51.3,
+     "north": 66.54
+    },
+    {
+     "east": -42.37,
+     "north": 71.52
+    }
+   ]
+  },
+  "B": {
+   "osm_way": 934085288,
+   "kind": "floating",
+   "provenance": "DOC",
+   "line": [
+    {
+     "east": -36.42,
+     "north": 64.18
+    },
+    {
+     "east": -46.28,
+     "north": 58.61
+    },
+    {
+     "east": -35.31,
+     "north": 39.13
+    },
+    {
+     "east": -31.24,
+     "north": 32.39
+    },
+    {
+     "east": 5.69,
+     "north": -28.78
+    },
+    {
+     "east": 10.51,
+     "north": -36.13
+    },
+    {
+     "east": 46.05,
+     "north": -95.09
+    },
+    {
+     "east": 60.04,
+     "north": -116.84
+    }
+   ]
+  },
+  "C": {
+   "osm_way": 1073532827,
+   "kind": "floating",
+   "provenance": "DOC",
+   "line": [
+    {
+     "east": 150.16,
+     "north": -262.61
+    },
+    {
+     "east": 143.18,
+     "north": -268.82
+    },
+    {
+     "east": 168.78,
+     "north": -303.05
+    },
+    {
+     "east": 195.6,
+     "north": -338.93
+    },
+    {
+     "east": 203.91,
+     "north": -332.9
+    }
+   ]
+  },
+  "D": {
+   "osm_way": 1073540143,
+   "kind": "floating",
+   "provenance": "DOC",
+   "line": [
+    {
+     "east": 65.04,
+     "north": -113.78
+    },
+    {
+     "east": 60.04,
+     "north": -116.84
+    },
+    {
+     "east": 54.26,
+     "north": -120.39
+    },
+    {
+     "east": 113.18,
+     "north": -209.07
+    },
+    {
+     "east": 117.78,
+     "north": -216.07
+    },
+    {
+     "east": 121.25,
+     "north": -221.36
+    },
+    {
+     "east": 106.19,
+     "north": -231.4
+    }
+   ]
+  },
+  "E": {
+   "osm_way": 1073532822,
+   "kind": "fixed",
+   "provenance": "DOC",
+   "line": [
+    {
+     "east": 261.87,
+     "north": -426.84
+    },
+    {
+     "east": 238.4,
+     "north": -395.93
+    },
+    {
+     "east": 200.76,
+     "north": -346.64
+    },
+    {
+     "east": 208.38,
+     "north": -340.75
+    }
+   ]
+  }
+ },
+ "slips": [
+  {
+   "id": "A-01",
+   "dock": "A",
+   "number": 1,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -128.11,
+      "north": 201.04
+     },
+     {
+      "east": -126.59,
+      "north": 198.41
+     },
+     {
+      "east": -119.97,
+      "north": 202.2
+     },
+     {
+      "east": -121.49,
+      "north": 204.83
+     }
+    ],
+    "centroid": {
+     "east": -124.04,
+     "north": 201.62
+    },
+    "innerMid": {
+     "east": -127.35,
+     "north": 199.72
+    },
+    "outerMid": {
+     "east": -120.73,
+     "north": 203.51
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 4.6
+   }
+  },
+  {
+   "id": "A-02",
+   "dock": "A",
+   "number": 2,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -126.59,
+      "north": 198.41
+     },
+     {
+      "east": -125.06,
+      "north": 195.76
+     },
+     {
+      "east": -118.45,
+      "north": 199.55
+     },
+     {
+      "east": -119.97,
+      "north": 202.2
+     }
+    ],
+    "centroid": {
+     "east": -122.52,
+     "north": 198.98
+    },
+    "innerMid": {
+     "east": -125.82,
+     "north": 197.09
+    },
+    "outerMid": {
+     "east": -119.21,
+     "north": 200.87
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 7.7
+   }
+  },
+  {
+   "id": "A-03",
+   "dock": "A",
+   "number": 3,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -125.06,
+      "north": 195.76
+     },
+     {
+      "east": -123.54,
+      "north": 193.13
+     },
+     {
+      "east": -116.92,
+      "north": 196.92
+     },
+     {
+      "east": -118.45,
+      "north": 199.55
+     }
+    ],
+    "centroid": {
+     "east": -120.99,
+     "north": 196.34
+    },
+    "innerMid": {
+     "east": -124.3,
+     "north": 194.45
+    },
+    "outerMid": {
+     "east": -117.69,
+     "north": 198.24
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 10.7
+   }
+  },
+  {
+   "id": "A-04",
+   "dock": "A",
+   "number": 4,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -123.54,
+      "north": 193.13
+     },
+     {
+      "east": -122.02,
+      "north": 190.49
+     },
+     {
+      "east": -115.4,
+      "north": 194.27
+     },
+     {
+      "east": -116.92,
+      "north": 196.92
+     }
+    ],
+    "centroid": {
+     "east": -119.47,
+     "north": 193.7
+    },
+    "innerMid": {
+     "east": -122.78,
+     "north": 191.81
+    },
+    "outerMid": {
+     "east": -116.16,
+     "north": 195.6
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 13.8
+   }
+  },
+  {
+   "id": "A-05",
+   "dock": "A",
+   "number": 5,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -122.02,
+      "north": 190.49
+     },
+     {
+      "east": -120.5,
+      "north": 187.85
+     },
+     {
+      "east": -113.88,
+      "north": 191.64
+     },
+     {
+      "east": -115.4,
+      "north": 194.27
+     }
+    ],
+    "centroid": {
+     "east": -117.95,
+     "north": 191.06
+    },
+    "innerMid": {
+     "east": -121.26,
+     "north": 189.17
+    },
+    "outerMid": {
+     "east": -114.64,
+     "north": 192.96
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 16.8
+   }
+  },
+  {
+   "id": "A-06",
+   "dock": "A",
+   "number": 6,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -120.5,
+      "north": 187.85
+     },
+     {
+      "east": -118.98,
+      "north": 185.22
+     },
+     {
+      "east": -112.36,
+      "north": 189.01
+     },
+     {
+      "east": -113.88,
+      "north": 191.64
+     }
+    ],
+    "centroid": {
+     "east": -116.43,
+     "north": 188.43
+    },
+    "innerMid": {
+     "east": -119.74,
+     "north": 186.54
+    },
+    "outerMid": {
+     "east": -113.12,
+     "north": 190.33
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 19.9
+   }
+  },
+  {
+   "id": "A-07",
+   "dock": "A",
+   "number": 7,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -118.98,
+      "north": 185.22
+     },
+     {
+      "east": -117.45,
+      "north": 182.58
+     },
+     {
+      "east": -110.84,
+      "north": 186.37
+     },
+     {
+      "east": -112.36,
+      "north": 189.01
+     }
+    ],
+    "centroid": {
+     "east": -114.91,
+     "north": 185.79
+    },
+    "innerMid": {
+     "east": -118.22,
+     "north": 183.9
+    },
+    "outerMid": {
+     "east": -111.6,
+     "north": 187.69
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 22.9
+   }
+  },
+  {
+   "id": "A-08",
+   "dock": "A",
+   "number": 8,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -117.45,
+      "north": 182.58
+     },
+     {
+      "east": -115.93,
+      "north": 179.94
+     },
+     {
+      "east": -109.32,
+      "north": 183.73
+     },
+     {
+      "east": -110.84,
+      "north": 186.37
+     }
+    ],
+    "centroid": {
+     "east": -113.39,
+     "north": 183.15
+    },
+    "innerMid": {
+     "east": -116.69,
+     "north": 181.26
+    },
+    "outerMid": {
+     "east": -110.08,
+     "north": 185.05
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 26
+   }
+  },
+  {
+   "id": "A-09",
+   "dock": "A",
+   "number": 9,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -115.93,
+      "north": 179.94
+     },
+     {
+      "east": -114.41,
+      "north": 177.3
+     },
+     {
+      "east": -107.8,
+      "north": 181.1
+     },
+     {
+      "east": -109.32,
+      "north": 183.73
+     }
+    ],
+    "centroid": {
+     "east": -111.87,
+     "north": 180.52
+    },
+    "innerMid": {
+     "east": -115.17,
+     "north": 178.62
+    },
+    "outerMid": {
+     "east": -108.56,
+     "north": 182.42
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 29
+   }
+  },
+  {
+   "id": "A-10",
+   "dock": "A",
+   "number": 10,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -114.41,
+      "north": 177.3
+     },
+     {
+      "east": -112.89,
+      "north": 174.67
+     },
+     {
+      "east": -106.28,
+      "north": 178.46
+     },
+     {
+      "east": -107.8,
+      "north": 181.1
+     }
+    ],
+    "centroid": {
+     "east": -110.34,
+     "north": 177.88
+    },
+    "innerMid": {
+     "east": -113.65,
+     "north": 175.98
+    },
+    "outerMid": {
+     "east": -107.04,
+     "north": 179.78
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 32
+   }
+  },
+  {
+   "id": "A-11",
+   "dock": "A",
+   "number": 11,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -112.89,
+      "north": 174.67
+     },
+     {
+      "east": -111.37,
+      "north": 172.03
+     },
+     {
+      "east": -104.76,
+      "north": 175.82
+     },
+     {
+      "east": -106.28,
+      "north": 178.46
+     }
+    ],
+    "centroid": {
+     "east": -108.83,
+     "north": 175.24
+    },
+    "innerMid": {
+     "east": -112.13,
+     "north": 173.35
+    },
+    "outerMid": {
+     "east": -105.52,
+     "north": 177.14
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 35.1
+   }
+  },
+  {
+   "id": "A-12",
+   "dock": "A",
+   "number": 12,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -111.37,
+      "north": 172.03
+     },
+     {
+      "east": -109.86,
+      "north": 169.39
+     },
+     {
+      "east": -103.24,
+      "north": 173.18
+     },
+     {
+      "east": -104.76,
+      "north": 175.82
+     }
+    ],
+    "centroid": {
+     "east": -107.31,
+     "north": 172.61
+    },
+    "innerMid": {
+     "east": -110.62,
+     "north": 170.71
+    },
+    "outerMid": {
+     "east": -104,
+     "north": 174.5
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 38.1
+   }
+  },
+  {
+   "id": "A-13",
+   "dock": "A",
+   "number": 13,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -109.86,
+      "north": 169.39
+     },
+     {
+      "east": -108.33,
+      "north": 166.76
+     },
+     {
+      "east": -101.72,
+      "north": 170.55
+     },
+     {
+      "east": -103.24,
+      "north": 173.18
+     }
+    ],
+    "centroid": {
+     "east": -105.79,
+     "north": 169.97
+    },
+    "innerMid": {
+     "east": -109.09,
+     "north": 168.07
+    },
+    "outerMid": {
+     "east": -102.48,
+     "north": 171.86
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 41.2
+   }
+  },
+  {
+   "id": "A-14",
+   "dock": "A",
+   "number": 14,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -108.33,
+      "north": 166.76
+     },
+     {
+      "east": -106.81,
+      "north": 164.11
+     },
+     {
+      "east": -100.19,
+      "north": 167.91
+     },
+     {
+      "east": -101.72,
+      "north": 170.55
+     }
+    ],
+    "centroid": {
+     "east": -104.26,
+     "north": 167.33
+    },
+    "innerMid": {
+     "east": -107.57,
+     "north": 165.44
+    },
+    "outerMid": {
+     "east": -100.95,
+     "north": 169.23
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 44.2
+   }
+  },
+  {
+   "id": "A-15",
+   "dock": "A",
+   "number": 15,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -106.81,
+      "north": 164.11
+     },
+     {
+      "east": -105.29,
+      "north": 161.48
+     },
+     {
+      "east": -98.67,
+      "north": 165.27
+     },
+     {
+      "east": -100.19,
+      "north": 167.91
+     }
+    ],
+    "centroid": {
+     "east": -102.74,
+     "north": 164.7
+    },
+    "innerMid": {
+     "east": -106.05,
+     "north": 162.8
+    },
+    "outerMid": {
+     "east": -99.43,
+     "north": 166.59
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 47.3
+   }
+  },
+  {
+   "id": "A-16",
+   "dock": "A",
+   "number": 16,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -105.29,
+      "north": 161.48
+     },
+     {
+      "east": -103.77,
+      "north": 158.85
+     },
+     {
+      "east": -97.15,
+      "north": 162.64
+     },
+     {
+      "east": -98.67,
+      "north": 165.27
+     }
+    ],
+    "centroid": {
+     "east": -101.22,
+     "north": 162.06
+    },
+    "innerMid": {
+     "east": -104.53,
+     "north": 160.16
+    },
+    "outerMid": {
+     "east": -97.91,
+     "north": 163.95
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 50.3
+   }
+  },
+  {
+   "id": "A-17",
+   "dock": "A",
+   "number": 17,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -103.77,
+      "north": 158.85
+     },
+     {
+      "east": -102.25,
+      "north": 156.2
+     },
+     {
+      "east": -95.63,
+      "north": 159.99
+     },
+     {
+      "east": -97.15,
+      "north": 162.64
+     }
+    ],
+    "centroid": {
+     "east": -99.7,
+     "north": 159.42
+    },
+    "innerMid": {
+     "east": -103.01,
+     "north": 157.53
+    },
+    "outerMid": {
+     "east": -96.39,
+     "north": 161.31
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 53.4
+   }
+  },
+  {
+   "id": "A-18",
+   "dock": "A",
+   "number": 18,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -102.25,
+      "north": 156.2
+     },
+     {
+      "east": -100.73,
+      "north": 153.57
+     },
+     {
+      "east": -94.11,
+      "north": 157.36
+     },
+     {
+      "east": -95.63,
+      "north": 159.99
+     }
+    ],
+    "centroid": {
+     "east": -98.18,
+     "north": 156.78
+    },
+    "innerMid": {
+     "east": -101.49,
+     "north": 154.89
+    },
+    "outerMid": {
+     "east": -94.87,
+     "north": 158.68
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 56.4
+   }
+  },
+  {
+   "id": "A-19",
+   "dock": "A",
+   "number": 19,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -100.73,
+      "north": 153.57
+     },
+     {
+      "east": -99.2,
+      "north": 150.94
+     },
+     {
+      "east": -92.59,
+      "north": 154.73
+     },
+     {
+      "east": -94.11,
+      "north": 157.36
+     }
+    ],
+    "centroid": {
+     "east": -96.66,
+     "north": 154.15
+    },
+    "innerMid": {
+     "east": -99.96,
+     "north": 152.25
+    },
+    "outerMid": {
+     "east": -93.35,
+     "north": 156.04
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 59.4
+   }
+  },
+  {
+   "id": "A-20",
+   "dock": "A",
+   "number": 20,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -99.2,
+      "north": 150.94
+     },
+     {
+      "east": -97.68,
+      "north": 148.29
+     },
+     {
+      "east": -91.06,
+      "north": 152.08
+     },
+     {
+      "east": -92.59,
+      "north": 154.73
+     }
+    ],
+    "centroid": {
+     "east": -95.13,
+     "north": 151.51
+    },
+    "innerMid": {
+     "east": -98.44,
+     "north": 149.62
+    },
+    "outerMid": {
+     "east": -91.83,
+     "north": 153.4
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 62.5
+   }
+  },
+  {
+   "id": "A-21",
+   "dock": "A",
+   "number": 21,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -97.68,
+      "north": 148.29
+     },
+     {
+      "east": -96.16,
+      "north": 145.66
+     },
+     {
+      "east": -89.54,
+      "north": 149.45
+     },
+     {
+      "east": -91.06,
+      "north": 152.08
+     }
+    ],
+    "centroid": {
+     "east": -93.61,
+     "north": 148.87
+    },
+    "innerMid": {
+     "east": -96.92,
+     "north": 146.98
+    },
+    "outerMid": {
+     "east": -90.3,
+     "north": 150.77
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 65.5
+   }
+  },
+  {
+   "id": "A-22",
+   "dock": "A",
+   "number": 22,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -96.16,
+      "north": 145.66
+     },
+     {
+      "east": -94.64,
+      "north": 143.02
+     },
+     {
+      "east": -88.02,
+      "north": 146.81
+     },
+     {
+      "east": -89.54,
+      "north": 149.45
+     }
+    ],
+    "centroid": {
+     "east": -92.09,
+     "north": 146.23
+    },
+    "innerMid": {
+     "east": -95.4,
+     "north": 144.34
+    },
+    "outerMid": {
+     "east": -88.78,
+     "north": 148.13
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 68.6
+   }
+  },
+  {
+   "id": "A-23",
+   "dock": "A",
+   "number": 23,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -94.64,
+      "north": 143.02
+     },
+     {
+      "east": -93.12,
+      "north": 140.38
+     },
+     {
+      "east": -86.5,
+      "north": 144.17
+     },
+     {
+      "east": -88.02,
+      "north": 146.81
+     }
+    ],
+    "centroid": {
+     "east": -90.57,
+     "north": 143.6
+    },
+    "innerMid": {
+     "east": -93.88,
+     "north": 141.7
+    },
+    "outerMid": {
+     "east": -87.26,
+     "north": 145.49
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 71.6
+   }
+  },
+  {
+   "id": "A-24",
+   "dock": "A",
+   "number": 24,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -93.12,
+      "north": 140.38
+     },
+     {
+      "east": -91.59,
+      "north": 137.75
+     },
+     {
+      "east": -84.98,
+      "north": 141.54
+     },
+     {
+      "east": -86.5,
+      "north": 144.17
+     }
+    ],
+    "centroid": {
+     "east": -89.05,
+     "north": 140.96
+    },
+    "innerMid": {
+     "east": -92.36,
+     "north": 139.07
+    },
+    "outerMid": {
+     "east": -85.74,
+     "north": 142.86
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 74.7
+   }
+  },
+  {
+   "id": "A-25",
+   "dock": "A",
+   "number": 25,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -91.59,
+      "north": 137.75
+     },
+     {
+      "east": -90.07,
+      "north": 135.11
+     },
+     {
+      "east": -83.46,
+      "north": 138.9
+     },
+     {
+      "east": -84.98,
+      "north": 141.54
+     }
+    ],
+    "centroid": {
+     "east": -87.53,
+     "north": 138.32
+    },
+    "innerMid": {
+     "east": -90.83,
+     "north": 136.43
+    },
+    "outerMid": {
+     "east": -84.22,
+     "north": 140.22
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 77.7
+   }
+  },
+  {
+   "id": "A-26",
+   "dock": "A",
+   "number": 26,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -90.07,
+      "north": 135.11
+     },
+     {
+      "east": -88.55,
+      "north": 132.48
+     },
+     {
+      "east": -81.94,
+      "north": 136.26
+     },
+     {
+      "east": -83.46,
+      "north": 138.9
+     }
+    ],
+    "centroid": {
+     "east": -86,
+     "north": 135.69
+    },
+    "innerMid": {
+     "east": -89.31,
+     "north": 133.79
+    },
+    "outerMid": {
+     "east": -82.7,
+     "north": 137.58
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 80.8
+   }
+  },
+  {
+   "id": "A-27",
+   "dock": "A",
+   "number": 27,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -88.55,
+      "north": 132.48
+     },
+     {
+      "east": -87.03,
+      "north": 129.83
+     },
+     {
+      "east": -80.42,
+      "north": 133.63
+     },
+     {
+      "east": -81.94,
+      "north": 136.26
+     }
+    ],
+    "centroid": {
+     "east": -84.49,
+     "north": 133.05
+    },
+    "innerMid": {
+     "east": -87.79,
+     "north": 131.15
+    },
+    "outerMid": {
+     "east": -81.18,
+     "north": 134.95
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 83.8
+   }
+  },
+  {
+   "id": "A-28",
+   "dock": "A",
+   "number": 28,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -87.03,
+      "north": 129.83
+     },
+     {
+      "east": -85.51,
+      "north": 127.2
+     },
+     {
+      "east": -78.9,
+      "north": 130.99
+     },
+     {
+      "east": -80.42,
+      "north": 133.63
+     }
+    ],
+    "centroid": {
+     "east": -82.96,
+     "north": 130.41
+    },
+    "innerMid": {
+     "east": -86.27,
+     "north": 128.51
+    },
+    "outerMid": {
+     "east": -79.66,
+     "north": 132.31
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 86.8
+   }
+  },
+  {
+   "id": "A-29",
+   "dock": "A",
+   "number": 29,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -85.51,
+      "north": 127.2
+     },
+     {
+      "east": -83.99,
+      "north": 124.57
+     },
+     {
+      "east": -77.38,
+      "north": 128.35
+     },
+     {
+      "east": -78.9,
+      "north": 130.99
+     }
+    ],
+    "centroid": {
+     "east": -81.45,
+     "north": 127.78
+    },
+    "innerMid": {
+     "east": -84.75,
+     "north": 125.88
+    },
+    "outerMid": {
+     "east": -78.14,
+     "north": 129.67
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 89.9
+   }
+  },
+  {
+   "id": "A-30",
+   "dock": "A",
+   "number": 30,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -83.99,
+      "north": 124.57
+     },
+     {
+      "east": -82.47,
+      "north": 121.92
+     },
+     {
+      "east": -75.86,
+      "north": 125.71
+     },
+     {
+      "east": -77.38,
+      "north": 128.35
+     }
+    ],
+    "centroid": {
+     "east": -79.92,
+     "north": 125.14
+    },
+    "innerMid": {
+     "east": -83.23,
+     "north": 123.24
+    },
+    "outerMid": {
+     "east": -76.62,
+     "north": 127.03
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 92.9
+   }
+  },
+  {
+   "id": "A-31",
+   "dock": "A",
+   "number": 31,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -82.47,
+      "north": 121.92
+     },
+     {
+      "east": -80.95,
+      "north": 119.29
+     },
+     {
+      "east": -74.33,
+      "north": 123.08
+     },
+     {
+      "east": -75.86,
+      "north": 125.71
+     }
+    ],
+    "centroid": {
+     "east": -78.4,
+     "north": 122.5
+    },
+    "innerMid": {
+     "east": -81.71,
+     "north": 120.61
+    },
+    "outerMid": {
+     "east": -75.09,
+     "north": 124.39
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 96
+   }
+  },
+  {
+   "id": "A-32",
+   "dock": "A",
+   "number": 32,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -80.95,
+      "north": 119.29
+     },
+     {
+      "east": -79.43,
+      "north": 116.64
+     },
+     {
+      "east": -72.81,
+      "north": 120.44
+     },
+     {
+      "east": -74.33,
+      "north": 123.08
+     }
+    ],
+    "centroid": {
+     "east": -76.88,
+     "north": 119.86
+    },
+    "innerMid": {
+     "east": -80.19,
+     "north": 117.97
+    },
+    "outerMid": {
+     "east": -73.57,
+     "north": 121.76
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 99
+   }
+  },
+  {
+   "id": "A-33",
+   "dock": "A",
+   "number": 33,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -79.43,
+      "north": 116.64
+     },
+     {
+      "east": -77.91,
+      "north": 114.01
+     },
+     {
+      "east": -71.29,
+      "north": 117.8
+     },
+     {
+      "east": -72.81,
+      "north": 120.44
+     }
+    ],
+    "centroid": {
+     "east": -75.36,
+     "north": 117.23
+    },
+    "innerMid": {
+     "east": -78.67,
+     "north": 115.33
+    },
+    "outerMid": {
+     "east": -72.05,
+     "north": 119.12
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 102.1
+   }
+  },
+  {
+   "id": "A-34",
+   "dock": "A",
+   "number": 34,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -77.91,
+      "north": 114.01
+     },
+     {
+      "east": -76.39,
+      "north": 111.38
+     },
+     {
+      "east": -69.77,
+      "north": 115.17
+     },
+     {
+      "east": -71.29,
+      "north": 117.8
+     }
+    ],
+    "centroid": {
+     "east": -73.84,
+     "north": 114.59
+    },
+    "innerMid": {
+     "east": -77.15,
+     "north": 112.7
+    },
+    "outerMid": {
+     "east": -70.53,
+     "north": 116.48
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 105.1
+   }
+  },
+  {
+   "id": "A-35",
+   "dock": "A",
+   "number": 35,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -76.39,
+      "north": 111.38
+     },
+     {
+      "east": -74.86,
+      "north": 108.74
+     },
+     {
+      "east": -68.25,
+      "north": 112.52
+     },
+     {
+      "east": -69.77,
+      "north": 115.17
+     }
+    ],
+    "centroid": {
+     "east": -72.32,
+     "north": 111.95
+    },
+    "innerMid": {
+     "east": -75.62,
+     "north": 110.06
+    },
+    "outerMid": {
+     "east": -69.01,
+     "north": 113.85
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 108.2
+   }
+  },
+  {
+   "id": "A-36",
+   "dock": "A",
+   "number": 36,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -74.86,
+      "north": 108.74
+     },
+     {
+      "east": -73.34,
+      "north": 106.1
+     },
+     {
+      "east": -66.72,
+      "north": 109.89
+     },
+     {
+      "east": -68.25,
+      "north": 112.52
+     }
+    ],
+    "centroid": {
+     "east": -70.79,
+     "north": 109.31
+    },
+    "innerMid": {
+     "east": -74.1,
+     "north": 107.42
+    },
+    "outerMid": {
+     "east": -67.49,
+     "north": 111.21
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.62,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 111.2
+   }
+  },
+  {
+   "id": "A-37",
+   "dock": "A",
+   "number": 37,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -73.34,
+      "north": 106.1
+     },
+     {
+      "east": -71.82,
+      "north": 103.47
+     },
+     {
+      "east": -65.2,
+      "north": 107.26
+     },
+     {
+      "east": -66.72,
+      "north": 109.89
+     }
+    ],
+    "centroid": {
+     "east": -69.27,
+     "north": 106.68
+    },
+    "innerMid": {
+     "east": -72.58,
+     "north": 104.79
+    },
+    "outerMid": {
+     "east": -65.96,
+     "north": 108.57
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 114.2
+   }
+  },
+  {
+   "id": "A-38",
+   "dock": "A",
+   "number": 38,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -71.82,
+      "north": 103.47
+     },
+     {
+      "east": -70.3,
+      "north": 100.83
+     },
+     {
+      "east": -63.68,
+      "north": 104.61
+     },
+     {
+      "east": -65.2,
+      "north": 107.26
+     }
+    ],
+    "centroid": {
+     "east": -67.75,
+     "north": 104.04
+    },
+    "innerMid": {
+     "east": -71.06,
+     "north": 102.15
+    },
+    "outerMid": {
+     "east": -64.44,
+     "north": 105.94
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.05,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 117.3
+   }
+  },
+  {
+   "id": "A-39",
+   "dock": "A",
+   "number": 39,
+   "length_ft": 25,
+   "width_ft": 10,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 934085283,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -70.3,
+      "north": 100.83
+     },
+     {
+      "east": -68.78,
+      "north": 98.19
+     },
+     {
+      "east": -62.16,
+      "north": 101.98
+     },
+     {
+      "east": -63.68,
+      "north": 104.61
+     }
+    ],
+    "centroid": {
+     "east": -66.23,
+     "north": 101.4
+    },
+    "innerMid": {
+     "east": -69.54,
+     "north": 99.51
+    },
+    "outerMid": {
+     "east": -62.92,
+     "north": 103.3
+    },
+    "headingDeg": 60.2,
+    "measuredLength_m": 7.63,
+    "measuredWidth_m": 3.04,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 120.3
+   }
+  },
+  {
+   "id": "B-01",
+   "dock": "B",
+   "number": 1,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -28.7,
+      "north": 29.35
+     },
+     {
+      "east": -26.98,
+      "north": 26.48
+     },
+     {
+      "east": -19.13,
+      "north": 31.18
+     },
+     {
+      "east": -20.86,
+      "north": 34.06
+     }
+    ],
+    "centroid": {
+     "east": -23.92,
+     "north": 30.27
+    },
+    "innerMid": {
+     "east": -27.84,
+     "north": 27.92
+    },
+    "outerMid": {
+     "east": -19.99,
+     "north": 32.62
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 47.1
+   }
+  },
+  {
+   "id": "B-02",
+   "dock": "B",
+   "number": 2,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -26.98,
+      "north": 26.48
+     },
+     {
+      "east": -25.25,
+      "north": 23.62
+     },
+     {
+      "east": -17.4,
+      "north": 28.32
+     },
+     {
+      "east": -19.13,
+      "north": 31.18
+     }
+    ],
+    "centroid": {
+     "east": -22.19,
+     "north": 27.4
+    },
+    "innerMid": {
+     "east": -26.11,
+     "north": 25.05
+    },
+    "outerMid": {
+     "east": -18.26,
+     "north": 29.75
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 50.5
+   }
+  },
+  {
+   "id": "B-03",
+   "dock": "B",
+   "number": 3,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -25.25,
+      "north": 23.62
+     },
+     {
+      "east": -23.52,
+      "north": 20.75
+     },
+     {
+      "east": -15.66,
+      "north": 25.45
+     },
+     {
+      "east": -17.4,
+      "north": 28.32
+     }
+    ],
+    "centroid": {
+     "east": -20.46,
+     "north": 24.53
+    },
+    "innerMid": {
+     "east": -24.38,
+     "north": 22.18
+    },
+    "outerMid": {
+     "east": -16.53,
+     "north": 26.88
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 53.8
+   }
+  },
+  {
+   "id": "B-04",
+   "dock": "B",
+   "number": 4,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -23.52,
+      "north": 20.75
+     },
+     {
+      "east": -21.78,
+      "north": 17.89
+     },
+     {
+      "east": -13.94,
+      "north": 22.58
+     },
+     {
+      "east": -15.66,
+      "north": 25.45
+     }
+    ],
+    "centroid": {
+     "east": -18.73,
+     "north": 21.67
+    },
+    "innerMid": {
+     "east": -22.65,
+     "north": 19.32
+    },
+    "outerMid": {
+     "east": -14.8,
+     "north": 24.02
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 57.2
+   }
+  },
+  {
+   "id": "B-05",
+   "dock": "B",
+   "number": 5,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -21.78,
+      "north": 17.89
+     },
+     {
+      "east": -20.05,
+      "north": 15.02
+     },
+     {
+      "east": -12.21,
+      "north": 19.72
+     },
+     {
+      "east": -13.94,
+      "north": 22.58
+     }
+    ],
+    "centroid": {
+     "east": -17,
+     "north": 18.8
+    },
+    "innerMid": {
+     "east": -20.92,
+     "north": 16.45
+    },
+    "outerMid": {
+     "east": -13.07,
+     "north": 21.15
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.14,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 60.5
+   }
+  },
+  {
+   "id": "B-06",
+   "dock": "B",
+   "number": 6,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -20.05,
+      "north": 15.02
+     },
+     {
+      "east": -18.32,
+      "north": 12.15
+     },
+     {
+      "east": -10.47,
+      "north": 16.85
+     },
+     {
+      "east": -12.21,
+      "north": 19.72
+     }
+    ],
+    "centroid": {
+     "east": -15.26,
+     "north": 15.94
+    },
+    "innerMid": {
+     "east": -19.18,
+     "north": 13.59
+    },
+    "outerMid": {
+     "east": -11.34,
+     "north": 18.29
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.14,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 63.9
+   }
+  },
+  {
+   "id": "B-07",
+   "dock": "B",
+   "number": 7,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -18.32,
+      "north": 12.15
+     },
+     {
+      "east": -16.59,
+      "north": 9.29
+     },
+     {
+      "east": -8.74,
+      "north": 13.99
+     },
+     {
+      "east": -10.47,
+      "north": 16.85
+     }
+    ],
+    "centroid": {
+     "east": -13.53,
+     "north": 13.07
+    },
+    "innerMid": {
+     "east": -17.46,
+     "north": 10.72
+    },
+    "outerMid": {
+     "east": -9.61,
+     "north": 15.42
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 67.2
+   }
+  },
+  {
+   "id": "B-08",
+   "dock": "B",
+   "number": 8,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -16.59,
+      "north": 9.29
+     },
+     {
+      "east": -14.86,
+      "north": 6.41
+     },
+     {
+      "east": -7.01,
+      "north": 11.12
+     },
+     {
+      "east": -8.74,
+      "north": 13.99
+     }
+    ],
+    "centroid": {
+     "east": -11.8,
+     "north": 10.2
+    },
+    "innerMid": {
+     "east": -15.73,
+     "north": 7.85
+    },
+    "outerMid": {
+     "east": -7.88,
+     "north": 12.55
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 70.6
+   }
+  },
+  {
+   "id": "B-09",
+   "dock": "B",
+   "number": 9,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -14.86,
+      "north": 6.41
+     },
+     {
+      "east": -13.13,
+      "north": 3.54
+     },
+     {
+      "east": -5.28,
+      "north": 8.25
+     },
+     {
+      "east": -7.01,
+      "north": 11.12
+     }
+    ],
+    "centroid": {
+     "east": -10.07,
+     "north": 7.33
+    },
+    "innerMid": {
+     "east": -14,
+     "north": 4.98
+    },
+    "outerMid": {
+     "east": -6.14,
+     "north": 9.69
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.16,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 73.9
+   }
+  },
+  {
+   "id": "B-10",
+   "dock": "B",
+   "number": 10,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -13.13,
+      "north": 3.54
+     },
+     {
+      "east": -11.4,
+      "north": 0.68
+     },
+     {
+      "east": -3.55,
+      "north": 5.39
+     },
+     {
+      "east": -5.28,
+      "north": 8.25
+     }
+    ],
+    "centroid": {
+     "east": -8.34,
+     "north": 4.47
+    },
+    "innerMid": {
+     "east": -12.26,
+     "north": 2.11
+    },
+    "outerMid": {
+     "east": -4.42,
+     "north": 6.82
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 77.3
+   }
+  },
+  {
+   "id": "B-11",
+   "dock": "B",
+   "number": 11,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -11.4,
+      "north": 0.68
+     },
+     {
+      "east": -9.67,
+      "north": -2.19
+     },
+     {
+      "east": -1.82,
+      "north": 2.52
+     },
+     {
+      "east": -3.55,
+      "north": 5.39
+     }
+    ],
+    "centroid": {
+     "east": -6.61,
+     "north": 1.6
+    },
+    "innerMid": {
+     "east": -10.53,
+     "north": -0.76
+    },
+    "outerMid": {
+     "east": -2.69,
+     "north": 3.95
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 80.6
+   }
+  },
+  {
+   "id": "B-12",
+   "dock": "B",
+   "number": 12,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -9.67,
+      "north": -2.19
+     },
+     {
+      "east": -7.93,
+      "north": -5.05
+     },
+     {
+      "east": -0.09,
+      "north": -0.36
+     },
+     {
+      "east": -1.82,
+      "north": 2.52
+     }
+    ],
+    "centroid": {
+     "east": -4.88,
+     "north": -1.27
+    },
+    "innerMid": {
+     "east": -8.8,
+     "north": -3.62
+    },
+    "outerMid": {
+     "east": -0.96,
+     "north": 1.08
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 84
+   }
+  },
+  {
+   "id": "B-13",
+   "dock": "B",
+   "number": 13,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -7.93,
+      "north": -5.05
+     },
+     {
+      "east": -6.21,
+      "north": -7.92
+     },
+     {
+      "east": 1.64,
+      "north": -3.22
+     },
+     {
+      "east": -0.09,
+      "north": -0.36
+     }
+    ],
+    "centroid": {
+     "east": -3.15,
+     "north": -4.14
+    },
+    "innerMid": {
+     "east": -7.07,
+     "north": -6.49
+    },
+    "outerMid": {
+     "east": 0.78,
+     "north": -1.79
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 87.3
+   }
+  },
+  {
+   "id": "B-14",
+   "dock": "B",
+   "number": 14,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -6.21,
+      "north": -7.92
+     },
+     {
+      "east": -4.48,
+      "north": -10.79
+     },
+     {
+      "east": 3.37,
+      "north": -6.09
+     },
+     {
+      "east": 1.64,
+      "north": -3.22
+     }
+    ],
+    "centroid": {
+     "east": -1.42,
+     "north": -7
+    },
+    "innerMid": {
+     "east": -5.34,
+     "north": -9.35
+    },
+    "outerMid": {
+     "east": 2.51,
+     "north": -4.65
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 90.7
+   }
+  },
+  {
+   "id": "B-15",
+   "dock": "B",
+   "number": 15,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -4.48,
+      "north": -10.79
+     },
+     {
+      "east": -2.75,
+      "north": -13.65
+     },
+     {
+      "east": 5.11,
+      "north": -8.95
+     },
+     {
+      "east": 3.37,
+      "north": -6.09
+     }
+    ],
+    "centroid": {
+     "east": 0.31,
+     "north": -9.87
+    },
+    "innerMid": {
+     "east": -3.61,
+     "north": -12.22
+    },
+    "outerMid": {
+     "east": 4.24,
+     "north": -7.52
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 94
+   }
+  },
+  {
+   "id": "B-16",
+   "dock": "B",
+   "number": 16,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -2.75,
+      "north": -13.65
+     },
+     {
+      "east": -1.01,
+      "north": -16.52
+     },
+     {
+      "east": 6.83,
+      "north": -11.82
+     },
+     {
+      "east": 5.11,
+      "north": -8.95
+     }
+    ],
+    "centroid": {
+     "east": 2.04,
+     "north": -12.74
+    },
+    "innerMid": {
+     "east": -1.88,
+     "north": -15.09
+    },
+    "outerMid": {
+     "east": 5.97,
+     "north": -10.39
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 97.4
+   }
+  },
+  {
+   "id": "B-17",
+   "dock": "B",
+   "number": 17,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": -1.01,
+      "north": -16.52
+     },
+     {
+      "east": 0.72,
+      "north": -19.39
+     },
+     {
+      "east": 8.56,
+      "north": -14.69
+     },
+     {
+      "east": 6.83,
+      "north": -11.82
+     }
+    ],
+    "centroid": {
+     "east": 3.77,
+     "north": -15.6
+    },
+    "innerMid": {
+     "east": -0.15,
+     "north": -17.95
+    },
+    "outerMid": {
+     "east": 7.7,
+     "north": -13.25
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.14,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 100.7
+   }
+  },
+  {
+   "id": "B-18",
+   "dock": "B",
+   "number": 18,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 0.72,
+      "north": -19.39
+     },
+     {
+      "east": 2.45,
+      "north": -22.26
+     },
+     {
+      "east": 10.3,
+      "north": -17.55
+     },
+     {
+      "east": 8.56,
+      "north": -14.69
+     }
+    ],
+    "centroid": {
+     "east": 5.51,
+     "north": -18.47
+    },
+    "innerMid": {
+     "east": 1.59,
+     "north": -20.82
+    },
+    "outerMid": {
+     "east": 9.43,
+     "north": -16.12
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 104.1
+   }
+  },
+  {
+   "id": "B-19",
+   "dock": "B",
+   "number": 19,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 2.45,
+      "north": -22.26
+     },
+     {
+      "east": 4.18,
+      "north": -25.13
+     },
+     {
+      "east": 12.03,
+      "north": -20.42
+     },
+     {
+      "east": 10.3,
+      "north": -17.55
+     }
+    ],
+    "centroid": {
+     "east": 7.24,
+     "north": -21.34
+    },
+    "innerMid": {
+     "east": 3.31,
+     "north": -23.7
+    },
+    "outerMid": {
+     "east": 11.16,
+     "north": -18.99
+    },
+    "headingDeg": 59,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 107.4
+   }
+  },
+  {
+   "id": "B-20",
+   "dock": "B",
+   "number": 20,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 13.24,
+      "north": -39.48
+     },
+     {
+      "east": 14.96,
+      "north": -42.36
+     },
+     {
+      "east": 22.81,
+      "north": -37.66
+     },
+     {
+      "east": 21.09,
+      "north": -34.79
+     }
+    ],
+    "centroid": {
+     "east": 18.02,
+     "north": -38.57
+    },
+    "innerMid": {
+     "east": 14.1,
+     "north": -40.92
+    },
+    "outerMid": {
+     "east": 21.95,
+     "north": -36.23
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 127.8
+   }
+  },
+  {
+   "id": "B-21",
+   "dock": "B",
+   "number": 21,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 14.96,
+      "north": -42.36
+     },
+     {
+      "east": 16.69,
+      "north": -45.22
+     },
+     {
+      "east": 24.54,
+      "north": -40.53
+     },
+     {
+      "east": 22.81,
+      "north": -37.66
+     }
+    ],
+    "centroid": {
+     "east": 19.75,
+     "north": -41.44
+    },
+    "innerMid": {
+     "east": 15.83,
+     "north": -43.79
+    },
+    "outerMid": {
+     "east": 23.68,
+     "north": -39.09
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 131.1
+   }
+  },
+  {
+   "id": "B-22",
+   "dock": "B",
+   "number": 22,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 16.69,
+      "north": -45.22
+     },
+     {
+      "east": 18.42,
+      "north": -48.09
+     },
+     {
+      "east": 26.27,
+      "north": -43.39
+     },
+     {
+      "east": 24.54,
+      "north": -40.53
+     }
+    ],
+    "centroid": {
+     "east": 21.48,
+     "north": -44.31
+    },
+    "innerMid": {
+     "east": 17.55,
+     "north": -46.66
+    },
+    "outerMid": {
+     "east": 25.41,
+     "north": -41.96
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.34,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 134.5
+   }
+  },
+  {
+   "id": "B-23",
+   "dock": "B",
+   "number": 23,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 18.42,
+      "north": -48.09
+     },
+     {
+      "east": 20.15,
+      "north": -50.96
+     },
+     {
+      "east": 28,
+      "north": -46.26
+     },
+     {
+      "east": 26.27,
+      "north": -43.39
+     }
+    ],
+    "centroid": {
+     "east": 23.21,
+     "north": -47.17
+    },
+    "innerMid": {
+     "east": 19.28,
+     "north": -49.52
+    },
+    "outerMid": {
+     "east": 27.13,
+     "north": -44.82
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 137.8
+   }
+  },
+  {
+   "id": "B-24",
+   "dock": "B",
+   "number": 24,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 20.15,
+      "north": -50.96
+     },
+     {
+      "east": 21.88,
+      "north": -53.82
+     },
+     {
+      "east": 29.73,
+      "north": -49.14
+     },
+     {
+      "east": 28,
+      "north": -46.26
+     }
+    ],
+    "centroid": {
+     "east": 24.94,
+     "north": -50.04
+    },
+    "innerMid": {
+     "east": 21.02,
+     "north": -52.39
+    },
+    "outerMid": {
+     "east": 28.87,
+     "north": -47.7
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 141.1
+   }
+  },
+  {
+   "id": "B-25",
+   "dock": "B",
+   "number": 25,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 21.88,
+      "north": -53.82
+     },
+     {
+      "east": 23.61,
+      "north": -56.7
+     },
+     {
+      "east": 31.46,
+      "north": -52
+     },
+     {
+      "east": 29.73,
+      "north": -49.14
+     }
+    ],
+    "centroid": {
+     "east": 26.67,
+     "north": -52.92
+    },
+    "innerMid": {
+     "east": 22.74,
+     "north": -55.26
+    },
+    "outerMid": {
+     "east": 30.6,
+     "north": -50.57
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 144.5
+   }
+  },
+  {
+   "id": "B-26",
+   "dock": "B",
+   "number": 26,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 23.61,
+      "north": -56.7
+     },
+     {
+      "east": 25.34,
+      "north": -59.57
+     },
+     {
+      "east": 33.19,
+      "north": -54.87
+     },
+     {
+      "east": 31.46,
+      "north": -52
+     }
+    ],
+    "centroid": {
+     "east": 28.4,
+     "north": -55.78
+    },
+    "innerMid": {
+     "east": 24.47,
+     "north": -58.13
+    },
+    "outerMid": {
+     "east": 32.32,
+     "north": -53.43
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 147.8
+   }
+  },
+  {
+   "id": "B-27",
+   "dock": "B",
+   "number": 27,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 25.34,
+      "north": -59.57
+     },
+     {
+      "east": 27.06,
+      "north": -62.43
+     },
+     {
+      "east": 34.91,
+      "north": -57.73
+     },
+     {
+      "east": 33.19,
+      "north": -54.87
+     }
+    ],
+    "centroid": {
+     "east": 30.13,
+     "north": -58.65
+    },
+    "innerMid": {
+     "east": 26.2,
+     "north": -61
+    },
+    "outerMid": {
+     "east": 34.05,
+     "north": -56.3
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.34,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 151.2
+   }
+  },
+  {
+   "id": "B-28",
+   "dock": "B",
+   "number": 28,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 27.06,
+      "north": -62.43
+     },
+     {
+      "east": 28.79,
+      "north": -65.3
+     },
+     {
+      "east": 36.65,
+      "north": -60.6
+     },
+     {
+      "east": 34.91,
+      "north": -57.73
+     }
+    ],
+    "centroid": {
+     "east": 31.85,
+     "north": -61.52
+    },
+    "innerMid": {
+     "east": 27.93,
+     "north": -63.87
+    },
+    "outerMid": {
+     "east": 35.78,
+     "north": -59.17
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 154.5
+   }
+  },
+  {
+   "id": "B-29",
+   "dock": "B",
+   "number": 29,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 28.79,
+      "north": -65.3
+     },
+     {
+      "east": 30.53,
+      "north": -68.16
+     },
+     {
+      "east": 38.38,
+      "north": -63.48
+     },
+     {
+      "east": 36.65,
+      "north": -60.6
+     }
+    ],
+    "centroid": {
+     "east": 33.59,
+     "north": -64.38
+    },
+    "innerMid": {
+     "east": 29.66,
+     "north": -66.73
+    },
+    "outerMid": {
+     "east": 37.51,
+     "north": -62.04
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 157.9
+   }
+  },
+  {
+   "id": "B-30",
+   "dock": "B",
+   "number": 30,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 30.53,
+      "north": -68.16
+     },
+     {
+      "east": 32.25,
+      "north": -71.04
+     },
+     {
+      "east": 40.1,
+      "north": -66.34
+     },
+     {
+      "east": 38.38,
+      "north": -63.48
+     }
+    ],
+    "centroid": {
+     "east": 35.31,
+     "north": -67.26
+    },
+    "innerMid": {
+     "east": 31.39,
+     "north": -69.6
+    },
+    "outerMid": {
+     "east": 39.24,
+     "north": -64.91
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 161.2
+   }
+  },
+  {
+   "id": "B-31",
+   "dock": "B",
+   "number": 31,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 32.25,
+      "north": -71.04
+     },
+     {
+      "east": 33.98,
+      "north": -73.91
+     },
+     {
+      "east": 41.83,
+      "north": -69.21
+     },
+     {
+      "east": 40.1,
+      "north": -66.34
+     }
+    ],
+    "centroid": {
+     "east": 37.04,
+     "north": -70.13
+    },
+    "innerMid": {
+     "east": 33.12,
+     "north": -72.48
+    },
+    "outerMid": {
+     "east": 40.97,
+     "north": -67.78
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 164.6
+   }
+  },
+  {
+   "id": "B-32",
+   "dock": "B",
+   "number": 32,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 33.98,
+      "north": -73.91
+     },
+     {
+      "east": 35.71,
+      "north": -76.77
+     },
+     {
+      "east": 43.56,
+      "north": -72.08
+     },
+     {
+      "east": 41.83,
+      "north": -69.21
+     }
+    ],
+    "centroid": {
+     "east": 38.77,
+     "north": -72.99
+    },
+    "innerMid": {
+     "east": 34.84,
+     "north": -75.34
+    },
+    "outerMid": {
+     "east": 42.7,
+     "north": -70.64
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.34,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 167.9
+   }
+  },
+  {
+   "id": "B-33",
+   "dock": "B",
+   "number": 33,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 35.71,
+      "north": -76.77
+     },
+     {
+      "east": 37.44,
+      "north": -79.64
+     },
+     {
+      "east": 45.29,
+      "north": -74.94
+     },
+     {
+      "east": 43.56,
+      "north": -72.08
+     }
+    ],
+    "centroid": {
+     "east": 40.5,
+     "north": -75.86
+    },
+    "innerMid": {
+     "east": 36.57,
+     "north": -78.21
+    },
+    "outerMid": {
+     "east": 44.42,
+     "north": -73.51
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 171.3
+   }
+  },
+  {
+   "id": "B-34",
+   "dock": "B",
+   "number": 34,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 37.44,
+      "north": -79.64
+     },
+     {
+      "east": 39.17,
+      "north": -82.51
+     },
+     {
+      "east": 47.02,
+      "north": -77.82
+     },
+     {
+      "east": 45.29,
+      "north": -74.94
+     }
+    ],
+    "centroid": {
+     "east": 42.23,
+     "north": -78.73
+    },
+    "innerMid": {
+     "east": 38.3,
+     "north": -81.07
+    },
+    "outerMid": {
+     "east": 46.16,
+     "north": -76.38
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 174.6
+   }
+  },
+  {
+   "id": "B-35",
+   "dock": "B",
+   "number": 35,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 39.17,
+      "north": -82.51
+     },
+     {
+      "east": 40.89,
+      "north": -85.38
+     },
+     {
+      "east": 48.75,
+      "north": -80.68
+     },
+     {
+      "east": 47.02,
+      "north": -77.82
+     }
+    ],
+    "centroid": {
+     "east": 43.96,
+     "north": -81.6
+    },
+    "innerMid": {
+     "east": 40.03,
+     "north": -83.95
+    },
+    "outerMid": {
+     "east": 47.88,
+     "north": -79.25
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 178
+   }
+  },
+  {
+   "id": "B-36",
+   "dock": "B",
+   "number": 36,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 40.89,
+      "north": -85.38
+     },
+     {
+      "east": 42.63,
+      "north": -88.25
+     },
+     {
+      "east": 50.48,
+      "north": -83.55
+     },
+     {
+      "east": 48.75,
+      "north": -80.68
+     }
+    ],
+    "centroid": {
+     "east": 45.69,
+     "north": -84.47
+    },
+    "innerMid": {
+     "east": 41.76,
+     "north": -86.82
+    },
+    "outerMid": {
+     "east": 49.61,
+     "north": -82.12
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.35,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 181.3
+   }
+  },
+  {
+   "id": "B-37",
+   "dock": "B",
+   "number": 37,
+   "length_ft": 30,
+   "width_ft": 11,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 934085288,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 42.63,
+      "north": -88.25
+     },
+     {
+      "east": 44.35,
+      "north": -91.12
+     },
+     {
+      "east": 52.2,
+      "north": -86.42
+     },
+     {
+      "east": 50.48,
+      "north": -83.55
+     }
+    ],
+    "centroid": {
+     "east": 47.41,
+     "north": -87.33
+    },
+    "innerMid": {
+     "east": 43.49,
+     "north": -89.68
+    },
+    "outerMid": {
+     "east": 51.34,
+     "north": -84.98
+    },
+    "headingDeg": 59.1,
+    "measuredLength_m": 9.15,
+    "measuredWidth_m": 3.34,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 184.7
+   }
+  },
+  {
+   "id": "C-01",
+   "dock": "C",
+   "number": 1,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 146.2,
+      "north": -271.86
+     },
+     {
+      "east": 148.48,
+      "north": -274.9
+     },
+     {
+      "east": 157.05,
+      "north": -268.55
+     },
+     {
+      "east": 154.77,
+      "north": -265.49
+     }
+    ],
+    "centroid": {
+     "east": 151.63,
+     "north": -270.2
+    },
+    "innerMid": {
+     "east": 147.34,
+     "north": -273.38
+    },
+    "outerMid": {
+     "east": 155.91,
+     "north": -267.02
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 15.5
+   }
+  },
+  {
+   "id": "C-02",
+   "dock": "C",
+   "number": 2,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 148.48,
+      "north": -274.9
+     },
+     {
+      "east": 150.76,
+      "north": -277.96
+     },
+     {
+      "east": 159.33,
+      "north": -271.59
+     },
+     {
+      "east": 157.05,
+      "north": -268.55
+     }
+    ],
+    "centroid": {
+     "east": 153.9,
+     "north": -273.25
+    },
+    "innerMid": {
+     "east": 149.62,
+     "north": -276.43
+    },
+    "outerMid": {
+     "east": 158.19,
+     "north": -270.07
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 19.3
+   }
+  },
+  {
+   "id": "C-03",
+   "dock": "C",
+   "number": 3,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 150.76,
+      "north": -277.96
+     },
+     {
+      "east": 153.04,
+      "north": -281
+     },
+     {
+      "east": 161.61,
+      "north": -274.65
+     },
+     {
+      "east": 159.33,
+      "north": -271.59
+     }
+    ],
+    "centroid": {
+     "east": 156.18,
+     "north": -276.3
+    },
+    "innerMid": {
+     "east": 151.9,
+     "north": -279.48
+    },
+    "outerMid": {
+     "east": 160.47,
+     "north": -273.12
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 23.1
+   }
+  },
+  {
+   "id": "C-04",
+   "dock": "C",
+   "number": 4,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 153.04,
+      "north": -281
+     },
+     {
+      "east": 155.32,
+      "north": -284.06
+     },
+     {
+      "east": 163.89,
+      "north": -277.69
+     },
+     {
+      "east": 161.61,
+      "north": -274.65
+     }
+    ],
+    "centroid": {
+     "east": 158.46,
+     "north": -279.35
+    },
+    "innerMid": {
+     "east": 154.18,
+     "north": -282.53
+    },
+    "outerMid": {
+     "east": 162.75,
+     "north": -276.17
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 26.9
+   }
+  },
+  {
+   "id": "C-05",
+   "dock": "C",
+   "number": 5,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 155.32,
+      "north": -284.06
+     },
+     {
+      "east": 157.6,
+      "north": -287.1
+     },
+     {
+      "east": 166.17,
+      "north": -280.74
+     },
+     {
+      "east": 163.89,
+      "north": -277.69
+     }
+    ],
+    "centroid": {
+     "east": 160.74,
+     "north": -282.4
+    },
+    "innerMid": {
+     "east": 156.46,
+     "north": -285.58
+    },
+    "outerMid": {
+     "east": 165.03,
+     "north": -279.21
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 30.7
+   }
+  },
+  {
+   "id": "C-06",
+   "dock": "C",
+   "number": 6,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 157.6,
+      "north": -287.1
+     },
+     {
+      "east": 159.88,
+      "north": -290.15
+     },
+     {
+      "east": 168.45,
+      "north": -283.79
+     },
+     {
+      "east": 166.17,
+      "north": -280.74
+     }
+    ],
+    "centroid": {
+     "east": 163.03,
+     "north": -285.44
+    },
+    "innerMid": {
+     "east": 158.74,
+     "north": -288.62
+    },
+    "outerMid": {
+     "east": 167.31,
+     "north": -282.26
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 34.5
+   }
+  },
+  {
+   "id": "C-07",
+   "dock": "C",
+   "number": 7,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 159.88,
+      "north": -290.15
+     },
+     {
+      "east": 162.16,
+      "north": -293.2
+     },
+     {
+      "east": 170.73,
+      "north": -286.84
+     },
+     {
+      "east": 168.45,
+      "north": -283.79
+     }
+    ],
+    "centroid": {
+     "east": 165.3,
+     "north": -288.49
+    },
+    "innerMid": {
+     "east": 161.02,
+     "north": -291.67
+    },
+    "outerMid": {
+     "east": 169.59,
+     "north": -285.31
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 38.3
+   }
+  },
+  {
+   "id": "C-08",
+   "dock": "C",
+   "number": 8,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 162.16,
+      "north": -293.2
+     },
+     {
+      "east": 164.44,
+      "north": -296.24
+     },
+     {
+      "east": 173.01,
+      "north": -289.89
+     },
+     {
+      "east": 170.73,
+      "north": -286.84
+     }
+    ],
+    "centroid": {
+     "east": 167.59,
+     "north": -291.54
+    },
+    "innerMid": {
+     "east": 163.3,
+     "north": -294.72
+    },
+    "outerMid": {
+     "east": 171.87,
+     "north": -288.36
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 42.1
+   }
+  },
+  {
+   "id": "C-09",
+   "dock": "C",
+   "number": 9,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 164.44,
+      "north": -296.24
+     },
+     {
+      "east": 166.72,
+      "north": -299.3
+     },
+     {
+      "east": 175.29,
+      "north": -292.93
+     },
+     {
+      "east": 173.01,
+      "north": -289.89
+     }
+    ],
+    "centroid": {
+     "east": 169.86,
+     "north": -294.59
+    },
+    "innerMid": {
+     "east": 165.58,
+     "north": -297.77
+    },
+    "outerMid": {
+     "east": 174.15,
+     "north": -291.41
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 46
+   }
+  },
+  {
+   "id": "C-10",
+   "dock": "C",
+   "number": 10,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 172.42,
+      "north": -306.91
+     },
+     {
+      "east": 174.7,
+      "north": -309.96
+     },
+     {
+      "east": 183.26,
+      "north": -303.6
+     },
+     {
+      "east": 180.98,
+      "north": -300.55
+     }
+    ],
+    "centroid": {
+     "east": 177.84,
+     "north": -305.26
+    },
+    "innerMid": {
+     "east": 173.56,
+     "north": -308.44
+    },
+    "outerMid": {
+     "east": 182.12,
+     "north": -302.08
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 59.3
+   }
+  },
+  {
+   "id": "C-11",
+   "dock": "C",
+   "number": 11,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 174.7,
+      "north": -309.96
+     },
+     {
+      "east": 176.98,
+      "north": -313.01
+     },
+     {
+      "east": 185.54,
+      "north": -306.65
+     },
+     {
+      "east": 183.26,
+      "north": -303.6
+     }
+    ],
+    "centroid": {
+     "east": 180.12,
+     "north": -308.3
+    },
+    "innerMid": {
+     "east": 175.84,
+     "north": -311.49
+    },
+    "outerMid": {
+     "east": 184.4,
+     "north": -305.13
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 63.1
+   }
+  },
+  {
+   "id": "C-12",
+   "dock": "C",
+   "number": 12,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 176.98,
+      "north": -313.01
+     },
+     {
+      "east": 179.26,
+      "north": -316.06
+     },
+     {
+      "east": 187.82,
+      "north": -309.7
+     },
+     {
+      "east": 185.54,
+      "north": -306.65
+     }
+    ],
+    "centroid": {
+     "east": 182.4,
+     "north": -311.36
+    },
+    "innerMid": {
+     "east": 178.12,
+     "north": -314.54
+    },
+    "outerMid": {
+     "east": 186.68,
+     "north": -308.18
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 66.9
+   }
+  },
+  {
+   "id": "C-13",
+   "dock": "C",
+   "number": 13,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 179.26,
+      "north": -316.06
+     },
+     {
+      "east": 181.53,
+      "north": -319.11
+     },
+     {
+      "east": 190.1,
+      "north": -312.75
+     },
+     {
+      "east": 187.82,
+      "north": -309.7
+     }
+    ],
+    "centroid": {
+     "east": 184.68,
+     "north": -314.4
+    },
+    "innerMid": {
+     "east": 180.39,
+     "north": -317.58
+    },
+    "outerMid": {
+     "east": 188.96,
+     "north": -311.22
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.8,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 70.7
+   }
+  },
+  {
+   "id": "C-14",
+   "dock": "C",
+   "number": 14,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 181.53,
+      "north": -319.11
+     },
+     {
+      "east": 183.81,
+      "north": -322.16
+     },
+     {
+      "east": 192.38,
+      "north": -315.8
+     },
+     {
+      "east": 190.1,
+      "north": -312.75
+     }
+    ],
+    "centroid": {
+     "east": 186.95,
+     "north": -317.46
+    },
+    "innerMid": {
+     "east": 182.67,
+     "north": -320.63
+    },
+    "outerMid": {
+     "east": 191.24,
+     "north": -314.27
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 74.5
+   }
+  },
+  {
+   "id": "C-15",
+   "dock": "C",
+   "number": 15,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 183.81,
+      "north": -322.16
+     },
+     {
+      "east": 186.09,
+      "north": -325.21
+     },
+     {
+      "east": 194.66,
+      "north": -318.85
+     },
+     {
+      "east": 192.38,
+      "north": -315.8
+     }
+    ],
+    "centroid": {
+     "east": 189.24,
+     "north": -320.5
+    },
+    "innerMid": {
+     "east": 184.95,
+     "north": -323.68
+    },
+    "outerMid": {
+     "east": 193.52,
+     "north": -317.32
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 78.3
+   }
+  },
+  {
+   "id": "C-16",
+   "dock": "C",
+   "number": 16,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 186.09,
+      "north": -325.21
+     },
+     {
+      "east": 188.37,
+      "north": -328.26
+     },
+     {
+      "east": 196.94,
+      "north": -321.9
+     },
+     {
+      "east": 194.66,
+      "north": -318.85
+     }
+    ],
+    "centroid": {
+     "east": 191.51,
+     "north": -323.55
+    },
+    "innerMid": {
+     "east": 187.23,
+     "north": -326.73
+    },
+    "outerMid": {
+     "east": 195.8,
+     "north": -320.37
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 82.1
+   }
+  },
+  {
+   "id": "C-17",
+   "dock": "C",
+   "number": 17,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 188.37,
+      "north": -328.26
+     },
+     {
+      "east": 190.65,
+      "north": -331.3
+     },
+     {
+      "east": 199.22,
+      "north": -324.95
+     },
+     {
+      "east": 196.94,
+      "north": -321.9
+     }
+    ],
+    "centroid": {
+     "east": 193.79,
+     "north": -326.6
+    },
+    "innerMid": {
+     "east": 189.51,
+     "north": -329.78
+    },
+    "outerMid": {
+     "east": 198.08,
+     "north": -323.42
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.81,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 85.9
+   }
+  },
+  {
+   "id": "C-18",
+   "dock": "C",
+   "number": 18,
+   "length_ft": 35,
+   "width_ft": 12.5,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073532827,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 190.65,
+      "north": -331.3
+     },
+     {
+      "east": 192.93,
+      "north": -334.35
+     },
+     {
+      "east": 201.5,
+      "north": -327.99
+     },
+     {
+      "east": 199.22,
+      "north": -324.95
+     }
+    ],
+    "centroid": {
+     "east": 196.07,
+     "north": -329.65
+    },
+    "innerMid": {
+     "east": 191.79,
+     "north": -332.83
+    },
+    "outerMid": {
+     "east": 200.36,
+     "north": -326.47
+    },
+    "headingDeg": 53.4,
+    "measuredLength_m": 10.67,
+    "measuredWidth_m": 3.8,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 89.7
+   }
+  },
+  {
+   "id": "D-01",
+   "dock": "D",
+   "number": 1,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 58.27,
+      "north": -125.34
+     },
+     {
+      "east": 60.63,
+      "north": -128.89
+     },
+     {
+      "east": 70.82,
+      "north": -122.18
+     },
+     {
+      "east": 68.45,
+      "north": -118.62
+     }
+    ],
+    "centroid": {
+     "east": 64.55,
+     "north": -123.76
+    },
+    "innerMid": {
+     "east": 59.45,
+     "north": -127.12
+    },
+    "outerMid": {
+     "east": 69.63,
+     "north": -120.4
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 21.1
+   }
+  },
+  {
+   "id": "D-02",
+   "dock": "D",
+   "number": 2,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 60.63,
+      "north": -128.89
+     },
+     {
+      "east": 62.99,
+      "north": -132.44
+     },
+     {
+      "east": 73.17,
+      "north": -125.72
+     },
+     {
+      "east": 70.82,
+      "north": -122.18
+     }
+    ],
+    "centroid": {
+     "east": 66.9,
+     "north": -127.31
+    },
+    "innerMid": {
+     "east": 61.81,
+     "north": -130.66
+    },
+    "outerMid": {
+     "east": 71.99,
+     "north": -123.95
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 25.4
+   }
+  },
+  {
+   "id": "D-03",
+   "dock": "D",
+   "number": 3,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 62.99,
+      "north": -132.44
+     },
+     {
+      "east": 65.35,
+      "north": -136
+     },
+     {
+      "east": 75.53,
+      "north": -129.28
+     },
+     {
+      "east": 73.17,
+      "north": -125.72
+     }
+    ],
+    "centroid": {
+     "east": 69.26,
+     "north": -130.86
+    },
+    "innerMid": {
+     "east": 64.17,
+     "north": -134.22
+    },
+    "outerMid": {
+     "east": 74.35,
+     "north": -127.5
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 29.6
+   }
+  },
+  {
+   "id": "D-04",
+   "dock": "D",
+   "number": 4,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 65.35,
+      "north": -136
+     },
+     {
+      "east": 67.71,
+      "north": -139.54
+     },
+     {
+      "east": 77.89,
+      "north": -132.83
+     },
+     {
+      "east": 75.53,
+      "north": -129.28
+     }
+    ],
+    "centroid": {
+     "east": 71.62,
+     "north": -134.41
+    },
+    "innerMid": {
+     "east": 66.53,
+     "north": -137.77
+    },
+    "outerMid": {
+     "east": 76.71,
+     "north": -131.05
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 33.9
+   }
+  },
+  {
+   "id": "D-05",
+   "dock": "D",
+   "number": 5,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 67.71,
+      "north": -139.54
+     },
+     {
+      "east": 70.06,
+      "north": -143.1
+     },
+     {
+      "east": 80.25,
+      "north": -136.37
+     },
+     {
+      "east": 77.89,
+      "north": -132.83
+     }
+    ],
+    "centroid": {
+     "east": 73.98,
+     "north": -137.96
+    },
+    "innerMid": {
+     "east": 68.89,
+     "north": -141.32
+    },
+    "outerMid": {
+     "east": 79.07,
+     "north": -134.6
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 38.2
+   }
+  },
+  {
+   "id": "D-06",
+   "dock": "D",
+   "number": 6,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 70.06,
+      "north": -143.1
+     },
+     {
+      "east": 72.43,
+      "north": -146.65
+     },
+     {
+      "east": 82.61,
+      "north": -139.93
+     },
+     {
+      "east": 80.25,
+      "north": -136.37
+     }
+    ],
+    "centroid": {
+     "east": 76.34,
+     "north": -141.51
+    },
+    "innerMid": {
+     "east": 71.24,
+     "north": -144.87
+    },
+    "outerMid": {
+     "east": 81.43,
+     "north": -138.15
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 42.4
+   }
+  },
+  {
+   "id": "D-07",
+   "dock": "D",
+   "number": 7,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 72.43,
+      "north": -146.65
+     },
+     {
+      "east": 74.79,
+      "north": -150.19
+     },
+     {
+      "east": 84.97,
+      "north": -143.48
+     },
+     {
+      "east": 82.61,
+      "north": -139.93
+     }
+    ],
+    "centroid": {
+     "east": 78.7,
+     "north": -145.06
+    },
+    "innerMid": {
+     "east": 73.61,
+     "north": -148.42
+    },
+    "outerMid": {
+     "east": 83.79,
+     "north": -141.71
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 46.7
+   }
+  },
+  {
+   "id": "D-08",
+   "dock": "D",
+   "number": 8,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 74.79,
+      "north": -150.19
+     },
+     {
+      "east": 77.15,
+      "north": -153.75
+     },
+     {
+      "east": 87.33,
+      "north": -147.03
+     },
+     {
+      "east": 84.97,
+      "north": -143.48
+     }
+    ],
+    "centroid": {
+     "east": 81.06,
+     "north": -148.62
+    },
+    "innerMid": {
+     "east": 75.97,
+     "north": -151.97
+    },
+    "outerMid": {
+     "east": 86.15,
+     "north": -145.26
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 51
+   }
+  },
+  {
+   "id": "D-09",
+   "dock": "D",
+   "number": 9,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 77.15,
+      "north": -153.75
+     },
+     {
+      "east": 79.5,
+      "north": -157.29
+     },
+     {
+      "east": 89.69,
+      "north": -150.58
+     },
+     {
+      "east": 87.33,
+      "north": -147.03
+     }
+    ],
+    "centroid": {
+     "east": 83.42,
+     "north": -152.16
+    },
+    "innerMid": {
+     "east": 78.32,
+     "north": -155.52
+    },
+    "outerMid": {
+     "east": 88.51,
+     "north": -148.81
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 55.2
+   }
+  },
+  {
+   "id": "D-10",
+   "dock": "D",
+   "number": 10,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 79.5,
+      "north": -157.29
+     },
+     {
+      "east": 81.86,
+      "north": -160.85
+     },
+     {
+      "east": 92.04,
+      "north": -154.14
+     },
+     {
+      "east": 89.69,
+      "north": -150.58
+     }
+    ],
+    "centroid": {
+     "east": 85.77,
+     "north": -155.72
+    },
+    "innerMid": {
+     "east": 80.68,
+     "north": -159.07
+    },
+    "outerMid": {
+     "east": 90.87,
+     "north": -152.36
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 59.5
+   }
+  },
+  {
+   "id": "D-11",
+   "dock": "D",
+   "number": 11,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 81.86,
+      "north": -160.85
+     },
+     {
+      "east": 84.22,
+      "north": -164.4
+     },
+     {
+      "east": 94.4,
+      "north": -157.68
+     },
+     {
+      "east": 92.04,
+      "north": -154.14
+     }
+    ],
+    "centroid": {
+     "east": 88.13,
+     "north": -159.27
+    },
+    "innerMid": {
+     "east": 83.04,
+     "north": -162.63
+    },
+    "outerMid": {
+     "east": 93.22,
+     "north": -155.91
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 63.7
+   }
+  },
+  {
+   "id": "D-12",
+   "dock": "D",
+   "number": 12,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 84.22,
+      "north": -164.4
+     },
+     {
+      "east": 86.59,
+      "north": -167.95
+     },
+     {
+      "east": 96.77,
+      "north": -161.24
+     },
+     {
+      "east": 94.4,
+      "north": -157.68
+     }
+    ],
+    "centroid": {
+     "east": 90.5,
+     "north": -162.82
+    },
+    "innerMid": {
+     "east": 85.4,
+     "north": -166.17
+    },
+    "outerMid": {
+     "east": 95.59,
+     "north": -159.46
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 68
+   }
+  },
+  {
+   "id": "D-13",
+   "dock": "D",
+   "number": 13,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 86.59,
+      "north": -167.95
+     },
+     {
+      "east": 88.94,
+      "north": -171.5
+     },
+     {
+      "east": 99.12,
+      "north": -164.78
+     },
+     {
+      "east": 96.77,
+      "north": -161.24
+     }
+    ],
+    "centroid": {
+     "east": 92.85,
+     "north": -166.37
+    },
+    "innerMid": {
+     "east": 87.76,
+     "north": -169.72
+    },
+    "outerMid": {
+     "east": 97.94,
+     "north": -163.01
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 72.3
+   }
+  },
+  {
+   "id": "D-14",
+   "dock": "D",
+   "number": 14,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 88.94,
+      "north": -171.5
+     },
+     {
+      "east": 91.3,
+      "north": -175.06
+     },
+     {
+      "east": 101.48,
+      "north": -168.34
+     },
+     {
+      "east": 99.12,
+      "north": -164.78
+     }
+    ],
+    "centroid": {
+     "east": 95.21,
+     "north": -169.92
+    },
+    "innerMid": {
+     "east": 90.12,
+     "north": -173.28
+    },
+    "outerMid": {
+     "east": 100.3,
+     "north": -166.56
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 76.5
+   }
+  },
+  {
+   "id": "D-15",
+   "dock": "D",
+   "number": 15,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 91.3,
+      "north": -175.06
+     },
+     {
+      "east": 93.66,
+      "north": -178.6
+     },
+     {
+      "east": 103.84,
+      "north": -171.89
+     },
+     {
+      "east": 101.48,
+      "north": -168.34
+     }
+    ],
+    "centroid": {
+     "east": 97.57,
+     "north": -173.47
+    },
+    "innerMid": {
+     "east": 92.48,
+     "north": -176.83
+    },
+    "outerMid": {
+     "east": 102.66,
+     "north": -170.11
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 80.8
+   }
+  },
+  {
+   "id": "D-16",
+   "dock": "D",
+   "number": 16,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 93.66,
+      "north": -178.6
+     },
+     {
+      "east": 96.01,
+      "north": -182.15
+     },
+     {
+      "east": 106.2,
+      "north": -175.43
+     },
+     {
+      "east": 103.84,
+      "north": -171.89
+     }
+    ],
+    "centroid": {
+     "east": 99.93,
+     "north": -177.02
+    },
+    "innerMid": {
+     "east": 94.84,
+     "north": -180.38
+    },
+    "outerMid": {
+     "east": 105.02,
+     "north": -173.66
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 85.1
+   }
+  },
+  {
+   "id": "D-17",
+   "dock": "D",
+   "number": 17,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 96.01,
+      "north": -182.15
+     },
+     {
+      "east": 98.38,
+      "north": -185.71
+     },
+     {
+      "east": 108.56,
+      "north": -178.99
+     },
+     {
+      "east": 106.2,
+      "north": -175.43
+     }
+    ],
+    "centroid": {
+     "east": 102.29,
+     "north": -180.57
+    },
+    "innerMid": {
+     "east": 97.19,
+     "north": -183.93
+    },
+    "outerMid": {
+     "east": 107.38,
+     "north": -177.21
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 89.3
+   }
+  },
+  {
+   "id": "D-18",
+   "dock": "D",
+   "number": 18,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 98.38,
+      "north": -185.71
+     },
+     {
+      "east": 100.74,
+      "north": -189.25
+     },
+     {
+      "east": 110.92,
+      "north": -182.54
+     },
+     {
+      "east": 108.56,
+      "north": -178.99
+     }
+    ],
+    "centroid": {
+     "east": 104.65,
+     "north": -184.12
+    },
+    "innerMid": {
+     "east": 99.56,
+     "north": -187.48
+    },
+    "outerMid": {
+     "east": 109.74,
+     "north": -180.77
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 93.6
+   }
+  },
+  {
+   "id": "D-19",
+   "dock": "D",
+   "number": 19,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 100.74,
+      "north": -189.25
+     },
+     {
+      "east": 103.1,
+      "north": -192.81
+     },
+     {
+      "east": 113.28,
+      "north": -186.09
+     },
+     {
+      "east": 110.92,
+      "north": -182.54
+     }
+    ],
+    "centroid": {
+     "east": 107.01,
+     "north": -187.67
+    },
+    "innerMid": {
+     "east": 101.92,
+     "north": -191.03
+    },
+    "outerMid": {
+     "east": 112.1,
+     "north": -184.32
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 97.9
+   }
+  },
+  {
+   "id": "D-20",
+   "dock": "D",
+   "number": 20,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 103.1,
+      "north": -192.81
+     },
+     {
+      "east": 105.45,
+      "north": -196.35
+     },
+     {
+      "east": 115.64,
+      "north": -189.64
+     },
+     {
+      "east": 113.28,
+      "north": -186.09
+     }
+    ],
+    "centroid": {
+     "east": 109.37,
+     "north": -191.22
+    },
+    "innerMid": {
+     "east": 104.27,
+     "north": -194.58
+    },
+    "outerMid": {
+     "east": 114.46,
+     "north": -187.86
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 102.1
+   }
+  },
+  {
+   "id": "D-21",
+   "dock": "D",
+   "number": 21,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 105.45,
+      "north": -196.35
+     },
+     {
+      "east": 107.81,
+      "north": -199.91
+     },
+     {
+      "east": 117.99,
+      "north": -193.2
+     },
+     {
+      "east": 115.64,
+      "north": -189.64
+     }
+    ],
+    "centroid": {
+     "east": 111.72,
+     "north": -194.78
+    },
+    "innerMid": {
+     "east": 106.63,
+     "north": -198.13
+    },
+    "outerMid": {
+     "east": 116.82,
+     "north": -191.42
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.27,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 106.4
+   }
+  },
+  {
+   "id": "D-22",
+   "dock": "D",
+   "number": 22,
+   "length_ft": 40,
+   "width_ft": 14,
+   "dock_kind": "floating",
+   "headwalk_osm_way": 1073540143,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 107.81,
+      "north": -199.91
+     },
+     {
+      "east": 110.17,
+      "north": -203.46
+     },
+     {
+      "east": 120.35,
+      "north": -196.74
+     },
+     {
+      "east": 117.99,
+      "north": -193.2
+     }
+    ],
+    "centroid": {
+     "east": 114.08,
+     "north": -198.33
+    },
+    "innerMid": {
+     "east": 108.99,
+     "north": -201.68
+    },
+    "outerMid": {
+     "east": 119.17,
+     "north": -194.97
+    },
+    "headingDeg": 56.6,
+    "measuredLength_m": 12.2,
+    "measuredWidth_m": 4.26,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 110.6
+   }
+  },
+  {
+   "id": "E-01",
+   "dock": "E",
+   "number": 1,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 234.84,
+      "north": -390.28
+     },
+     {
+      "east": 231.88,
+      "north": -386.42
+     },
+     {
+      "east": 242.82,
+      "north": -378.13
+     },
+     {
+      "east": 245.78,
+      "north": -382
+     }
+    ],
+    "centroid": {
+     "east": 238.83,
+     "north": -384.21
+    },
+    "innerMid": {
+     "east": 233.36,
+     "north": -388.35
+    },
+    "outerMid": {
+     "east": 244.3,
+     "north": -380.06
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 47.9
+   }
+  },
+  {
+   "id": "E-02",
+   "dock": "E",
+   "number": 2,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 231.88,
+      "north": -386.42
+     },
+     {
+      "east": 228.93,
+      "north": -382.54
+     },
+     {
+      "east": 239.86,
+      "north": -374.25
+     },
+     {
+      "east": 242.82,
+      "north": -378.13
+     }
+    ],
+    "centroid": {
+     "east": 235.87,
+     "north": -380.33
+    },
+    "innerMid": {
+     "east": 230.41,
+     "north": -384.48
+    },
+    "outerMid": {
+     "east": 241.34,
+     "north": -376.19
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.88,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 52.8
+   }
+  },
+  {
+   "id": "E-03",
+   "dock": "E",
+   "number": 3,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 228.93,
+      "north": -382.54
+     },
+     {
+      "east": 225.97,
+      "north": -378.66
+     },
+     {
+      "east": 236.91,
+      "north": -370.38
+     },
+     {
+      "east": 239.86,
+      "north": -374.25
+     }
+    ],
+    "centroid": {
+     "east": 232.92,
+     "north": -376.46
+    },
+    "innerMid": {
+     "east": 227.45,
+     "north": -380.6
+    },
+    "outerMid": {
+     "east": 238.38,
+     "north": -372.31
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 57.6
+   }
+  },
+  {
+   "id": "E-04",
+   "dock": "E",
+   "number": 4,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 225.97,
+      "north": -378.66
+     },
+     {
+      "east": 223.01,
+      "north": -374.8
+     },
+     {
+      "east": 233.95,
+      "north": -366.51
+     },
+     {
+      "east": 236.91,
+      "north": -370.38
+     }
+    ],
+    "centroid": {
+     "east": 229.96,
+     "north": -372.59
+    },
+    "innerMid": {
+     "east": 224.49,
+     "north": -376.73
+    },
+    "outerMid": {
+     "east": 235.43,
+     "north": -368.44
+    },
+    "headingDeg": 52.9,
+    "measuredLength_m": 13.73,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 62.5
+   }
+  },
+  {
+   "id": "E-05",
+   "dock": "E",
+   "number": 5,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 223.01,
+      "north": -374.8
+     },
+     {
+      "east": 220.06,
+      "north": -370.92
+     },
+     {
+      "east": 230.99,
+      "north": -362.63
+     },
+     {
+      "east": 233.95,
+      "north": -366.51
+     }
+    ],
+    "centroid": {
+     "east": 227.01,
+     "north": -368.71
+    },
+    "innerMid": {
+     "east": 221.54,
+     "north": -372.86
+    },
+    "outerMid": {
+     "east": 232.47,
+     "north": -364.57
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 67.4
+   }
+  },
+  {
+   "id": "E-06",
+   "dock": "E",
+   "number": 6,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 220.06,
+      "north": -370.92
+     },
+     {
+      "east": 217.1,
+      "north": -367.04
+     },
+     {
+      "east": 228.04,
+      "north": -358.75
+     },
+     {
+      "east": 230.99,
+      "north": -362.63
+     }
+    ],
+    "centroid": {
+     "east": 224.05,
+     "north": -364.84
+    },
+    "innerMid": {
+     "east": 218.58,
+     "north": -368.98
+    },
+    "outerMid": {
+     "east": 229.52,
+     "north": -360.69
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.88,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 72.3
+   }
+  },
+  {
+   "id": "E-07",
+   "dock": "E",
+   "number": 7,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 217.1,
+      "north": -367.04
+     },
+     {
+      "east": 214.15,
+      "north": -363.18
+     },
+     {
+      "east": 225.08,
+      "north": -354.89
+     },
+     {
+      "east": 228.04,
+      "north": -358.75
+     }
+    ],
+    "centroid": {
+     "east": 221.09,
+     "north": -360.97
+    },
+    "innerMid": {
+     "east": 215.63,
+     "north": -365.11
+    },
+    "outerMid": {
+     "east": 226.56,
+     "north": -356.82
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 77.1
+   }
+  },
+  {
+   "id": "E-08",
+   "dock": "E",
+   "number": 8,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 214.15,
+      "north": -363.18
+     },
+     {
+      "east": 211.19,
+      "north": -359.3
+     },
+     {
+      "east": 222.12,
+      "north": -351.01
+     },
+     {
+      "east": 225.08,
+      "north": -354.89
+     }
+    ],
+    "centroid": {
+     "east": 218.13,
+     "north": -357.09
+    },
+    "innerMid": {
+     "east": 212.67,
+     "north": -361.24
+    },
+    "outerMid": {
+     "east": 223.6,
+     "north": -352.95
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.88,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 82
+   }
+  },
+  {
+   "id": "E-09",
+   "dock": "E",
+   "number": 9,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 211.19,
+      "north": -359.3
+     },
+     {
+      "east": 208.23,
+      "north": -355.42
+     },
+     {
+      "east": 219.16,
+      "north": -347.13
+     },
+     {
+      "east": 222.12,
+      "north": -351.01
+     }
+    ],
+    "centroid": {
+     "east": 215.18,
+     "north": -353.22
+    },
+    "innerMid": {
+     "east": 209.71,
+     "north": -357.36
+    },
+    "outerMid": {
+     "east": 220.64,
+     "north": -349.07
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.88,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 86.9
+   }
+  },
+  {
+   "id": "E-10",
+   "dock": "E",
+   "number": 10,
+   "length_ft": 45,
+   "width_ft": 16,
+   "dock_kind": "fixed",
+   "headwalk_osm_way": 1073532822,
+   "provenance": "ASSUME",
+   "basis": "single-loaded finger on the water side of an OSM-mapped headwalk; count, length class and numbering are design assumptions, not surveyed",
+   "derived": {
+    "corners": [
+     {
+      "east": 208.23,
+      "north": -355.42
+     },
+     {
+      "east": 205.27,
+      "north": -351.56
+     },
+     {
+      "east": 216.21,
+      "north": -343.27
+     },
+     {
+      "east": 219.16,
+      "north": -347.13
+     }
+    ],
+    "centroid": {
+     "east": 212.22,
+     "north": -349.35
+    },
+    "innerMid": {
+     "east": 206.75,
+     "north": -353.49
+    },
+    "outerMid": {
+     "east": 217.68,
+     "north": -345.2
+    },
+    "headingDeg": 52.8,
+    "measuredLength_m": 13.72,
+    "measuredWidth_m": 4.87,
+    "headwalkGap_m": 0.6,
+    "chainage_m": 91.8
+   }
+  }
+ ],
+ "river": {
+  "centreline": [
+   {
+    "east": -1119.86,
+    "north": 569.67
+   },
+   {
+    "east": -845.95,
+    "north": 506.84
+   },
+   {
+    "east": -666.48,
+    "north": 465.68
+   },
+   {
+    "east": -427.09,
+    "north": 423.07
+   },
+   {
+    "east": -228.98,
+    "north": 410.83
+   },
+   {
+    "east": -116.77,
+    "north": 367.16
+   },
+   {
+    "east": -43.13,
+    "north": 279.83
+   },
+   {
+    "east": 12.89,
+    "north": 196.97
+   },
+   {
+    "east": 126.49,
+    "north": 76.8
+   },
+   {
+    "east": 180.99,
+    "north": 13.75
+   },
+   {
+    "east": 182.16,
+    "north": 12.41
+   },
+   {
+    "east": 196.06,
+    "north": -3.68
+   },
+   {
+    "east": 253.9,
+    "north": -70.58
+   },
+   {
+    "east": 428.06,
+    "north": -167.78
+   },
+   {
+    "east": 553.57,
+    "north": -231.59
+   },
+   {
+    "east": 629.77,
+    "north": -280.47
+   },
+   {
+    "east": 642.54,
+    "north": -295.82
+   },
+   {
+    "east": 729.61,
+    "north": -381.61
+   },
+   {
+    "east": 785.01,
+    "north": -476.17
+   },
+   {
+    "east": 831.77,
+    "north": -578.68
+   },
+   {
+    "east": 941.78,
+    "north": -883.06
+   },
+   {
+    "east": 959.63,
+    "north": -1137.76
+   },
+   {
+    "east": 938.68,
+    "north": -1229.61
+   },
+   {
+    "east": 954.47,
+    "north": -1308.24
+   },
+   {
+    "east": 1001.8,
+    "north": -1362.41
+   },
+   {
+    "east": 1059.3,
+    "north": -1378.87
+   },
+   {
+    "east": 1066.44,
+    "north": -1378.55
+   },
+   {
+    "east": 1089.03,
+    "north": -1377.52
+   }
+  ],
+  "osm_ways": [
+   1216155152,
+   1517089936,
+   1517089942,
+   1517089941,
+   1517089940,
+   1517089939,
+   1517089937
+  ],
+  "provenance": "DOC",
+  "approxWidthAtB12_m": 296.2
+ },
+ "waterStrategy": "Water is a plane at sea level. Land masks are drawn only where land evidence exists. Partial OSM water polygons are never closed across the site.",
+ "cityShipCanal": {
+  "osm_id": 31752570,
+  "provenance": "DOC",
+  "ring": [
+   {
+    "east": 7.62,
+    "north": -35.98
+   },
+   {
+    "east": 39.81,
+    "north": -20.1
+   },
+   {
+    "east": 72.39,
+    "north": -4.01
+   },
+   {
+    "east": 131.35,
+    "north": -109.4
+   },
+   {
+    "east": 165.74,
+    "north": -162.85
+   },
+   {
+    "east": 161.96,
+    "north": -165.47
+   },
+   {
+    "east": 217.5,
+    "north": -252.02
+   },
+   {
+    "east": 327.19,
+    "north": -414.49
+   },
+   {
+    "east": 332.99,
+    "north": -429.08
+   },
+   {
+    "east": 341.9,
+    "north": -425.54
+   },
+   {
+    "east": 348.86,
+    "north": -435.33
+   },
+   {
+    "east": 407.62,
+    "north": -518.11
+   },
+   {
+    "east": 487.99,
+    "north": -636.05
+   },
+   {
+    "east": 509.61,
+    "north": -666.5
+   },
+   {
+    "east": 519.98,
+    "north": -661.54
+   },
+   {
+    "east": 536.86,
+    "north": -676.08
+   },
+   {
+    "east": 546.95,
+    "north": -695.65
+   },
+   {
+    "east": 549.64,
+    "north": -702.92
+   },
+   {
+    "east": 555.79,
+    "north": -721.63
+   },
+   {
+    "east": 551.47,
+    "north": -726.31
+   },
+   {
+    "east": 549.97,
+    "north": -730.05
+   },
+   {
+    "east": 604.49,
+    "north": -846
+   },
+   {
+    "east": 659.95,
+    "north": -964.67
+   },
+   {
+    "east": 705.45,
+    "north": -1063.23
+   },
+   {
+    "east": 734.51,
+    "north": -1120.8
+   },
+   {
+    "east": 741.55,
+    "north": -1117.83
+   },
+   {
+    "east": 763.32,
+    "north": -1159.83
+   },
+   {
+    "east": 819.85,
+    "north": -1293.85
+   },
+   {
+    "east": 983.56,
+    "north": -1677.16
+   },
+   {
+    "east": 980.71,
+    "north": -1679.79
+   },
+   {
+    "east": 1030.46,
+    "north": -1765.4
+   },
+   {
+    "east": 1028.56,
+    "north": -1767.45
+   },
+   {
+    "east": 1070.13,
+    "north": -1843.6
+   },
+   {
+    "east": 1076.7,
+    "north": -1847.75
+   },
+   {
+    "east": 1087.88,
+    "north": -1868.51
+   },
+   {
+    "east": 1087.44,
+    "north": -1876.36
+   },
+   {
+    "east": 1104.26,
+    "north": -1906.84
+   },
+   {
+    "east": 1120.09,
+    "north": -1934.03
+   },
+   {
+    "east": 1124.7,
+    "north": -1945.82
+   },
+   {
+    "east": 1137.4,
+    "north": -1959.8
+   },
+   {
+    "east": 1145.95,
+    "north": -1972.91
+   },
+   {
+    "east": 1145.08,
+    "north": -1978.37
+   },
+   {
+    "east": 1141.79,
+    "north": -1979.9
+   },
+   {
+    "east": 1097.96,
+    "north": -1935.99
+   },
+   {
+    "east": 1067.94,
+    "north": -1901.27
+   },
+   {
+    "east": 1055.17,
+    "north": -1885.17
+   },
+   {
+    "east": 1031.34,
+    "north": -1854.74
+   },
+   {
+    "east": 987.95,
+    "north": -1780.48
+   },
+   {
+    "east": 933.59,
+    "north": -1674.32
+   },
+   {
+    "east": 855.14,
+    "north": -1523.84
+   },
+   {
+    "east": 766.23,
+    "north": -1333.72
+   },
+   {
+    "east": 704.59,
+    "north": -1210.14
+   },
+   {
+    "east": 703.05,
+    "north": -1192
+   },
+   {
+    "east": 685.71,
+    "north": -1164.59
+   },
+   {
+    "east": 670.49,
+    "north": -1127.68
+   },
+   {
+    "east": 633.42,
+    "north": -1051.94
+   },
+   {
+    "east": 614.67,
+    "north": -1013.87
+   },
+   {
+    "east": 605.78,
+    "north": -995.81
+   },
+   {
+    "east": 594.16,
+    "north": -972.21
+   },
+   {
+    "east": 589.97,
+    "north": -962.12
+   },
+   {
+    "east": 585.46,
+    "north": -965.04
+   },
+   {
+    "east": 583.58,
+    "north": -966.27
+   },
+   {
+    "east": 557.14,
+    "north": -909.85
+   },
+   {
+    "east": 546.6,
+    "north": -887.79
+   },
+   {
+    "east": 542.86,
+    "north": -879.84
+   },
+   {
+    "east": 540.15,
+    "north": -872.85
+   },
+   {
+    "east": 538.28,
+    "north": -868.04
+   },
+   {
+    "east": 533.2,
+    "north": -854.95
+   },
+   {
+    "east": 532.04,
+    "north": -852.33
+   },
+   {
+    "east": 512.1,
+    "north": -807.3
+   },
+   {
+    "east": 497.58,
+    "north": -790.39
+   },
+   {
+    "east": 437.03,
+    "north": -700.05
+   },
+   {
+    "east": 356.81,
+    "north": -580.69
+   },
+   {
+    "east": 329.04,
+    "north": -539.81
+   },
+   {
+    "east": 314.82,
+    "north": -518.87
+   },
+   {
+    "east": 283.09,
+    "north": -469.47
+   },
+   {
+    "east": 277.23,
+    "north": -457.71
+   },
+   {
+    "east": 278.07,
+    "north": -452.18
+   },
+   {
+    "east": 262.41,
+    "north": -433.15
+   },
+   {
+    "east": 233.45,
+    "north": -400.24
+   },
+   {
+    "east": 190.99,
+    "north": -346.42
+   },
+   {
+    "east": 188.59,
+    "north": -343.47
+   },
+   {
+    "east": 160.26,
+    "north": -308.63
+   },
+   {
+    "east": 140.13,
+    "north": -275.91
+   },
+   {
+    "east": 132.99,
+    "north": -258.65
+   },
+   {
+    "east": 127.07,
+    "north": -248.61
+   },
+   {
+    "east": 122.08,
+    "north": -240.12
+   },
+   {
+    "east": 116.03,
+    "north": -243.1
+   },
+   {
+    "east": 112.02,
+    "north": -236.24
+   },
+   {
+    "east": 106.17,
+    "north": -226.25
+   },
+   {
+    "east": 111.15,
+    "north": -215.19
+   },
+   {
+    "east": 105.96,
+    "north": -213.53
+   },
+   {
+    "east": 97.45,
+    "north": -201.9
+   },
+   {
+    "east": 94.89,
+    "north": -195.94
+   },
+   {
+    "east": 82.07,
+    "north": -177.42
+   },
+   {
+    "east": 76.71,
+    "north": -167.18
+   },
+   {
+    "east": 69.21,
+    "north": -158.84
+   },
+   {
+    "east": 64.75,
+    "north": -152.4
+   },
+   {
+    "east": 53.18,
+    "north": -130.71
+   },
+   {
+    "east": 52.22,
+    "north": -128.76
+   },
+   {
+    "east": 52.88,
+    "north": -124.85
+   },
+   {
+    "east": 47.23,
+    "north": -115.72
+   },
+   {
+    "east": 54.17,
+    "north": -111.32
+   },
+   {
+    "east": 26.25,
+    "north": -66.87
+   }
+  ]
+ },
+ "landMasks": [
+  {
+   "id": "land-west",
+   "provenance": "ASSUME",
+   "basis": "Marina side. North of the canal mouth: bank authored 1 m (Dock A) / 3 m (Dock B first run) behind the OSM headwalks. South-east of the mouth: the City Ship Canal west edge (DOC, OSM 31752570). Closes 400 m inland.",
+   "ring": [
+    {
+     "east": -194.43,
+     "north": 304.84
+    },
+    {
+     "east": -131.05,
+     "north": 202.94
+    },
+    {
+     "east": -68.61,
+     "north": 94.69
+    },
+    {
+     "east": -52.17,
+     "north": 66.05
+    },
+    {
+     "east": -48.89,
+     "north": 57.14
+    },
+    {
+     "east": -37.9,
+     "north": 37.61
+    },
+    {
+     "east": -33.81,
+     "north": 30.84
+    },
+    {
+     "east": 3.12,
+     "north": -30.33
+    },
+    {
+     "east": 7.62,
+     "north": -35.98
+    },
+    {
+     "east": 26.25,
+     "north": -66.87
+    },
+    {
+     "east": 54.17,
+     "north": -111.32
+    },
+    {
+     "east": 47.23,
+     "north": -115.72
+    },
+    {
+     "east": 52.88,
+     "north": -124.85
+    },
+    {
+     "east": 52.22,
+     "north": -128.76
+    },
+    {
+     "east": 53.18,
+     "north": -130.71
+    },
+    {
+     "east": 64.75,
+     "north": -152.4
+    },
+    {
+     "east": 69.21,
+     "north": -158.84
+    },
+    {
+     "east": 76.71,
+     "north": -167.18
+    },
+    {
+     "east": 82.07,
+     "north": -177.42
+    },
+    {
+     "east": 94.89,
+     "north": -195.94
+    },
+    {
+     "east": 97.45,
+     "north": -201.9
+    },
+    {
+     "east": 105.96,
+     "north": -213.53
+    },
+    {
+     "east": 111.15,
+     "north": -215.19
+    },
+    {
+     "east": 106.17,
+     "north": -226.25
+    },
+    {
+     "east": 112.02,
+     "north": -236.24
+    },
+    {
+     "east": 116.03,
+     "north": -243.1
+    },
+    {
+     "east": 122.08,
+     "north": -240.12
+    },
+    {
+     "east": 127.07,
+     "north": -248.61
+    },
+    {
+     "east": 132.99,
+     "north": -258.65
+    },
+    {
+     "east": 140.13,
+     "north": -275.91
+    },
+    {
+     "east": 160.26,
+     "north": -308.63
+    },
+    {
+     "east": 188.59,
+     "north": -343.47
+    },
+    {
+     "east": 190.99,
+     "north": -346.42
+    },
+    {
+     "east": 233.45,
+     "north": -400.24
+    },
+    {
+     "east": 262.41,
+     "north": -433.15
+    },
+    {
+     "east": 278.07,
+     "north": -452.18
+    },
+    {
+     "east": 277.23,
+     "north": -457.71
+    },
+    {
+     "east": 283.09,
+     "north": -469.47
+    },
+    {
+     "east": 314.82,
+     "north": -518.87
+    },
+    {
+     "east": 329.04,
+     "north": -539.81
+    },
+    {
+     "east": 356.81,
+     "north": -580.69
+    },
+    {
+     "east": 17.16,
+     "north": -791.97
+    },
+    {
+     "east": -534.08,
+     "north": 93.56
+    }
+   ],
+   "holes": [
+    1073603319
+   ]
+  },
+  {
+   "id": "land-east",
+   "provenance": "ASSUME",
+   "basis": "Peninsula between the City Ship Canal and the river: canal east edge (DOC, OSM 31752570) + river bank assumed 45 m from the OSM centreline",
+   "ring": [
+    {
+     "east": 72.39,
+     "north": -4.01
+    },
+    {
+     "east": 131.35,
+     "north": -109.4
+    },
+    {
+     "east": 165.74,
+     "north": -162.85
+    },
+    {
+     "east": 161.96,
+     "north": -165.47
+    },
+    {
+     "east": 217.5,
+     "north": -252.02
+    },
+    {
+     "east": 327.19,
+     "north": -414.49
+    },
+    {
+     "east": 332.99,
+     "north": -429.08
+    },
+    {
+     "east": 341.9,
+     "north": -425.54
+    },
+    {
+     "east": 348.86,
+     "north": -435.33
+    },
+    {
+     "east": 407.62,
+     "north": -518.11
+    },
+    {
+     "east": 487.99,
+     "north": -636.05
+    },
+    {
+     "east": 509.61,
+     "north": -666.5
+    },
+    {
+     "east": 519.98,
+     "north": -661.54
+    },
+    {
+     "east": 536.86,
+     "north": -676.08
+    },
+    {
+     "east": 546.95,
+     "north": -695.65
+    },
+    {
+     "east": 790.07,
+     "north": -595.69
+    },
+    {
+     "east": 745.02,
+     "north": -496.93
+    },
+    {
+     "east": 693.79,
+     "north": -409.49
+    },
+    {
+     "east": 609.37,
+     "north": -326.31
+    },
+    {
+     "east": 599.63,
+     "north": -314.59
+    },
+    {
+     "east": 531.17,
+     "north": -270.68
+    },
+    {
+     "east": 406.88,
+     "north": -207.5
+    },
+    {
+     "east": 225.04,
+     "north": -106
+    },
+    {
+     "east": 162.02,
+     "north": -33.11
+    },
+    {
+     "east": 148.16,
+     "north": -17.07
+    },
+    {
+     "east": 146.99,
+     "north": -15.72
+    }
+   ],
+   "holes": [
+    158778752
+   ]
+  },
+  {
+   "id": "land-north",
+   "provenance": "ASSUME",
+   "basis": "Canalside side: wharf edge digitized from the 2022 map, extended; closes inland",
+   "ring": [
+    {
+     "east": -48.38,
+     "north": 670.56
+    },
+    {
+     "east": 147.8,
+     "north": 321.98
+    },
+    {
+     "east": 329.67,
+     "north": -1.17
+    },
+    {
+     "east": 359.1,
+     "north": -53.46
+    },
+    {
+     "east": 620.54,
+     "north": 93.68
+    },
+    {
+     "east": 213.05,
+     "north": 817.7
+    }
+   ],
+   "holes": [
+    371587071,
+    449798165,
+    1072510134
+   ]
+  }
+ ],
+ "osmContext": [
+  {
+   "osm_id": 93129248,
+   "kind": "coastguard_station",
+   "name": "U.S. Coast Guard - Sector Buffalo",
+   "provenance": "DOC",
+   "ring": [
+    {
+     "east": -312.8,
+     "north": 275.93
+    },
+    {
+     "east": -310.42,
+     "north": 280.11
+    },
+    {
+     "east": -320.74,
+     "north": 288.79
+    },
+    {
+     "east": -319.52,
+     "north": 289.86
+    },
+    {
+     "east": -324.46,
+     "north": 294.81
+    },
+    {
+     "east": -357.24,
+     "north": 328.11
+    },
+    {
+     "east": -468.62,
+     "north": 340.61
+    },
+    {
+     "east": -491.23,
+     "north": 380.01
+    },
+    {
+     "east": -496.51,
+     "north": 380.64
+    },
+    {
+     "east": -496.12,
+     "north": 383.88
+    },
+    {
+     "east": -562.7,
+     "north": 391.54
+    },
+    {
+     "east": -598.28,
+     "north": 395.54
+    },
+    {
+     "east": -613.08,
+     "north": 397.16
+    },
+    {
+     "east": -613.27,
+     "north": 395.56
+    },
+    {
+     "east": -614.98,
+     "north": 395.75
+    },
+    {
+     "east": -640.49,
+     "north": 398.6
+    },
+    {
+     "east": -640.35,
+     "north": 400.19
+    },
+    {
+     "east": -697.14,
+     "north": 406.35
+    },
+    {
+     "east": -705.26,
+     "north": 407.22
+    },
+    {
+     "east": -709.14,
+     "north": 373.79
+    },
+    {
+     "east": -720.2,
+     "north": 368.84
+    },
+    {
+     "east": -802.87,
+     "north": 378.12
+    },
+    {
+     "east": -804.05,
+     "north": 378.04
+    },
+    {
+     "east": -805.08,
+     "north": 377.53
+    },
+    {
+     "east": -806.08,
+     "north": 376.65
+    },
+    {
+     "east": -806.93,
+     "north": 375.31
+    },
+    {
+     "east": -807.45,
+     "north": 374.01
+    },
+    {
+     "east": -807.34,
+     "north": 372.76
+    },
+    {
+     "east": -807.18,
+     "north": 371.06
+    },
+    {
+     "east": -806.21,
+     "north": 369.43
+    },
+    {
+     "east": -806.91,
+     "north": 367.61
+    },
+    {
+     "east": -782.6,
+     "north": 304.12
+    },
+    {
+     "east": -769.44,
+     "north": 269.69
+    },
+    {
+     "east": -705.67,
+     "north": 311.11
+    },
+    {
+     "east": -703.56,
+     "north": 333.56
+    },
+    {
+     "east": -700.74,
+     "north": 333.23
+    },
+    {
+     "east": -697.76,
+     "north": 332.9
+    },
+    {
+     "east": -696.51,
+     "north": 332.78
+    },
+    {
+     "east": -695.49,
+     "north": 332.68
+    },
+    {
+     "east": -607.34,
+     "north": 322.54
+    },
+    {
+     "east": -608.43,
+     "north": 313.35
+    },
+    {
+     "east": -609.41,
+     "north": 304.11
+    },
+    {
+     "east": -648.62,
+     "north": 308.21
+    },
+    {
+     "east": -648.88,
+     "north": 303.88
+    },
+    {
+     "east": -662.07,
+     "north": 295.58
+    },
+    {
+     "east": -662.96,
+     "north": 295.03
+    },
+    {
+     "east": -667.02,
+     "north": 295.94
+    },
+    {
+     "east": -669.67,
+     "north": 294.4
+    },
+    {
+     "east": -668.75,
+     "north": 292.92
+    },
+    {
+     "east": -667.94,
+     "north": 291.65
+    },
+    {
+     "east": -676.04,
+     "north": 286.3
+    },
+    {
+     "east": -753.88,
+     "north": 235.32
+    },
+    {
+     "east": -763.39,
+     "north": 229.4
+    },
+    {
+     "east": -764.53,
+     "north": 230.97
+    },
+    {
+     "east": -765.18,
+     "north": 231.93
+    },
+    {
+     "east": -767.81,
+     "north": 230.28
+    },
+    {
+     "east": -768.53,
+     "north": 226.01
+    },
+    {
+     "east": -780.29,
+     "north": 218.34
+    },
+    {
+     "east": -781.38,
+     "north": 218.7
+    },
+    {
+     "east": -793.62,
+     "north": 210.45
+    },
+    {
+     "east": -822.3,
+     "north": 255.74
+    },
+    {
+     "east": -827.27,
+     "north": 252.32
+    },
+    {
+     "east": -798.53,
+     "north": 206.92
+    },
+    {
+     "east": -785.13,
+     "north": 186.78
+    },
+    {
+     "east": -782.34,
+     "north": 182.74
+    },
+    {
+     "east": -771.92,
+     "north": 189.52
+    },
+    {
+     "east": -757.05,
+     "north": 173.88
+    },
+    {
+     "east": -749.56,
+     "north": 162.91
+    },
+    {
+     "east": -741.35,
+     "north": 153.16
+    },
+    {
+     "east": -725.09,
+     "north": 140.32
+    },
+    {
+     "east": -715.55,
+     "north": 140
+    },
+    {
+     "east": -709.15,
+     "north": 136.25
+    },
+    {
+     "east": -704.27,
+     "north": 129.43
+    },
+    {
+     "east": -699.75,
+     "north": 116.03
+    },
+    {
+     "east": -692.79,
+     "north": 104.45
+    },
+    {
+     "east": -680.73,
+     "north": 114.35
+    },
+    {
+     "east": -659.25,
+     "north": 129.96
+    },
+    {
+     "east": -612.28,
+     "north": 159.97
+    },
+    {
+     "east": -578.18,
+     "north": 181.77
+    },
+    {
+     "east": -563.17,
+     "north": 191.15
+    },
+    {
+     "east": -489.38,
+     "north": 237.27
+    },
+    {
+     "east": -427.18,
+     "north": 279.49
+    },
+    {
+     "east": -348.96,
+     "north": 279.99
+    },
+    {
+     "east": -330.54,
+     "north": 280.23
+    },
+    {
+     "east": -318.81,
+     "north": 267.99
+    },
+    {
+     "east": -314.39,
+     "north": 273.12
+    },
+    {
+     "east": -312.8,
+     "north": 275.93
+    }
+   ]
+  },
+  {
+   "osm_id": 1073398697,
+   "kind": "parking",
+   "name": null,
+   "provenance": "DOC",
+   "ring": [
+    {
+     "east": 213.24,
+     "north": -496.31
+    },
+    {
+     "east": 252.22,
+     "north": -474.78
+    },
+    {
+     "east": 266.13,
+     "north": -467.8
+    },
+    {
+     "east": 270.04,
+     "north": -465.69
+    },
+    {
+     "east": 320.03,
+     "north": -546.29
+    },
+    {
+     "east": 380.16,
+     "north": -640.46
+    },
+    {
+     "east": 429.98,
+     "north": -713.94
+    },
+    {
+     "east": 475.82,
+     "north": -781.8
+    },
+    {
+     "east": 485.45,
+     "north": -796.36
+    },
+    {
+     "east": 495.09,
+     "north": -811.26
+    },
+    {
+     "east": 473,
+     "north": -823.39
+    },
+    {
+     "east": 443.37,
+     "north": -787.94
+    },
+    {
+     "east": 393.05,
+     "north": -754.23
+    },
+    {
+     "east": 333.33,
+     "north": -687.95
+    },
+    {
+     "east": 322.64,
+     "north": -669.36
+    },
+    {
+     "east": 283.88,
+     "north": -608.56
+    },
+    {
+     "east": 238.05,
+     "north": -539.25
+    },
+    {
+     "east": 213.24,
+     "north": -496.31
+    }
+   ]
+  },
+  {
+   "osm_id": 1073532833,
+   "kind": "parking",
+   "name": null,
+   "provenance": "DOC",
+   "ring": [
+    {
+     "east": 183.24,
+     "north": -346.51
+    },
+    {
+     "east": 137.05,
+     "north": -369.94
+    },
+    {
+     "east": 139.52,
+     "north": -405.49
+    },
+    {
+     "east": 156.79,
+     "north": -429.83
+    },
+    {
+     "east": 198.29,
+     "north": -468.42
+    },
+    {
+     "east": 203.34,
+     "north": -468.61
+    },
+    {
+     "east": 249.99,
+     "north": -448.27
+    },
+    {
+     "east": 262.2,
+     "north": -442.57
+    },
+    {
+     "east": 250.79,
+     "north": -426.89
+    },
+    {
+     "east": 247.7,
+     "north": -423.93
+    },
+    {
+     "east": 242.65,
+     "north": -418.33
+    },
+    {
+     "east": 236.26,
+     "north": -415.96
+    },
+    {
+     "east": 217.37,
+     "north": -394.47
+    },
+    {
+     "east": 194.37,
+     "north": -363.77
+    },
+    {
+     "east": 183.24,
+     "north": -346.51
+    }
+   ]
+  },
+  {
+   "osm_id": 1073532834,
+   "kind": "parking",
+   "name": null,
+   "provenance": "DOC",
+   "ring": [
+    {
+     "east": 49.57,
+     "north": -275.85
+    },
+    {
+     "east": 68.17,
+     "north": -302.84
+    },
+    {
+     "east": 109.13,
+     "north": -280.01
+    },
+    {
+     "east": 134.64,
+     "north": -317.4
+    },
+    {
+     "east": 143.76,
+     "north": -339.73
+    },
+    {
+     "east": 152.27,
+     "north": -335.48
+    },
+    {
+     "east": 158.66,
+     "north": -349.02
+    },
+    {
+     "east": 149.49,
+     "north": -353.6
+    },
+    {
+     "east": 152.69,
+     "north": -361.2
+    },
+    {
+     "east": 180.39,
+     "north": -346.86
+    },
+    {
+     "east": 122.01,
+     "north": -267.51
+    },
+    {
+     "east": 127.07,
+     "north": -248.61
+    },
+    {
+     "east": 122.08,
+     "north": -240.12
+    },
+    {
+     "east": 116.03,
+     "north": -243.1
+    },
+    {
+     "east": 49.57,
+     "north": -275.85
+    }
+   ]
+  },
+  {
+   "osm_id": 1073548174,
+   "kind": "parking",
+   "name": null,
+   "provenance": "DOC",
+   "ring": [
+    {
+     "east": -150.08,
+     "north": 225.78
+    },
+    {
+     "east": -239.82,
+     "north": 225.24
+    },
+    {
+     "east": -206.95,
+     "north": 148.37
+    },
+    {
+     "east": -202.14,
+     "north": 137.01
+    },
+    {
+     "east": -198.03,
+     "north": 127.32
+    },
+    {
+     "east": -98.58,
+     "north": -44.45
+    },
+    {
+     "east": -44.23,
+     "north": -140.44
+    },
+    {
+     "east": 15.39,
+     "north": -239.08
+    },
+    {
+     "east": 23.38,
+     "north": -252.03
+    },
+    {
+     "east": 42.81,
+     "north": -278.84
+    },
+    {
+     "east": 49.57,
+     "north": -275.85
+    },
+    {
+     "east": 116.03,
+     "north": -243.1
+    },
+    {
+     "east": 112.02,
+     "north": -236.24
+    },
+    {
+     "east": 106.17,
+     "north": -226.25
+    },
+    {
+     "east": 80.5,
+     "north": -186.12
+    },
+    {
+     "east": 47.45,
+     "north": -137.96
+    },
+    {
+     "east": 36.99,
+     "north": -143.58
+    },
+    {
+     "east": 9.53,
+     "north": -92.12
+    },
+    {
+     "east": -26.07,
+     "north": -36.83
+    },
+    {
+     "east": -25.45,
+     "north": -33.4
+    },
+    {
+     "east": -11.39,
+     "north": -24.85
+    },
+    {
+     "east": -2.57,
+     "north": -19.45
+    },
+    {
+     "east": -10.8,
+     "north": -9.44
+    },
+    {
+     "east": -25.75,
+     "north": 9.84
+    },
+    {
+     "east": -38.12,
+     "north": 32.59
+    },
+    {
+     "east": -48.67,
+     "north": 51.96
+    },
+    {
+     "east": -62.46,
+     "north": 45.34
+    },
+    {
+     "east": -64.95,
+     "north": 48.45
+    },
+    {
+     "east": -68.94,
+     "north": 55.66
+    },
+    {
+     "east": -69.35,
+     "north": 56.71
+    },
+    {
+     "east": -71.45,
+     "north": 57.31
+    },
+    {
+     "east": -75.25,
+     "north": 58.82
+    },
+    {
+     "east": -75.68,
+     "north": 67.23
+    },
+    {
+     "east": -74.52,
+     "north": 77.82
+    },
+    {
+     "east": -85.81,
+     "north": 97.68
+    },
+    {
+     "east": -107.32,
+     "north": 137.9
+    },
+    {
+     "east": -132.4,
+     "north": 185.05
+    },
+    {
+     "east": -137.19,
+     "north": 195.49
+    },
+    {
+     "east": -139.16,
+     "north": 199.4
+    },
+    {
+     "east": -139.75,
+     "north": 200.56
+    },
+    {
+     "east": -135.83,
+     "north": 202.86
+    },
+    {
+     "east": -136.87,
+     "north": 205.09
+    },
+    {
+     "east": -138.13,
+     "north": 207.39
+    },
+    {
+     "east": -136.16,
+     "north": 208.67
+    },
+    {
+     "east": -134.7,
+     "north": 210.49
+    },
+    {
+     "east": -142.06,
+     "north": 221.55
+    },
+    {
+     "east": -145.51,
+     "north": 222.04
+    },
+    {
+     "east": -146.18,
+     "north": 223.11
+    },
+    {
+     "east": -147.95,
+     "north": 225.75
+    },
+    {
+     "east": -150.08,
+     "north": 225.78
+    }
+   ]
+  }
+ ],
+ "slipway": {
+  "osm_id": 1073540134,
+  "provenance": "DOC",
+  "line": [
+   {
+    "east": 102.98,
+    "north": -241.34
+   },
+   {
+    "east": 112.02,
+    "north": -236.24
+   }
+  ]
+ },
+ "masses": [
+  {
+   "id": "grain-elevator",
+   "kind": "building",
+   "label": "Grain elevator (map marker 7, “Grain Elevator Light Display”)",
+   "ring": [
+    {
+     "east": 75.23,
+     "north": -135.52
+    },
+    {
+     "east": 129.11,
+     "north": -224.2
+    },
+    {
+     "east": 96.38,
+     "north": -244.08
+    },
+    {
+     "east": 42.5,
+     "north": -155.4
+    }
+   ],
+   "heightNote": "Tall elevator; height not sourced — ASSUME massing only"
+  },
+  {
+   "id": "service-building",
+   "kind": "building",
+   "label": "Service building (map marker 3)",
+   "ring": [
+    {
+     "east": -219.82,
+     "north": 138.38
+    },
+    {
+     "east": -200.58,
+     "north": 106.71
+    },
+    {
+     "east": -220.11,
+     "north": 94.84
+    },
+    {
+     "east": -239.35,
+     "north": 126.51
+    }
+   ]
+  },
+  {
+   "id": "small-building",
+   "kind": "building",
+   "label": "Small building beside storage area (map marker 6)",
+   "ring": [
+    {
+     "east": 10.64,
+     "north": -64.9
+    },
+    {
+     "east": 20.91,
+     "north": -81.79
+    },
+    {
+     "east": 7.18,
+     "north": -90.13
+    },
+    {
+     "east": -3.08,
+     "north": -73.24
+    }
+   ]
+  },
+  {
+   "id": "storage-4a",
+   "kind": "boat-storage",
+   "label": "Boat storage (map marker 4)",
+   "ring": [
+    {
+     "east": -121.26,
+     "north": 149.84
+    },
+    {
+     "east": -16.07,
+     "north": -23.31
+    },
+    {
+     "east": -23.4,
+     "north": -38.6
+    },
+    {
+     "east": -71.87,
+     "north": -65.88
+    },
+    {
+     "east": -173.54,
+     "north": 101.45
+    },
+    {
+     "east": -169.96,
+     "north": 125.31
+    }
+   ]
+  },
+  {
+   "id": "storage-4b",
+   "kind": "boat-storage",
+   "label": "Boat storage along road (map marker 4)",
+   "ring": [
+    {
+     "east": -166.49,
+     "north": 52.98
+    },
+    {
+     "east": 21.06,
+     "north": -224.8
+    },
+    {
+     "east": -10.06,
+     "north": -247.32
+    },
+    {
+     "east": -191.71,
+     "north": 36.21
+    }
+   ]
+  },
+  {
+   "id": "storage-6",
+   "kind": "boat-storage",
+   "label": "Boat storage (map marker 6)",
+   "ring": [
+    {
+     "east": 12.11,
+     "north": -62.56
+    },
+    {
+     "east": 40.01,
+     "north": -108.49
+    },
+    {
+     "east": 32.16,
+     "north": -124.1
+    },
+    {
+     "east": -13.7,
+     "north": -146.18
+    },
+    {
+     "east": -48.97,
+     "north": -88.11
+    }
+   ]
+  },
+  {
+   "id": "parking-8",
+   "kind": "parking",
+   "label": "Parking (map marker 8)",
+   "ring": [
+    {
+     "east": 31.7,
+     "north": -232.79
+    },
+    {
+     "east": 99.52,
+     "north": -332.52
+    },
+    {
+     "east": 59.3,
+     "north": -359.12
+    },
+    {
+     "east": -6.86,
+     "north": -252.6
+    }
+   ]
+  },
+  {
+   "id": "yard-9",
+   "kind": "yard",
+   "label": "Yard (map marker 9)",
+   "ring": [
+    {
+     "east": 155.53,
+     "north": -309.33
+    },
+    {
+     "east": 243.67,
+     "north": -443.69
+    },
+    {
+     "east": 151.44,
+     "north": -508.39
+    },
+    {
+     "east": 63.15,
+     "north": -365.45
+    }
+   ]
+  },
+  {
+   "id": "site-boundary-2022",
+   "kind": "boundary",
+   "label": "2022 site boundary (red dash-dot on map)",
+   "ring": [
+    {
+     "east": -281.03,
+     "north": 191.54
+    },
+    {
+     "east": -116.83,
+     "north": 210.35
+    },
+    {
+     "east": 285.96,
+     "north": -428.84
+    },
+    {
+     "east": 152.95,
+     "north": -513.26
+    },
+    {
+     "east": -37.21,
+     "north": -224.06
+    }
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": "skyway",
+   "kind": "bridge",
+   "label": "Skyway (NY-5) deck centreline, approx. 28 m wide",
+   "line": [
+    {
+     "east": 371.14,
+     "north": 67.39
+    },
+    {
+     "east": 294.06,
+     "north": -745.53
+    }
+   ],
+   "widthM": 28
+  },
+  {
+   "id": "fuhrmann-blvd",
+   "kind": "road",
+   "label": "Fuhrmann Blvd",
+   "line": [
+    {
+     "east": -282.08,
+     "north": 190.89
+    },
+    {
+     "east": -38.26,
+     "north": -224.7
+    },
+    {
+     "east": 144.5,
+     "north": -518.39
+    },
+    {
+     "east": 275.59,
+     "north": -756.75
+    }
+   ],
+   "widthM": 12
+  },
+  {
+   "id": "service-road",
+   "kind": "road",
+   "label": "Service road (approximate)",
+   "line": [
+    {
+     "east": -232.3,
+     "north": 192.23
+    },
+    {
+     "east": -162.88,
+     "north": 89.86
+    },
+    {
+     "east": -71.95,
+     "north": -71.71
+    },
+    {
+     "east": 3.77,
+     "north": -163.03
+    },
+    {
+     "east": 119.71,
+     "north": -345.54
+    },
+    {
+     "east": 200.46,
+     "north": -484.4
+    }
+   ],
+   "widthM": 7
+  },
+  {
+   "id": "gangway-marker-5",
+   "kind": "gangway",
+   "label": "Gangway at map marker 5",
+   "line": [
+    {
+     "east": 17.33,
+     "north": -28.32
+    },
+    {
+     "east": -14.35,
+     "north": -47.56
+    }
+   ],
+   "widthM": 2
+  },
+  {
+   "id": "canalside-wharf-edge",
+   "kind": "bank",
+   "label": "North bank wharf edge (Canalside side)",
+   "line": [
+    {
+     "east": 147.8,
+     "north": 321.98
+    },
+    {
+     "east": 329.67,
+     "north": -1.17
+    }
+   ],
+   "widthM": 0
+  }
+ ]
+}

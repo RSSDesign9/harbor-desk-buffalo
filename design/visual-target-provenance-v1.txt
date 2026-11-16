@@ -1,0 +1,18 @@
+Asset: visual-target-v1.png
+Status: draft visual target for user review, not approved for implementation.
+Creation method: built-in image generation, initial reference-based generation followed by one visual refinement.
+The frame is a conceptual reconstruction with approximate geometry. It is not a photograph, survey, live feed, or a verified model of current site conditions. Vessels, records, slip IDs, and observations are simulated.
+
+Geographic/photo reference:
+https://marinas.com/view/marina/55c7xj_First_Buffalo_River_Marina_Buffalo_NY_United_States
+https://img.marinas.com/v2/d3de237c03326744017c16e73086e6446555bfb69d6cc9c0e4b5e85e87ff5d7d.jpg
+
+Supporting site description:
+https://www.esd.ny.gov/sites/default/files/rfp/Exhibit-A-Site-Map-First-Buffalo-Marina-Operator.pdf
+Site-map date: June 1, 2022.
+
+Style reference: user-supplied ssstwitter.com_1794669390043.mp4, approximately 12-second frame.
+Original generation prompt: ../visual-target-prompt-v1.txt
+
+Refinement prompt:
+Refine this visual target frame, keeping the exact same Harbor Desk application UI, exact readable text and hierarchy, panel position, selected B-12 boat, long linear First Buffalo River Marina quay, boatyard, service buildings and Connecting Terminal industrial context. Make ONE targeted art-direction improvement: the environment currently reads like a drone photograph with UI. Transform the environment into a clearly custom-built, premium architectural real-time 3D model with a higher approximately 40-degree downward camera and near-orthographic projection, like the clean warehouse reference discussed. Remove the eye-level sky/horizon composition; let the scene fill the viewport with river, long quay, boatyard, realistic buildings and background grain elevator. Keep geography coherent and recognizable, no rearranged island or generic marina basin. Increase deliberate clarity: controlled smooth high-quality mesh silhouettes, slightly simplified tree canopies with rich believable volume, carefully composed clean grounds and fewer distracting parked objects, subtle ambient occlusion. Preserve sophisticated high-resolution PBR materials: fiberglass hulls, navy fabric, weathered concrete, timber, glazing, stainless rails, realistic softly rippling desaturated river water and natural daylight. The ideal is 55% exquisitely modeled clean 3D diorama readability and 45% hyperrealistic surface finish, not low-poly, not cartoon, not plasticky, not a real aerial photograph. Camera must show near boats large enough to inspect and long straight waterfront quay continuing into context; no miniature platform edge. Keep the UI entirely crisp and unchanged. Preserve exact footer 'Independent concept · simulated records · approximate geometry'. Output one wide 16:9 high quality application frame.

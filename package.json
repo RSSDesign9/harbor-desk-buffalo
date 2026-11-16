@@ -1,0 +1,57 @@
+{
+  "name": "harbor-desk",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Harbor Desk — independent portfolio concept: a 3D Buffalo River marina with a simulated slip-review workflow.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 4719 --strictPort",
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "geometry": "node scripts/inspect-geometry.ts && node scripts/render-plan.ts && node scripts/build-site-runtime.ts",
+    "check": "npm run tokens:check && npm run fixtures:check && npm run assets:check && npm run typecheck && npm run lint && npm run test && npm run build",
+    "fixtures": "node scripts/generate-fixtures.ts",
+    "fixtures:check": "node scripts/generate-fixtures.ts --check",
+    "tokens": "node scripts/build-tokens.ts",
+    "tokens:check": "node scripts/build-tokens.ts --check",
+    "assets": "node scripts/export-assets.ts",
+    "assets:check": "node scripts/export-assets.ts --check",
+    "assets:glb": "node scripts/export-assets.ts --glb",
+    "capture": "node scripts/capture-scene.ts",
+    "measure": "node scripts/measure-scene.ts",
+    "profile": "node scripts/profile-scene.ts",
+    "transfer": "node scripts/measure-transfer.ts"
+  },
+  "dependencies": {
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.1",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "eslint": "10.15.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.14.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  }
+}

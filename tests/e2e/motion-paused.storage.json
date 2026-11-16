@@ -1,0 +1,9 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://127.0.0.1:4719",
+      "localStorage": [{ "name": "harbor-desk:prefs", "value": "{\"theme\":\"dark\",\"solidPanels\":false,\"motionPaused\":true,\"mobile3d\":false}" }]
+    }
+  ]
+}

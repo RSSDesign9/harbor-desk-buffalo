@@ -1,0 +1,12 @@
+/*
+ * Local fonts — three variable faces (DESIGN §3, approved 15 Nov 2026). Files are byte-identical copies
+ * of design/fonts/* (checked by tests/unit/assets.test.ts). No third-party font host is contacted.
+ *   Commissioner 400–800, FLAR 0–100   headings, names, labels, counts (VOLM and slnt pinned to 0)
+ *   Work Sans 400–600                   body, UI, buttons
+ *   Atkinson Hyperlegible Mono 400–600  IDs, times, data, provenance tags
+ * All three: SIL OFL 1.1, no Reserved Font Name. Instanced and subset to Latin from google/fonts;
+ * licences at /fonts/*-OFL.txt.
+ */
+@font-face { font-family: "Commissioner"; font-weight: 400 800; font-style: normal; font-display: swap; src: url("/fonts/Commissioner-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-weight: 400 600; font-style: normal; font-display: swap; src: url("/fonts/WorkSans-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible Mono"; font-weight: 400 600; font-style: normal; font-display: swap; src: url("/fonts/AtkinsonHyperlegibleMono-Variable.woff2") format("woff2"); }

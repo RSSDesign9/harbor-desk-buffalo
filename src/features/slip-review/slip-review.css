@@ -1,0 +1,56 @@
+/* Slip review (T11–T13). Uses the T07 rules: no orange text on glass; --text-muted never carries meaning. */
+.review { gap: var(--s-3); }
+.review h3[tabindex], .review h4[tabindex] { scroll-margin-top: var(--s-4); }
+.review-block { display: grid; gap: var(--s-2); }
+.review-actions, .confirm-block { display: grid; gap: var(--s-2); }
+.confirm-block .checkbox { padding: var(--s-1) 0; min-height: 44px; }
+
+/* Evidence stills: the camera frame and the staff photo are visibly different kinds of evidence (ASSET-PLAN). */
+.evidence { margin: 0; display: grid; gap: var(--s-1); }
+.evidence img, .evidence-missing { width: 100%; height: auto; aspect-ratio: 8 / 5; border-radius: var(--r-xs); display: block; }
+.evidence-camera img { border: 1px solid var(--border-hairline); background: var(--c-ink-700); }
+.evidence-missing {
+  display: flex; align-items: center; justify-content: center; gap: var(--s-2); padding: var(--s-3);
+  border: 1px dashed var(--border-strong); color: var(--text-secondary); font-size: var(--fs-body-sm); text-align: center;
+  background: repeating-linear-gradient(135deg, transparent 0 8px, rgba(255, 255, 255, 0.04) 8px 16px);
+}
+.evidence figcaption { font-size: var(--fs-label-sm); }
+.staff-card {
+  display: grid; gap: var(--s-2); padding: var(--s-3); border-radius: var(--r-sm);
+  background: var(--bg-panel-solid); color: var(--text-primary); border: 1px solid var(--border-hairline);
+}
+.staff-card .evidence-staff img { border-radius: 2px; box-shadow: 0 1px 3px rgba(1, 27, 43, 0.25); }
+.staff-card .label { color: var(--text-secondary); }
+
+.source-note { display: flex; gap: var(--s-2); align-items: flex-start; color: var(--text-primary); }
+.source-note .icon { margin-top: 2px; color: var(--text-secondary); }
+.observed-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+.observed-split ul { margin: var(--s-1) 0 0; padding-left: 1.1em; display: grid; gap: 2px; }
+
+.task-status {
+  display: grid; gap: var(--s-1); padding: var(--s-3); border-radius: var(--r-sm);
+  border: 1px solid var(--state-review); background: rgba(255, 255, 255, 0.03);
+}
+.task-status:focus-visible, .review [tabindex="-1"]:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; box-shadow: 0 0 0 2px var(--focus-halo); }
+
+.scenario-control {
+  display: grid; gap: var(--s-2); padding: var(--s-3); border-radius: var(--r-sm);
+  border: 1px dashed var(--border-strong);
+}
+.scenario-control-label { display: flex; gap: var(--s-2); align-items: center; }
+.no-evidence { display: grid; gap: var(--s-2); }
+.readonly-note { display: flex; gap: var(--s-2); align-items: flex-start; padding: var(--s-2) var(--s-3); border-radius: var(--r-sm); border: 1px solid var(--border-hairline); }
+.readonly-note .icon { margin-top: 2px; flex: none; }
+
+.comparison { width: 100%; border-collapse: collapse; font-size: 12.5px; line-height: 1.35; table-layout: fixed; }
+.comparison caption { text-align: left; padding-bottom: var(--s-1); }
+.comparison th, .comparison td { text-align: left; vertical-align: top; padding: 5px 4px; border-top: 1px solid var(--border-hairline); }
+.comparison thead th { font-family: var(--f-heading); font-weight: var(--fw-semibold); font-size: 12.5px; border-top: 0; }
+.comparison thead td { border-top: 0; }
+.comparison tbody th { color: var(--text-secondary); font-weight: var(--fw-regular); width: 64px; }
+.comparison .col-note { display: block; font-family: var(--f-mono); font-weight: var(--fw-medium); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-secondary); }
+
+.trail { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.trail li { display: grid; grid-template-columns: 44px 1fr; gap: var(--s-2); position: relative; }
+.trail time { color: var(--text-secondary); font-size: 13px; padding-top: 1px; }
+.trail-title { font-weight: var(--fw-semibold); font-size: var(--fs-body-sm); }

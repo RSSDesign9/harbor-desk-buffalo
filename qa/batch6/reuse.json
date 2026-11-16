@@ -1,0 +1,37 @@
+{
+  "measuredAt": "2026-11-14T23:41:19.622Z",
+  "url": "http://127.0.0.1:4719",
+  "note": "Counts after each full cycle (5 selections, full B-12 resolution, 3 presets, restart). Flat after the first cycle = caches are bounded and nothing leaks.",
+  "cycles": [
+    {
+      "cycle": 1,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15
+    },
+    {
+      "cycle": 2,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15
+    },
+    {
+      "cycle": 3,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15
+    },
+    {
+      "cycle": 4,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15
+    },
+    {
+      "cycle": 5,
+      "geometries": 136,
+      "textures": 8,
+      "programs": 15
+    }
+  ]
+}

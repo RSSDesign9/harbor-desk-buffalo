@@ -1,0 +1,1784 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "AGR-001",
+   "vesselId": "V-001",
+   "slipId": "A-03",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-002",
+   "vesselId": "V-002",
+   "slipId": "A-05",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-003",
+   "vesselId": "V-003",
+   "slipId": "A-08",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-004",
+   "vesselId": "V-004",
+   "slipId": "A-11",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-005",
+   "vesselId": "V-005",
+   "slipId": "A-14",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-006",
+   "vesselId": "V-006",
+   "slipId": "A-19",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-007",
+   "vesselId": "V-007",
+   "slipId": "A-24",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-008",
+   "vesselId": "V-008",
+   "slipId": "A-30",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-009",
+   "vesselId": "V-009",
+   "slipId": "B-05",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-010",
+   "vesselId": "V-010",
+   "slipId": "B-06",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-011",
+   "vesselId": "V-011",
+   "slipId": "B-07",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-012",
+   "vesselId": "V-012",
+   "slipId": "B-08",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-013",
+   "vesselId": "V-013",
+   "slipId": "B-09",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-014",
+   "vesselId": "V-014",
+   "slipId": "B-11",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-015",
+   "vesselId": "V-015",
+   "slipId": "B-13",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-016",
+   "vesselId": "V-016",
+   "slipId": "B-15",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-017",
+   "vesselId": "V-017",
+   "slipId": "B-16",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-018",
+   "vesselId": "V-018",
+   "slipId": "B-17",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-019",
+   "vesselId": "V-019",
+   "slipId": "B-18",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-020",
+   "vesselId": "V-020",
+   "slipId": "B-22",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-021",
+   "vesselId": "V-021",
+   "slipId": "B-12",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-022",
+   "vesselId": "V-022",
+   "slipId": "B-14",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-023",
+   "vesselId": "V-023",
+   "slipId": "B-10",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-024",
+   "vesselId": "V-024",
+   "slipId": "B-23",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-025",
+   "vesselId": "V-025",
+   "slipId": "B-24",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-026",
+   "vesselId": "V-026",
+   "slipId": "B-25",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-027",
+   "vesselId": "V-027",
+   "slipId": "B-26",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-028",
+   "vesselId": "V-028",
+   "slipId": "B-27",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-029",
+   "vesselId": "V-029",
+   "slipId": "C-02",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-030",
+   "vesselId": "V-030",
+   "slipId": "C-04",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-031",
+   "vesselId": "V-031",
+   "slipId": "C-07",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-032",
+   "vesselId": "V-032",
+   "slipId": "C-11",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-033",
+   "vesselId": "V-033",
+   "slipId": "C-15",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-034",
+   "vesselId": "V-034",
+   "slipId": "D-02",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-035",
+   "vesselId": "V-035",
+   "slipId": "D-05",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-036",
+   "vesselId": "V-036",
+   "slipId": "D-06",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-037",
+   "vesselId": "V-037",
+   "slipId": "D-09",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-038",
+   "vesselId": "V-038",
+   "slipId": "D-13",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-039",
+   "vesselId": "V-039",
+   "slipId": "D-17",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-040",
+   "vesselId": "V-040",
+   "slipId": "D-20",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-041",
+   "vesselId": "V-041",
+   "slipId": "E-02",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-042",
+   "vesselId": "V-042",
+   "slipId": "E-04",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-043",
+   "vesselId": "V-043",
+   "slipId": "E-07",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-044",
+   "vesselId": "V-044",
+   "slipId": "E-09",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-045",
+   "vesselId": "V-045",
+   "slipId": "A-36",
+   "type": "transient",
+   "start": "2026-07-14",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-046",
+   "vesselId": "V-046",
+   "slipId": "A-37",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-047",
+   "vesselId": "V-049",
+   "slipId": "A-04",
+   "type": "transient",
+   "start": "2026-07-13",
+   "end": "2026-07-18",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-048",
+   "vesselId": "V-050",
+   "slipId": "A-06",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-049",
+   "vesselId": "V-051",
+   "slipId": "A-07",
+   "type": "transient",
+   "start": "2026-07-14",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-050",
+   "vesselId": "V-052",
+   "slipId": "A-09",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-051",
+   "vesselId": "V-053",
+   "slipId": "A-10",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-052",
+   "vesselId": "V-054",
+   "slipId": "A-12",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-053",
+   "vesselId": "V-055",
+   "slipId": "A-13",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-054",
+   "vesselId": "V-056",
+   "slipId": "A-15",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-055",
+   "vesselId": "V-057",
+   "slipId": "A-16",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-056",
+   "vesselId": "V-058",
+   "slipId": "A-17",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-057",
+   "vesselId": "V-059",
+   "slipId": "A-18",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-058",
+   "vesselId": "V-060",
+   "slipId": "A-20",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-059",
+   "vesselId": "V-061",
+   "slipId": "A-22",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-060",
+   "vesselId": "V-062",
+   "slipId": "A-23",
+   "type": "transient",
+   "start": "2026-07-13",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-061",
+   "vesselId": "V-063",
+   "slipId": "A-25",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-062",
+   "vesselId": "V-064",
+   "slipId": "A-26",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-063",
+   "vesselId": "V-065",
+   "slipId": "A-27",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-064",
+   "vesselId": "V-066",
+   "slipId": "A-28",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-065",
+   "vesselId": "V-067",
+   "slipId": "A-29",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-066",
+   "vesselId": "V-068",
+   "slipId": "A-31",
+   "type": "transient",
+   "start": "2026-07-14",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-067",
+   "vesselId": "V-069",
+   "slipId": "A-32",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-068",
+   "vesselId": "V-070",
+   "slipId": "A-33",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-069",
+   "vesselId": "V-071",
+   "slipId": "A-34",
+   "type": "transient",
+   "start": "2026-07-13",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-070",
+   "vesselId": "V-072",
+   "slipId": "A-35",
+   "type": "transient",
+   "start": "2026-07-14",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 63,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-071",
+   "vesselId": "V-073",
+   "slipId": "A-38",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2050,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-072",
+   "vesselId": "V-074",
+   "slipId": "B-01",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-073",
+   "vesselId": "V-075",
+   "slipId": "B-02",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-074",
+   "vesselId": "V-076",
+   "slipId": "B-03",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-075",
+   "vesselId": "V-077",
+   "slipId": "B-04",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-076",
+   "vesselId": "V-078",
+   "slipId": "B-19",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-077",
+   "vesselId": "V-079",
+   "slipId": "B-20",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-078",
+   "vesselId": "V-080",
+   "slipId": "B-21",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-079",
+   "vesselId": "V-081",
+   "slipId": "B-28",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-080",
+   "vesselId": "V-082",
+   "slipId": "B-29",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-081",
+   "vesselId": "V-083",
+   "slipId": "B-31",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-082",
+   "vesselId": "V-084",
+   "slipId": "B-33",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-083",
+   "vesselId": "V-085",
+   "slipId": "B-35",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-084",
+   "vesselId": "V-086",
+   "slipId": "B-36",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 2880,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-085",
+   "vesselId": "V-087",
+   "slipId": "B-37",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 75,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-086",
+   "vesselId": "V-088",
+   "slipId": "C-03",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-087",
+   "vesselId": "V-089",
+   "slipId": "C-06",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-088",
+   "vesselId": "V-090",
+   "slipId": "C-08",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-089",
+   "vesselId": "V-091",
+   "slipId": "C-09",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-090",
+   "vesselId": "V-092",
+   "slipId": "C-10",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-091",
+   "vesselId": "V-093",
+   "slipId": "C-14",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 88,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-092",
+   "vesselId": "V-094",
+   "slipId": "C-18",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 3780,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-093",
+   "vesselId": "V-095",
+   "slipId": "D-03",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 100,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-094",
+   "vesselId": "V-096",
+   "slipId": "D-04",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-095",
+   "vesselId": "V-097",
+   "slipId": "D-07",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-096",
+   "vesselId": "V-098",
+   "slipId": "D-08",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-097",
+   "vesselId": "V-099",
+   "slipId": "D-10",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-098",
+   "vesselId": "V-100",
+   "slipId": "D-11",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-099",
+   "vesselId": "V-101",
+   "slipId": "D-12",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-19",
+   "status": "active",
+   "rateUsd": 100,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-100",
+   "vesselId": "V-102",
+   "slipId": "D-14",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 100,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-101",
+   "vesselId": "V-103",
+   "slipId": "D-15",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-102",
+   "vesselId": "V-104",
+   "slipId": "D-16",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 100,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-103",
+   "vesselId": "V-105",
+   "slipId": "D-18",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-104",
+   "vesselId": "V-106",
+   "slipId": "D-21",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-17",
+   "status": "active",
+   "rateUsd": 100,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-105",
+   "vesselId": "V-107",
+   "slipId": "D-22",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 4720,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-106",
+   "vesselId": "V-108",
+   "slipId": "E-01",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-107",
+   "vesselId": "V-109",
+   "slipId": "E-03",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-108",
+   "vesselId": "V-110",
+   "slipId": "E-05",
+   "type": "transient",
+   "start": "2026-07-15",
+   "end": "2026-07-16",
+   "status": "active",
+   "rateUsd": 113,
+   "rateBasis": "night",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-109",
+   "vesselId": "V-111",
+   "slipId": "E-06",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-110",
+   "vesselId": "V-112",
+   "slipId": "E-08",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  },
+  {
+   "id": "AGR-111",
+   "vesselId": "V-113",
+   "slipId": "E-10",
+   "type": "seasonal",
+   "start": "2026-05-01",
+   "end": "2026-10-15",
+   "status": "active",
+   "rateUsd": 5760,
+   "rateBasis": "season",
+   "provenance": "SIM",
+   "fieldProvenance": {
+    "rateUsd": "ASSUME",
+    "rateBasis": "ASSUME"
+   }
+  }
+ ]
+}

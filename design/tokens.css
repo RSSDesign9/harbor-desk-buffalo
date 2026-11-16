@@ -1,0 +1,167 @@
+/* Commissioner, Work Sans and Atkinson Hyperlegible Mono, self-hosted (design/fonts), SIL OFL 1.1, no Reserved Font Name.
+   Variable files from github.com/google/fonts, instanced (Commissioner VOLM = 0, slnt = 0) and subset to Latin, 15 Nov 2026.
+   Licences: fonts/Commissioner-OFL.txt, fonts/WorkSans-OFL.txt, fonts/AtkinsonHyperlegibleMono-OFL.txt. */
+@font-face { font-family: "Commissioner"; font-weight: 400 800; font-style: normal; font-display: swap; src: url("fonts/Commissioner-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-weight: 400 600; font-style: normal; font-display: swap; src: url("fonts/WorkSans-Variable.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible Mono"; font-weight: 400 600; font-style: normal; font-display: swap; src: url("fonts/AtkinsonHyperlegibleMono-Variable.woff2") format("woff2"); }
+
+/* Harbor Desk — design tokens
+   Source of truth: design/tokens.json. Keep in sync in the same commit.
+   MEASURED values come from saildrone.com and rivian.com CSS (14 Nov 2026).
+   PLACEHOLDER values are flagged inline and must be replaced. */
+
+:root {
+  /* ---------- base color ---------- */
+  --c-midnight: #011b2b;        /* Saildrone midnight-blue */
+  --c-ink-700: #233747;         /* Saildrone dark-grey */
+  --c-ink-500: #3f5464;         /* Saildrone grey */
+  --c-ink-300: #748491;         /* Saildrone mid-grey */
+  --c-mist-200: #d5dfe3;        /* Saildrone light-grey */
+  --c-mist-100: #eaf1f4;        /* Saildrone lightest-grey */
+  --c-white: #ffffff;
+  --c-signal: #ff4d00;          /* Saildrone orange */
+  --c-signal-light: #ff5d17;
+  --c-signal-dark: #c53c00;
+  --c-focus: #2d62ff;           /* Saildrone focus-state */
+  --c-sand: #e6e5df;            /* Rivian */
+  --c-sand-dark: #bbb9ad;       /* Rivian */
+  --c-forest: #465243;          /* Rivian, 3D material only */
+  --c-rust: #a15842;            /* Rivian, 3D material only */
+  --c-slate: #73859f;           /* Rivian */
+  --c-harbor-night: #2b333f;    /* Rivian */
+  --c-success-fill: #4a8231;    /* Rivian semantic-success */
+  --c-success-text: #cef5ca;    /* Saildrone success-green */
+  --c-success-text-dark: #114e0b;
+  --c-error-fill: #dc3127;      /* Rivian semantic-error */
+  --c-error-text: #ffb3ab;      /* derived */
+  --c-warning: #ffac00;         /* Rivian accent */
+  --c-warning-dark: #d58103;    /* Rivian semantic-warning */
+  --c-info-dark: #005e7d;       /* Rivian semantic-info */
+  --c-chart-water: #9ecefc;     /* MEASURED NOAA ENC shallow-water area, Buffalo Harbor render 14 Nov 2026 */
+  --c-chart-shoal: #82bdff;     /* MEASURED NOAA ENC very-shallow / dredged area */
+  --c-chart-land: #b09e56;      /* MEASURED NOAA ENC land area */
+  --c-chart-built: #cec58a;     /* MEASURED NOAA ENC pier / wharf / built land */
+  --c-chart-cyan: #7fd1e8;      /* derived, dark-mode underway */
+  --c-chart-cyan-dark: #0a6e8a; /* derived, light-mode underway */
+  --c-chart-magenta: #c842c6;   /* MEASURED NOAA ENC magenta (aids, labels) */
+  --c-chart-green: #77e137;     /* MEASURED NOAA ENC green lateral mark */
+  --c-chart-magenta-dm: #ff3d9a;/* derived for dark backgrounds */
+  --c-winter-sky: #c9d0d7;      /* MEASURED median, overcast sky, Raj's winter aerial of Erie Basin, 14 Nov 2026 */
+  --c-snow: #d2d9e0;            /* MEASURED median, snow field, same photo */
+  --c-ice-floe: #adb5bd;        /* MEASURED median, lake ice floes, same photo */
+  --c-winter-water: #585858;    /* MEASURED dominant, open water between floes, same photo */
+  --c-winter-concrete: #65615b; /* MEASURED median, observation tower, same photo */
+  --c-snow-canvas: #f2f5f8;     /* DERIVED: snow hue lifted to a UI canvas; measured snow is too dark for AA text */
+  --c-silo-concrete: #7b7265;   /* MEASURED median, RiverWorks elevator tower, Commons CC0 photo */
+  --c-silo-blue: #284878;       /* MEASURED dominant, Labatt-painted silos at RiverWorks, Commons CC0 photo */
+  --c-lake-sky: #91a8c3;        /* MEASURED median, sky over RiverWorks */
+  --c-river-water: #4e6d98;     /* MEASURED median, Buffalo River at Concrete Central, sunlit, CC BY 4.0 photo */
+  --c-limestone: #e7ebed;       /* MEASURED median, Buffalo Main Light tower (painted), CC BY-SA 2.5 photo */
+  --c-review-dark: #8a5a00;     /* DERIVED (T07): needs-review text on light surfaces */
+
+  /* ---------- typography (APPROVED 15 Nov 2026) ---------- */
+  --f-heading: "Commissioner", "Work Sans", Arial, sans-serif;            /* headings, names, labels, counts */
+  --f-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;            /* body, UI, buttons */
+  --f-mono: "Atkinson Hyperlegible Mono", "SF Mono", Menlo, monospace;   /* IDs, times, data, provenance tags */
+
+  /* Fluid scale, 20rem → 90rem viewport */
+  --fs-h1: clamp(2.5rem, 1.929rem + 2.857vw, 4.5rem);
+  --fs-h2: clamp(2rem, 1.714rem + 1.429vw, 3rem);
+  --fs-h3: clamp(1.75rem, 1.536rem + 1.071vw, 2.5rem);
+  --fs-h4: clamp(1.5rem, 1.357rem + 0.714vw, 2rem);
+  --fs-h5: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+  --fs-h6: clamp(1.0625rem, 1.009rem + 0.268vw, 1.25rem);
+  --fs-body-lg: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-body-sm: 0.9375rem;
+  --fs-control: 0.875rem;
+  --fs-label: 0.7813rem;
+  --fs-label-sm: 0.6875rem;
+  --fs-data: 0.875rem;
+  --fs-data-lg: clamp(1.875rem, 1.696rem + 0.893vw, 2.5rem);
+
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+  --lh-tight: 1.05; --lh-heading: 1.15; --lh-snug: 1.25; --lh-body: 1.5; --lh-compact: 1.4; --lh-label: 1.2;
+  --ls-label: 0.07em; --ls-label-sm: 0.04em; --ls-display: -0.025em; --ls-heading: -0.015em; --ls-wordmark: 0.1em;
+  /* Commissioner flare axis (FLAR): off for small text, full for headings and names, partial for counts */
+  --flare-display: 100; --flare-count: 60; --flare-ui: 0;
+
+  /* ---------- space (4px base) ---------- */
+  --s-0: 0; --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px;
+  --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-24: 96px;
+  --inset-app: 24px;
+
+  /* ---------- shape ---------- */
+  --r-0: 0; --r-xs: 4px; --r-sm: 8px; --r-md: 12px; --r-lg: 20px; --r-pill: 999px;
+
+  /* ---------- motion ---------- */
+  --t-micro: 150ms; --t-panel: 240ms; --t-camera: 700ms; --t-scene-in: 400ms;
+  --e-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --e-camera: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* ---------- sizes ---------- */
+  --sz-topbar: 56px; --sz-inspector: 360px; --sz-list-w: 400px; --sz-list-h: 320px;
+  --sz-row: 44px; --sz-btn: 40px; --sz-icon-btn: 32px; --sz-kpi-w: 160px; --sz-kpi-h: 88px;
+}
+
+/* ---------- semantic: dark (default) ---------- */
+:root, [data-theme="dark"] {
+  --bg-canvas: var(--c-midnight);
+  --bg-panel: rgba(1, 27, 43, 0.84);            /* T07: was 0.72; AA on glass over bright scene, see tokens.json _meta.reconciled */
+  --bg-panel-solid: var(--c-ink-700);
+  --bg-row-hover: rgba(255, 255, 255, 0.06);
+  --text-primary: var(--c-white);
+  --text-secondary: var(--c-mist-200);
+  --text-muted: var(--c-ink-300);
+  --text-accent: var(--c-signal);
+  --text-on-accent: var(--c-midnight);
+  --border-hairline: rgba(255, 255, 255, 0.12);
+  --border-strong: var(--c-ink-300);
+  --focus-ring: var(--c-focus);
+  --state-docked: var(--c-success-text);      --state-docked-fill: var(--c-success-fill);
+  --state-underway: var(--c-chart-cyan);
+  --state-arriving: var(--c-signal-light);    --state-arriving-fill: var(--c-signal);
+  --state-overdue: var(--c-error-text);       --state-overdue-fill: var(--c-error-fill);
+  --state-maintenance: var(--c-warning);
+  --state-winterized: var(--c-sand-dark);
+  --nav-aid: var(--c-chart-magenta-dm);
+  --state-review: var(--c-warning);           /* T07: needs review / identity unverified (non-orange) */
+  --focus-halo: var(--c-white);               /* T07: separates the focus ring from any backdrop */
+  --shadow-panel: 0 10px 38px -10px rgba(14, 18, 22, 0.35), 0 10px 20px -15px rgba(14, 18, 22, 0.2);
+  --shadow-sheet: 0 -8px 40px rgba(1, 27, 43, 0.5);
+}
+
+/* ---------- semantic: light "chart mode" ---------- */
+[data-theme="light"] {
+  --bg-canvas: var(--c-snow-canvas);
+  --bg-water: var(--c-chart-water);
+  --bg-shoal: var(--c-chart-shoal);
+  --bg-land: var(--c-chart-built);
+  --bg-land-deep: var(--c-chart-land);
+  --bg-panel: rgba(255, 255, 255, 0.8);
+  --bg-panel-solid: var(--c-white);
+  --bg-row-hover: rgba(1, 27, 43, 0.05);
+  --text-primary: var(--c-ink-700);
+  --text-secondary: var(--c-ink-500);
+  --text-muted: #5d6c7b;               /* Saildrone measured grey; ink-300 is 3.47 on winter-sky and fails */
+  --text-accent: var(--c-signal-dark);
+  --text-on-accent: var(--c-white);
+  --border-hairline: rgba(1, 27, 43, 0.12);
+  --border-strong: var(--c-ink-300);
+  --focus-ring: var(--c-focus);
+  --state-docked: var(--c-success-text-dark);  --state-docked-fill: var(--c-success-fill);
+  --state-underway: var(--c-chart-cyan-dark);
+  --state-arriving: var(--c-signal-dark);      --state-arriving-fill: var(--c-signal-dark);
+  --state-overdue: var(--c-error-fill);        --state-overdue-fill: var(--c-error-fill);
+  --state-maintenance: var(--c-warning-dark);
+  --state-winterized: #686258;
+  --nav-aid: var(--c-chart-magenta);
+  --state-review: var(--c-review-dark);
+  --focus-halo: var(--c-white);
+  --shadow-panel: 0 10px 38px -10px rgba(14, 18, 22, 0.18), 0 10px 20px -15px rgba(14, 18, 22, 0.1);
+  --shadow-sheet: 0 -8px 40px rgba(1, 27, 43, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-micro: 0ms; --t-panel: 100ms; --t-camera: 0ms; --t-scene-in: 0ms; }
+}

@@ -1,0 +1,1208 @@
+# Accessibility-tree snapshots (Batch 7)
+
+Chromium 159.0.8154.6 via Playwright `ariaSnapshot()`, production build, 1440×900. **Substitute evidence, not a screen-reader test.**
+
+## 08:45 normal (B-12 selected)
+
+```yaml
+- complementary "Slip and vessel details":
+  - 'region "Slip B-12 ASSUME: Design assumption (provenance)"':
+    - paragraph: Dock B · floating
+    - button "Close details"
+    - 'heading "Slip B-12 ASSUME: Design assumption (provenance)" [level=2]':
+      - text: Slip B-12
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+    - region "Assigned vessel · registry":
+      - heading "Assigned vessel · registry" [level=3]
+      - paragraph:
+        - button "Open registry record for Lake Effect, assigned to B-12": Lake Effect
+        - text: 29 ft cabin cruiser
+      - term: Agreement
+      - definition:
+        - text: Seasonal · B-12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Term
+      - definition:
+        - text: 2026-05-01 → 2026-10-15
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Latest observation · separate from the registry":
+      - heading "Latest observation · separate from the registry" [level=3]
+      - paragraph: Empty No vessel present
+      - term: Source
+      - definition:
+        - text: Camera C-02 · 08:45
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Freshness
+      - definition: Current (demo policy)
+    - region "Slip review":
+      - heading "Slip review" [level=3]
+      - paragraph: No open issue. Lake Effect departed at 08:10 (staff log); B-12 stays assigned and is not bookable. Camera shows it empty at 08:45.
+      - paragraph:
+        - text: Scenario control
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - button "Show 09:12 camera observation"
+      - paragraph: "Demo only: advances simulated time to 09:12 and adds a fictional camera observation."
+    - region "Status summary":
+      - term: Presence
+      - definition: Empty
+      - term: Agreement
+      - definition: Assigned
+      - term: Bookable
+      - definition: "No"
+    - group: Slip details and provenance
+  - region "Registry":
+    - heading "Registry" [level=2]
+    - paragraph:
+      - text: "Provenance: roster"
+      - 'button "SIM: Simulated (provenance)"': SIM
+      - text: slips
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+      - text: headwalks
+      - 'button "DOC: Documented source (provenance)"': DOC
+    - button "Hide list" [expanded]
+    - tablist "Registry":
+      - tab "Slips 126" [selected]
+      - tab "Vessels 48"
+    - text: Dock
+    - combobox "Dock":
+      - option "All docks" [selected]
+      - option "Dock A"
+      - option "Dock B"
+      - option "Dock C"
+      - option "Dock D"
+      - option "Dock E"
+    - checkbox "Needs review"
+    - text: Needs review
+    - listbox "Slips":
+      - option "A-01 No agreement Empty"
+      - option "A-02 No agreement Empty"
+      - option "A-03 North Light Present"
+      - option "A-04 No agreement Empty"
+      - option "A-05 Breakwall Present"
+      - option "A-06 No agreement Empty"
+      - option "A-07 No agreement Empty"
+      - option "A-08 Erie Glass Present"
+      - option "A-09 No agreement Empty"
+      - option "A-10 No agreement Empty"
+      - option "A-11 Second Wind Present"
+      - option "A-12 No agreement Empty"
+      - option "A-13 No agreement Empty"
+      - option "A-14 Halcyon Empty"
+      - option "A-15 No agreement Empty"
+      - option "A-16 No agreement Empty"
+      - option "A-17 No agreement Empty"
+      - option "A-18 No agreement Empty"
+      - option "A-19 Kestrel Present"
+      - option "A-20 No agreement Empty"
+      - option "A-21 No agreement Empty"
+      - option "A-22 No agreement Empty"
+      - option "A-23 No agreement Empty"
+      - option "A-24 Blue Heron Present"
+      - option "A-25 No agreement Empty"
+      - option "A-26 No agreement Empty"
+      - option "A-27 No agreement Empty"
+      - option "A-28 No agreement Empty"
+      - option "A-29 No agreement Empty"
+      - option "A-30 Driftwood Present"
+      - option "A-31 No agreement Empty"
+      - option "A-32 No agreement Empty"
+      - option "A-33 No agreement Empty"
+      - option "A-34 No agreement Empty"
+      - option "A-35 No agreement Empty"
+      - option "A-36 Undertow Present"
+      - option "A-37 Whitecap Present"
+      - option "A-38 No agreement Empty"
+      - option "A-39 No agreement Empty"
+      - option "B-01 No agreement Empty"
+      - option "B-02 No agreement Empty"
+      - option "B-03 No agreement Empty"
+      - option "B-04 No agreement Empty"
+      - option "B-05 Sandpiper Present"
+      - option "B-06 Seiche Empty"
+      - option "B-07 Grain Line Present"
+      - option "B-08 Low Pressure Empty"
+      - option "B-09 Tern Present"
+      - option "B-10 River Run Present"
+      - option "B-11 Meridian Present"
+      - option "B-12 Lake Effect Empty" [selected]
+      - option "B-13 Slow Current Present"
+      - option "B-14 Harbor Light Empty"
+      - option "B-15 Bluewater Present"
+      - option "B-16 Westerly Present"
+      - option "B-17 Fair Weather Present"
+      - option "B-18 Night Heron Present"
+      - option "B-19 No agreement Empty"
+      - option "B-20 No agreement Empty"
+      - option "B-21 No agreement Empty"
+      - option "B-22 Long Pier Empty"
+      - option "B-23 Pennant Present"
+      - option "B-24 Cormorant Presence unknown"
+      - option "B-25 Gray Lady Present"
+      - option "B-26 Freshwater Present"
+      - option "B-27 Easy Does It Empty"
+      - option "B-28 No agreement Empty"
+      - option "B-29 No agreement Empty"
+      - option "B-30 No agreement Empty"
+      - option "B-31 No agreement Empty"
+      - option "B-32 No agreement Empty"
+      - option "B-33 No agreement Empty"
+      - option "B-34 No agreement Empty"
+      - option "B-35 No agreement Empty"
+      - option "B-36 No agreement Empty"
+      - option "B-37 No agreement Empty"
+      - option "C-01 No agreement Camera offline"
+      - option "C-02 Sundown Camera offline"
+      - option "C-03 No agreement Camera offline"
+      - option "C-04 Shoal Draft Camera offline"
+      - option "C-05 No agreement Camera offline"
+      - option "C-06 No agreement Camera offline"
+      - option "C-07 Clear Sky Camera offline"
+      - option "C-08 No agreement Camera offline"
+      - option "C-09 No agreement Camera offline"
+      - option "C-10 No agreement Camera offline"
+      - option "C-11 Stillwater Camera offline"
+      - option "C-12 No agreement Camera offline"
+      - option "C-13 No agreement Camera offline"
+      - option "C-14 No agreement Camera offline"
+      - option "C-15 Marigold Camera offline"
+      - option "C-16 No agreement Camera offline"
+      - option "C-17 No agreement Camera offline"
+      - option "C-18 No agreement Camera offline"
+      - option "D-01 No agreement Empty"
+      - option "D-02 Osprey Present"
+      - option "D-03 No agreement Empty"
+      - option "D-04 No agreement Empty"
+      - option "D-05 Second Shift Present"
+      - option "D-06 Silver Lining Presence unknown"
+      - option "D-07 No agreement Empty"
+      - option "D-08 No agreement Empty"
+      - option "D-09 Lake Song Present"
+      - option "D-10 No agreement Empty"
+      - option "D-11 No agreement Empty"
+      - option "D-12 No agreement Empty"
+      - option "D-13 Quiet Hour Present"
+      - option "D-14 No agreement Empty"
+      - option "D-15 No agreement Empty"
+      - option "D-16 No agreement Empty"
+      - option "D-17 Windward Present"
+      - option "D-18 No agreement Empty"
+      - option "D-19 No agreement Empty"
+      - option "D-20 Starboard Light Present"
+      - option "D-21 No agreement Empty"
+      - option "D-22 No agreement Empty"
+      - option "E-01 No agreement Camera offline"
+      - option "E-02 Tailwind Camera offline"
+      - option "E-03 No agreement Camera offline"
+      - option "E-04 Morning Watch Camera offline"
+      - option "E-05 No agreement Camera offline"
+      - option "E-06 No agreement Camera offline"
+      - option "E-07 Small Craft Camera offline"
+      - option "E-08 No agreement Camera offline"
+      - option "E-09 Ballast Camera offline"
+      - option "E-10 No agreement Camera offline"
+```
+
+## 09:12 uncertain
+
+```yaml
+- complementary "Slip and vessel details":
+  - 'region "Slip B-12 ASSUME: Design assumption (provenance)"':
+    - paragraph: Dock B · floating
+    - text: Needs review
+    - button "Close details"
+    - 'heading "Slip B-12 ASSUME: Design assumption (provenance)" [level=2]':
+      - text: Slip B-12
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+    - region "Assigned vessel · registry":
+      - heading "Assigned vessel · registry" [level=3]
+      - paragraph:
+        - button "Open registry record for Lake Effect, assigned to B-12": Lake Effect
+        - text: 29 ft cabin cruiser
+      - term: Agreement
+      - definition:
+        - text: Seasonal · B-12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Term
+      - definition:
+        - text: 2026-05-01 → 2026-10-15
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Latest observation · separate from the registry":
+      - heading "Latest observation · separate from the registry" [level=3]
+      - paragraph: Present Vessel present · identity unverified
+      - term: Source
+      - definition:
+        - text: Camera C-02 · 09:12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Freshness
+      - definition: Current (demo policy)
+      - term: Identity
+      - definition:
+        - text: Unverified
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - paragraph:
+        - text: "Possible match (candidate only, not an identity):"
+        - button "Compare with registry record of possible match Harbor Light": Harbor Light
+      - paragraph: "Reason for doubt: Name obscured. Canvas cover differs from the cover on record for the assigned vessel; hull profile resembles another cabin cruiser."
+    - region "Observation review":
+      - heading "Observation review" [level=3]
+      - figure "Camera C-02 · 09:12 · simulated frame":
+        - 'img "Simulated camera frame from C-02 at 09:12: an elevated view along Dock B with a cabin cruiser under a tan canvas cover in the slip; no name is legible."'
+        - text: Camera C-02 · 09:12 · simulated frame
+      - paragraph: Cabin cruiser present at the slip. Stern name not legible; canvas cover differs from the cover on record for the assigned vessel.
+      - paragraph: Observed
+      - list:
+        - listitem: A vessel is present in B-12 (Camera C-02, 09:12).
+        - listitem: It is a cabin cruiser with a tan canvas cover.
+      - paragraph: Not established
+      - list:
+        - listitem: "Which vessel it is: the name is not legible in the frame."
+        - listitem: Whether the cover change explains the difference.
+      - button "Review observation"
+      - button "Request dock check"
+      - region "Activity trail · append-only":
+        - heading "Activity trail · append-only" [level=4]
+        - list:
+          - listitem:
+            - time: 08:10
+            - paragraph: Departure logged
+            - paragraph: Lake Effect left B-12 (staff log). Agreement stays assigned.
+          - listitem:
+            - time: 09:12
+            - paragraph: Vessel present · identity unverified · retained
+            - paragraph: Camera C-02 observation OBS-S4K22B; possible match Harbor Light (candidate only). Original record retained unchanged.
+    - region "Status summary":
+      - term: Presence
+      - definition: Present
+      - term: Agreement
+      - definition: Assigned
+      - term: Bookable
+      - definition: "No"
+    - group: Slip details and provenance
+  - region "Registry":
+    - heading "Registry" [level=2]
+    - paragraph:
+      - text: "Provenance: roster"
+      - 'button "SIM: Simulated (provenance)"': SIM
+      - text: slips
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+      - text: headwalks
+      - 'button "DOC: Documented source (provenance)"': DOC
+    - button "Hide list" [expanded]
+    - tablist "Registry":
+      - tab "Slips 126" [selected]
+      - tab "Vessels 48"
+    - text: Dock
+    - combobox "Dock":
+      - option "All docks" [selected]
+      - option "Dock A"
+      - option "Dock B"
+      - option "Dock C"
+      - option "Dock D"
+      - option "Dock E"
+    - checkbox "Needs review"
+    - text: Needs review
+    - listbox "Slips":
+      - option "A-01 No agreement Empty"
+      - option "A-02 No agreement Empty"
+      - option "A-03 North Light Present"
+      - option "A-04 No agreement Empty"
+      - option "A-05 Breakwall Present"
+      - option "A-06 No agreement Empty"
+      - option "A-07 No agreement Empty"
+      - option "A-08 Erie Glass Present"
+      - option "A-09 No agreement Empty"
+      - option "A-10 No agreement Empty"
+      - option "A-11 Second Wind Present"
+      - option "A-12 No agreement Empty"
+      - option "A-13 No agreement Empty"
+      - option "A-14 Halcyon Empty"
+      - option "A-15 No agreement Empty"
+      - option "A-16 No agreement Empty"
+      - option "A-17 No agreement Empty"
+      - option "A-18 No agreement Empty"
+      - option "A-19 Kestrel Present"
+      - option "A-20 No agreement Empty"
+      - option "A-21 No agreement Empty"
+      - option "A-22 No agreement Empty"
+      - option "A-23 No agreement Empty"
+      - option "A-24 Blue Heron Present"
+      - option "A-25 No agreement Empty"
+      - option "A-26 No agreement Empty"
+      - option "A-27 No agreement Empty"
+      - option "A-28 No agreement Empty"
+      - option "A-29 No agreement Empty"
+      - option "A-30 Driftwood Present"
+      - option "A-31 No agreement Empty"
+      - option "A-32 No agreement Empty"
+      - option "A-33 No agreement Empty"
+      - option "A-34 No agreement Empty"
+      - option "A-35 No agreement Empty"
+      - option "A-36 Undertow Present"
+      - option "A-37 Whitecap Present"
+      - option "A-38 No agreement Empty"
+      - option "A-39 No agreement Empty"
+      - option "B-01 No agreement Empty"
+      - option "B-02 No agreement Empty"
+      - option "B-03 No agreement Empty"
+      - option "B-04 No agreement Empty"
+      - option "B-05 Sandpiper Present"
+      - option "B-06 Seiche Empty"
+      - option "B-07 Grain Line Present"
+      - option "B-08 Low Pressure Empty"
+      - option "B-09 Tern Present"
+      - option "B-10 River Run Present"
+      - option "B-11 Meridian Present"
+      - option "B-12 Lake Effect Needs review Present" [selected]
+      - option "B-13 Slow Current Present"
+      - option "B-14 Harbor Light Empty"
+      - option "B-15 Bluewater Present"
+      - option "B-16 Westerly Present"
+      - option "B-17 Fair Weather Present"
+      - option "B-18 Night Heron Present"
+      - option "B-19 No agreement Empty"
+      - option "B-20 No agreement Empty"
+      - option "B-21 No agreement Empty"
+      - option "B-22 Long Pier Empty"
+      - option "B-23 Pennant Present"
+      - option "B-24 Cormorant Present"
+      - option "B-25 Gray Lady Present"
+      - option "B-26 Freshwater Present"
+      - option "B-27 Easy Does It Empty"
+      - option "B-28 No agreement Empty"
+      - option "B-29 No agreement Empty"
+      - option "B-30 No agreement Empty"
+      - option "B-31 No agreement Empty"
+      - option "B-32 No agreement Empty"
+      - option "B-33 No agreement Empty"
+      - option "B-34 No agreement Empty"
+      - option "B-35 No agreement Empty"
+      - option "B-36 No agreement Empty"
+      - option "B-37 No agreement Empty"
+      - option "C-01 No agreement Camera offline"
+      - option "C-02 Sundown Camera offline"
+      - option "C-03 No agreement Camera offline"
+      - option "C-04 Shoal Draft Camera offline"
+      - option "C-05 No agreement Camera offline"
+      - option "C-06 No agreement Camera offline"
+      - option "C-07 Clear Sky Camera offline"
+      - option "C-08 No agreement Camera offline"
+      - option "C-09 No agreement Camera offline"
+      - option "C-10 No agreement Camera offline"
+      - option "C-11 Stillwater Camera offline"
+      - option "C-12 No agreement Camera offline"
+      - option "C-13 No agreement Camera offline"
+      - option "C-14 No agreement Camera offline"
+      - option "C-15 Marigold Camera offline"
+      - option "C-16 No agreement Camera offline"
+      - option "C-17 No agreement Camera offline"
+      - option "C-18 No agreement Camera offline"
+      - option "D-01 No agreement Empty"
+      - option "D-02 Osprey Present"
+      - option "D-03 No agreement Empty"
+      - option "D-04 No agreement Empty"
+      - option "D-05 Second Shift Present"
+      - option "D-06 Silver Lining Present"
+      - option "D-07 No agreement Empty"
+      - option "D-08 No agreement Empty"
+      - option "D-09 Lake Song Present"
+      - option "D-10 No agreement Empty"
+      - option "D-11 No agreement Empty"
+      - option "D-12 No agreement Empty"
+      - option "D-13 Quiet Hour Present"
+      - option "D-14 No agreement Empty"
+      - option "D-15 No agreement Empty"
+      - option "D-16 No agreement Empty"
+      - option "D-17 Windward Present"
+      - option "D-18 No agreement Empty"
+      - option "D-19 No agreement Empty"
+      - option "D-20 Starboard Light Present"
+      - option "D-21 No agreement Empty"
+      - option "D-22 No agreement Empty"
+      - option "E-01 No agreement Camera offline"
+      - option "E-02 Tailwind Camera offline"
+      - option "E-03 No agreement Camera offline"
+      - option "E-04 Morning Watch Camera offline"
+      - option "E-05 No agreement Camera offline"
+      - option "E-06 No agreement Camera offline"
+      - option "E-07 Small Craft Camera offline"
+      - option "E-08 No agreement Camera offline"
+      - option "E-09 Ballast Camera offline"
+      - option "E-10 No agreement Camera offline"
+```
+
+## 09:13 dock check requested
+
+```yaml
+- complementary "Slip and vessel details":
+  - 'region "Slip B-12 ASSUME: Design assumption (provenance)"':
+    - paragraph: Dock B · floating
+    - text: Dock check pending
+    - button "Close details"
+    - 'heading "Slip B-12 ASSUME: Design assumption (provenance)" [level=2]':
+      - text: Slip B-12
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+    - region "Assigned vessel · registry":
+      - heading "Assigned vessel · registry" [level=3]
+      - paragraph:
+        - button "Open registry record for Lake Effect, assigned to B-12": Lake Effect
+        - text: 29 ft cabin cruiser
+      - term: Agreement
+      - definition:
+        - text: Seasonal · B-12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Term
+      - definition:
+        - text: 2026-05-01 → 2026-10-15
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Latest observation · separate from the registry":
+      - heading "Latest observation · separate from the registry" [level=3]
+      - paragraph: Present Vessel present · identity unverified
+      - term: Source
+      - definition:
+        - text: Camera C-02 · 09:12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Freshness
+      - definition: Current (demo policy)
+      - term: Identity
+      - definition:
+        - text: Unverified
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - paragraph:
+        - text: "Possible match (candidate only, not an identity):"
+        - button "Compare with registry record of possible match Harbor Light": Harbor Light
+      - paragraph: "Reason for doubt: Name obscured. Canvas cover differs from the cover on record for the assigned vessel; hull profile resembles another cabin cruiser."
+    - region "Observation review":
+      - heading "Observation review" [level=3]
+      - figure "Camera C-02 · 09:12 · simulated frame":
+        - 'img "Simulated camera frame from C-02 at 09:12: an elevated view along Dock B with a cabin cruiser under a tan canvas cover in the slip; no name is legible."'
+        - text: Camera C-02 · 09:12 · simulated frame
+      - paragraph: Cabin cruiser present at the slip. Stern name not legible; canvas cover differs from the cover on record for the assigned vessel.
+      - paragraph: Observed
+      - list:
+        - listitem: A vessel is present in B-12 (Camera C-02, 09:12).
+        - listitem: It is a cabin cruiser with a tan canvas cover.
+      - paragraph: Not established
+      - list:
+        - listitem: "Which vessel it is: the name is not legible in the frame."
+        - listitem: Whether the cover change explains the difference.
+      - group "Dock check":
+        - paragraph: Dock check pending TSK-0001
+        - paragraph: "Requested 09:13. Simulated local task: no message, notification or staff dispatch was sent."
+        - paragraph: Identity remains unverified. The issue stays open until staff evidence is reviewed and confirmed.
+      - button "Review observation"
+      - region "Activity trail · append-only":
+        - heading "Activity trail · append-only" [level=4]
+        - list:
+          - listitem:
+            - time: 08:10
+            - paragraph: Departure logged
+            - paragraph: Lake Effect left B-12 (staff log). Agreement stays assigned.
+          - listitem:
+            - time: 09:12
+            - paragraph: Vessel present · identity unverified · retained
+            - paragraph: Camera C-02 observation OBS-S4K22B; possible match Harbor Light (candidate only). Original record retained unchanged.
+          - listitem:
+            - time: 09:13
+            - paragraph: Dock check requested
+            - paragraph: Simulated local task TSK-0001 pending. No message was sent.
+    - region "Status summary":
+      - term: Presence
+      - definition: Present
+      - term: Agreement
+      - definition: Assigned
+      - term: Bookable
+      - definition: "No"
+    - group: Slip details and provenance
+  - region "Registry":
+    - heading "Registry" [level=2]
+    - paragraph:
+      - text: "Provenance: roster"
+      - 'button "SIM: Simulated (provenance)"': SIM
+      - text: slips
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+      - text: headwalks
+      - 'button "DOC: Documented source (provenance)"': DOC
+    - button "Hide list" [expanded]
+    - tablist "Registry":
+      - tab "Slips 126" [selected]
+      - tab "Vessels 48"
+    - text: Dock
+    - combobox "Dock":
+      - option "All docks" [selected]
+      - option "Dock A"
+      - option "Dock B"
+      - option "Dock C"
+      - option "Dock D"
+      - option "Dock E"
+    - checkbox "Needs review"
+    - text: Needs review
+    - listbox "Slips":
+      - option "A-01 No agreement Empty"
+      - option "A-02 No agreement Empty"
+      - option "A-03 North Light Present"
+      - option "A-04 No agreement Empty"
+      - option "A-05 Breakwall Present"
+      - option "A-06 No agreement Empty"
+      - option "A-07 No agreement Empty"
+      - option "A-08 Erie Glass Present"
+      - option "A-09 No agreement Empty"
+      - option "A-10 No agreement Empty"
+      - option "A-11 Second Wind Present"
+      - option "A-12 No agreement Empty"
+      - option "A-13 No agreement Empty"
+      - option "A-14 Halcyon Empty"
+      - option "A-15 No agreement Empty"
+      - option "A-16 No agreement Empty"
+      - option "A-17 No agreement Empty"
+      - option "A-18 No agreement Empty"
+      - option "A-19 Kestrel Present"
+      - option "A-20 No agreement Empty"
+      - option "A-21 No agreement Empty"
+      - option "A-22 No agreement Empty"
+      - option "A-23 No agreement Empty"
+      - option "A-24 Blue Heron Present"
+      - option "A-25 No agreement Empty"
+      - option "A-26 No agreement Empty"
+      - option "A-27 No agreement Empty"
+      - option "A-28 No agreement Empty"
+      - option "A-29 No agreement Empty"
+      - option "A-30 Driftwood Present"
+      - option "A-31 No agreement Empty"
+      - option "A-32 No agreement Empty"
+      - option "A-33 No agreement Empty"
+      - option "A-34 No agreement Empty"
+      - option "A-35 No agreement Empty"
+      - option "A-36 Undertow Present"
+      - option "A-37 Whitecap Present"
+      - option "A-38 No agreement Empty"
+      - option "A-39 No agreement Empty"
+      - option "B-01 No agreement Empty"
+      - option "B-02 No agreement Empty"
+      - option "B-03 No agreement Empty"
+      - option "B-04 No agreement Empty"
+      - option "B-05 Sandpiper Present"
+      - option "B-06 Seiche Empty"
+      - option "B-07 Grain Line Present"
+      - option "B-08 Low Pressure Empty"
+      - option "B-09 Tern Present"
+      - option "B-10 River Run Present"
+      - option "B-11 Meridian Present"
+      - option "B-12 Lake Effect Dock check pending Present" [selected]
+      - option "B-13 Slow Current Present"
+      - option "B-14 Harbor Light Empty"
+      - option "B-15 Bluewater Present"
+      - option "B-16 Westerly Present"
+      - option "B-17 Fair Weather Present"
+      - option "B-18 Night Heron Present"
+      - option "B-19 No agreement Empty"
+      - option "B-20 No agreement Empty"
+      - option "B-21 No agreement Empty"
+      - option "B-22 Long Pier Empty"
+      - option "B-23 Pennant Present"
+      - option "B-24 Cormorant Present"
+      - option "B-25 Gray Lady Present"
+      - option "B-26 Freshwater Present"
+      - option "B-27 Easy Does It Empty"
+      - option "B-28 No agreement Empty"
+      - option "B-29 No agreement Empty"
+      - option "B-30 No agreement Empty"
+      - option "B-31 No agreement Empty"
+      - option "B-32 No agreement Empty"
+      - option "B-33 No agreement Empty"
+      - option "B-34 No agreement Empty"
+      - option "B-35 No agreement Empty"
+      - option "B-36 No agreement Empty"
+      - option "B-37 No agreement Empty"
+      - option "C-01 No agreement Camera offline"
+      - option "C-02 Sundown Camera offline"
+      - option "C-03 No agreement Camera offline"
+      - option "C-04 Shoal Draft Camera offline"
+      - option "C-05 No agreement Camera offline"
+      - option "C-06 No agreement Camera offline"
+      - option "C-07 Clear Sky Camera offline"
+      - option "C-08 No agreement Camera offline"
+      - option "C-09 No agreement Camera offline"
+      - option "C-10 No agreement Camera offline"
+      - option "C-11 Stillwater Camera offline"
+      - option "C-12 No agreement Camera offline"
+      - option "C-13 No agreement Camera offline"
+      - option "C-14 No agreement Camera offline"
+      - option "C-15 Marigold Camera offline"
+      - option "C-16 No agreement Camera offline"
+      - option "C-17 No agreement Camera offline"
+      - option "C-18 No agreement Camera offline"
+      - option "D-01 No agreement Empty"
+      - option "D-02 Osprey Present"
+      - option "D-03 No agreement Empty"
+      - option "D-04 No agreement Empty"
+      - option "D-05 Second Shift Present"
+      - option "D-06 Silver Lining Present"
+      - option "D-07 No agreement Empty"
+      - option "D-08 No agreement Empty"
+      - option "D-09 Lake Song Present"
+      - option "D-10 No agreement Empty"
+      - option "D-11 No agreement Empty"
+      - option "D-12 No agreement Empty"
+      - option "D-13 Quiet Hour Present"
+      - option "D-14 No agreement Empty"
+      - option "D-15 No agreement Empty"
+      - option "D-16 No agreement Empty"
+      - option "D-17 Windward Present"
+      - option "D-18 No agreement Empty"
+      - option "D-19 No agreement Empty"
+      - option "D-20 Starboard Light Present"
+      - option "D-21 No agreement Empty"
+      - option "D-22 No agreement Empty"
+      - option "E-01 No agreement Camera offline"
+      - option "E-02 Tailwind Camera offline"
+      - option "E-03 No agreement Camera offline"
+      - option "E-04 Morning Watch Camera offline"
+      - option "E-05 No agreement Camera offline"
+      - option "E-06 No agreement Camera offline"
+      - option "E-07 Small Craft Camera offline"
+      - option "E-08 No agreement Camera offline"
+      - option "E-09 Ballast Camera offline"
+      - option "E-10 No agreement Camera offline"
+```
+
+## 09:18 evidence review (staff evidence loaded, not acknowledged)
+
+```yaml
+- complementary "Slip and vessel details":
+  - 'region "Slip B-12 ASSUME: Design assumption (provenance)"':
+    - paragraph: Dock B · floating
+    - text: Dock check pending
+    - button "Close details"
+    - 'heading "Slip B-12 ASSUME: Design assumption (provenance)" [level=2]':
+      - text: Slip B-12
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+    - region "Assigned vessel · registry":
+      - heading "Assigned vessel · registry" [level=3]
+      - paragraph:
+        - button "Open registry record for Lake Effect, assigned to B-12": Lake Effect
+        - text: 29 ft cabin cruiser
+      - term: Agreement
+      - definition:
+        - text: Seasonal · B-12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Term
+      - definition:
+        - text: 2026-05-01 → 2026-10-15
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Latest observation · separate from the registry":
+      - heading "Latest observation · separate from the registry" [level=3]
+      - paragraph: Present Vessel present · identity unverified
+      - term: Source
+      - definition:
+        - text: Camera C-02 · 09:18
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Freshness
+      - definition: Current (demo policy)
+      - term: Identity
+      - definition:
+        - text: Unverified
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - paragraph:
+        - text: "Possible match (candidate only, not an identity):"
+        - button "Compare with registry record of possible match Harbor Light": Harbor Light
+      - paragraph: "Reason for doubt: Name obscured. Canvas cover differs from the cover on record for the assigned vessel; hull profile resembles another cabin cruiser."
+    - region "Observation review":
+      - heading "Observation review" [level=3]
+      - figure "Camera C-02 · 09:12 · simulated frame":
+        - 'img "Simulated camera frame from C-02 at 09:12: an elevated view along Dock B with a cabin cruiser under a tan canvas cover in the slip; no name is legible."'
+        - text: Camera C-02 · 09:12 · simulated frame
+      - paragraph: Cabin cruiser present at the slip. Stern name not legible; canvas cover differs from the cover on record for the assigned vessel.
+      - paragraph: Observed
+      - list:
+        - listitem: A vessel is present in B-12 (Camera C-02, 09:12).
+        - listitem: It is a cabin cruiser with a tan canvas cover.
+      - paragraph: Not established
+      - list:
+        - listitem: "Which vessel it is: the name is not legible in the frame."
+        - listitem: Whether the cover change explains the difference.
+      - group "Dock check":
+        - paragraph: Dock check pending TSK-0001
+        - paragraph: "Requested 09:13. Simulated local task: no message, notification or staff dispatch was sent."
+        - paragraph: Identity remains unverified. The issue stays open until staff evidence is reviewed and confirmed.
+      - region "Evidence review · B-12":
+        - heading "Evidence review · B-12" [level=4]
+        - table "Observation vs registry records":
+          - caption: Observation vs registry records
+          - rowgroup:
+            - row "Observed Lake Effect assigned Harbor Light possible match":
+              - cell
+              - columnheader "Observed"
+              - columnheader "Lake Effect assigned"
+              - columnheader "Harbor Light possible match"
+          - rowgroup:
+            - row "Type Cabin cruiser Cabin cruiser, 29 ft Cabin cruiser, 27 ft":
+              - rowheader "Type"
+              - cell "Cabin cruiser"
+              - cell "Cabin cruiser, 29 ft"
+              - cell "Cabin cruiser, 27 ft"
+            - row "Name Not legible On record On record":
+              - rowheader "Name"
+              - cell "Not legible"
+              - cell "On record"
+              - cell "On record"
+            - row "Cover Tan Navy on record Navy on record":
+              - rowheader "Cover"
+              - cell "Tan"
+              - cell "Navy on record"
+              - cell "Navy on record"
+            - row "Last activity Present 09:12 Departed B-12 08:10 Departed B-14 08:30":
+              - rowheader "Last activity"
+              - cell "Present 09:12"
+              - cell "Departed B-12 08:10"
+              - cell "Departed B-14 08:30"
+            - row "Assigned slip — B-12 B-14 (unchanged)":
+              - rowheader "Assigned slip"
+              - cell "—"
+              - cell "B-12"
+              - cell "B-14 (unchanged)"
+        - paragraph: The possible match is a comparison only. Opening it never moves or reassigns that vessel.
+        - region "Staff evidence":
+          - heading "Staff evidence" [level=4]
+          - figure "Staff photo · 09:18 · SIM":
+            - 'img "Simulated staff photos at 09:18: the transom name board and the bow registration panel, which shows only the suffix."'
+            - text: Staff photo · 09:18 · SIM
+          - paragraph:
+            - strong: Staff dock check · Demo dock staff · 09:18
+            - 'button "SIM: Simulated (provenance)"': SIM
+          - paragraph: "Staff dock check: boat name and registration ending 42 AB match Lake Effect. A new canvas cover explains the visual difference."
+          - paragraph: Recorded separately from the camera, and newer than the 09:12 frame.
+        - 'checkbox "I reviewed the staff evidence: name and registration ending 42 AB match Lake Effect’s record."'
+        - text: "I reviewed the staff evidence: name and registration ending 42 AB match Lake Effect’s record."
+        - button "Confirm identity & resolve" [disabled]
+        - paragraph: Tick the acknowledgment above to enable confirmation.
+        - button "Back to observation"
+      - region "Activity trail · append-only":
+        - heading "Activity trail · append-only" [level=4]
+        - list:
+          - listitem:
+            - time: 08:10
+            - paragraph: Departure logged
+            - paragraph: Lake Effect left B-12 (staff log). Agreement stays assigned.
+          - listitem:
+            - time: 09:12
+            - paragraph: Vessel present · identity unverified · retained
+            - paragraph: Camera C-02 observation OBS-S4K22B; possible match Harbor Light (candidate only). Original record retained unchanged.
+          - listitem:
+            - time: 09:13
+            - paragraph: Dock check requested
+            - paragraph: Simulated local task TSK-0001 pending. No message was sent.
+          - listitem:
+            - time: 09:18
+            - paragraph: Staff evidence received
+            - paragraph: "Demo dock staff: Staff dock check: boat name and registration ending 42 AB match Lake Effect. A new canvas cover explains the visual difference."
+    - region "Status summary":
+      - term: Presence
+      - definition: Present
+      - term: Agreement
+      - definition: Assigned
+      - term: Bookable
+      - definition: "No"
+    - group: Slip details and provenance
+  - region "Registry":
+    - heading "Registry" [level=2]
+    - paragraph:
+      - text: "Provenance: roster"
+      - 'button "SIM: Simulated (provenance)"': SIM
+      - text: slips
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+      - text: headwalks
+      - 'button "DOC: Documented source (provenance)"': DOC
+    - button "Hide list" [expanded]
+    - tablist "Registry":
+      - tab "Slips 126" [selected]
+      - tab "Vessels 48"
+    - text: Dock
+    - combobox "Dock":
+      - option "All docks" [selected]
+      - option "Dock A"
+      - option "Dock B"
+      - option "Dock C"
+      - option "Dock D"
+      - option "Dock E"
+    - checkbox "Needs review"
+    - text: Needs review
+    - listbox "Slips":
+      - option "A-01 No agreement Empty"
+      - option "A-02 No agreement Empty"
+      - option "A-03 North Light Present"
+      - option "A-04 No agreement Empty"
+      - option "A-05 Breakwall Present"
+      - option "A-06 No agreement Empty"
+      - option "A-07 No agreement Empty"
+      - option "A-08 Erie Glass Present"
+      - option "A-09 No agreement Empty"
+      - option "A-10 No agreement Empty"
+      - option "A-11 Second Wind Present"
+      - option "A-12 No agreement Empty"
+      - option "A-13 No agreement Empty"
+      - option "A-14 Halcyon Empty"
+      - option "A-15 No agreement Empty"
+      - option "A-16 No agreement Empty"
+      - option "A-17 No agreement Empty"
+      - option "A-18 No agreement Empty"
+      - option "A-19 Kestrel Present"
+      - option "A-20 No agreement Empty"
+      - option "A-21 No agreement Empty"
+      - option "A-22 No agreement Empty"
+      - option "A-23 No agreement Empty"
+      - option "A-24 Blue Heron Present"
+      - option "A-25 No agreement Empty"
+      - option "A-26 No agreement Empty"
+      - option "A-27 No agreement Empty"
+      - option "A-28 No agreement Empty"
+      - option "A-29 No agreement Empty"
+      - option "A-30 Driftwood Present"
+      - option "A-31 No agreement Empty"
+      - option "A-32 No agreement Empty"
+      - option "A-33 No agreement Empty"
+      - option "A-34 No agreement Empty"
+      - option "A-35 No agreement Empty"
+      - option "A-36 Undertow Present"
+      - option "A-37 Whitecap Present"
+      - option "A-38 No agreement Empty"
+      - option "A-39 No agreement Empty"
+      - option "B-01 No agreement Empty"
+      - option "B-02 No agreement Empty"
+      - option "B-03 No agreement Empty"
+      - option "B-04 No agreement Empty"
+      - option "B-05 Sandpiper Present"
+      - option "B-06 Seiche Empty"
+      - option "B-07 Grain Line Present"
+      - option "B-08 Low Pressure Empty"
+      - option "B-09 Tern Present"
+      - option "B-10 River Run Present"
+      - option "B-11 Meridian Present"
+      - option "B-12 Lake Effect Dock check pending Present" [selected]
+      - option "B-13 Slow Current Present"
+      - option "B-14 Harbor Light Empty"
+      - option "B-15 Bluewater Present"
+      - option "B-16 Westerly Present"
+      - option "B-17 Fair Weather Present"
+      - option "B-18 Night Heron Present"
+      - option "B-19 No agreement Empty"
+      - option "B-20 No agreement Empty"
+      - option "B-21 No agreement Empty"
+      - option "B-22 Long Pier Empty"
+      - option "B-23 Pennant Present"
+      - option "B-24 Cormorant Present"
+      - option "B-25 Gray Lady Present"
+      - option "B-26 Freshwater Present"
+      - option "B-27 Easy Does It Empty"
+      - option "B-28 No agreement Empty"
+      - option "B-29 No agreement Empty"
+      - option "B-30 No agreement Empty"
+      - option "B-31 No agreement Empty"
+      - option "B-32 No agreement Empty"
+      - option "B-33 No agreement Empty"
+      - option "B-34 No agreement Empty"
+      - option "B-35 No agreement Empty"
+      - option "B-36 No agreement Empty"
+      - option "B-37 No agreement Empty"
+      - option "C-01 No agreement Camera offline"
+      - option "C-02 Sundown Camera offline"
+      - option "C-03 No agreement Camera offline"
+      - option "C-04 Shoal Draft Camera offline"
+      - option "C-05 No agreement Camera offline"
+      - option "C-06 No agreement Camera offline"
+      - option "C-07 Clear Sky Camera offline"
+      - option "C-08 No agreement Camera offline"
+      - option "C-09 No agreement Camera offline"
+      - option "C-10 No agreement Camera offline"
+      - option "C-11 Stillwater Camera offline"
+      - option "C-12 No agreement Camera offline"
+      - option "C-13 No agreement Camera offline"
+      - option "C-14 No agreement Camera offline"
+      - option "C-15 Marigold Camera offline"
+      - option "C-16 No agreement Camera offline"
+      - option "C-17 No agreement Camera offline"
+      - option "C-18 No agreement Camera offline"
+      - option "D-01 No agreement Empty"
+      - option "D-02 Osprey Present"
+      - option "D-03 No agreement Empty"
+      - option "D-04 No agreement Empty"
+      - option "D-05 Second Shift Present"
+      - option "D-06 Silver Lining Present"
+      - option "D-07 No agreement Empty"
+      - option "D-08 No agreement Empty"
+      - option "D-09 Lake Song Present"
+      - option "D-10 No agreement Empty"
+      - option "D-11 No agreement Empty"
+      - option "D-12 No agreement Empty"
+      - option "D-13 Quiet Hour Present"
+      - option "D-14 No agreement Empty"
+      - option "D-15 No agreement Empty"
+      - option "D-16 No agreement Empty"
+      - option "D-17 Windward Present"
+      - option "D-18 No agreement Empty"
+      - option "D-19 No agreement Empty"
+      - option "D-20 Starboard Light Present"
+      - option "D-21 No agreement Empty"
+      - option "D-22 No agreement Empty"
+      - option "E-01 No agreement Camera offline"
+      - option "E-02 Tailwind Camera offline"
+      - option "E-03 No agreement Camera offline"
+      - option "E-04 Morning Watch Camera offline"
+      - option "E-05 No agreement Camera offline"
+      - option "E-06 No agreement Camera offline"
+      - option "E-07 Small Craft Camera offline"
+      - option "E-08 No agreement Camera offline"
+      - option "E-09 Ballast Camera offline"
+      - option "E-10 No agreement Camera offline"
+```
+
+## 09:20 resolved
+
+```yaml
+- complementary "Slip and vessel details":
+  - 'region "Slip B-12 ASSUME: Design assumption (provenance)"':
+    - paragraph: Dock B · floating
+    - text: Resolved
+    - button "Close details"
+    - 'heading "Slip B-12 ASSUME: Design assumption (provenance)" [level=2]':
+      - text: Slip B-12
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+    - region "Assigned vessel · registry":
+      - heading "Assigned vessel · registry" [level=3]
+      - paragraph:
+        - button "Open registry record for Lake Effect, assigned to B-12": Lake Effect
+        - text: 29 ft cabin cruiser
+      - term: Agreement
+      - definition:
+        - text: Seasonal · B-12
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Term
+      - definition:
+        - text: 2026-05-01 → 2026-10-15
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Latest observation · separate from the registry":
+      - heading "Latest observation · separate from the registry" [level=3]
+      - paragraph: Present Lake Effect present · identity confirmed
+      - term: Source
+      - definition:
+        - text: Staff check · 09:18
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Freshness
+      - definition: Current (demo policy)
+      - term: Identity
+      - definition:
+        - text: Identity decision (staff evidence) · 09:20
+        - 'button "SIM: Simulated (provenance)"': SIM
+    - region "Resolution":
+      - heading "Resolution" [level=3]
+      - paragraph: Resolved Lake Effect confirmed at B-12
+      - term: Identity
+      - definition:
+        - text: Confirmed 09:20 by Demo dockmaster
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Evidence
+      - definition:
+        - text: Staff dock check 09:18
+        - 'button "SIM: Simulated (provenance)"': SIM
+      - term: Presence
+      - definition: Present · staff verified
+      - term: Agreement
+      - definition: Unchanged · Seasonal B-12
+      - term: Bookable
+      - definition: No · assigned
+      - paragraph: "Harbor Light was only a possible match. Its record is unchanged: assigned B-14, last confirmed away (departed 08:30)."
+      - paragraph: Dock check TSK-0001 completed 09:20 with the resolution.
+      - group: Original observation (retained, unchanged)
+      - region "Activity trail · append-only":
+        - heading "Activity trail · append-only" [level=4]
+        - list:
+          - listitem:
+            - time: 08:10
+            - paragraph: Departure logged
+            - paragraph: Lake Effect left B-12 (staff log). Agreement stays assigned.
+          - listitem:
+            - time: 09:12
+            - paragraph: Vessel present · identity unverified · retained
+            - paragraph: Camera C-02 observation OBS-S4K22B; possible match Harbor Light (candidate only). Original record retained unchanged.
+          - listitem:
+            - time: 09:13
+            - paragraph: Dock check requested
+            - paragraph: Simulated local task TSK-0001 pending. No message was sent.
+          - listitem:
+            - time: 09:18
+            - paragraph: Staff evidence received
+            - paragraph: "Demo dock staff: Staff dock check: boat name and registration ending 42 AB match Lake Effect. A new canvas cover explains the visual difference."
+          - listitem:
+            - time: 09:20
+            - paragraph: Identity confirmed
+            - paragraph: Lake Effect confirmed by Demo dockmaster (decision DEC-0001, from staff evidence).
+          - listitem:
+            - time: 09:20
+            - paragraph: Dock check completed
+            - paragraph: Task TSK-0001 closed with the resolution.
+          - listitem:
+            - time: 09:20
+            - paragraph: Issue resolved
+            - paragraph: Review closed. Agreement for B-12 unchanged.
+    - region "Status summary":
+      - term: Presence
+      - definition: Present
+      - term: Agreement
+      - definition: Assigned
+      - term: Bookable
+      - definition: "No"
+    - group: Slip details and provenance
+  - region "Registry":
+    - heading "Registry" [level=2]
+    - paragraph:
+      - text: "Provenance: roster"
+      - 'button "SIM: Simulated (provenance)"': SIM
+      - text: slips
+      - 'button "ASSUME: Design assumption (provenance)"': ASSUME
+      - text: headwalks
+      - 'button "DOC: Documented source (provenance)"': DOC
+    - button "Hide list" [expanded]
+    - tablist "Registry":
+      - tab "Slips 126" [selected]
+      - tab "Vessels 48"
+    - text: Dock
+    - combobox "Dock":
+      - option "All docks" [selected]
+      - option "Dock A"
+      - option "Dock B"
+      - option "Dock C"
+      - option "Dock D"
+      - option "Dock E"
+    - checkbox "Needs review"
+    - text: Needs review
+    - listbox "Slips":
+      - option "A-01 No agreement Empty"
+      - option "A-02 No agreement Empty"
+      - option "A-03 North Light Present"
+      - option "A-04 No agreement Empty"
+      - option "A-05 Breakwall Present"
+      - option "A-06 No agreement Empty"
+      - option "A-07 No agreement Empty"
+      - option "A-08 Erie Glass Present"
+      - option "A-09 No agreement Empty"
+      - option "A-10 No agreement Empty"
+      - option "A-11 Second Wind Present"
+      - option "A-12 No agreement Empty"
+      - option "A-13 No agreement Empty"
+      - option "A-14 Halcyon Empty"
+      - option "A-15 No agreement Empty"
+      - option "A-16 No agreement Empty"
+      - option "A-17 No agreement Empty"
+      - option "A-18 No agreement Empty"
+      - option "A-19 Kestrel Present"
+      - option "A-20 No agreement Empty"
+      - option "A-21 No agreement Empty"
+      - option "A-22 No agreement Empty"
+      - option "A-23 No agreement Empty"
+      - option "A-24 Blue Heron Present"
+      - option "A-25 No agreement Empty"
+      - option "A-26 No agreement Empty"
+      - option "A-27 No agreement Empty"
+      - option "A-28 No agreement Empty"
+      - option "A-29 No agreement Empty"
+      - option "A-30 Driftwood Present"
+      - option "A-31 No agreement Empty"
+      - option "A-32 No agreement Empty"
+      - option "A-33 No agreement Empty"
+      - option "A-34 No agreement Empty"
+      - option "A-35 No agreement Empty"
+      - option "A-36 Undertow Present"
+      - option "A-37 Whitecap Present"
+      - option "A-38 No agreement Empty"
+      - option "A-39 No agreement Empty"
+      - option "B-01 No agreement Empty"
+      - option "B-02 No agreement Empty"
+      - option "B-03 No agreement Empty"
+      - option "B-04 No agreement Empty"
+      - option "B-05 Sandpiper Present"
+      - option "B-06 Seiche Empty"
+      - option "B-07 Grain Line Present"
+      - option "B-08 Low Pressure Empty"
+      - option "B-09 Tern Present"
+      - option "B-10 River Run Present"
+      - option "B-11 Meridian Present"
+      - option "B-12 Lake Effect Resolved Present" [selected]
+      - option "B-13 Slow Current Present"
+      - option "B-14 Harbor Light Empty"
+      - option "B-15 Bluewater Present"
+      - option "B-16 Westerly Present"
+      - option "B-17 Fair Weather Present"
+      - option "B-18 Night Heron Present"
+      - option "B-19 No agreement Empty"
+      - option "B-20 No agreement Empty"
+      - option "B-21 No agreement Empty"
+      - option "B-22 Long Pier Empty"
+      - option "B-23 Pennant Present"
+      - option "B-24 Cormorant Present"
+      - option "B-25 Gray Lady Present"
+      - option "B-26 Freshwater Present"
+      - option "B-27 Easy Does It Empty"
+      - option "B-28 No agreement Empty"
+      - option "B-29 No agreement Empty"
+      - option "B-30 No agreement Empty"
+      - option "B-31 No agreement Empty"
+      - option "B-32 No agreement Empty"
+      - option "B-33 No agreement Empty"
+      - option "B-34 No agreement Empty"
+      - option "B-35 No agreement Empty"
+      - option "B-36 No agreement Empty"
+      - option "B-37 No agreement Empty"
+      - option "C-01 No agreement Camera offline"
+      - option "C-02 Sundown Camera offline"
+      - option "C-03 No agreement Camera offline"
+      - option "C-04 Shoal Draft Camera offline"
+      - option "C-05 No agreement Camera offline"
+      - option "C-06 No agreement Camera offline"
+      - option "C-07 Clear Sky Camera offline"
+      - option "C-08 No agreement Camera offline"
+      - option "C-09 No agreement Camera offline"
+      - option "C-10 No agreement Camera offline"
+      - option "C-11 Stillwater Camera offline"
+      - option "C-12 No agreement Camera offline"
+      - option "C-13 No agreement Camera offline"
+      - option "C-14 No agreement Camera offline"
+      - option "C-15 Marigold Camera offline"
+      - option "C-16 No agreement Camera offline"
+      - option "C-17 No agreement Camera offline"
+      - option "C-18 No agreement Camera offline"
+      - option "D-01 No agreement Empty"
+      - option "D-02 Osprey Present"
+      - option "D-03 No agreement Empty"
+      - option "D-04 No agreement Empty"
+      - option "D-05 Second Shift Present"
+      - option "D-06 Silver Lining Present"
+      - option "D-07 No agreement Empty"
+      - option "D-08 No agreement Empty"
+      - option "D-09 Lake Song Present"
+      - option "D-10 No agreement Empty"
+      - option "D-11 No agreement Empty"
+      - option "D-12 No agreement Empty"
+      - option "D-13 Quiet Hour Present"
+      - option "D-14 No agreement Empty"
+      - option "D-15 No agreement Empty"
+      - option "D-16 No agreement Empty"
+      - option "D-17 Windward Present"
+      - option "D-18 No agreement Empty"
+      - option "D-19 No agreement Empty"
+      - option "D-20 Starboard Light Present"
+      - option "D-21 No agreement Empty"
+      - option "D-22 No agreement Empty"
+      - option "E-01 No agreement Camera offline"
+      - option "E-02 Tailwind Camera offline"
+      - option "E-03 No agreement Camera offline"
+      - option "E-04 Morning Watch Camera offline"
+      - option "E-05 No agreement Camera offline"
+      - option "E-06 No agreement Camera offline"
+      - option "E-07 Small Craft Camera offline"
+      - option "E-08 No agreement Camera offline"
+      - option "E-09 Ballast Camera offline"
+      - option "E-10 No agreement Camera offline"
+```
+
+## Identity-leak check before resolution
+
+- None: the observation section, scene marker and announcements never name the observed hull before 09:20.

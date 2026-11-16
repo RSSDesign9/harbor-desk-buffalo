@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbor Desk · Primary type options with Work Sans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --midnight:#011b2b; --ink-700:#233747; --ink-500:#3f5464; --ink-300:#748491;
+  --mist-200:#d5dfe3; --mist-100:#eaf1f4; --signal:#ff4d00; --signal-light:#ff7a3d;
+  --warning:#ffac00; --cyan:#7fd1e8; --success:#cef5ca; --snow:#f2f5f8; --sand:#e6e5df;
+  --river:#4e6d98; --magenta:#c842c6;
+  --work:"Work Sans", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--snow);color:var(--midnight)}
+body{margin:0;font-family:var(--work);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:72px 40px 120px}
+h1{font-family:var(--work);font-weight:600;font-size:44px;line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;max-width:900px}
+.lede{font-size:19px;max-width:760px;color:var(--ink-700);margin:0 0 28px}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 72px}
+.rules div{background:#fff;border:1px solid var(--mist-200);border-radius:10px;padding:18px 20px;font-size:15px;color:var(--ink-700)}
+.rules b{display:block;color:var(--midnight);font-weight:600;margin-bottom:4px}
+.mono{font-family:var(--mono);font-size:.86em}
+
+/* ---------- option block ---------- */
+.opt{margin:0 0 96px;padding-top:40px;border-top:1px solid var(--mist-200)}
+.opt-head{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;margin-bottom:28px}
+.opt-num{font-family:var(--mono);font-size:13px;color:var(--ink-500)}
+.opt-name{font-size:64px;line-height:1;margin:6px 0 10px}
+.opt-tag{font-size:20px;color:var(--ink-700);margin:0 0 18px;font-weight:500}
+.opt-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-500);line-height:1.7}
+.opt-why p{margin:0 0 12px;font-size:15.5px;color:var(--ink-700)}
+.opt-why p b{color:var(--midnight);font-weight:600}
+.opt-why .risk{border-left:3px solid var(--warning);padding-left:12px}
+.weights{display:flex;gap:18px;flex-wrap:wrap;align-items:baseline;margin:18px 0 0;color:var(--ink-700)}
+.weights span{font-size:34px;line-height:1}
+.weights small{display:block;font-family:var(--mono);font-size:12px;color:var(--ink-500);margin-top:6px;text-align:center}
+
+/* ---------- product mock ---------- */
+.stage{display:grid;grid-template-columns:1fr 372px;gap:14px;background:linear-gradient(160deg,#16364d 0%,#0b2a3e 45%,#06202f 100%);border-radius:16px;padding:14px;position:relative;overflow:hidden;color:#fff}
+.stage::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 40% at 30% 70%,rgba(78,109,152,.45),transparent 70%),
+  repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px);pointer-events:none}
+.left{position:relative;display:flex;flex-direction:column;gap:14px;min-height:540px}
+.kpis{display:flex;gap:10px}
+.kpi{background:rgba(1,27,43,.86);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px 10px;min-width:128px}
+.kpi .k-row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.map{flex:1;position:relative}
+.maplabel{position:absolute;color:rgba(213,223,227,.78)}
+.dock{position:absolute;left:46%;top:44%;width:200px;height:74px;border:2px solid var(--signal);transform:rotate(-24deg);border-radius:3px;background:rgba(255,77,0,.08)}
+.dock::after{content:"";position:absolute;inset:5px;border:1.5px dashed var(--warning)}
+.pierline{position:absolute;left:8%;right:4%;top:36%;height:10px;background:#5b5249;opacity:.55;transform:rotate(-14deg);border-radius:2px}
+.callout{position:absolute;left:19%;top:27%;background:rgba(1,27,43,.92);border:1px solid var(--signal);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.signletter{position:absolute;right:7%;top:12%;width:58px;height:58px;border-radius:8px;background:#f2f5f8;color:var(--midnight);display:grid;place-items:center}
+.replay{background:rgba(1,27,43,.9);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px}
+.replay .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.step{border-top:2px solid rgba(255,255,255,.18);padding-top:8px}
+.step.on{border-color:#fff}
+.step .t{display:block}
+.panel{position:relative;background:rgba(1,27,43,.93);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:0}
+.p-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid;border-radius:999px;padding:3px 10px 3px 8px;white-space:nowrap}
+.chip i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.chip.review{color:var(--warning);border-color:rgba(255,172,0,.6)}
+.chip.present{color:var(--success);border-color:rgba(206,245,202,.5)}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:1px 5px;border:1px solid var(--signal);border-radius:3px;color:var(--signal-light)}
+.tag.assume{border-color:rgba(255,255,255,.3);color:var(--mist-200)}
+.slip{display:flex;align-items:baseline;gap:10px;margin:10px 0 2px}
+.rule{height:1px;background:rgba(255,255,255,.1);margin:16px 0 14px}
+.kv{display:grid;grid-template-columns:104px 1fr auto;gap:8px 10px;align-items:baseline}
+.kv dt{color:var(--mist-200);opacity:.8}
+.kv dd{margin:0}
+.note .r-vessel{display:block;margin-top:2px}
+.note{margin-top:14px;border:1px dashed rgba(255,172,0,.6);border-radius:10px;padding:12px 14px}
+.btns{display:flex;gap:8px;margin-top:16px}
+.btn{border-radius:6px;padding:10px 16px;border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent;font:inherit}
+.btn.primary{background:var(--signal);border-color:var(--signal);color:var(--midnight)}
+
+/* light chart-mode strip */
+.chartstrip{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:14px}
+.chart{background:#9ecefc;border-radius:12px;height:150px;position:relative;overflow:hidden}
+.chart .land{position:absolute;left:0;right:0;bottom:0;height:46px;background:#b09e56}
+.chart .built{position:absolute;left:12%;bottom:46px;width:58%;height:12px;background:#cec58a}
+.chart .lbl{position:absolute;color:#0b3a5e}
+.registry{background:#fff;border:1px solid var(--mist-200);border-radius:12px;padding:6px 0;color:var(--midnight)}
+.registry .row{display:grid;grid-template-columns:62px 1fr 92px;gap:10px;padding:9px 16px;align-items:center;border-bottom:1px solid var(--mist-100)}
+.registry .row:last-child{border-bottom:0}
+.registry .hdr{color:var(--ink-500)}
+
+/* ---------- per-option role styles ---------- */
+/* role classes: .r-title .r-vessel .r-label .r-kpi .r-map .r-mapalt .r-sign .r-body .r-small .r-id .r-chip .r-btn .r-note */
+.opt .r-body{font-family:var(--work);font-size:15px;line-height:1.5}
+.opt .r-small{font-family:var(--work);font-size:14px}
+.opt .r-id{font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums}
+.opt .r-chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.opt .r-btn{font-family:var(--work);font-weight:600;font-size:15px}
+.opt .r-note{font-family:var(--work);font-size:14.5px}
+
+/* 1 · Big Shoulders */
+.o1 .opt-name,.o1 .weights span{font-family:"Big Shoulders";font-variation-settings:"opsz" 72}
+.o1 .opt-name{font-weight:800;letter-spacing:-.005em}
+.o1 .r-title{font-family:"Big Shoulders";font-variation-settings:"opsz" 72;font-weight:800;font-size:46px;line-height:.95;letter-spacing:.005em}
+.o1 .r-vessel{font-family:"Big Shoulders";font-variation-settings:"opsz" 40;font-weight:700;font-size:30px;line-height:1.05;letter-spacing:.01em}
+.o1 .r-label{font-family:"Big Shoulders";font-variation-settings:"opsz" 10;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase;color:var(--mist-200)}
+.o1 .r-kpi{font-family:"Big Shoulders";font-variation-settings:"opsz" 72;font-weight:700;font-size:48px;line-height:1;font-variant-numeric:tabular-nums}
+.o1 .r-map{font-family:"Big Shoulders";font-variation-settings:"opsz" 30;font-weight:600;font-size:22px;letter-spacing:.24em;text-transform:uppercase}
+.o1 .r-mapalt{font-family:"Big Shoulders";font-variation-settings:"opsz" 20;font-weight:500;font-size:15px;letter-spacing:.18em;text-transform:uppercase}
+.o1 .r-sign{font-family:"Big Shoulders Stencil";font-variation-settings:"opsz" 72;font-weight:900;font-size:44px;line-height:1}
+.o1 .registry .hdr{font-family:"Big Shoulders";font-variation-settings:"opsz" 10;font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase}
+.o1 .registry .vn{font-family:"Big Shoulders";font-variation-settings:"opsz" 24;font-weight:700;font-size:19px;letter-spacing:.01em}
+
+/* 2 · Archivo */
+.o2 .opt-name{font-family:"Archivo";font-stretch:125%;font-weight:800;font-size:56px;letter-spacing:-.01em}
+.o2 .weights span{font-family:"Archivo";font-stretch:125%}
+.o2 .r-title{font-family:"Archivo";font-stretch:125%;font-weight:800;font-size:38px;line-height:1;letter-spacing:-.01em}
+.o2 .r-vessel{font-family:"Archivo";font-stretch:112%;font-weight:700;font-size:25px;line-height:1.1;letter-spacing:-.005em}
+.o2 .r-label{font-family:"Archivo";font-stretch:125%;font-weight:600;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mist-200)}
+.o2 .r-kpi{font-family:"Archivo";font-stretch:72%;font-weight:700;font-size:48px;line-height:1;font-variant-numeric:tabular-nums}
+.o2 .r-map{font-family:"Archivo";font-stretch:125%;font-weight:500;font-size:17px;letter-spacing:.3em;text-transform:uppercase}
+.o2 .r-mapalt{font-family:"Archivo";font-stretch:125%;font-weight:400;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase}
+.o2 .r-sign{font-family:"Archivo";font-stretch:125%;font-weight:900;font-size:38px;line-height:1}
+.o2 .registry .hdr{font-family:"Archivo";font-stretch:125%;font-weight:600;font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+.o2 .registry .vn{font-family:"Archivo";font-stretch:112%;font-weight:650;font-size:15.5px}
+
+/* 3 · Atkinson Hyperlegible Next */
+.o3 .opt-name,.o3 .weights span{font-family:"Atkinson Hyperlegible Next"}
+.o3 .opt-name{font-weight:800;letter-spacing:-.02em;font-size:58px}
+.o3 .r-title{font-family:"Atkinson Hyperlegible Next";font-weight:800;font-size:40px;line-height:1;letter-spacing:-.02em}
+.o3 .r-vessel{font-family:"Atkinson Hyperlegible Next";font-weight:700;font-size:26px;line-height:1.1;letter-spacing:-.01em}
+.o3 .r-label{font-family:"Atkinson Hyperlegible Next";font-weight:600;font-size:13.5px;color:var(--mist-200)}
+.o3 .r-kpi{font-family:"Atkinson Hyperlegible Next";font-weight:800;font-size:44px;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.o3 .r-map{font-family:"Atkinson Hyperlegible Next";font-weight:300;font-style:italic;font-size:24px;letter-spacing:.02em}
+.o3 .r-mapalt{font-family:"Atkinson Hyperlegible Next";font-weight:400;font-style:italic;font-size:15px}
+.o3 .r-sign{font-family:"Atkinson Hyperlegible Next";font-weight:800;font-size:40px;line-height:1}
+.o3 .r-id,.o3 .r-chip{font-family:"Atkinson Hyperlegible Mono"}
+.o3 .r-id{font-size:13.5px;font-weight:500}
+.o3 .r-chip{font-weight:600}
+.o3 .registry .hdr{font-family:"Atkinson Hyperlegible Next";font-weight:600;font-size:13px}
+.o3 .registry .vn{font-family:"Atkinson Hyperlegible Next";font-weight:700;font-size:16px}
+
+/* 4 · Newsreader */
+.o4 .opt-name,.o4 .weights span{font-family:"Newsreader";font-variation-settings:"opsz" 72}
+.o4 .opt-name{font-weight:500;letter-spacing:-.025em;font-size:68px}
+.o4 .r-title{font-family:"Newsreader";font-variation-settings:"opsz" 72;font-weight:600;font-size:46px;line-height:.95;letter-spacing:-.02em}
+.o4 .r-vessel{font-family:"Newsreader";font-variation-settings:"opsz" 36;font-style:italic;font-weight:600;font-size:31px;line-height:1.05;letter-spacing:-.01em}
+.o4 .r-label{font-family:var(--work);font-weight:500;font-size:13.5px;color:var(--mist-200)}
+.o4 .r-kpi{font-family:"Newsreader";font-variation-settings:"opsz" 72;font-weight:500;font-size:50px;line-height:1;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.02em}
+.o4 .r-map{font-family:"Newsreader";font-variation-settings:"opsz" 30;font-style:italic;font-weight:400;font-size:28px;letter-spacing:.06em}
+.o4 .r-mapalt{font-family:"Newsreader";font-variation-settings:"opsz" 14;font-style:italic;font-weight:400;font-size:17px;letter-spacing:.04em}
+.o4 .r-sign{font-family:"Newsreader";font-variation-settings:"opsz" 72;font-weight:700;font-size:44px;line-height:1}
+.o4 .registry .hdr{font-family:var(--work);font-weight:500;font-size:13px}
+.o4 .registry .vn{font-family:"Newsreader";font-variation-settings:"opsz" 18;font-style:italic;font-weight:600;font-size:18px}
+
+/* 5 · Recursive */
+.o5 .opt-name,.o5 .weights span{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 0}
+.o5 .opt-name{font-weight:800;letter-spacing:-.02em;font-size:58px}
+.o5 .r-title{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 0;font-weight:800;font-size:40px;line-height:1;letter-spacing:-.02em}
+.o5 .r-vessel{font-family:"Recursive";font-variation-settings:"CASL" .35,"MONO" 0;font-weight:700;font-size:26px;line-height:1.1;letter-spacing:-.01em}
+.o5 .r-label{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 1;font-weight:500;font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--mist-200)}
+.o5 .r-kpi{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 1;font-weight:600;font-size:44px;line-height:1}
+.o5 .r-map{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 0;font-style:italic;font-weight:400;font-size:24px;letter-spacing:.04em}
+.o5 .r-mapalt{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 0;font-weight:400;font-size:14px;letter-spacing:.06em}
+.o5 .r-sign{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 1;font-weight:900;font-size:40px;line-height:1}
+.o5 .r-id,.o5 .r-chip{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 1}
+.o5 .r-note .staff{font-family:"Recursive";font-variation-settings:"CASL" 1,"MONO" 0;font-weight:500;font-size:16px;color:#fff;display:block;margin-top:6px}
+.o5 .registry .hdr{font-family:"Recursive";font-variation-settings:"CASL" 0,"MONO" 1;font-weight:500;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase}
+.o5 .registry .vn{font-family:"Recursive";font-variation-settings:"CASL" .35,"MONO" 0;font-weight:700;font-size:16px}
+.staff{display:none}
+.o5 .staff{display:block}
+
+/* recommendation */
+.rec{background:var(--midnight);color:#fff;border-radius:18px;padding:40px 44px}
+.rec h2{font-family:var(--work);font-weight:600;font-size:32px;margin:0 0 14px;letter-spacing:-.01em}
+.rec p{color:var(--mist-200);max-width:820px;margin:0 0 12px}
+.rec table{border-collapse:collapse;width:100%;margin-top:22px;font-size:14.5px}
+.rec th,.rec td{text-align:left;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.12);vertical-align:top}
+.rec th{color:var(--mist-200);font-weight:500;font-size:13px}
+.rec td.y{color:var(--success)} .rec td.m{color:var(--warning)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Five primary typefaces for Harbor Desk, each paired with Work Sans</h1>
+  <p class="lede">Every specimen below is the same B-12 slip-review moment, set at real product sizes. The primary typeface carries what a dockmaster scans for: slip, vessel name, counts, the water. Work Sans carries everything they read. IBM Plex Mono stays for timestamps and record IDs.</p>
+  <div class="rules">
+    <div><b>Not in shadcn</b>Checked against <span class="mono">shadcn-ui/ui · font-definitions.ts</span> today. Its 26 families are all excluded, including Space Grotesk, Instrument, Manrope, IBM Plex Sans and Montserrat.</div>
+    <div><b>Wide weight range</b>Every pick is a variable Google Font covering at least 200–800. Three also carry a second axis (optical size, width or casual) that does real work in a dense UI.</div>
+    <div><b>Less dense than today</b>Mono uppercase labels are cut back to IDs, times and chips. Section labels move to the primary face, body goes up from 14 to 15 px, and rows get 4 px more air.</div>
+  </div>
+
+  <!-- ================= 1 ================= -->
+  <section class="opt o1">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">01 · Great Lakes signage</div>
+        <div class="opt-name">Big Shoulders</div>
+        <p class="opt-tag">Condensed civic grotesque with an optical-size axis and a stencil cut</p>
+        <div class="opt-meta">Patric King · weights 100–900 · opsz 10–72 · Stencil companion · Google Fonts, OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Ag</span><small>200</small></div>
+          <div><span style="font-weight:400">Ag</span><small>400</small></div>
+          <div><span style="font-weight:600">Ag</span><small>600</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800</small></div>
+          <div><span style="font-weight:900;font-family:'Big Shoulders Stencil'">B-12</span><small>Stencil 900</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> It was drawn for Chicago's civic identity, which places it among Great Lakes industrial cities like Buffalo, with their freighters and grain elevators. It reads as dock signage, not as a startup dashboard. Being condensed, it takes back width: <span class="mono">B-12</span>, "Lake Effect" and 3-digit counts all fit in less room, so panels can breathe without growing.</p>
+        <p><b>Who it serves.</b> Dock staff glancing at a tablet from arm's length. The tall caps and open counters hold up at 40 px+, and the optical-size axis tightens spacing at 13 px so small caps labels don't smear.</p>
+        <p><b>Stencil</b> is kept for physical dock letters in the 3D scene only, the way a real marina paints them on pilings.</p>
+        <p class="risk"><b>Watch.</b> Condensed caps turn shouty in quantity. Keep caps to labels of 13 px or more and set vessel names in mixed case. Never use it for paragraphs.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 2 ================= -->
+  <section class="opt o2">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">02 · Hull lettering</div>
+        <div class="opt-name">Archivo</div>
+        <p class="opt-tag">Grotesque with a width axis from 62% to 125%, so density becomes a setting</p>
+        <div class="opt-meta">Omnibus-Type · weights 100–900 + italics · wdth 62–125 · Google Fonts, OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Ag</span><small>200 · 125%</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500 · 125%</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800 · 125%</small></div>
+          <div><span style="font-weight:700;font-stretch:72%">048</span><small>700 · 72%</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Extended caps are how boats and docks get lettered: registration numbers on the bow, names on the transom, the wide <span class="mono">HARBOR DESK</span> wordmark already in the logo. Archivo gives you that at 125%, then pulls in to 72% for KPI numerals and table headers where space is tight. One family handles both ends.</p>
+        <p><b>Who it serves.</b> The manager at a desktop scanning 126 slips. A narrow width in tables, a wide one for headings: the eye separates "where am I" from "what's in this row" by shape alone.</p>
+        <p><b>Design-system angle.</b> Width becomes a token (<span class="mono">--w-display: 125</span>, <span class="mono">--w-dense: 72</span>), which is an easy story to tell a hiring manager.</p>
+        <p class="risk"><b>Watch.</b> This is the only option that is also a grotesque like Work Sans. At normal width the two blur together. It only works if Archivo stays at the width extremes, never 100%.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 3 ================= -->
+  <section class="opt o3" id="atkinson">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">03 · Glare-proof</div>
+        <div class="opt-name">Atkinson Hyperlegible Next</div>
+        <p class="opt-tag">Braille Institute's low-vision typeface, rebuilt in 2025 with seven weights and a mono</p>
+        <div class="opt-meta">Braille Institute, Applied Design Works · 200–800 + italics · Mono companion · Google Fonts, OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Il1</span><small>200</small></div>
+          <div><span style="font-weight:400">0O8B</span><small>400</small></div>
+          <div><span style="font-weight:800">NY 8110 BL</span><small>800</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> The core job in Harbor Desk is checking an identity: does the hull number match the record? That's where <span class="mono">I/l/1</span>, <span class="mono">0/O</span> and <span class="mono">B/8</span> get confused, and those are exactly the pairs this face was drawn to tell apart. Its quirks (the spurred <i>l</i>, the slashed zero, the open tails) carry the personality.</p>
+        <p><b>Who it serves.</b> Marina staff outdoors in July sun on a dock tablet, and owners and operators who skew 50+. This choice puts the operator ahead of the portfolio.</p>
+        <p><b>System note.</b> Its Mono sibling can replace IBM Plex Mono, so every ID in the product comes from one legibility-led family.</p>
+        <p class="risk"><b>Watch.</b> It's the quietest of the five at heading sizes. It needs 800 weight and tight tracking to feel designed rather than merely accessible.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 4 ================= -->
+  <section class="opt o4">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">04 · Chart room</div>
+        <div class="opt-name">Newsreader</div>
+        <p class="opt-tag">Optical-size serif. Italic for water and vessels, the way nautical charts letter them</p>
+        <div class="opt-meta">Production Type · 200–800 + italics · opsz 6–72 · Google Fonts, OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:300">Ag</span><small>300</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500</small></div>
+          <div><span style="font-weight:700">Ag</span><small>700</small></div>
+          <div><span style="font-weight:600;font-style:italic">Lake Effect</span><small>600 italic</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> NOAA chart 14833, where your palette already comes from, letters water in italic serif and land in roman. Harbor Desk can follow the same rule: <i>Buffalo River</i> and <i>Lake Erie</i> on the 3D scene, and vessel names in italic because a boat's name is painted on its transom. Slip numbers and counts stay roman. That's a real convention, carried into software.</p>
+        <p><b>Who it serves.</b> Managers and owners, people who navigate by paper charts and have read tide tables for decades. It's also the strongest first impression: every other ops dashboard is a grotesque.</p>
+        <p><b>Density.</b> The serif only appears in names and headings, so it adds hierarchy without adding ink. It shows up three times per panel, and that's enough.</p>
+        <p class="risk"><b>Watch.</b> In a dark 3D UI a serif can drift toward editorial. Keep it out of controls, tables and buttons, and never set it below 16 px.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 5 ================= -->
+  <section class="opt o5">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">05 · Logbook</div>
+        <div class="opt-name">Recursive</div>
+        <p class="opt-tag">One variable family with Linear, Mono and Casual axes, mapped to who wrote each record</p>
+        <div class="opt-meta">Arrow Type, Stephen Nixon · weights 300–1000 · MONO, CASL, slnt, CRSV · Google Fonts, OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:300">Ag</span><small>300 linear</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800 linear</small></div>
+          <div><span style="font-weight:500;font-variation-settings:'MONO' 1">B-12</span><small>500 mono</small></div>
+          <div><span style="font-weight:500;font-variation-settings:'CASL' 1">Hull no. ok</span><small>500 casual</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Harbor Desk already separates sources (DOC, SIM, ASSUME, FIELD). Recursive puts that into the type itself: system text is Linear, machine records (IDs, camera times) are Mono, and anything a person typed on the dock, like a staff evidence note, is Casual, so it looks like a logbook entry. You can tell who said it before you read it.</p>
+        <p><b>Who it serves.</b> The dockmaster resolving the mismatch, who has to weigh a camera's claim against a coworker's note. It replaces Plex Mono too, which means one fewer family to load.</p>
+        <p><b>Hiring angle.</b> Typography doing product work, not decoration. That's the kind of decision a principal designer gets asked about in a portfolio review.</p>
+        <p class="risk"><b>Watch.</b> Casual can turn cartoonish. Limit it to quoted staff notes. Recursive also reads a bit "developer tool", so let Work Sans carry the calm.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <section class="rec">
+    <h2>Recommendation: 04 Newsreader, with 01's labelling discipline</h2>
+    <p>Newsreader gives the product a point of view that comes from the domain (chart lettering) rather than from a trend. It's the option most likely to stop a recruiter scrolling, and the hardest for a hiring manager to dismiss as a stock pick. It also suits the people who run marinas. Work Sans does the operating work, and the serif appears only where a name belongs.</p>
+    <p>Close second: 03 Atkinson Hyperlegible Next, if you want the case study to lead with operator empathy over visual flair. The wildcard is 05 Recursive, if the provenance story is the headline of your case study.</p>
+    <table>
+      <tr><th></th><th>Personality</th><th>Dense-data fit</th><th>Marina-user fit</th><th>Distinctiveness (GF popularity rank)</th><th>Pairing with Work Sans</th></tr>
+      <tr><td>01 Big Shoulders</td><td class="y">High</td><td class="y">High (condensed)</td><td class="y">Signage, outdoor</td><td class="y">#530, rare</td><td class="y">Strong contrast</td></tr>
+      <tr><td>02 Archivo</td><td class="m">Medium</td><td class="y">High (width axis)</td><td class="m">Neutral</td><td class="m">#44, very common</td><td class="m">Blurs at normal width</td></tr>
+      <tr><td>03 Atkinson Next</td><td class="m">Medium</td><td class="y">High</td><td class="y">Best (glare, age, IDs)</td><td class="y">#449</td><td class="y">Clear contrast</td></tr>
+      <tr><td>04 Newsreader</td><td class="y">High</td><td class="m">Names and headings only</td><td class="y">Chart and almanac literate</td><td class="m">#105</td><td class="y">Classic serif/sans</td></tr>
+      <tr><td>05 Recursive</td><td class="y">High</td><td class="y">High (mono axis)</td><td class="m">Good, slightly techy</td><td class="y">#806, rare</td><td class="m">Good if Casual is rationed</td></tr>
+    </table>
+  </section>
+</div>
+
+<template id="mock">
+  <div class="stage">
+    <div class="left">
+      <div class="kpis">
+        <div class="kpi"><div class="k-row"><span class="r-label">Slips</span><span class="tag assume">ASSUME</span></div><div class="r-kpi">126</div></div>
+        <div class="kpi"><div class="k-row"><span class="r-label">Vessels</span><span class="tag">SIM</span></div><div class="r-kpi">48</div></div>
+        <div class="kpi"><div class="k-row"><span class="r-label">Needs review</span><span class="tag">SIM</span></div><div class="r-kpi" style="color:var(--warning)">1</div></div>
+      </div>
+      <div class="map">
+        <div class="pierline"></div>
+        <div class="maplabel r-map" style="left:6%;bottom:22%">Buffalo River</div>
+        <div class="maplabel r-mapalt" style="left:58%;bottom:8%">Erie Basin</div>
+        <div class="signletter r-sign">B</div>
+        <div class="dock"></div>
+        <div class="callout"><span class="r-id">B-12</span> <span class="r-small" style="color:var(--mist-200)">· Vessel present · identity unverified</span></div>
+      </div>
+      <div class="replay">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span class="r-label">Slip review · B-12</span><span class="r-btn" style="font-size:14px">Guided replay</span></div>
+        <div class="steps">
+          <div class="step on"><span class="t r-id" style="color:var(--mist-200)">08:45</span><span class="r-small">Normal</span></div>
+          <div class="step on"><span class="t r-id">09:12</span><span class="r-small" style="font-weight:600">Uncertain</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:13</span><span class="r-small">Dock check</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:18</span><span class="r-small">Staff evidence</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:20</span><span class="r-small">Resolved</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="p-top"><span class="r-label">Dock B · Floating</span><span class="chip review r-chip"><i></i>Needs review</span></div>
+      <div class="slip"><span class="r-title">Slip B-12</span><span class="tag assume">ASSUME</span></div>
+      <div class="rule"></div>
+      <div class="r-label" style="margin-bottom:6px">Assigned vessel</div>
+      <div class="r-vessel">Lake Effect</div>
+      <div class="r-small" style="color:var(--mist-200);margin:2px 0 12px">29 ft cabin cruiser · <span class="r-id" style="font-size:12.5px">NY 8110 BL</span></div>
+      <dl class="kv r-body" style="margin:0">
+        <dt>Agreement</dt><dd>Seasonal</dd><dd><span class="tag">SIM</span></dd>
+        <dt>Term</dt><dd><span class="r-id" style="font-size:13px">05-01 → 10-15</span></dd><dd><span class="tag">SIM</span></dd>
+      </dl>
+      <div class="rule"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span class="r-label">Latest observation</span><span class="chip present r-chip"><i></i>Present</span></div>
+      <dl class="kv r-body" style="margin:0">
+        <dt>Source</dt><dd>Camera <span class="r-id" style="font-size:13px">C-02 · 09:12</span></dd><dd><span class="tag">SIM</span></dd>
+        <dt>Identity</dt><dd>Unverified</dd><dd></dd>
+      </dl>
+      <div class="note r-note">Possible match, not an identity: <span class="r-vessel" style="font-size:19px">Harbor Light</span>
+        <span class="staff">"Hull no. checks out, owner aboard. Moved from C-04 for pump-out." · J. Ortiz</span>
+      </div>
+      <div class="btns"><button class="btn primary r-btn">Request dock check</button><button class="btn r-btn">Confirm</button></div>
+    </div>
+  </div>
+  <div class="chartstrip">
+    <div class="chart">
+      <div class="built"></div><div class="land"></div>
+      <div class="lbl r-map" style="left:6%;top:22%;color:#0b3a5e">Lake Erie</div>
+      <div class="lbl r-mapalt" style="left:52%;top:48%;color:#0b3a5e">Buffalo River</div>
+      <div class="lbl r-id" style="right:5%;bottom:12px;color:#2a2410;font-size:12px">CHART 14833 · SIMULATED</div>
+    </div>
+    <div class="registry">
+      <div class="row hdr"><span>Slip</span><span>Vessel</span><span>Status</span></div>
+      <div class="row"><span class="r-id">B-11</span><span class="vn">Second Wind</span><span class="r-small">Docked</span></div>
+      <div class="row"><span class="r-id">B-12</span><span class="vn">Lake Effect</span><span class="r-small" style="color:#8a5a00;font-weight:600">Review</span></div>
+      <div class="row"><span class="r-id">B-14</span><span class="vn">Queen City</span><span class="r-small">Underway</span></div>
+    </div>
+  </div>
+</template>
+<script>
+  const tpl=document.getElementById('mock').innerHTML;
+  document.querySelectorAll('section.opt').forEach(s=>{s.innerHTML=s.innerHTML.replace('<!--MOCK-->',tpl)});
+</script>
+</body>
+</html>

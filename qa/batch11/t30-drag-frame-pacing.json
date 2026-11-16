@@ -1,0 +1,26 @@
+{
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+  "viewport": "1440x900 DPR1",
+  "headless": false,
+  "motion": "ambient water running",
+  "results": {
+    "Dock B": {
+      "frames": 300,
+      "medianMs": 16.7,
+      "p95Ms": 17.4,
+      "p99Ms": 17.7,
+      "maxMs": 33.3,
+      "over33ms": 0,
+      "calls": 39
+    },
+    "Map": {
+      "frames": 300,
+      "medianMs": 16.7,
+      "p95Ms": 17.3,
+      "p99Ms": 17.7,
+      "maxMs": 32.6,
+      "over33ms": 0,
+      "calls": 131
+    }
+  }
+}

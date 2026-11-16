@@ -1,0 +1,36 @@
+Use case: ui-mockup.
+Create ONE exceptionally polished wide landscape 16:9 visual target frame for a browser-based 3D marina operations application called Harbor Desk, based on the actual FIRST BUFFALO RIVER MARINA at 32 Fuhrmann Boulevard, Buffalo, New York. This is a reference-informed conceptual reconstruction, not a survey or live camera image.
+
+Reference roles: Image 1 is an actual aerial photograph of First Buffalo River Marina and is the geographic and site-character reference. Preserve its essential long straight waterfront quay and continuous river-edge dock with short perpendicular berths, greenish Great Lakes river water on one side, grass-and-gravel boat storage yard immediately behind, small utilitarian service buildings, parked trailers, mature deciduous trees. Do NOT replace this with a generic enclosed yacht basin, radial marina, many enormous parallel piers, tropical resort, or imaginary island. Image 2 is the user's warehouse video frame and is ONLY a visual-composition and interactive-3D-interface reference: learn its clean elevated perspective, crisply selectable assets and readable operational panels, but do not copy its brand, warehouse, blue roofs, metrics, or cartoon geometry.
+
+Art direction: sophisticated architectural 3D visualization midway between the clean tactile miniature clarity of Image 2 and photorealistic real-time rendering. Approximately 70% realistic materials and detailing, 30% deliberate clarity and visual simplification. Precise convincing scale and modeling, no toy-like inflated boats. White fiberglass recreational cabin cruisers, mixed sailboats and motorboats, navy canvas covers, tinted glazing, fine stainless rails, realistic mooring lines, cleats, small utility pedestals, subtle surface wear. Pale concrete quay, weathered timber where appropriate, asphalt/gravel access road, modest warehouse with pitched dark roof and simple office, several boats on yard stands. Beautiful muted blue-green river with physically plausible fine ripples and soft reflections, no Caribbean transparency or underwater blue glow. Temperate Buffalo summer greenery. Beyond the core dock area include the local industrial waterfront character and recognizable weathered pale-concrete cylindrical Connecting Terminal grain elevator with tall headhouse toward the far end of the site, subtly backgrounded, not overpowering. Do not invent downtown skyscrapers across the wrong side of the river. Surroundings continue naturally beyond frame, no floating cutaway slab, no sculpted island.
+
+Composition: camera elevated over river looking obliquely along the dock toward the service yard and far industrial end. The river occupies the lower-left foreground, dock runs diagonally from lower-left/middle toward upper-right, yard and buildings behind it. View is close enough to appreciate about 12 to 18 boats with individually readable details, plus more distant boats for context. Orthographic-like aerial lens, near-isometric clean navigation, not flat top-down. All environmental objects share ONE consistent physical lighting treatment. Calm late-morning sunlight, soft realistic directional shadows and ambient occlusion. Restrained premium daylight palette of off-white, warm concrete, desaturated olive trees, navy canvas and teal water. Environment dominates about 72 percent of frame. It must feel a beautiful actually buildable real-time 3D application, not a photograph with labels pasted on.
+
+Operational UI: rendered extremely crisp, with a slim white header and ONE opaque off-white operational panel floating on right, roughly 28 percent width, clean professional sans-serif, charcoal text, generous breathing room, delicate hairline separators, 10px corner radius and a subtle real shadow. No ornamental gradients, glassmorphism, large stat cards or blue science-fiction glows.
+Header text: "Harbor Desk" at left, then "First Buffalo River Marina"; small text at right "Demo data".
+In the 3D scene select ONE medium white cabin cruiser with a navy cover at a short berth, using a thin precise amber berth outline with small restrained corner marks, not a glowing neon boat. Adjacent tidy label says "B-12 · Verify identity". A few tiny muted nearby berth labels "B-10" and "B-14". No labels on every boat.
+Right panel EXACT copy, in this hierarchy:
+"Slip B-12" heading, small amber status "Needs review"
+"ASSIGNED VESSEL"
+"Lake Effect"
+"29 ft cabin cruiser"
+"Agreement" / "Seasonal · B-12"
+"Registration" / "On file · ending 42 AB"
+thin separator
+"LATEST OBSERVATION"
+"Vessel present · identity unverified"
+"Camera C-02 · 09:12"
+A small tasteful evidence thumbnail showing the same boat and adjacent text "Possible match: Harbor Light"
+"Staff verification required"
+Primary dark teal button: "Review observation"
+Secondary text action: "Request dock check"
+At bottom of panel a subtle three-column strip:
+"Presence" "Present"
+"Agreement" "Assigned"
+"Bookable" "No"
+Do not state that the boat identity is confirmed, do not change the agreement or imply the berth is available.
+A slim unobtrusive lower scene timeline strip reads "08:10 Departure logged" then "09:12 Possible mismatch", active amber dot on latter, with quiet view controls "3D" and "Top-down".
+Small readable bottom corner provenance caption "Independent concept · simulated records · approximate geometry".
+
+Constraints: one cohesive sophisticated wide application screenshot, no device mockup, no outside page margins, no poster title or explanatory annotations, no split comparison, no watermark, no company or city endorsement. UI contains exact coherent text above only. Keep real place character, accurate relative boat scale and material realism. Highest quality, detailed foreground with calmer distant surroundings.

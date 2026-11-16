@@ -1,0 +1,15 @@
+Asset: visual-target-v2.png
+Method: built-in image generation, editing visual-target-v1.png.
+Status: refinement for user review; not final approval.
+Source geography/provenance: see visual-target-provenance-v1.txt.
+User direction: slightly more stylized miniature than v1, remaining above 5 on a scale from warehouse reference (1) to hyperrealism (10).
+Proposed target: approximately 6.5/10; subjective art-direction guide, not a measured property.
+
+Exact edit prompt:
+Edit the supplied Harbor Desk Buffalo marina visual target. Preserve the entire composition, site arrangement, specific vessels, long linear waterfront dock, boatyard, service buildings, grain elevator, view angle, image dimensions, exact application UI and all exact readable text, selected B-12 boat and amber outline. This is a targeted aesthetic refinement only.
+
+User direction: slightly further toward the clean stylized miniature look of a polished 3D warehouse operations demo, while remaining ABOVE the midpoint between stylized miniature (1) and hyperrealism (10). Aim deliberately for 6.5/10. The starting frame reads about 8.5. The change must be clearly visible but sophisticated.
+
+Restyle the environmental rendering as an exquisitely constructed miniature architectural digital twin: simpler cleaner silhouettes and slightly softer beveled geometry, restrained and coherent material palette, more evenly finished fiberglass and buildings, less stochastic texture noise, lighter cleaner concrete, smoother navy canvas, slightly simplified organized clusters of tree foliage rather than thousands of individually sharp leaves, softer broad directional illumination and ambient contact shadows. Keep recognizable natural tree forms, not spheres or candy trees. Reduce the density and contrast of tiny water ripples significantly; retain convincing water depth, restrained reflections and a few elegant broad ripples. Simplify repetitive tiny distant boat details while preserving foreground hull shapes, glazing, railings, mooring and dock scale. The resulting scene should unmistakably be a premium carefully art-directed 3D model rather than a photograph, but still have convincing realistic PBR surfaces and refined fine details in the selected boat. Keep physical proportions, do not inflate toy boats or turn the scene low-poly, cartoon, clay, LEGO, flat-shaded or plastic. No diorama base or floating island. No artificial depth-of-field blur over operational objects.
+
+The UI must remain crisp and unchanged in text, size, layout and color. Retain the tiny evidence thumbnail as a photographic observation so there is a subtle, intentional contrast between spatial 3D model and camera evidence. Preserve the caption "Independent concept · simulated records · approximate geometry". Correct one compositing flaw: all grain elevator geometry stays BELOW and BEHIND the opaque white header, never overlaps its white background. Do not add or remove UI or labels. One wide application frame, no comparison panels.

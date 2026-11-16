@@ -1,0 +1,47 @@
+/* Scenario panel: bottom-left zone (DESIGN §9 timeline strip), clear of attribution and camera controls. */
+.scenario-panel { position: relative; width: 100%; min-width: 0; padding: var(--s-3) var(--s-4); display: grid; gap: var(--s-2); }
+.panel > .scenario-head { flex-wrap: wrap; }
+.panel > .scenario-head { display: flex; align-items: center; gap: var(--s-2); margin: 0; }
+.scenario-head h2 { margin-right: 0; }
+.scenario-head-actions { margin-left: auto; display: flex; gap: var(--s-1); }
+.scenario-head-actions .btn { min-height: 32px; padding: 0 var(--s-2); font-size: var(--fs-control); } /* compact control: keeps the head on one line */
+.scenario-panel[data-mode="replay"] { border-style: dashed; border-color: var(--border-strong); }
+.scenario-body { display: grid; gap: var(--s-2); justify-items: start; }
+.scenario-foot { display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap; }
+.scenario-foot .body-sm { flex: 1 1 240px; max-width: 300px; } /* shrinks beside the button rather than wrapping under it */
+
+.stage-strip { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--s-1); width: 100%; }
+.stage-strip li {
+  /* Top-aligned so every stage time sits on one line even when a label wraps. */
+  display: grid; grid-template-columns: 16px 1fr; grid-template-rows: auto auto; column-gap: 6px; align-items: start;
+  padding: 6px 6px 6px 0; border-top: 2px solid var(--border-hairline); font-size: 12.5px; line-height: 1.25;
+}
+.stage-dot { grid-row: 1; align-self: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--text-secondary); display: grid; place-items: center; }
+.stage-dot .icon-16 { width: 11px; height: 11px; }
+.stage-time { grid-column: 2; font-size: 12px; color: var(--text-secondary); }
+.stage-label { grid-column: 2; color: var(--text-secondary); }
+.stage-opt { font-size: 11px; }
+.stage-strip li[data-state="done"] { border-top-color: var(--text-secondary); }
+.stage-strip li[data-state="done"] .stage-dot { background: var(--text-secondary); color: var(--bg-panel-solid); }
+.stage-strip li[data-state="current"] { border-top-color: var(--text-primary); }
+.stage-strip li[data-state="current"] .stage-dot { border-color: var(--text-primary); box-shadow: inset 0 0 0 3px var(--text-primary); }
+.stage-strip li[data-state="current"] .stage-label, .stage-strip li[data-state="current"] .stage-time { color: var(--text-primary); font-weight: var(--fw-semibold); }
+.stage-strip li[data-state="skipped"] .stage-label { text-decoration: line-through; }
+.stage-strip li[data-state="skipped"] .stage-dot { border-style: dashed; }
+/* Narrow columns (tablet portrait, mobile sheet): every piece may shrink and wrap instead of overflowing. */
+.stage-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stage-label { overflow-wrap: anywhere; }
+.scenario-head h2 { min-width: 0; }
+.scenario-head-actions { flex-wrap: wrap; justify-content: flex-end; }
+.scenario-panel > * { min-width: 0; }
+
+/* Day timeline scrubber (T31). */
+.day-scrubber { width: 100%; display: grid; gap: 2px; }
+.day-scrubber-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-2); }
+.day-scrubber-time { font-size: 13px; color: var(--text-primary); }
+.day-scrubber-track { position: relative; display: grid; }
+.day-scrubber input[type="range"] { width: 100%; margin: 0; min-height: 28px; accent-color: var(--text-primary); cursor: pointer; }
+.day-scrubber-ticks { position: absolute; left: 8px; right: 8px; top: 3px; height: 6px; pointer-events: none; }
+.day-tick { position: absolute; top: 0; width: 2px; height: 6px; margin-left: -1px; background: var(--state-review); border-radius: 1px; }
+.day-scrubber-ends { display: flex; justify-content: space-between; font-size: 11px; }
+.day-scrubber-note { margin: 0; font-size: 11.5px; }

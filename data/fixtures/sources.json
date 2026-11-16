@@ -1,0 +1,152 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "Source manifest. Provenance is per record (DOC / ASSUME / SIM).",
+ "records": [
+  {
+   "id": "SRC-OSM",
+   "kind": "osm-dataset",
+   "title": "OpenStreetMap harbor features (Buffalo River mouth, City Ship Canal)",
+   "path": "data/buffalo-river-features.geojson",
+   "url": "https://www.openstreetmap.org/copyright",
+   "date": "2026-11-14",
+   "provenance": "DOC",
+   "caveats": "Crowd-sourced; fetched 14 Nov 2026. Documents a source, not current survey accuracy or site ownership. © OpenStreetMap contributors, ODbL."
+  },
+  {
+   "id": "SRC-ESD-MAP",
+   "kind": "official-map",
+   "title": "First Buffalo River Marina site map (ESD operator RFP, Exhibit A)",
+   "path": "data/reference/first-buffalo-site-map-2022.pdf",
+   "url": "https://www.esd.ny.gov/sites/default/files/rfp/Exhibit-A-Site-Map-First-Buffalo-Marina-Operator.pdf",
+   "date": "2022-06-01",
+   "provenance": "DOC",
+   "caveats": "Dated site diagram on an aerial photo. Labels do not validate current services or operations."
+  },
+  {
+   "id": "SRC-ESD-SCOPE",
+   "kind": "official-document",
+   "title": "ESD operator RFP, Appendix A — Scope of Services",
+   "url": "https://www.esd.ny.gov/sites/default/files/rfp/Appendix-A-Scope-of-Services-First-Buffalo-Marina-Operator.pdf",
+   "date": null,
+   "provenance": "DOC",
+   "caveats": "Publication date not recorded in this build. Supports registry/records as plausible workflows; does not establish current software or policies."
+  },
+  {
+   "id": "SRC-SLIPS",
+   "kind": "generated-layout",
+   "title": "Assumed slip plan: 126 slips, docks A–E",
+   "path": "data/slips.geojson",
+   "date": "2026-11-14",
+   "provenance": "ASSUME",
+   "caveats": "Generated on OSM headwalks. Count, numbering and length classes are design assumptions, not marina capacity."
+  },
+  {
+   "id": "SRC-SITE-LOCAL",
+   "kind": "derived-geometry",
+   "title": "Local-frame geometry, land masks and approximate surroundings",
+   "path": "data/derived/site-local.json",
+   "date": "2026-11-14",
+   "provenance": "ASSUME",
+   "caveats": "Derived by scripts/inspect-geometry.ts. Approximate; see data/GEOMETRY-VALIDATION.md."
+  },
+  {
+   "id": "C-01",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-01 (Dock A)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier. Not an installed camera or a validated field of view."
+  },
+  {
+   "id": "C-02",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-02 (Dock B, B-01…B-19)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier. Not an installed camera or a validated field of view."
+  },
+  {
+   "id": "C-03",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-03 (Dock B, B-20…B-37, and Dock D)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier. Not an installed camera or a validated field of view."
+  },
+  {
+   "id": "C-04",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-04 (Dock C, C-01…C-09)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier; the one camera scripted offline, from 07:05, to exercise stale-data handling."
+  },
+  {
+   "id": "C-05",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-05 (Dock C, C-10…C-18)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier. Not an installed camera or a validated field of view."
+  },
+  {
+   "id": "C-06",
+   "kind": "sim-camera",
+   "title": "Simulated camera C-06 (Dock E)",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Simulated camera identifier. Not an installed camera or a validated field of view."
+  },
+  {
+   "id": "SRC-RATES",
+   "kind": "assumed-rates",
+   "title": "Assumed dockage rates: seasonal $/ft by dock, transient $2.50/ft/night",
+   "date": "2026-11-16",
+   "provenance": "ASSUME",
+   "caveats": "Round numbers set for the demo, priced on the slip length class. Not a Buffalo rate card, a quote or a market survey."
+  },
+  {
+   "id": "SRC-SERVICES",
+   "kind": "assumed-services",
+   "title": "Assumed berth depth and shore power",
+   "date": "2026-11-16",
+   "provenance": "ASSUME",
+   "caveats": "Round demo numbers: deeper at the start of each dock run, about 1.5 ft shallower at its far end; 50 A outlets on slips of 35 ft and over, 30 A everywhere. Not a survey, soundings or a utility plan. Fit verdicts built on them are illustrations, not berth-fit or navigation advice."
+  },
+  {
+   "id": "SRC-LAKE",
+   "kind": "assumed-lake",
+   "title": "Simulated lake conditions: calm day and SW gale with seiche",
+   "date": "2026-11-16",
+   "provenance": "ASSUME",
+   "caveats": "Shapes chosen to illustrate a wind setup at the east end of Lake Erie and the slosh that follows (a 14 h period and the amplitudes are demo values), plus berth exposure and fixed-deck heights by dock. Not a NOAA gauge record, an NWS forecast or a survey. Verdicts built on them are illustrations, not navigation or berth-fit advice."
+  },
+  {
+   "id": "SRC-NWS-MARINE",
+   "kind": "official-guide",
+   "title": "NWS, Marine Weather Services: Great Lakes (NOAA PA 98053)",
+   "url": "https://www.weather.gov/media/owlie/mw_lakes.pdf",
+   "date": null,
+   "provenance": "DOC",
+   "caveats": "Publication date not recorded in this build. Defines a Gale Warning as forecast winds of 34 to 47 knots, the exposure no-fit line used here. It gives no numeric small craft threshold, so the 20 kt tight line is an assumption."
+  },
+  {
+   "id": "STAFF-LOG",
+   "kind": "sim-staff-log",
+   "title": "Simulated staff movement log",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Fictional departures and arrivals."
+  },
+  {
+   "id": "STAFF-CHECK",
+   "kind": "sim-staff-check",
+   "title": "Simulated staff dock walks and dock checks",
+   "date": "2026-11-14",
+   "provenance": "SIM",
+   "caveats": "Fictional staff identity checks, including “verified” demo decisions."
+  }
+ ]
+}

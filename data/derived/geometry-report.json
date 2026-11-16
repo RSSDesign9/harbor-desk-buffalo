@@ -1,0 +1,432 @@
+{
+ "generated_at": "2026-11-14",
+ "generator": "scripts/inspect-geometry.ts",
+ "summary": {
+  "total": 27,
+  "passed": 23,
+  "failed": [
+   "osm.slipway-934085281",
+   "water.coverage",
+   "docks.order",
+   "docks.numbering-direction"
+  ]
+ },
+ "checks": [
+  {
+   "id": "osm.count",
+   "title": "OSM feature count matches baseline (146)",
+   "pass": true,
+   "detail": "146 features"
+  },
+  {
+   "id": "osm.provenance",
+   "title": "Every OSM feature carries provenance DOC",
+   "pass": true,
+   "detail": "0 without DOC"
+  },
+  {
+   "id": "osm.slipway-934085281",
+   "title": "Slipway cited by SLIPS.md (OSM 934085281) is present in supplied features",
+   "pass": false,
+   "detail": "Not present. Only slipway in file is OSM 1073540134 (between headwalks D and C). Recorded, not fabricated."
+  },
+  {
+   "id": "slips.count",
+   "title": "Slip count is 126",
+   "pass": true,
+   "detail": "126"
+  },
+  {
+   "id": "slips.per-dock",
+   "title": "Per-dock counts A39/B37/C18/D22/E10",
+   "pass": true,
+   "detail": "{\"A\":39,\"B\":37,\"C\":18,\"D\":22,\"E\":10}"
+  },
+  {
+   "id": "slips.ids-unique",
+   "title": "Slip IDs unique",
+   "pass": true,
+   "detail": "no duplicates"
+  },
+  {
+   "id": "slips.numbering-contiguous",
+   "title": "Numbers run 01…n per dock without gaps",
+   "pass": true,
+   "detail": "contiguous"
+  },
+  {
+   "id": "slips.canonical",
+   "title": "B-10, B-12, B-14 exist",
+   "pass": true,
+   "detail": "checked by id"
+  },
+  {
+   "id": "slips.structure",
+   "title": "Rings closed, finite, 4 corners, provenance ASSUME, class dims, headwalk + kind match",
+   "pass": true,
+   "detail": "all 126 pass",
+   "data": []
+  },
+  {
+   "id": "slips.dimensions",
+   "title": "Polygon size matches length_ft/width_ft within 3% (units are feet → metres at 0.3048)",
+   "pass": true,
+   "detail": "max relative error 0.38%",
+   "data": []
+  },
+  {
+   "id": "slips.rectangular",
+   "title": "Slip corners are right angles within 2°",
+   "pass": true,
+   "detail": "max deviation 0.51°"
+  },
+  {
+   "id": "slips.headwalk-gap",
+   "title": "Each slip’s inner edge lies within 1.5 m of its OSM headwalk",
+   "pass": true,
+   "detail": "max gap 0.6 m",
+   "data": []
+  },
+  {
+   "id": "slips.overlap",
+   "title": "No two slips overlap (>0.05 m²)",
+   "pass": true,
+   "detail": "0 overlapping pairs",
+   "data": []
+  },
+  {
+   "id": "slips.spacing",
+   "title": "Centre spacing along each dock ≥ slip width (no squeezed berths)",
+   "pass": true,
+   "detail": "{\"A\":{\"min\":3.03,\"max\":3.05,\"widthM\":3.05},\"B\":{\"min\":3.34,\"max\":20.32,\"widthM\":3.35},\"C\":{\"min\":3.8,\"max\":13.32,\"widthM\":3.81},\"D\":{\"min\":4.25,\"max\":4.27,\"widthM\":4.27},\"E\":{\"min\":4.87,\"max\":4.88,\"widthM\":4.88}}",
+   "data": [
+    "B: max centre spacing 20.32 m (width 3.35 m) — a run break / gangway gap",
+    "C: max centre spacing 13.32 m (width 3.81 m) — a run break / gangway gap"
+   ]
+  },
+  {
+   "id": "slips.land",
+   "title": "No slip polygon overlaps a mapped land/yard/building polygon",
+   "pass": true,
+   "detail": "0 overlaps",
+   "data": []
+  },
+  {
+   "id": "water.coverage",
+   "title": "Every slip lies in a mapped water polygon (FLAG expected: river-mouth water is unmapped)",
+   "pass": false,
+   "detail": "68 slips (B-20…E-10) lie in OSM 31752570 “City Ship Canal”; 58 (A-01…B-19, incl. B-12) face the Buffalo River mouth, which the supplied file maps only as a centreline (OSM 1216155152, 1517089936, 1517089942, 1517089941, 1517089940, 1517089939, 1517089937). Repair: water plane + authored land masks; never close a partial polygon.",
+   "data": {
+    "inCanal": 68,
+    "inOtherWater": [],
+    "unmapped": [
+     "A-01",
+     "A-02",
+     "A-03",
+     "A-04",
+     "A-05",
+     "A-06",
+     "A-07",
+     "A-08",
+     "A-09",
+     "A-10",
+     "A-11",
+     "A-12",
+     "A-13",
+     "A-14",
+     "A-15",
+     "A-16",
+     "A-17",
+     "A-18",
+     "A-19",
+     "A-20",
+     "A-21",
+     "A-22",
+     "A-23",
+     "A-24",
+     "A-25",
+     "A-26",
+     "A-27",
+     "A-28",
+     "A-29",
+     "A-30",
+     "A-31",
+     "A-32",
+     "A-33",
+     "A-34",
+     "A-35",
+     "A-36",
+     "A-37",
+     "A-38",
+     "A-39",
+     "B-01",
+     "B-02",
+     "B-03",
+     "B-04",
+     "B-05",
+     "B-06",
+     "B-07",
+     "B-08",
+     "B-09",
+     "B-10",
+     "B-11",
+     "B-12",
+     "B-13",
+     "B-14",
+     "B-15",
+     "B-16",
+     "B-17",
+     "B-18",
+     "B-19"
+    ]
+   }
+  },
+  {
+   "id": "docks.order",
+   "title": "Docks are lettered in order along the reach, downstream (NW) → upstream (SE), per SLIPS.md",
+   "pass": false,
+   "detail": "Actual order NW→SE: A → B → D → C → E. IDs stay canonical; the lettering rule in SLIPS.md is not what the generated data does.",
+   "data": [
+    {
+     "dock": "A",
+     "alongM": 62.6,
+     "firstAlongM": 4.8,
+     "lastAlongM": 120.4
+    },
+    {
+     "dock": "B",
+     "alongM": 271.7,
+     "firstAlongM": 203.2,
+     "lastAlongM": 340.7
+    },
+    {
+     "dock": "D",
+     "alongM": 425.4,
+     "firstAlongM": 380.7,
+     "lastAlongM": 470.2
+    },
+    {
+     "dock": "C",
+     "alongM": 588,
+     "firstAlongM": 551,
+     "lastAlongM": 625
+    },
+    {
+     "dock": "E",
+     "alongM": 672.1,
+     "firstAlongM": 693.9,
+     "lastAlongM": 650.2
+    }
+   ]
+  },
+  {
+   "id": "docks.numbering-direction",
+   "title": "Numbering direction is consistent across docks",
+   "pass": false,
+   "detail": "A: 01 at NW (downstream) end; B: 01 at NW (downstream) end; D: 01 at NW (downstream) end; C: 01 at NW (downstream) end; E: 01 at SE (upstream) end"
+  },
+  {
+   "id": "anchors.fit",
+   "title": "Three distributed dock anchors agree with the 2022 map within 15 m",
+   "pass": true,
+   "detail": "R1 3.2 m, R2 5 m, R3 1.8 m; scale 1.63 px/m; map “up” points to bearing 58.7° (NE)",
+   "data": {
+    "anchorResults": [
+     {
+      "id": "R1",
+      "name": "Dock A headwalk NW end ↔ headwalk at the 2022 site-boundary corner (map marker 2)",
+      "local": {
+       "east": -130.18,
+       "north": 203.44
+      },
+      "map_px": [
+       640,
+       657.5
+      ],
+      "residual_m": 3.2
+     },
+     {
+      "id": "R2",
+      "name": "Gap between Dock B’s two runs ↔ gangway at map marker 5",
+      "local": {
+       "east": 8.1,
+       "north": -32.46
+      },
+      "map_px": [
+       1075,
+       657.5
+      ],
+      "residual_m": 5
+     },
+     {
+      "id": "R3",
+      "name": "Dock E headwalk SE end ↔ dock line end in the Skyway shadow (map marker 10)",
+      "local": {
+       "east": 261.87,
+       "north": -426.84
+      },
+      "map_px": [
+       1850,
+       643.5
+      ],
+      "residual_m": 1.8
+     }
+    ],
+    "independent": [
+     {
+      "id": "C1",
+      "name": "Mid-river on the map (between Canalside wharf edge and the dock line at x=850 px) vs OSM river centreline",
+      "residual_m": 17.9,
+      "verdict": "consistent"
+     },
+     {
+      "id": "C2",
+      "name": "Candidate Commercial Slip mouth on the map (680,160 px) vs southern end of OSM 371587071 “Commercial Slip”",
+      "residual_m": 84.9,
+      "verdict": "unresolved — identification of the map channel is uncertain; north-bank context stays approximate"
+     }
+    ]
+   }
+  },
+  {
+   "id": "docks.headwalk-lengths",
+   "title": "Headwalk lengths vs SLIPS.md (informational)",
+   "pass": true,
+   "detail": "{\"A\":{\"osm_m\":168.2,\"osm_ft\":552,\"slipsMd_ft\":\"410\"},\"B\":{\"osm_m\":216.5,\"osm_ft\":710,\"slipsMd_ft\":\"234 + 226\"},\"C\":{\"osm_m\":107.2,\"osm_ft\":352,\"slipsMd_ft\":\"140 + 147\"},\"D\":{\"osm_m\":151.9,\"osm_ft\":498,\"slipsMd_ft\":\"349\"},\"E\":{\"osm_m\":110.5,\"osm_ft\":362,\"slipsMd_ft\":\"203\"}}; main runs and slip spans {\"A\":{\"mainRun_m\":158,\"slipSpan_m\":118.7},\"B\":{\"mainRun_m\":205.2,\"slipSpan_m\":141},\"D\":{\"mainRun_m\":121.2,\"slipSpan_m\":93.8},\"C\":{\"mainRun_m\":87.5,\"slipSpan_m\":78},\"E\":{\"mainRun_m\":100.8,\"slipSpan_m\":48.8}}. SLIPS.md’s stated lengths do not match OSM; slips occupy part of each run."
+  },
+  {
+   "id": "yard.within-land",
+   "title": "OSM 1073548174 (kind parking; SLIPS.md “boatyard”) lies on the land side of the bank (±1 m)",
+   "pass": true,
+   "detail": "0 of 50 vertices fall on the water side (authored offsets A 1 m, B 3 m; canal west edge used south-east of the mouth)"
+  },
+  {
+   "id": "water.mask-clear",
+   "title": "No land mask covers any slip corner",
+   "pass": true,
+   "detail": "0 slips touched",
+   "data": []
+  },
+  {
+   "id": "water.river-open",
+   "title": "River centreline near the site stays in open water (not under a land mask)",
+   "pass": true,
+   "detail": "0 centreline vertices under land"
+  },
+  {
+   "id": "water.canal-open",
+   "title": "City Ship Canal (OSM 31752570) stays open water: ≤3% of its mapped area under land masks",
+   "pass": true,
+   "detail": "0 of 3989 4 m samples under land (0.0%)"
+  },
+  {
+   "id": "water.other-open",
+   "title": "No other mapped water polygon is covered by authored land (documented water cuts holes in masks)",
+   "pass": true,
+   "detail": "none covered; holes {\"land-west\":[1073603319],\"land-east\":[158778752],\"land-north\":[371587071,449798165,1072510134]}"
+  },
+  {
+   "id": "slips.water-side",
+   "title": "Every slip opens away from the site bank into water (outer edge on no land evidence)",
+   "pass": true,
+   "detail": "all 126 open into water",
+   "data": []
+  },
+  {
+   "id": "b12.context",
+   "title": "B-12 sits on Dock B’s first run between B-10 and B-14",
+   "pass": true,
+   "detail": "B-12 centroid {\"east\":-4.88,\"north\":-1.27} m, heading 59°, gap to headwalk 0.6 m; ≈33.4 m from the marker-5 gangway; ≈153.6 m to the schematic river centreline; faces the river mouth, just north of the City Ship Canal polygon"
+  }
+ ],
+ "measurements": {
+  "headwalkLengths": {
+   "A": {
+    "osm_m": 168.2,
+    "osm_ft": 552,
+    "slipsMd_ft": "410"
+   },
+   "B": {
+    "osm_m": 216.5,
+    "osm_ft": 710,
+    "slipsMd_ft": "234 + 226"
+   },
+   "C": {
+    "osm_m": 107.2,
+    "osm_ft": 352,
+    "slipsMd_ft": "140 + 147"
+   },
+   "D": {
+    "osm_m": 151.9,
+    "osm_ft": 498,
+    "slipsMd_ft": "349"
+   },
+   "E": {
+    "osm_m": 110.5,
+    "osm_ft": 362,
+    "slipsMd_ft": "203"
+   }
+  },
+  "spacing": {
+   "A": {
+    "min": 3.03,
+    "max": 3.05,
+    "widthM": 3.05
+   },
+   "B": {
+    "min": 3.34,
+    "max": 20.32,
+    "widthM": 3.35
+   },
+   "C": {
+    "min": 3.8,
+    "max": 13.32,
+    "widthM": 3.81
+   },
+   "D": {
+    "min": 4.25,
+    "max": 4.27,
+    "widthM": 4.27
+   },
+   "E": {
+    "min": 4.87,
+    "max": 4.88,
+    "widthM": 4.88
+   }
+  },
+  "halfRiverWidthFromHeadwalks_m": {
+   "min": 114.6,
+   "max": 287.5
+  },
+  "riverWidthAtB12_m": 296.2,
+  "canonical": [
+   {
+    "id": "B-10",
+    "centroid": {
+     "east": -8.34,
+     "north": 4.47
+    },
+    "headingDeg": 59,
+    "chainage_m": 77.3
+   },
+   {
+    "id": "B-12",
+    "centroid": {
+     "east": -4.88,
+     "north": -1.27
+    },
+    "headingDeg": 59,
+    "chainage_m": 84
+   },
+   {
+    "id": "B-14",
+    "centroid": {
+     "east": -1.42,
+     "north": -7
+    },
+    "headingDeg": 59.1,
+    "chainage_m": 90.7
+   }
+  ]
+ }
+}

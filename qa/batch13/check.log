@@ -1,0 +1,64 @@
+
+> harbor-desk@0.1.0 check
+> npm run tokens:check && npm run fixtures:check && npm run assets:check && npm run typecheck && npm run lint && npm run test && npm run build
+
+
+> harbor-desk@0.1.0 tokens:check
+> node scripts/build-tokens.ts --check
+
+src/ui/tokens.css matches design/tokens.json.
+
+> harbor-desk@0.1.0 fixtures:check
+> node scripts/generate-fixtures.ts --check
+
+Checked 15 fixture files. Validation: ok; fatal 0, errors 0, warnings 0.
+  slips 126 · vessels 113 · agreements 111 · documents 226 · observations 477 · movements 63 · verifications 94
+
+> harbor-desk@0.1.0 assets:check
+> node scripts/export-assets.ts --check
+
+asset-report.json matches the generators.
+
+> harbor-desk@0.1.0 typecheck
+> tsc -b
+
+
+> harbor-desk@0.1.0 lint
+> eslint .
+
+
+> harbor-desk@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina
+
+(node:93103) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+ Test Files  28 passed (28)
+      Tests  240 passed (240)
+   Start at  11:34:23
+   Duration  940ms (tests 55%, import 23%, transform 21%, worker 1%)
+
+
+> harbor-desk@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 697 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        1.55 kB │ gzip:   0.80 kB
+dist/assets/Gallery-BpF3m_iK.css       1.27 kB │ gzip:   0.52 kB
+dist/assets/PlanView-B4ZuIBwM.css      2.79 kB │ gzip:   0.95 kB
+dist/assets/index-D4ZPhVrg.css        47.20 kB │ gzip:   9.87 kB
+dist/assets/PlanView-BJXSPv0w.js       3.66 kB │ gzip:   1.60 kB │ map:    11.95 kB
+dist/assets/Gallery-CKVX6M0d.js        7.74 kB │ gzip:   2.54 kB │ map:    18.98 kB
+dist/assets/layout-sduFRhiy.js        37.53 kB │ gzip:  12.97 kB │ map:    18.92 kB
+dist/assets/index--7cTxVSN.js        739.27 kB │ gzip: 142.33 kB │ map: 1,508.24 kB
+dist/assets/SceneRoot-iKu-jF0Z.js  1,137.24 kB │ gzip: 315.81 kB │ map: 5,051.68 kB
+
+✓ built in 377ms

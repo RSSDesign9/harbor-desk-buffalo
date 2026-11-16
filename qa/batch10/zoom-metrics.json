@@ -1,0 +1,53 @@
+{
+  "metrics": {
+    "layoutViewport": {
+      "pageX": 0,
+      "pageY": 0,
+      "clientWidth": 1440,
+      "clientHeight": 813
+    },
+    "visualViewport": {
+      "offsetX": 0,
+      "offsetY": 0,
+      "pageX": 0,
+      "pageY": 0,
+      "clientWidth": 1440,
+      "clientHeight": 813,
+      "scale": 1,
+      "zoom": 2
+    },
+    "contentSize": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 813
+    },
+    "cssLayoutViewport": {
+      "pageX": 0,
+      "pageY": 0,
+      "clientWidth": 720,
+      "clientHeight": 406
+    },
+    "cssVisualViewport": {
+      "offsetX": 0,
+      "offsetY": 0,
+      "pageX": 0,
+      "pageY": 0,
+      "clientWidth": 720,
+      "clientHeight": 406.5,
+      "scale": 1,
+      "zoom": 2
+    },
+    "cssContentSize": {
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 406
+    }
+  },
+  "dom": {
+    "w": 720,
+    "dpr": 2,
+    "outer": 1440
+  }
+}

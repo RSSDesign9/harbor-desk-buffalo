@@ -1,0 +1,77 @@
+{
+ "tags": [
+  "wcag2a",
+  "wcag2aa",
+  "wcag21a",
+  "wcag21aa",
+  "wcag22aa"
+ ],
+ "results": {
+  "desktop overview": {
+   "violations": 0,
+   "passes": 30,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop evidence review (staff card, acknowledgment, disabled confirm)": {
+   "violations": 0,
+   "passes": 35,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop resolved (summary, original observation, trail)": {
+   "violations": 0,
+   "passes": 33,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop vessel record (Harbor Light)": {
+   "violations": 0,
+   "passes": 32,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop guided replay 09:12 (read-only)": {
+   "violations": 0,
+   "passes": 33,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop display menu open": {
+   "violations": 0,
+   "passes": 32,
+   "incomplete": 2,
+   "ids": []
+  },
+  "desktop light theme, resolved slip": {
+   "violations": 0,
+   "passes": 32,
+   "incomplete": 2,
+   "ids": []
+  },
+  "tablet uncertain details": {
+   "violations": 0,
+   "passes": 33,
+   "incomplete": 2,
+   "ids": []
+  },
+  "tablet list": {
+   "violations": 0,
+   "passes": 35,
+   "incomplete": 2,
+   "ids": []
+  },
+  "mobile list + plan": {
+   "violations": 0,
+   "passes": 35,
+   "incomplete": 1,
+   "ids": []
+  },
+  "mobile evidence review in sheet": {
+   "violations": 0,
+   "passes": 35,
+   "incomplete": 2,
+   "ids": []
+  }
+ }
+}

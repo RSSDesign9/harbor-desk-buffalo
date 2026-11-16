@@ -1,0 +1,954 @@
+{
+ "measuredAt": "2026-11-15T02:33:50.915Z",
+ "url": "http://127.0.0.1:4719",
+ "gpu": true,
+ "report": {
+  "desktop-dark-overview": {
+   "checked": 98,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Explore slip review",
+     "where": "scenario-panel",
+     "ratio": 5.29,
+     "min": 5.29,
+     "need": 4.5,
+     "px": 15,
+     "weight": 600
+    },
+    {
+     "text": "Empty",
+     "where": "pill",
+     "ratio": 10.52,
+     "min": 10.52,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "No agreement",
+     "where": "secondary",
+     "ratio": 10.52,
+     "min": 10.52,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Empty",
+     "where": "pill",
+     "ratio": 10.52,
+     "min": 10.52,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Empty",
+     "where": "pill",
+     "ratio": 10.52,
+     "min": 10.52,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "No agreement",
+     "where": "secondary",
+     "ratio": 10.55,
+     "min": 10.53,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": []
+  },
+  "desktop-dark-uncertain": {
+   "checked": 87,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Needs review",
+     "where": "pill",
+     "ratio": 7.48,
+     "min": 7.48,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Needs review",
+     "where": "inspector",
+     "ratio": 8.13,
+     "min": 8.01,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Latest observation · separate from the registry",
+     "where": "inspector",
+     "ratio": 10.27,
+     "min": 10.27,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "SIM",
+     "where": "inspector",
+     "ratio": 10.41,
+     "min": 10.41,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "ASSUME",
+     "where": "tag-box",
+     "ratio": 10.66,
+     "min": 10.66,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Reason for doubt:",
+    "(scroll edge) Name obscured. Canvas cover di"
+   ]
+  },
+  "desktop-dark-review-staff-card": {
+   "checked": 73,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Dock check pending",
+     "where": "pill",
+     "ratio": 7.48,
+     "min": 7.48,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Staff photo · 09:18 · SIM",
+     "where": "staff-photo",
+     "ratio": 7.74,
+     "min": 7.74,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "SIM",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Recorded separately from the camera, and newer t",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "09:12",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "frame.",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) I reviewed the staff evidence:",
+    "Confirm identity & resolve"
+   ]
+  },
+  "desktop-dark-possible-match": {
+   "checked": 76,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Needs review",
+     "where": "pill",
+     "ratio": 7.48,
+     "min": 7.48,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Name obscured. Canvas cover differs from the cov",
+     "where": "inspector",
+     "ratio": 10.27,
+     "min": 10.27,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "ASSUME",
+     "where": "tag-box",
+     "ratio": 10.66,
+     "min": 10.66,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "SIM",
+     "where": "tag-box",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Assumed slip layout",
+     "where": "flag",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": []
+  },
+  "desktop-light-possible-match": {
+   "checked": 76,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Freshness",
+     "where": "inspector",
+     "ratio": 5.44,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Identity",
+     "where": "inspector",
+     "ratio": 5.44,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 5.45,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Simulated vessels",
+     "where": "label",
+     "ratio": 5.49,
+     "min": 5.49,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Latest observation · separate from the registry",
+     "where": "inspector",
+     "ratio": 5.49,
+     "min": 5.39,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Vessels 48",
+     "where": "tab",
+     "ratio": 5.54,
+     "min": 5.54,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    }
+   ],
+   "exemptDisabled": []
+  },
+  "desktop-dark-confirm-block": {
+   "checked": 74,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "SIM",
+     "where": "staff-evidence",
+     "ratio": 7.11,
+     "min": 7.11,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Dock check pending",
+     "where": "pill",
+     "ratio": 7.48,
+     "min": 7.48,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Recorded separately from the camera, and newer t",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "09:12",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "frame.",
+     "where": "staff-evidence",
+     "ratio": 7.88,
+     "min": 7.88,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Tick the acknowledgment above to enable confirma",
+     "where": "confirm-hint",
+     "ratio": 10.27,
+     "min": 10.27,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "Confirm identity & resolve",
+    "(scroll edge) Camera C-02 observation OBS-S4"
+   ]
+  },
+  "desktop-light-confirm-block": {
+   "checked": 74,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 5.45,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Simulated vessels",
+     "where": "label",
+     "ratio": 5.49,
+     "min": 5.49,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Vessels 48",
+     "where": "tab",
+     "ratio": 5.54,
+     "min": 5.54,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "09:12",
+     "where": "activity-trail",
+     "ratio": 5.55,
+     "min": 5.54,
+     "need": 4.5,
+     "px": 13,
+     "weight": 400
+    },
+    {
+     "text": "Slip review · B-12 scenario",
+     "where": "scenario-panel",
+     "ratio": 5.68,
+     "min": 5.68,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Uncertain",
+     "where": "scenario-panel",
+     "ratio": 5.68,
+     "min": 5.68,
+     "need": 4.5,
+     "px": 12.5,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "Confirm identity & resolve",
+    "(scroll edge) Camera C-02 observation OBS-S4"
+   ]
+  },
+  "desktop-dark-resolved": {
+   "checked": 86,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Latest observation · separate from the registry",
+     "where": "inspector",
+     "ratio": 10.27,
+     "min": 10.27,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "SIM",
+     "where": "inspector",
+     "ratio": 10.41,
+     "min": 10.41,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "ASSUME",
+     "where": "tag-box",
+     "ratio": 10.66,
+     "min": 10.66,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "SIM",
+     "where": "tag-box",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Assumed slip layout",
+     "where": "flag",
+     "ratio": 10.67,
+     "min": 10.67,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Lake Effect",
+    "(scroll edge) confirmed at",
+    "(scroll edge) B-12"
+   ]
+  },
+  "desktop-dark-unknown-berth": {
+   "checked": 86,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Explore slip review",
+     "where": "scenario-panel",
+     "ratio": 5.29,
+     "min": 5.29,
+     "need": 4.5,
+     "px": 15,
+     "weight": 600
+    },
+    {
+     "text": "Camera offline",
+     "where": "inspector",
+     "ratio": 10.39,
+     "min": 10.39,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "No agreement",
+     "where": "secondary",
+     "ratio": 10.4,
+     "min": 10.4,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Camera offline",
+     "where": "pill",
+     "ratio": 10.4,
+     "min": 10.4,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Latest observation · separate from the registry",
+     "where": "inspector",
+     "ratio": 10.41,
+     "min": 10.41,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Simulated vessels",
+     "where": "label",
+     "ratio": 10.56,
+     "min": 10.56,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Slip details and provenance"
+   ]
+  },
+  "desktop-light-uncertain": {
+   "checked": 87,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "SIM",
+     "where": "inspector",
+     "ratio": 5.39,
+     "min": 5.39,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "SIM",
+     "where": "inspector",
+     "ratio": 5.39,
+     "min": 5.39,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 5.45,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Assigned vessel · registry",
+     "where": "inspector",
+     "ratio": 5.45,
+     "min": 5.4,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Simulated vessels",
+     "where": "label",
+     "ratio": 5.49,
+     "min": 5.49,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "29 ft cabin cruiser",
+     "where": "inspector",
+     "ratio": 5.49,
+     "min": 5.49,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Reason for doubt:",
+    "(scroll edge) Name obscured. Canvas cover di"
+   ]
+  },
+  "desktop-light-review-staff-card": {
+   "checked": 73,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "The possible match is a comparison only. Opening",
+     "where": "evidence-review",
+     "ratio": 5.39,
+     "min": 5.22,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 5.45,
+     "min": 5.44,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Simulated vessels",
+     "where": "label",
+     "ratio": 5.49,
+     "min": 5.49,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Vessels 48",
+     "where": "tab",
+     "ratio": 5.54,
+     "min": 5.54,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "Slip review · B-12 scenario",
+     "where": "scenario-panel",
+     "ratio": 5.68,
+     "min": 5.68,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Uncertain",
+     "where": "scenario-panel",
+     "ratio": 5.68,
+     "min": 5.68,
+     "need": 4.5,
+     "px": 12.5,
+     "weight": 400
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) I reviewed the staff evidence:",
+    "Confirm identity & resolve"
+   ]
+  },
+  "desktop-solid-uncertain": {
+   "checked": 87,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Needs review",
+     "where": "pill",
+     "ratio": 5.78,
+     "min": 5.78,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Needs review",
+     "where": "inspector",
+     "ratio": 6.53,
+     "min": 6.53,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Buffalo River · Independent concept",
+     "where": "topbar-place secondary",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "Sim time",
+     "where": "label",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Simulated data",
+     "where": "flag",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 400
+    },
+    {
+     "text": "SIM",
+     "where": "tag-box",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Reason for doubt:",
+    "(scroll edge) Name obscured. Canvas cover di"
+   ]
+  },
+  "tablet-dark-uncertain": {
+   "checked": 76,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "ASSUME",
+     "where": "tag-box",
+     "ratio": 4.92,
+     "min": 2.6,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Needs review",
+     "where": "inspector",
+     "ratio": 8.7,
+     "min": 8.7,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Assigned vessel · registry",
+     "where": "inspector",
+     "ratio": 10.41,
+     "min": 10.41,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "Assumed slips",
+     "where": "label",
+     "ratio": 10.42,
+     "min": 10.42,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    },
+    {
+     "text": "SIM",
+     "where": "inspector",
+     "ratio": 10.52,
+     "min": 10.52,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "Latest observation · separate from the registry",
+     "where": "inspector",
+     "ratio": 10.54,
+     "min": 10.41,
+     "need": 4.5,
+     "px": 12,
+     "weight": 500
+    }
+   ],
+   "exemptDisabled": [
+    "(scroll edge) Reason for doubt:",
+    "(scroll edge) Name obscured. Canvas cover di"
+   ]
+  },
+  "mobile-dark-uncertain": {
+   "checked": 42,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Needs review",
+     "where": "inspector",
+     "ratio": 6.53,
+     "min": 6.53,
+     "need": 4.5,
+     "px": 11,
+     "weight": 500
+    },
+    {
+     "text": "All docks",
+     "where": "plan-view",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "A",
+     "where": "plan-view",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "B",
+     "where": "plan-view",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "C",
+     "where": "plan-view",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "D",
+     "where": "plan-view",
+     "ratio": 9.07,
+     "min": 9.07,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    }
+   ],
+   "exemptDisabled": []
+  },
+  "mobile-light-list": {
+   "checked": 41,
+   "failures": [],
+   "lowest": [
+    {
+     "text": "Explore slip review",
+     "where": "scenario-panel",
+     "ratio": 5.22,
+     "min": 5.22,
+     "need": 4.5,
+     "px": 15,
+     "weight": 600
+    },
+    {
+     "text": "A",
+     "where": "plan-view",
+     "ratio": 7.55,
+     "min": 7.55,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "B",
+     "where": "plan-view",
+     "ratio": 7.55,
+     "min": 7.55,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "C",
+     "where": "plan-view",
+     "ratio": 7.55,
+     "min": 7.55,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "D",
+     "where": "plan-view",
+     "ratio": 7.55,
+     "min": 7.55,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    },
+    {
+     "text": "E",
+     "where": "plan-view",
+     "ratio": 7.55,
+     "min": 7.55,
+     "need": 4.5,
+     "px": 14,
+     "weight": 600
+    }
+   ],
+   "exemptDisabled": [
+    "Details"
+   ]
+  }
+ }
+}

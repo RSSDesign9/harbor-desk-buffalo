@@ -1,0 +1,169 @@
+{
+  "measuredAt": "2026-11-15T01:01:35.001Z",
+  "method": "Production build via vite preview; cold context, 2x display, full B-12 scenario and replay. Compressed sizes computed from dist/ with gzip -9 and brotli 11 for text; fonts and images at file size.",
+  "requestedFromOtherOrigins": [],
+  "failedRequests": [],
+  "requested": {
+    "files": 13,
+    "diskBytes": 1968875,
+    "gzipBytes": 714808,
+    "brotliBytes": 640396,
+    "byKind": {
+      "script": {
+        "files": 3,
+        "diskBytes": 1640001,
+        "gzipBytes": 417040,
+        "brotliBytes": 343766
+      },
+      "image": {
+        "files": 3,
+        "diskBytes": 120636,
+        "gzipBytes": 118779,
+        "brotliBytes": 118660
+      },
+      "style": {
+        "files": 1,
+        "diskBytes": 36646,
+        "gzipBytes": 7912,
+        "brotliBytes": 7104
+      },
+      "font": {
+        "files": 5,
+        "diskBytes": 170448,
+        "gzipBytes": 170448,
+        "brotliBytes": 170448
+      },
+      "document": {
+        "files": 1,
+        "diskBytes": 1144,
+        "gzipBytes": 629,
+        "brotliBytes": 418
+      }
+    }
+  },
+  "fonts": {
+    "files": [
+      "fonts/GeneralSans-Semibold.woff (27972 B)",
+      "fonts/IBMPlexMono-Medium.woff2 (50400 B)",
+      "fonts/IBMPlexMono-Regular.woff2 (49248 B)",
+      "fonts/Switzer-Regular.woff (19240 B)",
+      "fonts/Switzer-Semibold.woff (23588 B)"
+    ],
+    "transferredBytes": 170448,
+    "budgetBytes": 200000,
+    "pass": true
+  },
+  "budget": {
+    "compressedBytes": 6000000,
+    "gzipPass": true
+  },
+  "wholeDist": {
+    "files": 21,
+    "diskBytes": 2025424,
+    "gzipBytes": 758494,
+    "brotliBytes": 682669
+  },
+  "notRequested": [
+    "assets/Gallery-BpF3m_iK.css (1273 B)",
+    "assets/Gallery-DyzTclx8.js (7746 B)",
+    "assets/PlanView-B4ZuIBwM.css (2798 B)",
+    "assets/PlanView-vdUSpax1.js (3664 B)",
+    "assets/evidence/ev-7k2q.webp (27330 B)",
+    "assets/evidence/ev-p3m8.webp (8250 B)",
+    "favicon.svg (1032 B)",
+    "fonts/IBM-Plex-OFL.txt (4456 B)"
+  ],
+  "files": [
+    {
+      "file": "assets/SceneRoot-BniN62qB.js",
+      "kind": "script",
+      "diskBytes": 1069040,
+      "gzipBytes": 287716,
+      "brotliBytes": 237133
+    },
+    {
+      "file": "assets/index-DyAnBIdQ.js",
+      "kind": "script",
+      "diskBytes": 533431,
+      "gzipBytes": 116593,
+      "brotliBytes": 96871
+    },
+    {
+      "file": "assets/evidence/ev-7k2q@2x.webp",
+      "kind": "image",
+      "diskBytes": 100830,
+      "gzipBytes": 100830,
+      "brotliBytes": 100830
+    },
+    {
+      "file": "fonts/IBMPlexMono-Medium.woff2",
+      "kind": "font",
+      "diskBytes": 50400,
+      "gzipBytes": 50400,
+      "brotliBytes": 50400
+    },
+    {
+      "file": "fonts/IBMPlexMono-Regular.woff2",
+      "kind": "font",
+      "diskBytes": 49248,
+      "gzipBytes": 49248,
+      "brotliBytes": 49248
+    },
+    {
+      "file": "fonts/GeneralSans-Semibold.woff",
+      "kind": "font",
+      "diskBytes": 27972,
+      "gzipBytes": 27972,
+      "brotliBytes": 27972
+    },
+    {
+      "file": "fonts/Switzer-Semibold.woff",
+      "kind": "font",
+      "diskBytes": 23588,
+      "gzipBytes": 23588,
+      "brotliBytes": 23588
+    },
+    {
+      "file": "fonts/Switzer-Regular.woff",
+      "kind": "font",
+      "diskBytes": 19240,
+      "gzipBytes": 19240,
+      "brotliBytes": 19240
+    },
+    {
+      "file": "assets/evidence/ev-p3m8@2x.webp",
+      "kind": "image",
+      "diskBytes": 17144,
+      "gzipBytes": 17144,
+      "brotliBytes": 17144
+    },
+    {
+      "file": "assets/layout-BOm9jRMx.js",
+      "kind": "script",
+      "diskBytes": 37530,
+      "gzipBytes": 12731,
+      "brotliBytes": 9762
+    },
+    {
+      "file": "assets/index-hBmGX7bE.css",
+      "kind": "style",
+      "diskBytes": 36646,
+      "gzipBytes": 7912,
+      "brotliBytes": 7104
+    },
+    {
+      "file": "assets/icons-vessels.svg",
+      "kind": "image",
+      "diskBytes": 2662,
+      "gzipBytes": 805,
+      "brotliBytes": 686
+    },
+    {
+      "file": "index.html",
+      "kind": "document",
+      "diskBytes": 1144,
+      "gzipBytes": 629,
+      "brotliBytes": 418
+    }
+  ]
+}

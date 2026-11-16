@@ -1,0 +1,50 @@
+{
+ "desktop-1440": {
+  "layout": "desktop",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1440,
+   900,
+   1
+  ]
+ },
+ "desktop-1600": {
+  "layout": "desktop",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1600,
+   1000,
+   1
+  ]
+ },
+ "tablet-1024": {
+  "layout": "tablet",
+  "map": "3d",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   1024,
+   768,
+   1
+  ]
+ },
+ "mobile-390": {
+  "layout": "mobile",
+  "map": "plan",
+  "overlaps": [],
+  "covered": [],
+  "horizontalScroll": false,
+  "inner": [
+   390,
+   844,
+   2
+  ]
+ }
+}

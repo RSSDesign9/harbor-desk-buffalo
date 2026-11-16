@@ -1,0 +1,23 @@
+Asset: visual-target-v3.png
+Status: approved by Raj on 16 Nov 2026 as the T33 environment target. It replaces visual-target-v2.png as the
+fidelity reference (PRD §2, §15).
+
+Method: captured from the Harbor Desk app itself, not generated. Slip B-12 selected at the 09:12 discrepancy,
+1440 × 900, device pixel ratio 1, motion paused, headless Chromium on the real GPU (ANGLE Metal, Apple M3 Max).
+Regenerate with:
+
+    node scripts/capture-v3.ts --out qa/batch12 --prefix v3 --only hero
+
+Because the target is a frame of the product, it is achievable by construction, and it shows the validated
+geography: nothing is moved or added to flatter the picture (v2 placed the grain elevator behind Dock B, where
+it is not).
+
+Realism target, set by Raj: surroundings about 8/10, hero boats and docks about 7/10, on the scale where the
+reference video is 1 and hyperrealism is 10. A subjective art-direction guide, not a measured property.
+
+Review trail: first look-dev pass shown 16 Nov 2026 (water, sky, ground, landmarks, trees); Raj asked for one
+more pass; second pass (ambient occlusion, mooring lines, finer tree crowns) approved the same day.
+Companion captures: qa/batch12/v3-before-after.png, v3-time-of-day.png, v3-close.png.
+
+Everything in the frame is simulated or assumed, as in the product: SIM records, ASSUME slip layout and
+scenery, approximate geometry. It is not a photograph, a survey or a live feed.

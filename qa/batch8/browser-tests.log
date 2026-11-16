@@ -1,0 +1,262 @@
+[WebServer] (node:70937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:70965) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 67 tests using 1 worker
+
+(node:70974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium-desktop] › tests/e2e/a11y.spec.ts:31:1 › axe: desktop overview, uncertain, evidence review, resolved, vessel record, replay, display menu, light theme (18.1s)
+  ✓   2 [chromium-desktop] › tests/e2e/a11y.spec.ts:54:1 › axe: tablet and mobile layouts, plan, sheet, list and details (6.9s)
+  ✓   3 [chromium-desktop] › tests/e2e/a11y.spec.ts:68:1 › touch targets: every visible control ≥ 24×24 CSS px; mobile workflow controls and rows ≥ 44 px tall (381ms)
+  ✓   4 [chromium-desktop] › tests/e2e/a11y.spec.ts:96:1 › keyboard only on tablet: requested-check path, with cancel/back, resolution and history (8.0s)
+  ✓   5 [chromium-desktop] › tests/e2e/a11y.spec.ts:114:1 › keyboard only on mobile: direct path from the list in the sheet (649ms)
+  ✓   6 [chromium-desktop] › tests/e2e/a11y.spec.ts:131:1 › announcements stay concise: camera movement and ambient updates are never announced (10.9s)
+  ✓   7 [chromium-desktop] › tests/e2e/failures.spec.ts:22:1 › WebGL context lost after load: the plan takes over with the same selection and open review; restart restores 3D; nothing duplicated (10.2s)
+  ✓   8 [chromium-desktop] › tests/e2e/failures.spec.ts:53:1 › WebGL unsupported (fault=webgl-unsupported): the plan is the map on desktop and the whole review works on it (951ms)
+  ✓   9 [chromium-desktop] › tests/e2e/failures.spec.ts:64:1 › invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete (796ms)
+  ✓  10 [chromium-desktop] › tests/e2e/failures.spec.ts:80:1 › missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged (6.5s)
+  ✓  11 [chromium-desktop] › tests/e2e/failures.spec.ts:98:1 › missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required (5.4s)
+  ✓  12 [chromium-desktop] › tests/e2e/failures.spec.ts:115:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works (630ms)
+  ✓  13 [chromium-desktop] › tests/e2e/failures.spec.ts:129:1 › a broken canonical scenario record is fatal: the workflow is disabled rather than guessed (200ms)
+  ✓  14 [chromium-desktop] › tests/e2e/failures.spec.ts:143:3 › storage: storage-unavailable → “Browser storage unavailable”, an in-memory session, and the review still works (543ms)
+  ✓  15 [chromium-desktop] › tests/e2e/failures.spec.ts:143:3 › storage: storage-corrupt → “Saved demo data was unreadable. Started fresh.”, an in-memory session, and the review still works (542ms)
+  ✓  16 [chromium-desktop] › tests/e2e/failures.spec.ts:143:3 › storage: storage-incompatible → “Saved demo was from an older version. Started fresh.”, an in-memory session, and the review still works (526ms)
+  ✓  17 [chromium-desktop] › tests/e2e/failures.spec.ts:152:1 › storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry (436ms)
+  ✓  18 [chromium-desktop] › tests/e2e/failures.spec.ts:169:1 › stale, offline and unknown sources never read as empty or bookable; newer staff evidence stays distinct (2.8s)
+  ✓  19 [chromium-desktop] › tests/e2e/failures.spec.ts:195:1 › mobile with 3D failing to load: the plan is already the default and every action works (942ms)
+  ✓  20 [chromium-desktop] › tests/e2e/foundation.spec.ts:12:1 › fonts: only the five local faces load, under the 200 KB budget, from no external host (962ms)
+  ✓  21 [chromium-desktop] › tests/e2e/foundation.spec.ts:35:1 › gallery renders every primitive without console errors (933ms)
+  ✓  22 [chromium-desktop] › tests/e2e/foundation.spec.ts:45:1 › keyboard: tabs, segmented control, search escape, checkbox and tooltip (1.0s)
+  ✓  23 [chromium-desktop] › tests/e2e/foundation.spec.ts:92:1 › loading button locks out repeat clicks and announces busy state (2.8s)
+  ✓  24 [chromium-desktop] › tests/e2e/foundation.spec.ts:104:1 › panels fall back to solid surfaces on request (948ms)
+  ✓  25 [chromium-desktop] › tests/e2e/foundation.spec.ts:113:1 › reduced motion zeroes camera and micro durations (214ms)
+  ✓  26 [chromium-desktop] › tests/e2e/foundation.spec.ts:121:1 › storage: corrupt saved data starts fresh with a notice (223ms)
+  ✓  27 [chromium-desktop] › tests/e2e/foundation.spec.ts:128:1 › storage: unavailable localStorage falls back to memory and the app still works (224ms)
+  ✓  28 [chromium-desktop] › tests/e2e/foundation.spec.ts:141:1 › a failed 3D chunk shows a recoverable region error and “Try again” refetches it (3.4s)
+  ✓  29 [chromium-desktop] › tests/e2e/foundation.spec.ts:161:1 › hover states change the surface without changing meaning (1.2s)
+  ✓  30 [chromium-desktop] › tests/e2e/marina.spec.ts:43:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data (5.4s)
+  ✓  31 [chromium-desktop] › tests/e2e/marina.spec.ts:71:1 › canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh) (28.2s)
+  ✓  32 [chromium-desktop] › tests/e2e/marina.spec.ts:105:1 › unknown and empty berths stay distinct; distant docks add no field of labels; scenery is not selectable (8.8s)
+  ✓  33 [chromium-desktop] › tests/e2e/marina.spec.ts:153:1 › rendering budget: draw calls stay under the aim in every view, and orbiting reuses the shadow map (13.7s)
+  ✓  34 [chromium-desktop] › tests/e2e/motion.spec.ts:35:1 › water drifts by default; Pause motion stops every ambient frame and is remembered; Resume restarts it (14.3s)
+  ✓  35 [chromium-desktop] › tests/e2e/motion.spec.ts:55:1 › a hidden tab requests no ambient frames (4.9s)
+  ✓  36 [chromium-desktop] › tests/e2e/motion.spec.ts:63:1 › reduced motion at load: still water, camera cuts, pause control explains why it is off, workflow complete (8.0s)
+  ✓  37 [chromium-desktop] › tests/e2e/motion.spec.ts:80:1 › reduced motion switched on mid-session freezes ambient motion and turns camera travel into cuts, and back (9.8s)
+  ✓  38 [chromium-desktop] › tests/e2e/release.spec.ts:6:1 › About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution (4.9s)
+  ✓  39 [chromium-desktop] › tests/e2e/release.spec.ts:41:1 › mobile reduced motion keyboard-only pending workflow and usable attribution (721ms)
+  ✘  40 [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss (30.1s)
+(node:75234) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  41 [chromium-desktop] › tests/e2e/release.spec.ts:79:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression (3.8s)
+(node:75256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  42 [chromium-desktop] › tests/e2e/responsive.spec.ts:8:1 › desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector (14.0s)
+  ✓  43 [chromium-desktop] › tests/e2e/responsive.spec.ts:32:1 › tablet 1024×768: one rail with Details / list navigation, collapsible, no collisions (4.7s)
+  ✘  44 [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; direct path resolves with taps (603ms)
+(node:75347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  45 [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; pending path resolves with taps (608ms)
+(node:75361) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  46 [chromium-desktop] › tests/e2e/responsive.spec.ts:95:1 › changing viewport, view and theme keeps selection and the open review exactly as they were (9.3s)
+  ✓  47 [chromium-desktop] › tests/e2e/review.spec.ts:59:1 › direct path: normal → uncertain → evidence review → acknowledgment → resolution, scene and DOM in step (8.3s)
+  ✓  48 [chromium-desktop] › tests/e2e/review.spec.ts:146:1 › pending path: request twice → one task → leave, return, reload → review → resolve → one completed task (8.4s)
+  ✓  49 [chromium-desktop] › tests/e2e/review.spec.ts:190:1 › missing evidence, unchecked acknowledgment and cancel all leave the issue open (6.7s)
+  ✓  50 [chromium-desktop] › tests/e2e/review.spec.ts:220:1 › guided replay is read-only and temporally correct; Try this state branches; restart and reload reset (10.5s)
+  ✓  51 [chromium-desktop] › tests/e2e/review.spec.ts:289:1 › keyboard only: focus follows each result and every action is announced (6.6s)
+  ✓  52 [chromium-desktop] › tests/e2e/review.spec.ts:342:1 › missing thumbnail and an offline camera keep text evidence, actions and an honest presence state (6.3s)
+  ✓  53 [chromium-desktop] › tests/e2e/scene.spec.ts:52:1 › overview renders the marina with nothing selected (2.6s)
+  ✓  54 [chromium-desktop] › tests/e2e/scene.spec.ts:60:1 › clicking an EMPTY berth on the canvas selects it; inspector and list follow (5.2s)
+  ✓  55 [chromium-desktop] › tests/e2e/scene.spec.ts:78:1 › dragging across a berth orbits the camera and never selects (7.8s)
+  ✓  56 [chromium-desktop] › tests/e2e/scene.spec.ts:96:1 › a new fly-to interrupts the running one and starts from the current pose (4.1s)
+  ✓  57 [chromium-desktop] › tests/e2e/scene.spec.ts:133:1 › reduced motion cuts straight to the target (3.2s)
+  ✓  58 [chromium-desktop] › tests/e2e/scene.spec.ts:143:1 › clicks on panels never select the berth behind them (6.2s)
+  ✓  59 [chromium-desktop] › tests/e2e/scene.spec.ts:178:1 › keyboard: search B12 → Enter selects B-12; arrows + Enter move the selection; camera follows (5.6s)
+  ✓  60 [chromium-desktop] › tests/e2e/scene.spec.ts:197:1 › uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth (8.0s)
+  ✓  61 [chromium-desktop] › tests/e2e/scene.spec.ts:237:1 › no-results and invalid-selection states recover (3.0s)
+  ✓  62 [chromium-desktop] › tests/e2e/scene.spec.ts:250:1 › deep link selects a vessel; dock and needs-review filters derive from shared state (4.5s)
+  ✓  63 [chromium-desktop] › tests/e2e/scene.spec.ts:266:1 › T09 assets: detail follows camera distance, draw calls stay small, and the idle scene renders nothing (6.4s)
+  ✓  64 [chromium-desktop] › tests/e2e/scene.spec.ts:301:1 › T09 assets: no scene label, tooltip or asset request names the observed hull before verification (5.8s)
+  ✘  65 [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors (7.4s)
+(node:77077) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  66 [chromium-desktop] › tests/e2e/nowebgl.spec.ts:10:1 › browser without WebGL: plan, list and the complete review; a plain notice; no crash (935ms)
+(node:77108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  67 [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes (1.4s)
+
+
+  1) [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.check: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('checkbox', { name: 'Use 3D view', exact: true })
+
+
+      58 |   const before = await session(page);
+      59 |   await btn(page, 'Display').click();
+    > 60 |   await page.getByRole('checkbox', { name: 'Use 3D view', exact: true }).check();
+         |                                                                          ^
+      61 |   await page.keyboard.press('Escape');
+      62 |   await page.waitForFunction(() => Boolean(window.__harborScene?.camera));
+      63 |   await page.waitForTimeout(1000);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:60:74
+
+    Error Context: test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-desktop] › tests/e2e/release.spec.ts:79:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('option', { selected: true })
+    Expected substring: "B-12"
+    Error: strict mode violation: getByRole('option', { selected: true }) resolved to 2 elements:
+        1) <option value="all">All docks</option> aka getByLabel('DockAll docksDock ADock BDock')
+        2) <div role="option" id="_r_9_-slip-B-12" aria-selected="true" class="registry-row is-active is-selected">…</div> aka getByRole('option', { name: 'B-12 Lake Effect Empty' })
+
+    Call log:
+      - Expect "toContainText" getByRole('option', { selected: true }) with timeout 5000ms
+      - waiting for getByRole('option', { selected: true })
+
+
+      94 |     await page.mouse.click(pos!.x, pos!.y);
+      95 |     await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
+    > 96 |     await expect(page.getByRole('option', { selected: true })).toContainText('B-12');
+         |                                                                ^
+      97 |     await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
+      98 |     await btn(page, 'Show 09:12 camera observation').click();
+      99 |     await page.waitForTimeout(1000);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:96:64
+
+    Error Context: test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; direct path resolves with taps 
+
+    Error: expect(locator).toBeAttached() failed
+
+    Locator: getByRole('link', { name: 'OpenStreetMap contributors' })
+    Expected: attached
+    Error: strict mode violation: getByRole('link', { name: 'OpenStreetMap contributors' }) resolved to 2 elements:
+        1) <a target="_blank" rel="noreferrer" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> aka locator('#rail-body').getByRole('link', { name: 'OpenStreetMap contributors' })
+        2) <a target="_blank" rel="noreferrer" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> aka getByRole('link', { name: 'OpenStreetMap contributors' }).nth(1)
+
+    Call log:
+      - Expect "toBeAttached" getByRole('link', { name: 'OpenStreetMap contributors' }) with timeout 5000ms
+      - waiting for getByRole('link', { name: 'OpenStreetMap contributors' })
+
+
+      60 |     await expect(page.getByTestId('plan-view')).toBeVisible();
+      61 |     await expect(page.locator('canvas')).toHaveCount(0); // lightweight by default
+    > 62 |     await expect(page.getByRole('link', { name: 'OpenStreetMap contributors' })).toBeAttached();
+         |                                                                                  ^
+      63 |     expect(await zoneOverlaps(page)).toEqual([]);
+      64 |     // Select B-12 on the plan itself (zoom to Dock B first; slips are tappable at dock scale).
+      65 |     await page.getByRole('button', { name: 'Zoom to dock B' }).click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/responsive.spec.ts:62:82
+
+    Error Context: test-results/responsive-mobile-390×844--eca01-ect-path-resolves-with-taps-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/responsive-mobile-390×844--eca01-ect-path-resolves-with-taps-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/responsive-mobile-390×844--eca01-ect-path-resolves-with-taps-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; pending path resolves with taps 
+
+    Error: expect(locator).toBeAttached() failed
+
+    Locator: getByRole('link', { name: 'OpenStreetMap contributors' })
+    Expected: attached
+    Error: strict mode violation: getByRole('link', { name: 'OpenStreetMap contributors' }) resolved to 2 elements:
+        1) <a target="_blank" rel="noreferrer" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> aka locator('#rail-body').getByRole('link', { name: 'OpenStreetMap contributors' })
+        2) <a target="_blank" rel="noreferrer" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> aka getByRole('link', { name: 'OpenStreetMap contributors' }).nth(1)
+
+    Call log:
+      - Expect "toBeAttached" getByRole('link', { name: 'OpenStreetMap contributors' }) with timeout 5000ms
+      - waiting for getByRole('link', { name: 'OpenStreetMap contributors' })
+
+
+      60 |     await expect(page.getByTestId('plan-view')).toBeVisible();
+      61 |     await expect(page.locator('canvas')).toHaveCount(0); // lightweight by default
+    > 62 |     await expect(page.getByRole('link', { name: 'OpenStreetMap contributors' })).toBeAttached();
+         |                                                                                  ^
+      63 |     expect(await zoneOverlaps(page)).toEqual([]);
+      64 |     // Select B-12 on the plan itself (zoom to Dock B first; slips are tappable at dock scale).
+      65 |     await page.getByRole('button', { name: 'Zoom to dock B' }).click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/responsive.spec.ts:62:82
+
+    Error Context: test-results/responsive-mobile-390×844--b2fb4-ing-path-resolves-with-taps-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/responsive-mobile-390×844--b2fb4-ing-path-resolves-with-taps-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/responsive-mobile-390×844--b2fb4-ing-path-resolves-with-taps-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByText(/\blive\b/i)
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByText(/\blive\b/i) with timeout 5000ms
+      - waiting for getByText(/\blive\b/i)
+        13 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      28 |   await expect(page.locator('canvas')).toBeVisible({ timeout: 15_000 });
+      29 |   await page.waitForLoadState('networkidle');
+    > 30 |   await expect(page.getByText(/\blive\b/i)).toHaveCount(0); // no “Live” badge masquerading as telemetry
+         |                                             ^
+      31 |
+      32 |   expect(errors).toEqual([]);
+      33 |   expect(external).toEqual([]);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/shell.spec.ts:30:45
+
+    Error Context: test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss 
+    [chromium-desktop] › tests/e2e/release.spec.ts:79:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression 
+    [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; direct path resolves with taps 
+    [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; pending path resolves with taps 
+    [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors 
+  62 passed (6.2m)

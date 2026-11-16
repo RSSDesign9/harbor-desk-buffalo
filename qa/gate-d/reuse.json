@@ -1,0 +1,62 @@
+{
+  "measuredAt": "2026-11-16T18:07:07.950Z",
+  "url": "http://127.0.0.1:4719",
+  "note": "Counts after each full cycle (5 selections, full B-12 resolution, replay backward, 3 presets, restart; DOM counters after forced GC). Flat counts indicate bounded renderer/DOM resources over this procedure, not a proof of all long-duration memory behavior.",
+  "cycles": [
+    {
+      "cycle": 1,
+      "geometries": 276,
+      "textures": 16,
+      "programs": 18,
+      "dom": {
+        "documents": 1,
+        "nodes": 714,
+        "jsEventListeners": 522
+      }
+    },
+    {
+      "cycle": 2,
+      "geometries": 276,
+      "textures": 16,
+      "programs": 18,
+      "dom": {
+        "documents": 1,
+        "nodes": 714,
+        "jsEventListeners": 522
+      }
+    },
+    {
+      "cycle": 3,
+      "geometries": 276,
+      "textures": 16,
+      "programs": 18,
+      "dom": {
+        "documents": 1,
+        "nodes": 714,
+        "jsEventListeners": 522
+      }
+    },
+    {
+      "cycle": 4,
+      "geometries": 276,
+      "textures": 16,
+      "programs": 18,
+      "dom": {
+        "documents": 1,
+        "nodes": 714,
+        "jsEventListeners": 522
+      }
+    },
+    {
+      "cycle": 5,
+      "geometries": 276,
+      "textures": 16,
+      "programs": 18,
+      "dom": {
+        "documents": 1,
+        "nodes": 714,
+        "jsEventListeners": 522
+      }
+    }
+  ]
+}

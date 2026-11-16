@@ -1,0 +1,2268 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "DOCREC-V-001-1",
+   "vesselId": "V-001",
+   "docType": "registration",
+   "maskedReference": "ending 92 PT",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-001-2",
+   "vesselId": "V-001",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5269",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-002-1",
+   "vesselId": "V-002",
+   "docType": "registration",
+   "maskedReference": "ending 30 DZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-05",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-002-2",
+   "vesselId": "V-002",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6965",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-003-1",
+   "vesselId": "V-003",
+   "docType": "registration",
+   "maskedReference": "ending 75 EH",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-01",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-003-2",
+   "vesselId": "V-003",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5466",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-17",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-004-1",
+   "vesselId": "V-004",
+   "docType": "registration",
+   "maskedReference": "ending 22 SB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-004-2",
+   "vesselId": "V-004",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2544",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-17",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-005-1",
+   "vesselId": "V-005",
+   "docType": "registration",
+   "maskedReference": "ending 93 YP",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-26",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-005-2",
+   "vesselId": "V-005",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9047",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-13",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-006-1",
+   "vesselId": "V-006",
+   "docType": "registration",
+   "maskedReference": "ending 18 WN",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-006-2",
+   "vesselId": "V-006",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7093",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-06",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-007-1",
+   "vesselId": "V-007",
+   "docType": "registration",
+   "maskedReference": "ending 35 RG",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-26",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-007-2",
+   "vesselId": "V-007",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7792",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-09",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-008-1",
+   "vesselId": "V-008",
+   "docType": "registration",
+   "maskedReference": "ending 19 NX",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-19",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-008-2",
+   "vesselId": "V-008",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-009-1",
+   "vesselId": "V-009",
+   "docType": "registration",
+   "maskedReference": "ending 75 BH",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-009-2",
+   "vesselId": "V-009",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4877",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-23",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-010-1",
+   "vesselId": "V-010",
+   "docType": "registration",
+   "maskedReference": "ending 35 BM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-18",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-010-2",
+   "vesselId": "V-010",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7406",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-01",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-011-1",
+   "vesselId": "V-011",
+   "docType": "registration",
+   "maskedReference": "ending 22 WZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-011-2",
+   "vesselId": "V-011",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6569",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-01",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-012-1",
+   "vesselId": "V-012",
+   "docType": "registration",
+   "maskedReference": "ending 84 NY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-27",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-012-2",
+   "vesselId": "V-012",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8331",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-013-1",
+   "vesselId": "V-013",
+   "docType": "registration",
+   "maskedReference": "ending 37 AA",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-11",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-013-2",
+   "vesselId": "V-013",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3019",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-11",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-014-1",
+   "vesselId": "V-014",
+   "docType": "registration",
+   "maskedReference": "ending 45 JR",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-23",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-014-2",
+   "vesselId": "V-014",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4042",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-03",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-015-1",
+   "vesselId": "V-015",
+   "docType": "registration",
+   "maskedReference": "ending 34 GX",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-02",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-015-2",
+   "vesselId": "V-015",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7456",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-26",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-016-1",
+   "vesselId": "V-016",
+   "docType": "registration",
+   "maskedReference": "ending 38 XM",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-016-2",
+   "vesselId": "V-016",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-017-1",
+   "vesselId": "V-017",
+   "docType": "registration",
+   "maskedReference": "ending 54 FD",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-24",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-017-2",
+   "vesselId": "V-017",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-018-1",
+   "vesselId": "V-018",
+   "docType": "registration",
+   "maskedReference": "ending 24 BN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-22",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-018-2",
+   "vesselId": "V-018",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2813",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-019-1",
+   "vesselId": "V-019",
+   "docType": "registration",
+   "maskedReference": "ending 29 FY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-21",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-019-2",
+   "vesselId": "V-019",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4248",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-020-1",
+   "vesselId": "V-020",
+   "docType": "registration",
+   "maskedReference": "ending 81 SC",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-09",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-020-2",
+   "vesselId": "V-020",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9556",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-021-1",
+   "vesselId": "V-021",
+   "docType": "registration",
+   "maskedReference": "ending 42 AB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-07",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-021-2",
+   "vesselId": "V-021",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8244",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-23",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-022-1",
+   "vesselId": "V-022",
+   "docType": "registration",
+   "maskedReference": "ending 83 KD",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-13",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-022-2",
+   "vesselId": "V-022",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9430",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-11",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-023-1",
+   "vesselId": "V-023",
+   "docType": "registration",
+   "maskedReference": "ending 05 RT",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-16",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-023-2",
+   "vesselId": "V-023",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9212",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-06",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-024-1",
+   "vesselId": "V-024",
+   "docType": "registration",
+   "maskedReference": "ending 50 TG",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-01",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-024-2",
+   "vesselId": "V-024",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-025-1",
+   "vesselId": "V-025",
+   "docType": "registration",
+   "maskedReference": "ending 63 NY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-02",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-025-2",
+   "vesselId": "V-025",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6285",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-02",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-026-1",
+   "vesselId": "V-026",
+   "docType": "registration",
+   "maskedReference": "ending 54 KG",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-23",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-026-2",
+   "vesselId": "V-026",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-027-1",
+   "vesselId": "V-027",
+   "docType": "registration",
+   "maskedReference": "ending 17 HD",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-05",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-027-2",
+   "vesselId": "V-027",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2385",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-25",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-028-1",
+   "vesselId": "V-028",
+   "docType": "registration",
+   "maskedReference": "ending 92 ZD",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-13",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-028-2",
+   "vesselId": "V-028",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-029-1",
+   "vesselId": "V-029",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••624",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-029-2",
+   "vesselId": "V-029",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9823",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-06",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-030-1",
+   "vesselId": "V-030",
+   "docType": "registration",
+   "maskedReference": "ending 54 HE",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-24",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-030-2",
+   "vesselId": "V-030",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8561",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-031-1",
+   "vesselId": "V-031",
+   "docType": "registration",
+   "maskedReference": "ending 54 VA",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-031-2",
+   "vesselId": "V-031",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7535",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-032-1",
+   "vesselId": "V-032",
+   "docType": "registration",
+   "maskedReference": "ending 77 DX",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-032-2",
+   "vesselId": "V-032",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5821",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-01",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-033-1",
+   "vesselId": "V-033",
+   "docType": "registration",
+   "maskedReference": "ending 88 YB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-05",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-033-2",
+   "vesselId": "V-033",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3577",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-26",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-034-1",
+   "vesselId": "V-034",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••682",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-17",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-034-2",
+   "vesselId": "V-034",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6820",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-16",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-035-1",
+   "vesselId": "V-035",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••890",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-035-2",
+   "vesselId": "V-035",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7866",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-24",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-036-1",
+   "vesselId": "V-036",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••950",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-036-2",
+   "vesselId": "V-036",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8648",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-037-1",
+   "vesselId": "V-037",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••453",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-037-2",
+   "vesselId": "V-037",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6711",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-28",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-038-1",
+   "vesselId": "V-038",
+   "docType": "registration",
+   "maskedReference": "ending 59 GP",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-038-2",
+   "vesselId": "V-038",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2365",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-13",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-039-1",
+   "vesselId": "V-039",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••774",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-22",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-039-2",
+   "vesselId": "V-039",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5277",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-040-1",
+   "vesselId": "V-040",
+   "docType": "registration",
+   "maskedReference": "ending 13 YE",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-18",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-040-2",
+   "vesselId": "V-040",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5005",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-09",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-041-1",
+   "vesselId": "V-041",
+   "docType": "registration",
+   "maskedReference": "ending 30 KX",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-041-2",
+   "vesselId": "V-041",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7001",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-10",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-042-1",
+   "vesselId": "V-042",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••982",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-02",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-042-2",
+   "vesselId": "V-042",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-043-1",
+   "vesselId": "V-043",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••617",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-11",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-043-2",
+   "vesselId": "V-043",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9308",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-14",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-044-1",
+   "vesselId": "V-044",
+   "docType": "registration",
+   "maskedReference": "ending 19 DW",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-28",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-044-2",
+   "vesselId": "V-044",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2435",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-20",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-045-1",
+   "vesselId": "V-045",
+   "docType": "registration",
+   "maskedReference": "ending 80 KV",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-07",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-045-2",
+   "vesselId": "V-045",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4922",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-03",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-046-1",
+   "vesselId": "V-046",
+   "docType": "registration",
+   "maskedReference": "ending 69 PX",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-046-2",
+   "vesselId": "V-046",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6857",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-25",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-047-1",
+   "vesselId": "V-047",
+   "docType": "registration",
+   "maskedReference": "ending 79 VH",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-24",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-047-2",
+   "vesselId": "V-047",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-048-1",
+   "vesselId": "V-048",
+   "docType": "registration",
+   "maskedReference": "ending 26 TM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-048-2",
+   "vesselId": "V-048",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9215",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-28",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-049-1",
+   "vesselId": "V-049",
+   "docType": "registration",
+   "maskedReference": "ending 63 GF",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-22",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-049-2",
+   "vesselId": "V-049",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8301",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-18",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-050-1",
+   "vesselId": "V-050",
+   "docType": "registration",
+   "maskedReference": "ending 56 ES",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-050-2",
+   "vesselId": "V-050",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1131",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-16",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-051-1",
+   "vesselId": "V-051",
+   "docType": "registration",
+   "maskedReference": "ending 95 AN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-051-2",
+   "vesselId": "V-051",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6670",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-12",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-052-1",
+   "vesselId": "V-052",
+   "docType": "registration",
+   "maskedReference": "ending 44 DZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-052-2",
+   "vesselId": "V-052",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5370",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-26",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-053-1",
+   "vesselId": "V-053",
+   "docType": "registration",
+   "maskedReference": "ending 55 GZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-053-2",
+   "vesselId": "V-053",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5690",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-054-1",
+   "vesselId": "V-054",
+   "docType": "registration",
+   "maskedReference": "ending 36 QQ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-054-2",
+   "vesselId": "V-054",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5461",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-07",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-055-1",
+   "vesselId": "V-055",
+   "docType": "registration",
+   "maskedReference": "ending 32 HZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-055-2",
+   "vesselId": "V-055",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7251",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-14",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-056-1",
+   "vesselId": "V-056",
+   "docType": "registration",
+   "maskedReference": "ending 68 WP",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-13",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-056-2",
+   "vesselId": "V-056",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-057-1",
+   "vesselId": "V-057",
+   "docType": "registration",
+   "maskedReference": "ending 64 EF",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-05",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-057-2",
+   "vesselId": "V-057",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8216",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-24",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-058-1",
+   "vesselId": "V-058",
+   "docType": "registration",
+   "maskedReference": "ending 74 FB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-14",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-058-2",
+   "vesselId": "V-058",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7237",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-06",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-059-1",
+   "vesselId": "V-059",
+   "docType": "registration",
+   "maskedReference": "ending 35 ZZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-15",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-059-2",
+   "vesselId": "V-059",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6274",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-10",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-060-1",
+   "vesselId": "V-060",
+   "docType": "registration",
+   "maskedReference": "ending 88 ST",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-060-2",
+   "vesselId": "V-060",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6092",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-14",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-061-1",
+   "vesselId": "V-061",
+   "docType": "registration",
+   "maskedReference": "ending 70 GX",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-06",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-061-2",
+   "vesselId": "V-061",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3487",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-062-1",
+   "vesselId": "V-062",
+   "docType": "registration",
+   "maskedReference": "ending 51 CW",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-26",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-062-2",
+   "vesselId": "V-062",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-063-1",
+   "vesselId": "V-063",
+   "docType": "registration",
+   "maskedReference": "ending 29 JN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-063-2",
+   "vesselId": "V-063",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8514",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-24",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-064-1",
+   "vesselId": "V-064",
+   "docType": "registration",
+   "maskedReference": "ending 60 JP",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-07",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-064-2",
+   "vesselId": "V-064",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6280",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-065-1",
+   "vesselId": "V-065",
+   "docType": "registration",
+   "maskedReference": "ending 81 PH",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-09",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-065-2",
+   "vesselId": "V-065",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7318",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-066-1",
+   "vesselId": "V-066",
+   "docType": "registration",
+   "maskedReference": "ending 29 DN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-19",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-066-2",
+   "vesselId": "V-066",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6724",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-26",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-067-1",
+   "vesselId": "V-067",
+   "docType": "registration",
+   "maskedReference": "ending 90 CP",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-11",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-067-2",
+   "vesselId": "V-067",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1178",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-25",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-068-1",
+   "vesselId": "V-068",
+   "docType": "registration",
+   "maskedReference": "ending 46 YC",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-15",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-068-2",
+   "vesselId": "V-068",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8130",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-069-1",
+   "vesselId": "V-069",
+   "docType": "registration",
+   "maskedReference": "ending 19 VE",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-13",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-069-2",
+   "vesselId": "V-069",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5762",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-23",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-070-1",
+   "vesselId": "V-070",
+   "docType": "registration",
+   "maskedReference": "ending 79 EB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-26",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-070-2",
+   "vesselId": "V-070",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-071-1",
+   "vesselId": "V-071",
+   "docType": "registration",
+   "maskedReference": "ending 81 BN",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-071-2",
+   "vesselId": "V-071",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5612",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-17",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-072-1",
+   "vesselId": "V-072",
+   "docType": "registration",
+   "maskedReference": "ending 77 RY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-23",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-072-2",
+   "vesselId": "V-072",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4966",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-073-1",
+   "vesselId": "V-073",
+   "docType": "registration",
+   "maskedReference": "ending 84 ET",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-073-2",
+   "vesselId": "V-073",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8029",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-21",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-074-1",
+   "vesselId": "V-074",
+   "docType": "registration",
+   "maskedReference": "ending 70 ZM",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-074-2",
+   "vesselId": "V-074",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1998",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-09",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-075-1",
+   "vesselId": "V-075",
+   "docType": "registration",
+   "maskedReference": "ending 19 JB",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-10",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-075-2",
+   "vesselId": "V-075",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6022",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-076-1",
+   "vesselId": "V-076",
+   "docType": "registration",
+   "maskedReference": "ending 38 WG",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-15",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-076-2",
+   "vesselId": "V-076",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6252",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-077-1",
+   "vesselId": "V-077",
+   "docType": "registration",
+   "maskedReference": "ending 62 GW",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-18",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-077-2",
+   "vesselId": "V-077",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6761",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-13",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-078-1",
+   "vesselId": "V-078",
+   "docType": "registration",
+   "maskedReference": "ending 95 GM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-15",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-078-2",
+   "vesselId": "V-078",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8003",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-25",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-079-1",
+   "vesselId": "V-079",
+   "docType": "registration",
+   "maskedReference": "ending 55 KJ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-079-2",
+   "vesselId": "V-079",
+   "docType": "insurance",
+   "maskedReference": "POL ••••5067",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-080-1",
+   "vesselId": "V-080",
+   "docType": "registration",
+   "maskedReference": "ending 58 CJ",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-080-2",
+   "vesselId": "V-080",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6081",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-22",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-081-1",
+   "vesselId": "V-081",
+   "docType": "registration",
+   "maskedReference": "ending 15 TM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-22",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-081-2",
+   "vesselId": "V-081",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3028",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-23",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-082-1",
+   "vesselId": "V-082",
+   "docType": "registration",
+   "maskedReference": "ending 16 GN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-17",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-082-2",
+   "vesselId": "V-082",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-083-1",
+   "vesselId": "V-083",
+   "docType": "registration",
+   "maskedReference": "ending 39 TY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-083-2",
+   "vesselId": "V-083",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-084-1",
+   "vesselId": "V-084",
+   "docType": "registration",
+   "maskedReference": "ending 45 BK",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-084-2",
+   "vesselId": "V-084",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7893",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-28",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-085-1",
+   "vesselId": "V-085",
+   "docType": "registration",
+   "maskedReference": "ending 98 TH",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-28",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-085-2",
+   "vesselId": "V-085",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6864",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-086-1",
+   "vesselId": "V-086",
+   "docType": "registration",
+   "maskedReference": "ending 25 JJ",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-086-2",
+   "vesselId": "V-086",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3733",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-02",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-087-1",
+   "vesselId": "V-087",
+   "docType": "registration",
+   "maskedReference": "ending 93 GJ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-04",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-087-2",
+   "vesselId": "V-087",
+   "docType": "insurance",
+   "maskedReference": "POL ••••3818",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-15",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-088-1",
+   "vesselId": "V-088",
+   "docType": "registration",
+   "maskedReference": "ending 73 PK",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-088-2",
+   "vesselId": "V-088",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4650",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-089-1",
+   "vesselId": "V-089",
+   "docType": "registration",
+   "maskedReference": "ending 87 FK",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-12",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-089-2",
+   "vesselId": "V-089",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7334",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-23",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-090-1",
+   "vesselId": "V-090",
+   "docType": "registration",
+   "maskedReference": "ending 95 DE",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-02",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-090-2",
+   "vesselId": "V-090",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-091-1",
+   "vesselId": "V-091",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••373",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-01",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-091-2",
+   "vesselId": "V-091",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7423",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-05",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-092-1",
+   "vesselId": "V-092",
+   "docType": "registration",
+   "maskedReference": "ending 87 TZ",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-24",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-092-2",
+   "vesselId": "V-092",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4336",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-05",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-093-1",
+   "vesselId": "V-093",
+   "docType": "registration",
+   "maskedReference": "ending 19 JN",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-093-2",
+   "vesselId": "V-093",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6452",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-19",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-094-1",
+   "vesselId": "V-094",
+   "docType": "registration",
+   "maskedReference": "ending 26 BY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-094-2",
+   "vesselId": "V-094",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1260",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-095-1",
+   "vesselId": "V-095",
+   "docType": "registration",
+   "maskedReference": "ending 67 XP",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-095-2",
+   "vesselId": "V-095",
+   "docType": "insurance",
+   "maskedReference": "POL ••••6818",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-096-1",
+   "vesselId": "V-096",
+   "docType": "registration",
+   "maskedReference": "ending 36 AM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-20",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-096-2",
+   "vesselId": "V-096",
+   "docType": "insurance",
+   "maskedReference": "POL ••••2451",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-12",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-097-1",
+   "vesselId": "V-097",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••740",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-28",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-097-2",
+   "vesselId": "V-097",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1776",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-12",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-098-1",
+   "vesselId": "V-098",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••962",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-098-2",
+   "vesselId": "V-098",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7244",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-22",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-099-1",
+   "vesselId": "V-099",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••756",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-099-2",
+   "vesselId": "V-099",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4076",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-10",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-100-1",
+   "vesselId": "V-100",
+   "docType": "registration",
+   "maskedReference": "ending 76 EY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-14",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-100-2",
+   "vesselId": "V-100",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8939",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-05",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-101-1",
+   "vesselId": "V-101",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••302",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-26",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-101-2",
+   "vesselId": "V-101",
+   "docType": "insurance",
+   "maskedReference": "POL ••••4051",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-102-1",
+   "vesselId": "V-102",
+   "docType": "registration",
+   "maskedReference": "ending 84 KY",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-01",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-102-2",
+   "vesselId": "V-102",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9760",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-02",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-103-1",
+   "vesselId": "V-103",
+   "docType": "registration",
+   "maskedReference": "ending 95 WE",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-27",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-103-2",
+   "vesselId": "V-103",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1458",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-07",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-104-1",
+   "vesselId": "V-104",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••274",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-22",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-104-2",
+   "vesselId": "V-104",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8059",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-105-1",
+   "vesselId": "V-105",
+   "docType": "registration",
+   "maskedReference": "ending 96 WN",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-28",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-105-2",
+   "vesselId": "V-105",
+   "docType": "insurance",
+   "maskedReference": null,
+   "reviewState": "not_recorded",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-106-1",
+   "vesselId": "V-106",
+   "docType": "registration",
+   "maskedReference": "ending 41 QS",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-19",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-106-2",
+   "vesselId": "V-106",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9230",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-22",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-107-1",
+   "vesselId": "V-107",
+   "docType": "registration",
+   "maskedReference": "ending 78 ZM",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-24",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-107-2",
+   "vesselId": "V-107",
+   "docType": "insurance",
+   "maskedReference": "POL ••••7026",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-07",
+   "expiresOn": "2027-06-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-108-1",
+   "vesselId": "V-108",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••918",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-21",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-108-2",
+   "vesselId": "V-108",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1234",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-19",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-109-1",
+   "vesselId": "V-109",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••373",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-25",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-109-2",
+   "vesselId": "V-109",
+   "docType": "insurance",
+   "maskedReference": "POL ••••1726",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-110-1",
+   "vesselId": "V-110",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••429",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-110-2",
+   "vesselId": "V-110",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9887",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-01",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-111-1",
+   "vesselId": "V-111",
+   "docType": "registration",
+   "maskedReference": "ending 83 ZN",
+   "reviewState": "pending_review",
+   "reviewedOn": null,
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-111-2",
+   "vesselId": "V-111",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8321",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-04-27",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-112-1",
+   "vesselId": "V-112",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••683",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-06",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-112-2",
+   "vesselId": "V-112",
+   "docType": "insurance",
+   "maskedReference": "POL ••••9797",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-03",
+   "expiresOn": "2027-04-30",
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-113-1",
+   "vesselId": "V-113",
+   "docType": "documentation",
+   "maskedReference": "DOC ••••420",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-06-01",
+   "expiresOn": null,
+   "provenance": "SIM"
+  },
+  {
+   "id": "DOCREC-V-113-2",
+   "vesselId": "V-113",
+   "docType": "insurance",
+   "maskedReference": "POL ••••8669",
+   "reviewState": "reviewed",
+   "reviewedOn": "2026-05-03",
+   "expiresOn": "2027-05-30",
+   "provenance": "SIM"
+  }
+ ]
+}

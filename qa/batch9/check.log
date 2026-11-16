@@ -1,0 +1,25 @@
+
+> harbor-desk@0.1.0 tokens:check
+> node scripts/build-tokens.ts --check
+
+src/ui/tokens.css matches design/tokens.json.
+
+> harbor-desk@0.1.0 fixtures:check
+> node scripts/generate-fixtures.ts --check
+
+Checked 12 fixture files. Validation: ok; fatal 0, errors 0, warnings 0.
+  slips 126 · vessels 48 · agreements 46 · documents 96 · observations 420 · movements 9 · verifications 44
+
+> harbor-desk@0.1.0 assets:check
+> node scripts/export-assets.ts --check
+
+asset-report.json matches the generators.
+
+ RUN  v5.1.0 /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina
+
+
+ Test Files  18 passed (18)
+      Tests  165 passed (165)
+   Start at  15:02:42
+   Duration  651ms (tests 37%, transform 34%, import 27%, worker 2%)
+

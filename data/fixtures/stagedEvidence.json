@@ -1,0 +1,47 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "EV-WALK-0910",
+   "kind": "dock-walk-mark",
+   "slipId": "B-12",
+   "capturedAt": "2026-07-15T13:10:00Z",
+   "sourceId": "STAFF-CHECK",
+   "actorId": "ACT-STAFF",
+   "verifiedVesselId": null,
+   "summary": "Marked Occupied on the morning dock walk; Lake Effect departed 08:10.",
+   "assetId": null,
+   "altText": "Text-only dock-walk entry for B-12. No image was taken.",
+   "provenance": "SIM"
+  },
+  {
+   "id": "EV-C02-0912",
+   "kind": "camera-frame",
+   "slipId": "B-12",
+   "capturedAt": "2026-07-15T13:12:00Z",
+   "sourceId": "C-02",
+   "actorId": null,
+   "verifiedVesselId": null,
+   "summary": "Cabin cruiser present at the slip. Stern name not legible; canvas cover differs from the cover on record for the assigned vessel.",
+   "assetId": "ev-7k2q",
+   "altText": "Simulated camera frame from C-02 at 09:12: an elevated view along Dock B with a cabin cruiser under a tan canvas cover in the slip; no name is legible.",
+   "provenance": "SIM"
+  },
+  {
+   "id": "EV-STAFF-0918",
+   "kind": "staff-dock-check",
+   "slipId": "B-12",
+   "capturedAt": "2026-07-15T13:18:00Z",
+   "sourceId": "STAFF-CHECK",
+   "actorId": "ACT-STAFF",
+   "verifiedVesselId": "V-021",
+   "summary": "Boat name and registration ending 42 AB match Lake Effect. A new canvas cover explains the visual difference.",
+   "assetId": "ev-p3m8",
+   "altText": "Simulated staff photos at 09:18: the transom name board and the bow registration panel, which shows only the suffix.",
+   "provenance": "SIM"
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+/*
+ * App-shell layout zones (DESIGN §9, PRD §6; T17). Three layouts keyed by .app[data-layout]:
+ * desktop (floating zones), tablet (one rail), mobile (grid: top bar, map, sheet — nothing overlaps by construction).
+ * --topbar-h drives every zone below the top bar, so a taller (wrapped) top bar can never cover them.
+ */
+.app { position: relative; height: 100%; overflow: hidden; --topbar-h: var(--sz-topbar); --zone-top: calc(12px + var(--topbar-h) + var(--s-4)); }
+.scene-layer { position: absolute; inset: 0; }
+.map-navigation { width: 100%; height: 100%; }
+.map-navigation:focus-visible, .plan:focus-visible { outline-offset: -4px; }
+/* T24 poster: above the canvas, below every panel; fades onto the first drawn frame (cut under reduced motion). */
+.scene-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; opacity: 1; transition: opacity var(--t-scene-in) var(--e-standard); } /* token scene-in 400ms = POSTER_FADE_MS */
+.scene-poster[data-state="leaving"] { opacity: 0; }
+.topbar {
+  position: absolute; top: 12px; left: var(--inset-app); right: var(--inset-app); min-height: var(--topbar-h);
+  display: flex; align-items: center; gap: var(--s-4); padding: var(--s-2) var(--s-4); flex-wrap: nowrap; z-index: 6;
+}
+.topbar-place { font-size: var(--fs-body-sm); white-space: nowrap; }
+.topbar-right { margin-left: auto; display: flex; gap: var(--s-3); align-items: center; flex-wrap: nowrap; white-space: nowrap; }
+.sim-time { display: inline-flex; gap: var(--s-2); align-items: baseline; }
+.flag { display: inline-flex; align-items: center; gap: var(--s-2); font-size: var(--fs-body-sm); color: var(--text-secondary); white-space: nowrap; }
+.summary-zone { position: absolute; top: var(--zone-top); left: var(--inset-app); display: flex; gap: var(--s-3); flex-wrap: wrap; }
+.notice-zone { position: absolute; top: calc(var(--zone-top) + var(--sz-kpi-h) + var(--s-4)); left: var(--inset-app); width: min(420px, calc(100% - 2 * var(--inset-app))); display: grid; gap: var(--s-2); z-index: 3; }
+.notice-detail { display: grid; gap: 2px; margin-top: var(--s-1); }
+.notice-detail .data { font-size: 12px; overflow-wrap: anywhere; }
+.replay-banner { padding: var(--s-1) var(--s-2); border-radius: var(--r-xs); border: 1px dashed var(--border-strong); color: var(--text-primary); justify-self: start; }
+
+/* Bottom-left column: scenario panel above attribution. One column, so they cannot collide (PRD §6). */
+.bottom-left-zone {
+  position: absolute; left: var(--inset-app); bottom: 12px; z-index: 4; display: flex; flex-direction: column; gap: var(--s-2);
+  width: clamp(360px, calc(100% - 2 * var(--inset-app) - var(--sz-inspector) - 16px - 480px - 16px), 540px);
+}
+.attribution { padding: var(--s-1) var(--s-3); font-size: 12px; color: var(--text-primary); background: var(--bg-panel); border-radius: var(--r-xs); }
+.attribution a { color: inherit; }
+
+/* Right rail (desktop): inspector above a collapsible list; they never overlap. */
+.rail {
+  position: absolute; top: var(--zone-top); right: var(--inset-app); bottom: var(--inset-app);
+  width: var(--sz-inspector); display: flex; flex-direction: column; gap: var(--s-3); z-index: 5; pointer-events: none;
+}
+.rail > * { pointer-events: auto; }
+.inspector { flex: 1 1 0; min-height: 0; overflow: auto; display: grid; gap: var(--s-3); align-content: start; padding: var(--s-4); }
+.inspector .object-name { display: flex; align-items: center; gap: var(--s-2); }
+.panel > .inspector-head { display: grid; gap: var(--s-1); margin: 0; } /* beats base .panel > header flex */
+.inspector-head-top { display: flex; justify-content: space-between; align-items: center; gap: var(--s-3); }
+.inspector-head-top > .label { white-space: nowrap; }
+.inspector-head-right { display: flex; gap: var(--s-2); align-items: center; }
+.inspector-section { display: grid; gap: var(--s-2); padding-top: var(--s-3); border-top: 1px solid var(--border-hairline); }
+.vessel-line { display: grid; gap: 2px; }
+.vessel-name { display: flex; align-items: center; gap: var(--s-2); }
+.observation-headline { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; font-weight: var(--fw-semibold); }
+.possible-match { display: grid; gap: var(--s-1); padding: var(--s-3); border-radius: var(--r-sm); border: 1px dashed var(--state-review); }
+.facts { display: grid; gap: var(--s-1); margin: 0; }
+.fact { display: grid; grid-template-columns: 112px 1fr; gap: var(--s-2); font-size: var(--fs-body-sm); line-height: 1.4; }
+.fact dt { color: var(--text-secondary); }
+.fact dd { margin: 0; display: flex; gap: var(--s-2); align-items: flex-start; justify-content: space-between; }
+.summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2); margin: 0; }
+.summary-grid dd { margin: 2px 0 0; font-family: var(--f-heading); font-weight: var(--fw-semibold); font-size: var(--fs-h6); font-variation-settings: "FLAR" var(--flare-count); }
+.inspector-more { border-top: 1px solid var(--border-hairline); padding-top: var(--s-3); display: grid; gap: var(--s-2); }
+.inspector-more summary { cursor: pointer; font-weight: var(--fw-semibold); font-size: var(--fs-body-sm); min-height: 44px; display: flex; align-items: center; }
+.link-btn {
+  background: none; border: 0; padding: 0; color: var(--text-primary); font-weight: var(--fw-semibold); cursor: pointer; min-height: 24px;
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-strong); text-align: left;
+}
+.link-btn:hover { text-decoration-color: var(--text-primary); }
+.vessel-line .link-btn { font-family: var(--f-heading); font-size: var(--fs-h5); letter-spacing: var(--ls-heading); font-variation-settings: "FLAR" var(--flare-display); }
+
+/* Display menu (theme, solid panels, pause motion). */
+.display-menu { position: relative; }
+.display-button { min-height: 40px; }
+.display-panel { position: absolute; right: 0; top: calc(100% + 8px); width: 300px; z-index: 30; display: grid; gap: var(--s-1); padding: var(--s-4); white-space: normal; }
+.display-panel[hidden] { display: none; }
+.display-group { border: 0; margin: 0; padding: 0; display: grid; gap: var(--s-1); }
+.radio { display: flex; gap: var(--s-2); align-items: center; min-height: 44px; font-size: var(--fs-body-sm); cursor: pointer; }
+.radio input { width: 18px; height: 18px; margin: 0; accent-color: var(--text-primary); }
+.motion-toggle { min-height: 34px; padding: 0 var(--s-3); font-size: var(--fs-body-sm); }
+
+/* Map insets (2D plan fits the open area between the panels). */
+.app { --map-top: calc(var(--zone-top) + var(--sz-kpi-h) + var(--s-4)); --map-right: calc(var(--inset-app) + var(--sz-inspector) + var(--s-4)); --map-bottom: var(--inset-app); --map-left: var(--inset-app); }
+.plan-svg { top: var(--map-top); right: var(--map-right); bottom: var(--map-bottom); left: var(--map-left); width: auto; height: auto; }
+.plan-toolbar { top: var(--zone-top); right: var(--map-right); }
+.plan-marker { top: calc(var(--zone-top) + 60px); right: var(--map-right); }
+.plan-legend { bottom: var(--map-bottom); right: var(--map-right); }
+.app[data-layout="desktop"][data-map="plan"] .plan-legend { bottom: calc(var(--inset-app) + 4px); }
+
+/* ---------------- tablet: one rail, Details or list, collapsible ---------------- */
+.app[data-layout="tablet"] { --topbar-h: 100px; --rail-w: 320px; --map-right: calc(var(--inset-app) + var(--rail-w) + 12px); }
+.app[data-layout="tablet"][data-rail="closed"] { --map-right: var(--inset-app); }
+.app[data-layout="tablet"] .topbar { flex-wrap: wrap; row-gap: var(--s-2); align-content: center; }
+.app[data-layout="tablet"] .topbar-place { display: none; }
+.app[data-layout="tablet"] .top-search { flex: 1 1 200px; }
+.app[data-layout="tablet"] .topbar-right { order: 3; margin-left: 0; flex: 1 1 100%; justify-content: flex-start; }
+.app[data-layout="tablet"] .display-menu { order: 2; }
+.app[data-layout="tablet"] .summary-zone .kpi { width: 108px; } /* four tiles (T28) stay left of the camera controls */
+.app[data-layout="tablet"] .rail { width: var(--rail-w); gap: 0; pointer-events: auto; background: var(--bg-panel); border: 1px solid var(--border-hairline); border-radius: var(--r-md); box-shadow: var(--shadow-panel); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); overflow: hidden; }
+.app[data-layout="tablet"][data-rail="closed"] .rail { bottom: auto; width: auto; }
+.app[data-layout="tablet"] .bottom-left-zone { width: min(540px, calc(100% - 2 * var(--inset-app) - var(--rail-w) - 12px - 170px)); min-width: 0; }
+.app[data-layout="tablet"][data-rail="closed"] .bottom-left-zone { width: min(540px, calc(100% - 2 * var(--inset-app) - 170px)); }
+/* Camera controls: a vertical stack at the scene's right edge, below the tile row (never beside the tiles). */
+.app[data-layout="tablet"] .view-controls {
+  top: calc(var(--zone-top) + var(--sz-kpi-h) + var(--s-4)); bottom: auto; right: var(--map-right); width: 140px;
+  flex-direction: column; border-radius: var(--r-md); align-items: stretch;
+}
+/* Narrow (portrait) tablets: the controls end well above the bottom-left column, so it may use the full width. */
+@media (max-width: 899.98px) {
+  .app[data-layout="tablet"] .bottom-left-zone { width: calc(100% - 2 * var(--inset-app) - var(--rail-w) - 12px); }
+}
+.app[data-layout="tablet"] .view-controls .segmented { flex-direction: column; border-radius: var(--r-sm); }
+.app[data-layout="tablet"] .view-controls .segment { border-radius: var(--r-xs); min-height: 40px; }
+.app[data-layout="tablet"] .notice-zone { width: min(380px, calc(100% - 2 * var(--inset-app) - var(--rail-w) - 180px)); }
+
+/* Shared compact rail pieces (tablet + mobile). */
+.rail-nav { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--border-hairline); flex: none; }
+.rail-tabs { display: inline-flex; padding: 3px; gap: 2px; border-radius: var(--r-pill); border: 1px solid var(--border-hairline); }
+.rail-tab { min-height: 40px; padding: 0 var(--s-3); white-space: nowrap; border-radius: var(--r-pill); border: 0; background: transparent; color: var(--text-secondary); font-weight: var(--fw-semibold); font-size: var(--fs-body-sm); cursor: pointer; }
+.rail-tab[aria-pressed="true"] { background: var(--bg-panel-solid); color: var(--text-primary); }
+.rail-tab:disabled { opacity: 0.4; cursor: not-allowed; }
+.rail-nav .btn-ghost { min-height: 40px; padding: 0 var(--s-2); font-size: var(--fs-body-sm); }
+.rail-body { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: var(--s-3); }
+.rail-body[hidden] { display: none; }
+/* Inside a compact rail there is ONE scroll container (the rail body); panels inside it do not scroll. */
+.rail-body > .panel { background: transparent; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-radius: 0; flex: none; overflow: visible; max-height: none; }
+.rail-body > .inspector, .rail-body > .registry { padding: var(--s-3) var(--s-4); }
+.rail-body .registry-list { overflow: visible; flex: none; }
+
+/* ---------------- mobile: grid of top bar / map / sheet ---------------- */
+.app[data-layout="mobile"] {
+  display: grid; grid-template-columns: 100%; grid-template-rows: auto minmax(96px, 1fr) var(--sheet-h, 52%);
+  grid-template-areas: "top" "map" "sheet"; --map-top: 0px; --map-right: 0px; --map-bottom: 0px; --map-left: 0px; --zone-top: 8px;
+}
+.app[data-layout="mobile"][data-sheet="full"] { grid-template-rows: auto 64px 1fr; }
+.app[data-layout="mobile"] .topbar { grid-area: top; position: relative; inset: auto; margin: var(--s-2) var(--s-2) 0; flex-wrap: wrap; gap: var(--s-2) var(--s-3); padding: var(--s-2) var(--s-3); min-height: 0; }
+.app[data-layout="mobile"] .topbar .lockup-word { font-size: 13px; }
+.app[data-layout="mobile"] .topbar .lockup svg { height: 26px; }
+.app[data-layout="mobile"] .topbar-place, .app[data-layout="mobile"] .sim-day { display: none; }
+.app[data-layout="mobile"] .display-menu { order: 1; margin-left: auto; }
+.app[data-layout="mobile"] .top-search { order: 2; flex: 1 1 100%; min-width: 0; }
+.app[data-layout="mobile"] .top-search .input { min-height: 40px; }
+.app[data-layout="mobile"] .topbar-right { order: 3; flex: 1 1 100%; margin-left: 0; flex-wrap: wrap; gap: 2px var(--s-3); justify-content: flex-start; white-space: normal; }
+.app[data-layout="mobile"] .flag, .app[data-layout="mobile"] .sim-time .data { font-size: 12px; }
+.app[data-layout="mobile"] .sim-time .label { font-size: 11px; }
+.app[data-layout="mobile"] .scene-layer { grid-area: map; position: relative; inset: auto; min-height: 0; }
+.app[data-layout="mobile"] .plan-toolbar { top: var(--s-2); left: var(--s-2); right: auto; }
+.app[data-layout="mobile"] .plan-marker { top: 64px; left: var(--s-2); right: auto; }
+.app[data-layout="mobile"] .plan-legend { left: var(--s-2); right: var(--s-2); bottom: var(--s-2); font-size: 12px; }
+.app[data-layout="mobile"] .sheet {
+  grid-area: sheet; position: relative; inset: auto; width: auto; margin: var(--s-2) var(--s-2) 0; z-index: 5; pointer-events: auto; gap: 0;
+  display: flex; flex-direction: column; min-height: 0; background: var(--bg-panel-solid); border: 1px solid var(--border-hairline);
+  border-radius: var(--r-lg) var(--r-lg) 0 0; box-shadow: var(--shadow-sheet);
+}
+.app[data-layout="mobile"] .sheet .rail-body { padding-bottom: var(--s-4); }
+.app[data-layout="mobile"] .notice-zone { position: static; width: auto; padding: var(--s-3) var(--s-3) 0; }
+.app[data-layout="mobile"] .notice-zone:empty { display: none; }
+.app[data-layout="mobile"] .summary-zone { position: static; flex-wrap: nowrap; padding: 0 var(--s-3); } /* tiles share the width: no scroller */
+.app[data-layout="mobile"] .summary-zone .kpi { flex: 1 1 0; width: auto; min-width: 0; min-height: 0; padding: var(--s-2) var(--s-3); background: transparent; border: 1px solid var(--border-hairline); box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.app[data-layout="mobile"] .summary-zone .data-lg { font-size: 24px; }
+.app[data-layout="mobile"] .summary-zone .kpi .body-sm { display: none; } /* notes would push the row into a scroller */
+.app[data-layout="mobile"] .attribution { margin: 0 var(--s-3); background: transparent; padding: var(--s-2) 0; }
+.app[data-layout="mobile"] .view-controls { display: none; }
+/* Wider compact screens (e.g. a laptop at 200 % zoom): map beside a full-height sheet instead of stacked. */
+@media (min-width: 600px) {
+  .app[data-layout="mobile"], .app[data-layout="mobile"][data-sheet="full"] {
+    grid-template-columns: minmax(0, 1fr) min(380px, 52%); grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "top top" "map sheet";
+  }
+  .app[data-layout="mobile"] .sheet { margin: var(--s-2) var(--s-2) var(--s-2) 0; border-radius: var(--r-md); }
+  .app[data-layout="mobile"] .rail-nav .btn-ghost { display: none; } /* nothing to expand: the sheet is full height */
+  .app[data-layout="mobile"] .top-search { order: 1; flex: 1 1 200px; }
+  .app[data-layout="mobile"] .display-menu { order: 2; margin-left: 0; }
+}
+.app[data-layout="tablet"] .view-controls > * { flex: none; }
+.app[data-layout="tablet"] .view-controls .icon-btn { align-self: center; }
+
+/* Keep the display control inside the desktop bar at the narrow desktop breakpoint. */
+@media (min-width: 1280px) and (max-width: 1439.98px) {
+  .topbar-place { display: none; }
+}

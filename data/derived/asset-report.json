@@ -1,0 +1,627 @@
+{
+  "schema": "harbor-desk/asset-report@1",
+  "generator": "scripts/export-assets.ts from src/scene/assets/*.ts",
+  "conventions": "metres; +y up; bow toward +x; pivot on the centreline at the waterline (y = 0); one draw call per asset",
+  "lodDistances_m": [
+    95,
+    260
+  ],
+  "boats": [
+    {
+      "id": "cabin-cruiser-observed",
+      "note": "Slip-class cruiser with the changed (sand) canvas cover: the B-12 observation hull",
+      "params": {
+        "family": "cruiser",
+        "lengthM": 8.687,
+        "beamM": 2.957,
+        "hull": "white",
+        "canvas": "sand"
+      },
+      "checks": {
+        "lengthMatchesLoa": true,
+        "centredOnZ": true,
+        "sitsInWater": true
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 8155,
+          "vertices": 5031,
+          "bbox_m": {
+            "min": [
+              -4.343,
+              -0.28,
+              -1.623
+            ],
+            "max": [
+              4.693,
+              2.321,
+              1.623
+            ]
+          },
+          "geometryBytes": 359472
+        },
+        {
+          "lod": 1,
+          "triangles": 2409,
+          "vertices": 1623,
+          "bbox_m": {
+            "min": [
+              -4.343,
+              -0.28,
+              -1.623
+            ],
+            "max": [
+              4.463,
+              2.315,
+              1.623
+            ]
+          },
+          "geometryBytes": 113304
+        },
+        {
+          "lod": 2,
+          "triangles": 362,
+          "vertices": 270,
+          "bbox_m": {
+            "min": [
+              -4.343,
+              -0.28,
+              -1.475
+            ],
+            "max": [
+              4.343,
+              2.277,
+              1.475
+            ]
+          },
+          "geometryBytes": 18384
+        }
+      ]
+    },
+    {
+      "id": "cabin-cruiser-navy",
+      "note": "Cabin cruiser, slate hull, navy canvas",
+      "params": {
+        "family": "cruiser",
+        "lengthM": 7.925,
+        "beamM": 2.682,
+        "hull": "slate",
+        "canvas": "navy"
+      },
+      "checks": {
+        "lengthMatchesLoa": true,
+        "centredOnZ": true,
+        "sitsInWater": true
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 8155,
+          "vertices": 5031,
+          "bbox_m": {
+            "min": [
+              -3.962,
+              -0.28,
+              -1.474
+            ],
+            "max": [
+              4.281,
+              2.118,
+              1.474
+            ]
+          },
+          "geometryBytes": 359472
+        },
+        {
+          "lod": 1,
+          "triangles": 2409,
+          "vertices": 1623,
+          "bbox_m": {
+            "min": [
+              -3.962,
+              -0.28,
+              -1.474
+            ],
+            "max": [
+              4.072,
+              2.112,
+              1.474
+            ]
+          },
+          "geometryBytes": 113304
+        },
+        {
+          "lod": 2,
+          "triangles": 362,
+          "vertices": 270,
+          "bbox_m": {
+            "min": [
+              -3.962,
+              -0.28,
+              -1.338
+            ],
+            "max": [
+              3.962,
+              2.077,
+              1.338
+            ]
+          },
+          "geometryBytes": 18384
+        }
+      ]
+    },
+    {
+      "id": "cabin-cruiser-open",
+      "note": "Cabin cruiser without canvas (open cockpit, radar arch)",
+      "params": {
+        "family": "cruiser",
+        "lengthM": 8.534,
+        "beamM": 2.896,
+        "hull": "white",
+        "canvas": "none"
+      },
+      "checks": {
+        "lengthMatchesLoa": true,
+        "centredOnZ": true,
+        "sitsInWater": true
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 7456,
+          "vertices": 4589,
+          "bbox_m": {
+            "min": [
+              -4.267,
+              -0.28,
+              -1.591
+            ],
+            "max": [
+              4.611,
+              2.599,
+              1.591
+            ]
+          },
+          "geometryBytes": 328100
+        },
+        {
+          "lod": 1,
+          "triangles": 2344,
+          "vertices": 1553,
+          "bbox_m": {
+            "min": [
+              -4.267,
+              -0.28,
+              -1.591
+            ],
+            "max": [
+              4.385,
+              2.599,
+              1.591
+            ]
+          },
+          "geometryBytes": 108884
+        },
+        {
+          "lod": 2,
+          "triangles": 308,
+          "vertices": 231,
+          "bbox_m": {
+            "min": [
+              -4.267,
+              -0.28,
+              -1.444
+            ],
+            "max": [
+              4.267,
+              2.025,
+              1.444
+            ]
+          },
+          "geometryBytes": 15708
+        }
+      ]
+    },
+    {
+      "id": "center-console",
+      "note": "Small powerboat: center console with T-top and outboard",
+      "params": {
+        "family": "console",
+        "lengthM": 7.315,
+        "beamM": 2.591,
+        "hull": "white",
+        "canvas": "navy"
+      },
+      "checks": {
+        "lengthMatchesLoa": true,
+        "centredOnZ": true,
+        "sitsInWater": true
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 5626,
+          "vertices": 3549,
+          "bbox_m": {
+            "min": [
+              -3.683,
+              -0.28,
+              -1.434
+            ],
+            "max": [
+              3.693,
+              3.971,
+              1.434
+            ]
+          },
+          "geometryBytes": 252060
+        },
+        {
+          "lod": 1,
+          "triangles": 1922,
+          "vertices": 1284,
+          "bbox_m": {
+            "min": [
+              -3.688,
+              -0.28,
+              -1.434
+            ],
+            "max": [
+              3.706,
+              2.357,
+              1.434
+            ]
+          },
+          "geometryBytes": 89832
+        },
+        {
+          "lod": 2,
+          "triangles": 370,
+          "vertices": 281,
+          "bbox_m": {
+            "min": [
+              -3.661,
+              -0.28,
+              -1.292
+            ],
+            "max": [
+              3.658,
+              2.357,
+              1.292
+            ]
+          },
+          "geometryBytes": 19052
+        }
+      ]
+    },
+    {
+      "id": "sailboat",
+      "note": "Keelboat with mast, boom, sail cover and standing rigging",
+      "params": {
+        "family": "sail",
+        "lengthM": 8.23,
+        "beamM": 2.804,
+        "hull": "white",
+        "canvas": "sand"
+      },
+      "checks": {
+        "lengthMatchesLoa": true,
+        "centredOnZ": true,
+        "sitsInWater": true
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "triangles": 5494,
+          "vertices": 3630,
+          "bbox_m": {
+            "min": [
+              -4.137,
+              -0.28,
+              -1.472
+            ],
+            "max": [
+              4.134,
+              11.149,
+              1.472
+            ]
+          },
+          "geometryBytes": 254688
+        },
+        {
+          "lod": 1,
+          "triangles": 1806,
+          "vertices": 1320,
+          "bbox_m": {
+            "min": [
+              -4.135,
+              -0.28,
+              -1.472
+            ],
+            "max": [
+              4.149,
+              11.149,
+              1.472
+            ]
+          },
+          "geometryBytes": 90312
+        },
+        {
+          "lod": 2,
+          "triangles": 408,
+          "vertices": 330,
+          "bbox_m": {
+            "min": [
+              -4.115,
+              -0.28,
+              -1.4
+            ],
+            "max": [
+              4.115,
+              11.146,
+              1.4
+            ]
+          },
+          "geometryBytes": 22056
+        }
+      ]
+    }
+  ],
+  "dock": [
+    {
+      "id": "dock-module-12m",
+      "triangles": 820,
+      "vertices": 847,
+      "bbox_m": {
+        "min": [
+          0,
+          -0.1,
+          -9.959
+        ],
+        "max": [
+          12,
+          1.45,
+          0
+        ]
+      },
+      "geometryBytes": 53884
+    },
+    {
+      "id": "pile",
+      "triangles": 160,
+      "vertices": 134,
+      "bbox_m": {
+        "min": [
+          -0.181,
+          -0.6,
+          -0.19
+        ],
+        "max": [
+          0.181,
+          2.2,
+          0.19
+        ]
+      },
+      "geometryBytes": 8888
+    },
+    {
+      "id": "gangway",
+      "triangles": 244,
+      "vertices": 264,
+      "bbox_m": {
+        "min": [
+          -1.297,
+          0.4,
+          -0.95
+        ],
+        "max": [
+          5.52,
+          2.278,
+          0.95
+        ]
+      },
+      "geometryBytes": 16656
+    },
+    {
+      "id": "rock",
+      "triangles": 30,
+      "vertices": 60,
+      "bbox_m": {
+        "min": [
+          -0.384,
+          -0.3,
+          -0.43
+        ],
+        "max": [
+          0.402,
+          0.337,
+          0.388
+        ]
+      },
+      "geometryBytes": 3480
+    },
+    {
+      "id": "tree",
+      "triangles": 5238,
+      "vertices": 3190,
+      "bbox_m": {
+        "min": [
+          -4.386,
+          -0.001,
+          -4.249
+        ],
+        "max": [
+          4.085,
+          7.322,
+          3.554
+        ]
+      },
+      "geometryBytes": 228736
+    },
+    {
+      "id": "tree-tall",
+      "triangles": 5662,
+      "vertices": 3446,
+      "bbox_m": {
+        "min": [
+          -3.749,
+          -0.008,
+          -3.854
+        ],
+        "max": [
+          3.259,
+          8.665,
+          3.252
+        ]
+      },
+      "geometryBytes": 247136
+    },
+    {
+      "id": "tree-young",
+      "triangles": 3754,
+      "vertices": 2294,
+      "bbox_m": {
+        "min": [
+          -3.135,
+          -0.01,
+          -2.979
+        ],
+        "max": [
+          2.827,
+          5.427,
+          2.644
+        ]
+      },
+      "geometryBytes": 164336
+    },
+    {
+      "id": "shrub",
+      "triangles": 320,
+      "vertices": 192,
+      "bbox_m": {
+        "min": [
+          -1.269,
+          -0.111,
+          -1.116
+        ],
+        "max": [
+          1.102,
+          1.196,
+          1.442
+        ]
+      },
+      "geometryBytes": 13824
+    },
+    {
+      "id": "lamp-post",
+      "triangles": 120,
+      "vertices": 98,
+      "bbox_m": {
+        "min": [
+          -0.24,
+          0,
+          -0.24
+        ],
+        "max": [
+          0.24,
+          4.56,
+          0.24
+        ]
+      },
+      "geometryBytes": 6536
+    }
+  ],
+  "surroundings": [
+    {
+      "id": "grain-elevator-104x38m",
+      "triangles": 5302,
+      "vertices": 4160,
+      "bbox_m": {
+        "min": [
+          -51.6,
+          0,
+          -20.33
+        ],
+        "max": [
+          52.93,
+          50.125,
+          12.58
+        ]
+      },
+      "geometryBytes": 279944
+    },
+    {
+      "id": "service-shed-36x22m",
+      "triangles": 736,
+      "vertices": 1428,
+      "bbox_m": {
+        "min": [
+          -18.5,
+          0,
+          -11.67
+        ],
+        "max": [
+          18.5,
+          10.15,
+          11.67
+        ]
+      },
+      "geometryBytes": 83088
+    },
+    {
+      "id": "office-20x16m",
+      "triangles": 492,
+      "vertices": 940,
+      "bbox_m": {
+        "min": [
+          -10.5,
+          0,
+          -8.67
+        ],
+        "max": [
+          10.5,
+          6.15,
+          8.67
+        ]
+      },
+      "geometryBytes": 54784
+    },
+    {
+      "id": "boat-stand-8m",
+      "triangles": 196,
+      "vertices": 280,
+      "bbox_m": {
+        "min": [
+          -2.521,
+          -0.027,
+          -2.183
+        ],
+        "max": [
+          2.685,
+          1.337,
+          1.984
+        ]
+      },
+      "geometryBytes": 16912
+    },
+    {
+      "id": "viaduct-232m",
+      "triangles": 810,
+      "vertices": 1030,
+      "bbox_m": {
+        "min": [
+          -117.3,
+          -1,
+          -14
+        ],
+        "max": [
+          117.3,
+          40.449,
+          14
+        ]
+      },
+      "geometryBytes": 63280
+    }
+  ]
+}

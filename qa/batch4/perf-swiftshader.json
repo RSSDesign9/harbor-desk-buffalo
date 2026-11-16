@@ -1,0 +1,180 @@
+{
+  "measuredAt": "2026-11-14T21:29:58.136Z",
+  "url": "http://127.0.0.1:4719",
+  "headless": true,
+  "gpuFlag": false,
+  "browser": "Chromium 159.0.8154.6",
+  "platform": "darwin arm64",
+  "results": [
+    {
+      "view": "overview",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1,
+      "drawCalls": 116,
+      "triangles": 135226,
+      "hullLods": {
+        "lod2": 15
+      },
+      "geometries": 107,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.4,
+        "p95": 76.9,
+        "max": 127.1
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 26,
+        "medianFps": 12,
+        "medianFrameMs": 83.3,
+        "p95FrameMs": 133.4,
+        "maxFrameMs": 150
+      }
+    },
+    {
+      "view": "dock-b",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1,
+      "drawCalls": 92,
+      "triangles": 179556,
+      "hullLods": {
+        "lod1": 15
+      },
+      "geometries": 109,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 93.9,
+        "max": 163.6
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 12,
+        "medianFps": 8.58,
+        "medianFrameMs": 116.6,
+        "p95FrameMs": 116.8,
+        "maxFrameMs": 116.8
+      }
+    },
+    {
+      "view": "b12-selected",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1,
+      "drawCalls": 82,
+      "triangles": 276736,
+      "hullLods": {
+        "lod0": 13,
+        "lod1": 2
+      },
+      "geometries": 123,
+      "textures": 6,
+      "programs": 14,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 130.9,
+        "max": 134.4
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 0,
+        "medianFps": null,
+        "medianFrameMs": null,
+        "p95FrameMs": null,
+        "maxFrameMs": null
+      }
+    },
+    {
+      "view": "overview",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1.75,
+      "drawCalls": 116,
+      "triangles": 135226,
+      "hullLods": {
+        "lod2": 15
+      },
+      "geometries": 107,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.3,
+        "p95": 134.5,
+        "max": 257.7
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 0,
+        "medianFps": null,
+        "medianFrameMs": null,
+        "p95FrameMs": null,
+        "maxFrameMs": null
+      }
+    },
+    {
+      "view": "dock-b",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1.75,
+      "drawCalls": 92,
+      "triangles": 179556,
+      "hullLods": {
+        "lod1": 15
+      },
+      "geometries": 107,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 181.5,
+        "max": 189.8
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 0,
+        "medianFps": null,
+        "medianFrameMs": null,
+        "p95FrameMs": null,
+        "maxFrameMs": null
+      }
+    },
+    {
+      "view": "b12-selected",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 1.75,
+      "drawCalls": 82,
+      "triangles": 276736,
+      "hullLods": {
+        "lod0": 13,
+        "lod1": 2
+      },
+      "geometries": 121,
+      "textures": 6,
+      "programs": 14,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 253,
+        "max": 327.3
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 0,
+        "medianFps": null,
+        "medianFrameMs": null,
+        "p95FrameMs": null,
+        "maxFrameMs": null
+      }
+    }
+  ]
+}

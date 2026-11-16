@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vessel card — states</title>
+<!-- tokens.css is inlined below so this file renders standalone; regenerate the block after editing tokens.css -->
+<style id="fonts">
+/* IBM Plex Mono, self-hosted (design/fonts), SIL Open Font License 1.1 — see fonts/IBM-Plex-OFL.txt.
+   Files from github.com/IBM/plex (packages/plex-mono, woff2), fetched 14 Nov 2026. */
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-Medium.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-SemiBold.woff2") format("woff2"); }
+/* General Sans, self-hosted (design/fonts). Webfont files supplied by Raj 14 Nov 2026. */
+@font-face { font-family: "General Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Regular.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Medium.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Semibold.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Bold.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/Switzer-Regular.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/Switzer-Medium.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/Switzer-Semibold.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/Switzer-Bold.woff") format("woff"); }
+</style>
+<style id="tokens">
+/* Switzer, self-hosted (design/fonts). Webfont files supplied by Raj 14 Nov 2026. */
+@font-face { font-family: "Switzer"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/Switzer-Regular.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/Switzer-Medium.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/Switzer-Semibold.woff") format("woff"); }
+@font-face { font-family: "Switzer"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/Switzer-Bold.woff") format("woff"); }
+
+/* General Sans, self-hosted (design/fonts). Webfont files supplied by Raj 14 Nov 2026. */
+@font-face { font-family: "General Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Regular.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Medium.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Semibold.woff") format("woff"); }
+@font-face { font-family: "General Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/GeneralSans-Bold.woff") format("woff"); }
+
+/* IBM Plex Mono, self-hosted (design/fonts), SIL Open Font License 1.1 — see fonts/IBM-Plex-OFL.txt.
+   Files from github.com/IBM/plex (packages/plex-mono, woff2), fetched 14 Nov 2026. */
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-Medium.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/IBMPlexMono-SemiBold.woff2") format("woff2"); }
+
+/* Harbor Desk — design tokens
+   Source of truth: design/tokens.json. Keep in sync in the same commit.
+   MEASURED values come from saildrone.com and rivian.com CSS (14 Nov 2026).
+   PLACEHOLDER values are flagged inline and must be replaced. */
+
+:root {
+  /* ---------- base color ---------- */
+  --c-midnight: #011b2b;        /* Saildrone midnight-blue */
+  --c-ink-700: #233747;         /* Saildrone dark-grey */
+  --c-ink-500: #3f5464;         /* Saildrone grey */
+  --c-ink-300: #748491;         /* Saildrone mid-grey */
+  --c-mist-200: #d5dfe3;        /* Saildrone light-grey */
+  --c-mist-100: #eaf1f4;        /* Saildrone lightest-grey */
+  --c-white: #ffffff;
+  --c-signal: #ff4d00;          /* Saildrone orange */
+  --c-signal-light: #ff5d17;
+  --c-signal-dark: #c53c00;
+  --c-focus: #2d62ff;           /* Saildrone focus-state */
+  --c-sand: #e6e5df;            /* Rivian */
+  --c-sand-dark: #bbb9ad;       /* Rivian */
+  --c-forest: #465243;          /* Rivian, 3D material only */
+  --c-rust: #a15842;            /* Rivian, 3D material only */
+  --c-slate: #73859f;           /* Rivian */
+  --c-harbor-night: #2b333f;    /* Rivian */
+  --c-success-fill: #4a8231;    /* Rivian semantic-success */
+  --c-success-text: #cef5ca;    /* Saildrone success-green */
+  --c-success-text-dark: #114e0b;
+  --c-error-fill: #dc3127;      /* Rivian semantic-error */
+  --c-error-text: #ffb3ab;      /* derived */
+  --c-warning: #ffac00;         /* Rivian accent */
+  --c-warning-dark: #d58103;    /* Rivian semantic-warning */
+  --c-info-dark: #005e7d;       /* Rivian semantic-info */
+  --c-chart-water: #9ecefc;     /* MEASURED NOAA ENC shallow-water area, Buffalo Harbor render 14 Nov 2026 */
+  --c-chart-shoal: #82bdff;     /* MEASURED NOAA ENC very-shallow / dredged area */
+  --c-chart-land: #b09e56;      /* MEASURED NOAA ENC land area */
+  --c-chart-built: #cec58a;     /* MEASURED NOAA ENC pier / wharf / built land */
+  --c-chart-cyan: #7fd1e8;      /* derived, dark-mode underway */
+  --c-chart-cyan-dark: #0a6e8a; /* derived, light-mode underway */
+  --c-chart-magenta: #c842c6;   /* MEASURED NOAA ENC magenta (aids, labels) */
+  --c-chart-green: #77e137;     /* MEASURED NOAA ENC green lateral mark */
+  --c-chart-magenta-dm: #ff3d9a;/* derived for dark backgrounds */
+  --c-winter-sky: #c9d0d7;      /* MEASURED median, overcast sky, Raj's winter aerial of Erie Basin, 14 Nov 2026 */
+  --c-snow: #d2d9e0;            /* MEASURED median, snow field, same photo */
+  --c-ice-floe: #adb5bd;        /* MEASURED median, lake ice floes, same photo */
+  --c-winter-water: #585858;    /* MEASURED dominant, open water between floes, same photo */
+  --c-winter-concrete: #65615b; /* MEASURED median, observation tower, same photo */
+  --c-snow-canvas: #f2f5f8;     /* DERIVED: snow hue lifted to a UI canvas; measured snow is too dark for AA text */
+  --c-silo-concrete: #7b7265;   /* MEASURED median, RiverWorks elevator tower, Commons CC0 photo */
+  --c-silo-blue: #284878;       /* MEASURED dominant, Labatt-painted silos at RiverWorks, Commons CC0 photo */
+  --c-lake-sky: #91a8c3;        /* MEASURED median, sky over RiverWorks */
+  --c-river-water: #4e6d98;     /* MEASURED median, Buffalo River at Concrete Central, sunlit, CC BY 4.0 photo */
+  --c-limestone: #e7ebed;       /* MEASURED median, Buffalo Main Light tower (painted), CC BY-SA 2.5 photo */
+  --c-review-dark: #8a5a00;     /* DERIVED (T07): needs-review text on light surfaces */
+
+  /* ---------- typography ---------- */
+  --f-heading: "General Sans", "Switzer", Arial, sans-serif;
+  --f-body: "Switzer", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  --f-accent-num: "LED Dot Matrix", "IBM Plex Mono", monospace; /* unlicensed; falls back */
+
+  /* Saildrone fluid scale, 20rem → 90rem viewport (MEASURED clamp endpoints) */
+  --fs-h1: clamp(2.25rem, 1.607rem + 3.214vw, 4.5rem);
+  --fs-h2: clamp(2rem, 1.714rem + 1.429vw, 3rem);
+  --fs-h3: clamp(1.75rem, 1.536rem + 1.071vw, 2.5rem);
+  --fs-h4: clamp(1.5rem, 1.357rem + 0.714vw, 2rem);
+  --fs-h5: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+  --fs-h6: clamp(1rem, 0.929rem + 0.357vw, 1.25rem);
+  --fs-body-lg: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-body-sm: 0.875rem;
+  --fs-label: 0.75rem;
+  --fs-label-sm: 0.6875rem;
+  --fs-data: 0.875rem;
+  --fs-data-lg: clamp(1.75rem, 1.607rem + 0.714vw, 2.25rem);
+  --fs-accent-num: clamp(2.5rem, 2.214rem + 1.429vw, 3.5rem);
+
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+  --lh-tight: 1.1; --lh-heading: 1.2; --lh-snug: 1.3; --lh-body: 1.5; --lh-label: 1.2;
+  --ls-label: 0.02em; --ls-label-sm: 0.04em; --ls-display: -0.01em;
+
+  /* ---------- space (4px base) ---------- */
+  --s-0: 0; --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px;
+  --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-24: 96px;
+  --inset-app: 24px;
+
+  /* ---------- shape ---------- */
+  --r-0: 0; --r-xs: 4px; --r-sm: 8px; --r-md: 12px; --r-lg: 20px; --r-pill: 999px;
+
+  /* ---------- motion ---------- */
+  --t-micro: 150ms; --t-panel: 240ms; --t-camera: 700ms; --t-scene-in: 400ms;
+  --e-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --e-camera: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* ---------- sizes ---------- */
+  --sz-topbar: 56px; --sz-inspector: 360px; --sz-list-w: 400px; --sz-list-h: 320px;
+  --sz-row: 44px; --sz-btn: 40px; --sz-icon-btn: 32px; --sz-kpi-w: 160px; --sz-kpi-h: 88px;
+}
+
+/* ---------- semantic: dark (default) ---------- */
+:root, [data-theme="dark"] {
+  --bg-canvas: var(--c-midnight);
+  --bg-panel: rgba(1, 27, 43, 0.84);            /* T07: was 0.72; AA on glass over bright scene, see tokens.json _meta.reconciled */
+  --bg-panel-solid: var(--c-ink-700);
+  --bg-row-hover: rgba(255, 255, 255, 0.06);
+  --text-primary: var(--c-white);
+  --text-secondary: var(--c-mist-200);
+  --text-muted: var(--c-ink-300);
+  --text-accent: var(--c-signal);
+  --text-on-accent: var(--c-midnight);
+  --border-hairline: rgba(255, 255, 255, 0.12);
+  --border-strong: var(--c-ink-300);
+  --focus-ring: var(--c-focus);
+  --state-docked: var(--c-success-text);      --state-docked-fill: var(--c-success-fill);
+  --state-underway: var(--c-chart-cyan);
+  --state-arriving: var(--c-signal-light);    --state-arriving-fill: var(--c-signal);
+  --state-overdue: var(--c-error-text);       --state-overdue-fill: var(--c-error-fill);
+  --state-maintenance: var(--c-warning);
+  --state-winterized: var(--c-sand-dark);
+  --nav-aid: var(--c-chart-magenta-dm);
+  --state-review: var(--c-warning);           /* T07: needs review / identity unverified (non-orange) */
+  --focus-halo: var(--c-white);               /* T07: separates the focus ring from any backdrop */
+  --shadow-panel: 0 10px 38px -10px rgba(14, 18, 22, 0.35), 0 10px 20px -15px rgba(14, 18, 22, 0.2);
+  --shadow-sheet: 0 -8px 40px rgba(1, 27, 43, 0.5);
+}
+
+/* ---------- semantic: light "chart mode" ---------- */
+[data-theme="light"] {
+  --bg-canvas: var(--c-snow-canvas);
+  --bg-water: var(--c-chart-water);
+  --bg-shoal: var(--c-chart-shoal);
+  --bg-land: var(--c-chart-built);
+  --bg-land-deep: var(--c-chart-land);
+  --bg-panel: rgba(255, 255, 255, 0.8);
+  --bg-panel-solid: var(--c-white);
+  --bg-row-hover: rgba(1, 27, 43, 0.05);
+  --text-primary: var(--c-ink-700);
+  --text-secondary: var(--c-ink-500);
+  --text-muted: #5d6c7b;               /* Saildrone measured grey; ink-300 is 3.47 on winter-sky and fails */
+  --text-accent: var(--c-signal-dark);
+  --text-on-accent: var(--c-white);
+  --border-hairline: rgba(1, 27, 43, 0.12);
+  --border-strong: var(--c-ink-300);
+  --focus-ring: var(--c-focus);
+  --state-docked: var(--c-success-text-dark);  --state-docked-fill: var(--c-success-fill);
+  --state-underway: var(--c-chart-cyan-dark);
+  --state-arriving: var(--c-signal-dark);      --state-arriving-fill: var(--c-signal-dark);
+  --state-overdue: var(--c-error-fill);        --state-overdue-fill: var(--c-error-fill);
+  --state-maintenance: var(--c-warning-dark);
+  --state-winterized: #686258;
+  --nav-aid: var(--c-chart-magenta);
+  --state-review: var(--c-review-dark);
+  --focus-halo: var(--c-white);
+  --shadow-panel: 0 10px 38px -10px rgba(14, 18, 22, 0.18), 0 10px 20px -15px rgba(14, 18, 22, 0.1);
+  --shadow-sheet: 0 -8px 40px rgba(1, 27, 43, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-micro: 0ms; --t-panel: 100ms; --t-camera: 0ms; --t-scene-in: 0ms; }
+}
+
+</style>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 40px;
+    background: var(--bg-canvas); color: var(--text-primary);
+    font-family: var(--f-body); font-size: var(--fs-body); line-height: var(--lh-body);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  [data-theme="light"] body, body[data-theme="light"] {
+    background-image:
+      linear-gradient(rgba(1,27,43,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(1,27,43,0.06) 1px, transparent 1px);
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, 360px); gap: 32px; align-items: start; }
+  .state-label { font-family: var(--f-mono); font-size: var(--fs-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px; }
+
+  /* ---------- vessel card ---------- */
+  .vessel-card {
+    width: 360px; padding: var(--s-5);
+    border-radius: var(--r-md);
+    background: var(--bg-panel); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    border: 1px solid var(--border-hairline);
+    box-shadow: var(--shadow-panel);
+    color: var(--text-primary);
+    transition: border-color var(--t-micro) var(--e-standard), transform var(--t-micro) var(--e-standard);
+  }
+  @supports not (backdrop-filter: blur(1px)) { .vessel-card { background: rgba(1,27,43,0.96); } }
+  .vessel-card:hover, .vessel-card[data-state="hover"] { border-color: rgba(127,209,232,0.6); }
+  .vessel-card:focus-within { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  .vessel-card[data-state="selected"] { border-color: var(--c-signal); }
+
+  .vc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-3); }
+  .label { font-family: var(--f-mono); font-size: var(--fs-label); font-weight: var(--fw-medium); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--text-secondary); line-height: var(--lh-label); margin: 0; }
+  .vc-name { font-family: var(--f-heading); font-weight: var(--fw-semibold); font-size: 24px; line-height: var(--lh-snug); margin: 2px 0; letter-spacing: 0; }
+  .body-sm { font-size: var(--fs-body-sm); line-height: 1.4; margin: 0; }
+  .muted { color: var(--text-secondary); }
+  .sim { font-family: var(--f-mono); font-size: var(--fs-label-sm); color: var(--c-signal-light); letter-spacing: var(--ls-label-sm); }
+
+  .pill {
+    font-family: var(--f-mono); font-size: var(--fs-label-sm); font-weight: var(--fw-medium);
+    text-transform: uppercase; letter-spacing: var(--ls-label-sm); line-height: 1;
+    padding: 5px 10px 5px 8px; border-radius: var(--r-pill); border: 1px solid;
+    display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; flex: none;
+    transition: background-color var(--t-micro) var(--e-standard), color var(--t-micro) var(--e-standard);
+  }
+  .pill i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .pill[data-status="docked"]      { color: var(--state-docked);      border-color: rgba(74,130,49,0.6); }
+  .pill[data-status="underway"]    { color: var(--state-underway);    border-color: rgba(127,209,232,0.5); }
+  .pill[data-status="arriving"]    { color: var(--state-arriving);    border-color: rgba(255,77,0,0.6); }
+  .pill[data-status="overdue"]     { color: var(--state-overdue);     border-color: rgba(220,49,39,0.7); }
+  .pill[data-status="maintenance"] { color: var(--state-maintenance); border-color: rgba(255,172,0,0.5); }
+  .pill[data-status="winterized"]  { color: var(--state-winterized);  border-color: rgba(187,185,173,0.5); }
+  .pill[data-status="overdue"] i { animation: pulse 1.2s var(--e-standard) infinite; }
+  @keyframes pulse { 50% { opacity: 0.3; } }
+
+  .vc-rows { margin: var(--s-4) 0 0; padding: 0; border-top: 1px solid var(--border-hairline); }
+  .vc-rows > div { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); padding: 10px 0; border-bottom: 1px solid var(--border-hairline); }
+  .vc-rows dt { font-size: var(--fs-body-sm); color: var(--text-secondary); margin: 0; flex: none; white-space: nowrap; }
+  .vc-rows dd { font-family: var(--f-mono); font-size: var(--fs-data); font-variant-numeric: tabular-nums; color: var(--text-primary); margin: 0; text-align: right; display: inline-flex; flex-wrap: wrap; justify-content: flex-end; align-items: baseline; gap: 4px 6px; min-width: 0; }
+  .vc-rows dd.err { color: var(--state-overdue); }
+
+  .tag { font-family: var(--f-mono); font-size: var(--fs-label-sm); letter-spacing: var(--ls-label-sm); line-height: 1; padding: 2px 5px; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--r-xs); color: var(--text-secondary); }
+  [data-theme="light"] .tag { border-color: rgba(1,27,43,0.2); }
+  .tag[data-prov="sim"]    { border-color: var(--c-signal-dark); color: var(--c-signal-light); }
+  [data-theme="light"] .tag[data-prov="sim"] { color: var(--c-signal-dark); }
+  .tag[data-prov="doc"]    { color: var(--text-secondary); }
+  .tag[data-prov="field"]  { border-style: dashed; }
+
+  .vc-actions { display: flex; gap: var(--s-2); margin-top: var(--s-4); }
+  .btn {
+    font-family: var(--f-body); font-size: 15px; font-weight: var(--fw-semibold); letter-spacing: 0;
+    height: var(--sz-btn); padding: 0 var(--s-5); border-radius: var(--r-sm); border: 1px solid transparent; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; min-width: 112px;
+    transition: background-color var(--t-micro) var(--e-standard), color var(--t-micro) var(--e-standard), border-color var(--t-micro) var(--e-standard);
+  }
+  .btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  .btn-primary { background: var(--c-signal); color: var(--text-on-accent); }
+  [data-theme="light"] .btn-primary { background: var(--c-signal-dark); color: #fff; }
+  .btn-primary:hover { background: var(--c-signal-light); }
+  [data-theme="light"] .btn-primary:hover { background: #a33200; }
+  .btn-primary:active { background: var(--c-signal-dark); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--text-primary); border-color: var(--border-strong); }
+  .btn-secondary:hover { background: var(--bg-row-hover); }
+  .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.4; pointer-events: none; }
+  .btn .spinner { width: 16px; height: 16px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* loading skeleton */
+  .vessel-card[data-state="loading"] .vc-name, .vessel-card[data-state="loading"] .vc-rows dd, .vessel-card[data-state="loading"] .body-sm {
+    color: transparent !important; background: rgba(255,255,255,0.08); border-radius: var(--r-xs); user-select: none;
+  }
+  .vessel-card[data-state="loading"] .tag, .vessel-card[data-state="loading"] .sim { visibility: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .vessel-card, .btn, .pill { transition: none; }
+    .pill i, .btn .spinner { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="grid">
+
+  <div>
+    <p class="state-label">Default</p>
+    <article class="vessel-card" aria-labelledby="v1">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip B-14 · Hull NY-4471-RB</p>
+          <h4 id="v1" class="vc-name">Lake Effect</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · 32 ft Sea Ray Sundancer</p>
+        </div>
+        <span class="pill" data-status="docked"><i></i>Docked</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>Last seen</dt><dd>14 Nov · 08:12 <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>32.0 / 10.5 / 2.8 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Basin position</dt><dd>42.8706, -78.8792 <span class="tag" data-prov="doc">DOC</span></dd></div>
+        <div><dt>Services due</dt><dd>Pump-out <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary">Fly to</button>
+        <button class="btn btn-secondary">History</button>
+      </footer>
+    </article>
+  </div>
+
+  <div>
+    <p class="state-label">Hover</p>
+    <article class="vessel-card" data-state="hover" aria-labelledby="v2">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip A-03 · Hull NY-2210-KD</p>
+          <h4 id="v2" class="vc-name">Ohio Street</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · 24 ft Bennington pontoon</p>
+        </div>
+        <span class="pill" data-status="underway"><i></i>Underway</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>Departed</dt><dd>14 Nov · 07:40 <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>Heading</dt><dd>Outer Harbor · 4.2 kn <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>24.0 / 8.5 / 1.6 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Services due</dt><dd>None <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary">Fly to</button>
+        <button class="btn btn-secondary">History</button>
+      </footer>
+    </article>
+  </div>
+
+  <div>
+    <p class="state-label">Selected</p>
+    <article class="vessel-card" data-state="selected" aria-labelledby="v3">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip C-21 · Hull NY-8820-MT</p>
+          <h4 id="v3" class="vc-name">Niagara Frontier</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · 38 ft Catalina sloop</p>
+        </div>
+        <span class="pill" data-status="arriving"><i></i>Arriving</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>ETA</dt><dd>09:05 · 11 min <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>38.0 / 12.0 / 5.3 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Basin position</dt><dd>42.8698, -78.8810 <span class="tag" data-prov="doc">DOC</span></dd></div>
+        <div><dt>Services due</dt><dd>Fuel <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary" autofocus>Fly to</button>
+        <button class="btn btn-secondary">History</button>
+      </footer>
+    </article>
+  </div>
+
+  <div>
+    <p class="state-label">Overdue</p>
+    <article class="vessel-card" aria-labelledby="v4">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip B-07 · Hull NY-1193-QA</p>
+          <h4 id="v4" class="vc-name">Canalside Drift</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · 27 ft Boston Whaler</p>
+        </div>
+        <span class="pill" data-status="overdue"><i></i>Overdue</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>Expected</dt><dd class="err">13 Nov · 18:30 · 14 h late <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>Last seen</dt><dd>13 Nov · 15:02 <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>27.0 / 9.0 / 1.9 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Contact</dt><dd>Pending <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary">Fly to</button>
+        <button class="btn btn-secondary">Log contact</button>
+      </footer>
+    </article>
+  </div>
+
+  <div>
+    <p class="state-label">Loading</p>
+    <article class="vessel-card" data-state="loading" aria-busy="true" aria-labelledby="v5">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip D-02 · Hull —</p>
+          <h4 id="v5" class="vc-name">Loading vessel</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · placeholder text here</p>
+        </div>
+        <span class="pill" data-status="winterized"><i></i>Winterized</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>Last seen</dt><dd>00 Nov · 00:00 <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>00.0 / 00.0 / 0.0 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Basin position</dt><dd>00.0000, -00.0000 <span class="tag" data-prov="doc">DOC</span></dd></div>
+        <div><dt>Services due</dt><dd>Placeholder <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary" disabled><span class="spinner" aria-label="Loading"></span></button>
+        <button class="btn btn-secondary" disabled>History</button>
+      </footer>
+    </article>
+  </div>
+
+  <div data-theme="light" style="padding: 24px; background: var(--bg-canvas); border-radius: 20px; background-image: linear-gradient(rgba(1,27,43,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(1,27,43,0.06) 1px, transparent 1px); background-size: 48px 48px;">
+    <p class="state-label">Chart mode (light)</p>
+    <article class="vessel-card" data-state="selected" aria-labelledby="v6">
+      <header class="vc-head">
+        <div>
+          <p class="label">Slip B-14 · Hull NY-4471-RB</p>
+          <h4 id="v6" class="vc-name">Lake Effect</h4>
+          <p class="body-sm muted">Owner <span class="sim">SIM</span> · 32 ft Sea Ray Sundancer</p>
+        </div>
+        <span class="pill" data-status="docked"><i></i>Docked</span>
+      </header>
+      <dl class="vc-rows">
+        <div><dt>Last seen</dt><dd>14 Nov · 08:12 <span class="tag" data-prov="sim">SIM</span></dd></div>
+        <div><dt>LOA / beam / draft</dt><dd>32.0 / 10.5 / 2.8 ft <span class="tag" data-prov="assume">ASSUME</span></dd></div>
+        <div><dt>Basin position</dt><dd>42.8706, -78.8792 <span class="tag" data-prov="doc">DOC</span></dd></div>
+        <div><dt>Services due</dt><dd>Pump-out <span class="tag" data-prov="field">FIELD</span></dd></div>
+      </dl>
+      <footer class="vc-actions">
+        <button class="btn btn-primary">Fly to</button>
+        <button class="btn btn-secondary">History</button>
+      </footer>
+    </article>
+  </div>
+
+</div>
+</body>
+</html>

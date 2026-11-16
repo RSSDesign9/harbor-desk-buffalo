@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harbor Desk: an independent concept for a 3D Buffalo River marina with a simulated slip-review workflow. Simulated data; assumed slip layout." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- T24: the 3D poster is the first meaningful paint on 3D layouts (mobile defaults to the plan). -->
+    <link rel="preload" as="image" href="/assets/poster/harbor-1600.webp" imagesrcset="/assets/poster/harbor-1600.webp 1600w, /assets/poster/harbor-2400.webp 2400w" imagesizes="100vw" media="(min-width: 768px)" fetchpriority="high" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Harbor Desk · Buffalo River · Independent concept</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Static pre-hydration shell so the first paint is meaningful even before JS runs. -->
+      <p style="font-family: system-ui, sans-serif; color: #d5dfe3; background: #011b2b; margin: 0; padding: 24px; min-height: 100vh; box-sizing: border-box;">
+        Loading Harbor Desk… Independent concept · simulated data · assumed slip layout.
+      </p>
+    </div>
+    <noscript>Harbor Desk needs JavaScript. It is an independent concept with simulated data.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

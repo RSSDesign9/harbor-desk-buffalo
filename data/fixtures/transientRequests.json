@@ -1,0 +1,25 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "REQ-001",
+   "vesselName": "Northern Tern",
+   "type": "cabin-cruiser",
+   "modelAssetKey": "cruiser",
+   "loa_ft": 36,
+   "beam_ft": 11.5,
+   "draft_ft": 4.5,
+   "powerA": 50,
+   "receivedAt": "2026-07-15T12:30:00Z",
+   "arrivalFrom": "2026-07-15T20:00:00Z",
+   "arrivalTo": "2026-07-15T22:00:00Z",
+   "nights": 2,
+   "hullColor": "white",
+   "canvasColor": "navy",
+   "provenance": "SIM"
+  }
+ ]
+}

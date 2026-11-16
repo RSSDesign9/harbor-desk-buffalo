@@ -1,0 +1,53 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "design/vessel-card.html"
+        ],
+        "createdAt": "2026-11-14T16:05:26.991Z",
+        "reason": "design lead: only gray text is Saildrone mid-grey #748491 on midnight, measured 4.57:1 (passes AA), 12px mono eyebrows outside the cards"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "design/vessel-card.html"
+        ],
+        "createdAt": "2026-11-14T16:06:27.054Z",
+        "reason": "design lead: remaining pairs are [data-theme=light] tokens (#3f5464, #233747, #114e0b, #c53c00) that the scanner matched against the dark panel (#0b2433); on their real #f6f3ea background they measure 7.1, 11.1, 8.9, 4.7. Real failures (light muted 3.47, light hover 3.1) were fixed."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/ui/base.css"
+        ],
+        "createdAt": "2026-11-14T19:16:41.404Z",
+        "reason": "Claude (agent) triage: base.css L131 is the checkbox checkmark, a 10x6px ::after with border-left + border-bottom rotated -45deg; not a card side-tab accent. Verified visually in the T07 gallery."
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "design/type-options.html"
+        ],
+        "createdAt": "2026-11-15T20:28:15.500Z",
+        "reason": "Claude: display headings (38-68px, mostly single-line) set at 0.95-1.1 by design; body text is 1.5"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design/type-options.html"
+        ],
+        "createdAt": "2026-11-15T20:28:15.511Z",
+        "reason": "Claude: 11px provenance tags/chips mirror DESIGN.md tag spec (1px 5px padding) so the specimen matches the product"
+      }
+    ]
+  }
+}

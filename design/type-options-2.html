@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbor Desk · Primary type options, round two</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Commissioner:slnt,wght,FLAR,VOLM@-12..0,100..900,0..100,0..100&family=Bitter:ital,wght@0,100..900;1,100..900&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&family=Geologica:slnt,wght,CRSV,SHRP@-12..0,100..900,0..1,0..100&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --midnight:#011b2b; --ink-700:#233747; --ink-500:#3f5464; --ink-300:#748491;
+  --mist-200:#d5dfe3; --mist-100:#eaf1f4; --signal:#ff4d00; --signal-light:#ff7a3d;
+  --warning:#ffac00; --cyan:#7fd1e8; --success:#cef5ca; --snow:#f2f5f8; --sand:#e6e5df;
+  --river:#4e6d98; --magenta:#c842c6;
+  --work:"Work Sans", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--snow);color:var(--midnight)}
+body{margin:0;font-family:var(--work);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:72px 40px 120px}
+h1{font-family:var(--work);font-weight:600;font-size:44px;line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;max-width:900px}
+.lede{font-size:19px;max-width:760px;color:var(--ink-700);margin:0 0 28px}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 72px}
+.rules div{background:#fff;border:1px solid var(--mist-200);border-radius:10px;padding:18px 20px;font-size:15px;color:var(--ink-700)}
+.rules b{display:block;color:var(--midnight);font-weight:600;margin-bottom:4px}
+.mono{font-family:var(--mono);font-size:.86em}
+
+/* ---------- option block ---------- */
+.opt{margin:0 0 96px;padding-top:40px;border-top:1px solid var(--mist-200)}
+.opt-head{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;margin-bottom:28px}
+.opt-num{font-family:var(--mono);font-size:13px;color:var(--ink-500)}
+.opt-name{font-size:64px;line-height:1;margin:6px 0 10px}
+.opt-tag{font-size:20px;color:var(--ink-700);margin:0 0 18px;font-weight:500}
+.opt-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-500);line-height:1.7}
+.opt-why p{margin:0 0 12px;font-size:15.5px;color:var(--ink-700)}
+.opt-why p b{color:var(--midnight);font-weight:600}
+.opt-why .risk{border-left:3px solid var(--warning);padding-left:12px}
+.weights{display:flex;gap:18px;flex-wrap:wrap;align-items:baseline;margin:18px 0 0;color:var(--ink-700)}
+.weights span{font-size:34px;line-height:1}
+.weights small{display:block;font-family:var(--mono);font-size:12px;color:var(--ink-500);margin-top:6px;text-align:center}
+
+/* ---------- product mock ---------- */
+.stage{display:grid;grid-template-columns:1fr 372px;gap:14px;background:linear-gradient(160deg,#16364d 0%,#0b2a3e 45%,#06202f 100%);border-radius:16px;padding:14px;position:relative;overflow:hidden;color:#fff}
+.stage::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 40% at 30% 70%,rgba(78,109,152,.45),transparent 70%),
+  repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px);pointer-events:none}
+.left{position:relative;display:flex;flex-direction:column;gap:14px;min-height:540px}
+.kpis{display:flex;gap:10px}
+.kpi{background:rgba(1,27,43,.86);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px 10px;min-width:128px}
+.kpi .k-row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.map{flex:1;position:relative}
+.maplabel{position:absolute;color:rgba(213,223,227,.78)}
+.dock{position:absolute;left:46%;top:44%;width:200px;height:74px;border:2px solid var(--signal);transform:rotate(-24deg);border-radius:3px;background:rgba(255,77,0,.08)}
+.dock::after{content:"";position:absolute;inset:5px;border:1.5px dashed var(--warning)}
+.pierline{position:absolute;left:8%;right:4%;top:36%;height:10px;background:#5b5249;opacity:.55;transform:rotate(-14deg);border-radius:2px}
+.callout{position:absolute;left:19%;top:27%;background:rgba(1,27,43,.92);border:1px solid var(--signal);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.signletter{position:absolute;right:7%;top:12%;width:58px;height:58px;border-radius:8px;background:#f2f5f8;color:var(--midnight);display:grid;place-items:center}
+.replay{background:rgba(1,27,43,.9);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px}
+.replay .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.step{border-top:2px solid rgba(255,255,255,.18);padding-top:8px}
+.step.on{border-color:#fff}
+.step .t{display:block}
+.panel{position:relative;background:rgba(1,27,43,.93);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:0}
+.p-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid;border-radius:999px;padding:3px 10px 3px 8px;white-space:nowrap}
+.chip i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.chip.review{color:var(--warning);border-color:rgba(255,172,0,.6)}
+.chip.present{color:var(--success);border-color:rgba(206,245,202,.5)}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:1px 5px;border:1px solid var(--signal);border-radius:3px;color:var(--signal-light)}
+.tag.assume{border-color:rgba(255,255,255,.3);color:var(--mist-200)}
+.slip{display:flex;align-items:baseline;gap:10px;margin:10px 0 2px}
+.rule{height:1px;background:rgba(255,255,255,.1);margin:16px 0 14px}
+.kv{display:grid;grid-template-columns:104px 1fr auto;gap:8px 10px;align-items:baseline}
+.kv dt{color:var(--mist-200);opacity:.8}
+.kv dd{margin:0}
+.note .r-vessel{display:block;margin-top:2px}
+.note{margin-top:14px;border:1px dashed rgba(255,172,0,.6);border-radius:10px;padding:12px 14px}
+.btns{display:flex;gap:8px;margin-top:16px}
+.btn{border-radius:6px;padding:10px 16px;border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent;font:inherit}
+.btn.primary{background:var(--signal);border-color:var(--signal);color:var(--midnight)}
+
+/* light chart-mode strip */
+.chartstrip{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:14px}
+.chart{background:#9ecefc;border-radius:12px;height:150px;position:relative;overflow:hidden}
+.chart .land{position:absolute;left:0;right:0;bottom:0;height:46px;background:#b09e56}
+.chart .built{position:absolute;left:12%;bottom:46px;width:58%;height:12px;background:#cec58a}
+.chart .lbl{position:absolute;color:#0b3a5e}
+.registry{background:#fff;border:1px solid var(--mist-200);border-radius:12px;padding:6px 0;color:var(--midnight)}
+.registry .row{display:grid;grid-template-columns:62px 1fr 92px;gap:10px;padding:9px 16px;align-items:center;border-bottom:1px solid var(--mist-100)}
+.registry .row:last-child{border-bottom:0}
+.registry .hdr{color:var(--ink-500)}
+
+/* ---------- per-option role styles ---------- */
+/* role classes: .r-title .r-vessel .r-label .r-kpi .r-map .r-mapalt .r-sign .r-body .r-small .r-id .r-chip .r-btn .r-note */
+.opt .r-body{font-family:var(--work);font-size:15px;line-height:1.5}
+.opt .r-small{font-family:var(--work);font-size:14px}
+.opt .r-id{font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums}
+.opt .r-chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.opt .r-btn{font-family:var(--work);font-weight:600;font-size:15px}
+.opt .r-note{font-family:var(--work);font-size:14.5px}
+
+/* bookmarked strip */
+.bm{display:grid;grid-template-columns:auto auto 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--mist-200);border-left:4px solid var(--signal);border-radius:12px;padding:22px 26px;margin:0 0 72px}
+.bm .nm{font-family:"Atkinson Hyperlegible Next";font-weight:800;font-size:34px;letter-spacing:-.02em;line-height:1.1}
+.bm .ids{white-space:nowrap;font-family:"Atkinson Hyperlegible Mono";font-weight:500;font-size:22px;color:var(--ink-700)}
+.bm p{margin:0;font-size:15px;color:var(--ink-700)}
+.bm a{color:var(--midnight);font-weight:600}
+
+/* 6 · National Park */
+.o6 .opt-name,.o6 .weights span{font-family:"National Park"}
+.o6 .opt-name{font-weight:800;font-size:62px;letter-spacing:-.01em}
+.o6 .r-title{font-family:"National Park";font-weight:800;font-size:44px;line-height:1;letter-spacing:-.01em}
+.o6 .r-vessel{font-family:"National Park";font-weight:700;font-size:28px;line-height:1.1}
+.o6 .r-label{font-family:"National Park";font-weight:600;font-size:14px;color:var(--mist-200);letter-spacing:.01em}
+.o6 .r-kpi{font-family:"National Park";font-weight:700;font-size:48px;line-height:1;font-variant-numeric:tabular-nums}
+.o6 .r-map{font-family:"National Park";font-weight:500;font-size:24px;letter-spacing:.04em}
+.o6 .r-mapalt{font-family:"National Park";font-weight:400;font-size:16px;letter-spacing:.04em}
+.o6 .r-sign{font-family:"National Park";font-weight:800;font-size:42px;line-height:1}
+.o6 .registry .hdr{font-family:"National Park";font-weight:600;font-size:13.5px}
+.o6 .registry .vn{font-family:"National Park";font-weight:700;font-size:17.5px}
+
+/* 7 · Commissioner */
+.o7 .opt-name,.o7 .weights span{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0}
+.o7 .opt-name{font-weight:700;font-size:62px;letter-spacing:-.02em}
+.o7 .r-title{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0;font-weight:700;font-size:42px;line-height:1;letter-spacing:-.02em}
+.o7 .r-vessel{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0;font-weight:600;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+.o7 .r-label{font-family:"Commissioner";font-variation-settings:"FLAR" 0,"VOLM" 0;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist-200)}
+.o7 .r-kpi{font-family:"Commissioner";font-variation-settings:"FLAR" 70,"VOLM" 0;font-weight:600;font-size:46px;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.o7 .r-map{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0,"slnt" -12;font-weight:400;font-size:25px;letter-spacing:.03em}
+.o7 .r-mapalt{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0,"slnt" -12;font-weight:400;font-size:16px}
+.o7 .r-sign{font-family:"Commissioner";font-variation-settings:"FLAR" 100,"VOLM" 0;font-weight:800;font-size:42px;line-height:1}
+.o7 .registry .hdr{font-family:"Commissioner";font-variation-settings:"FLAR" 0;font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.o7 .registry .vn{font-family:"Commissioner";font-variation-settings:"FLAR" 100;font-weight:600;font-size:17px}
+
+/* 8 · Bitter */
+.o8 .opt-name,.o8 .weights span{font-family:"Bitter"}
+.o8 .opt-name{font-weight:800;font-size:62px;letter-spacing:-.02em}
+.o8 .r-title{font-family:"Bitter";font-weight:800;font-size:40px;line-height:1;letter-spacing:-.02em}
+.o8 .r-vessel{font-family:"Bitter";font-style:italic;font-weight:600;font-size:27px;line-height:1.1}
+.o8 .r-label{font-family:var(--work);font-weight:500;font-size:13.5px;color:var(--mist-200)}
+.o8 .r-kpi{font-family:"Bitter";font-weight:700;font-size:46px;line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.o8 .r-map{font-family:"Bitter";font-style:italic;font-weight:400;font-size:25px;letter-spacing:.03em}
+.o8 .r-mapalt{font-family:"Bitter";font-style:italic;font-weight:400;font-size:16px}
+.o8 .r-sign{font-family:"Bitter";font-weight:900;font-size:42px;line-height:1}
+.o8 .registry .hdr{font-family:var(--work);font-weight:500;font-size:13px}
+.o8 .registry .vn{font-family:"Bitter";font-style:italic;font-weight:600;font-size:16.5px}
+
+/* 9 · Saira */
+.o9 .opt-name,.o9 .weights span{font-family:"Saira"}
+.o9 .opt-name{font-weight:700;font-size:62px;font-stretch:112%;letter-spacing:-.01em}
+.o9 .r-title{font-family:"Saira";font-stretch:112%;font-weight:700;font-size:40px;line-height:1;letter-spacing:-.01em}
+.o9 .r-vessel{font-family:"Saira";font-stretch:100%;font-weight:600;font-size:27px;line-height:1.1}
+.o9 .r-label{font-family:"Saira";font-stretch:118%;font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist-200)}
+.o9 .r-kpi{font-family:"Saira";font-stretch:62%;font-weight:500;font-size:56px;line-height:.95;font-variant-numeric:tabular-nums}
+.o9 .r-map{font-family:"Saira";font-stretch:125%;font-weight:400;font-size:18px;letter-spacing:.24em;text-transform:uppercase}
+.o9 .r-mapalt{font-family:"Saira";font-stretch:125%;font-weight:400;font-size:13px;letter-spacing:.22em;text-transform:uppercase}
+.o9 .r-sign{font-family:"Saira";font-stretch:100%;font-weight:800;font-size:42px;line-height:1}
+.o9 .registry .hdr{font-family:"Saira";font-stretch:118%;font-weight:600;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.o9 .registry .vn{font-family:"Saira";font-weight:600;font-size:17px}
+
+/* 10 · Geologica */
+.o10 .opt-name,.o10 .weights span{font-family:"Geologica";font-variation-settings:"SHRP" 100,"CRSV" 0}
+.o10 .opt-name{font-weight:700;font-size:62px;letter-spacing:-.03em}
+.o10 .r-title{font-family:"Geologica";font-variation-settings:"SHRP" 100,"CRSV" 0;font-weight:700;font-size:42px;line-height:1;letter-spacing:-.03em}
+.o10 .r-vessel{font-family:"Geologica";font-variation-settings:"SHRP" 60,"CRSV" 0;font-weight:600;font-size:27px;line-height:1.1;letter-spacing:-.015em}
+.o10 .r-label{font-family:"Geologica";font-variation-settings:"SHRP" 0,"CRSV" 0;font-weight:500;font-size:13.5px;color:var(--mist-200)}
+.o10 .r-kpi{font-family:"Geologica";font-variation-settings:"SHRP" 100,"CRSV" 0;font-weight:600;font-size:46px;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.o10 .r-map{font-family:"Geologica";font-variation-settings:"SHRP" 0,"CRSV" 1,"slnt" -12;font-weight:300;font-size:25px;letter-spacing:.02em}
+.o10 .r-mapalt{font-family:"Geologica";font-variation-settings:"SHRP" 0,"CRSV" 1,"slnt" -12;font-weight:300;font-size:16px}
+.o10 .r-sign{font-family:"Geologica";font-variation-settings:"SHRP" 100;font-weight:800;font-size:42px;line-height:1}
+.o10 .registry .hdr{font-family:"Geologica";font-variation-settings:"SHRP" 0;font-weight:500;font-size:13px}
+.o10 .registry .vn{font-family:"Geologica";font-variation-settings:"SHRP" 60;font-weight:600;font-size:16.5px}
+
+.staff{display:none}
+/* recommendation */
+.rec{background:var(--midnight);color:#fff;border-radius:18px;padding:40px 44px}
+.rec h2{font-family:var(--work);font-weight:600;font-size:32px;margin:0 0 14px;letter-spacing:-.01em}
+.rec p{color:var(--mist-200);max-width:820px;margin:0 0 12px}
+.rec table{border-collapse:collapse;width:100%;margin-top:22px;font-size:14.5px}
+.rec th,.rec td{text-align:left;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.12);vertical-align:top}
+.rec th{color:var(--mist-200);font-weight:500;font-size:13px}
+.rec td.y{color:var(--success)} .rec td.m{color:var(--warning)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Five more primary typefaces for Harbor Desk, each paired with Work Sans</h1>
+  <p class="lede">Same B-12 moment, same sizes and density rules as round one, five new ideas. None of them repeats a direction from round one. Atkinson Hyperlegible Next stays bookmarked as the benchmark to beat.</p>
+  <div class="rules">
+    <div><b>Not in shadcn</b>All five were checked against <span class="mono">font-definitions.ts</span> (26 families) and are on Google Fonts under the OFL.</div>
+    <div><b>Wide weight range</b>Four cover 100–900. National Park covers 200–800. Three have a second axis that changes their character: flare, width or sharpness.</div>
+    <div><b>Different from round one</b>Round one covered signage, hull lettering, legibility, charts and the logbook. This round covers park signs, brass nameplates, paperwork, helm instruments and cut vinyl.</div>
+  </div>
+
+  <div class="bm">
+    <div class="nm">Atkinson Hyperlegible Next</div>
+    <div class="ids">NY 8110 BL · B-12 · 0O 1Il</div>
+    <p>Bookmarked. <a href="type-options#atkinson">See it in round one</a>. Each option below is judged on whether it beats Atkinson on personality without losing much legibility.</p>
+  </div>
+
+  <!-- ================= 6 ================= -->
+  <section class="opt o6">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">06 · Park signage</div>
+        <div class="opt-name">National Park</div>
+        <p class="opt-tag">Drawn from the routed wooden signs of the US National Park Service</p>
+        <div class="opt-meta">Jeremy Shellhorn, Andrea Herstowski, Ben Hoepner and others · weights 200–800 · added to Google Fonts April 2025 · OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Ag</span><small>200</small></div>
+          <div><span style="font-weight:400">Ag</span><small>400</small></div>
+          <div><span style="font-weight:600">Ag</span><small>600</small></div>
+          <div><span style="font-weight:800">Dock B</span><small>800</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> It's based on the brown signs routed into wood at every American park, boat launch and public waterfront. The Erie Basin and Buffalo River marinas sit inside public waterfront parks, so this is the lettering people already pass on the way to their slip. The routing gives it soft corners and a carved feel that no SaaS grotesque has.</p>
+        <p><b>Who it serves.</b> Boaters and seasonal staff for whom the marina is leisure, not an office. It feels like a place rather than a piece of software, while staying a plain sans-serif that holds up at 14 px.</p>
+        <p><b>Distinctiveness.</b> It's rare: Google Fonts popularity rank #764, and only on the service since April 2025. A hiring manager won't have seen it in another portfolio.</p>
+        <p class="risk"><b>Watch.</b> There's no italic, so the water-in-italic idea doesn't work here. Water labels need letter spacing instead. Some will also see it as "outdoorsy", so keep it to names, headings and counts.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 7 ================= -->
+  <section class="opt o7">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">07 · Brass nameplate</div>
+        <div class="opt-name">Commissioner</div>
+        <p class="opt-tag">A clean sans with a flare axis that adds engraved-looking flared terminals as text gets bigger</p>
+        <div class="opt-meta">Kostas Bartsokas · weights 100–900 · FLAR 0–100 · VOLM 0–100 · slnt 0 to −12 · OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200;font-variation-settings:'FLAR' 0">Ag</span><small>200 · flare 0</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500 · flare 100</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800 · flare 100</small></div>
+          <div><span style="font-weight:600">Lake Effect</span><small>600 · flare 100</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Boats carry engraved metal: builder's plates, hull ID plates, the brass name board on the stern. At flare 100, Commissioner gets those flared, chiselled endings in vessel names and headings. At flare 0 it's a quiet sans for labels. Personality becomes one dial tied to text size.</p>
+        <p><b>Who it serves.</b> Owners and managers, people who care about a boat's name and history. It also gives dock staff a calm, unflared label style at small sizes, so density doesn't suffer.</p>
+        <p><b>System angle.</b> <span class="mono">--flare-display: 100</span>, <span class="mono">--flare-ui: 0</span>. One family, two voices, no second download.</p>
+        <p class="risk"><b>Watch.</b> At flare 100 and low weight it drifts toward wedding stationery. Keep flare to weights of 500 and up, and don't let it reach buttons.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 8 ================= -->
+  <section class="opt o8">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">08 · Registry paperwork</div>
+        <div class="opt-name">Bitter</div>
+        <p class="opt-tag">A slab serif built for screens, the voice of berth agreements and registration forms</p>
+        <div class="opt-meta">Sol Matas, Huerta Tipográfica · weights 100–900 + italics · OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Ag</span><small>200</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800</small></div>
+          <div><span style="font-weight:600;font-style:italic">Lake Effect</span><small>600 italic</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Harbor Desk is a registry, and registries are paper: berth agreements, state registrations, the clipboard in the dock office. Slab serifs are the typewriter-and-form voice of that world. Bitter was drawn for reading on screens, so its slabs stay crisp at 15 px on a dark panel, where a bookish serif would go thin.</p>
+        <p><b>Who it serves.</b> The manager reconciling records. It suggests "this is the official record" without looking like legal software, and the italic keeps round one's chart rule for water and vessel names.</p>
+        <p><b>Versus Newsreader.</b> It's sturdier and more mechanical. It has less charm but survives small sizes, dark backgrounds and lower-quality tablet screens better.</p>
+        <p class="risk"><b>Watch.</b> It's popular (rank #114) and was everywhere in 2012–2016 blogs. Only the italic-for-water rule and heavy weights stop it from feeling dated.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 9 ================= -->
+  <section class="opt o9">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">09 · Helm instruments</div>
+        <div class="opt-name">Saira</div>
+        <p class="opt-tag">A squared technical sans with a width axis from 50% to 125%, inspired by marine electronics</p>
+        <div class="opt-meta">Omnibus-Type, Héctor Gatti · weights 100–900 + italics · wdth 50–125 · OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200">Ag</span><small>200</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800</small></div>
+          <div><span style="font-weight:500;font-stretch:62%;font-size:44px">126 · 48</span><small>500 · 62%</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Every boat has a helm with a chartplotter, depth sounder and VHF, all of which use squared, condensed numerals made to be read at a glance on a moving deck. Saira brings that instrument feel to KPIs and slip numbers. The width axis does the density work: 62% for counts, 118% for small caps labels.</p>
+        <p><b>Who it serves.</b> Dock staff and dockmasters who read numbers more than words. Squared numerals stay distinct at a distance, and the narrow width packs three KPI tiles where two used to fit.</p>
+        <p><b>Fit with 3D.</b> Of all ten options, it sits most naturally over a real-time 3D scene. It looks like an overlay on a live instrument.</p>
+        <p class="risk"><b>Watch.</b> This is the riskiest with a picky reviewer: squared sans-serifs can read as gaming or motorsport. It's also common (rank #50). Keep it for numbers and headings only; Work Sans has to carry all prose.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <!-- ================= 10 ================= -->
+  <section class="opt o10">
+    <div class="opt-head">
+      <div>
+        <div class="opt-num">10 · Cut vinyl</div>
+        <div class="opt-name">Geologica</div>
+        <p class="opt-tag">A geometric grotesque with a sharpness axis that cuts square corners into curves, like plotter-cut vinyl</p>
+        <div class="opt-meta">Monokrom (Sindre Bremnes, Frode Helland) · weights 100–900 · SHRP 0–100 · CRSV 0–1 · slnt 0 to −12 · OFL</div>
+        <div class="weights">
+          <div><span style="font-weight:200;font-variation-settings:'SHRP' 0">Ag</span><small>200 · sharp 0</small></div>
+          <div><span style="font-weight:500">Ag</span><small>500 · sharp 100</small></div>
+          <div><span style="font-weight:800">Ag</span><small>800 · sharp 100</small></div>
+          <div><span style="font-weight:700">NY 8110 BL</span><small>700 · sharp 100</small></div>
+        </div>
+      </div>
+      <div class="opt-why">
+        <p><b>Why it fits.</b> Boat names and registration numbers are cut from vinyl sheet and applied by hand. Federal rules (33 CFR 173.27) require bow numbers in "plain vertical block characters" at least 3 inches tall. Geologica at sharp 0 is that plain block letter, for IDs and labels. At sharp 100 the curves get cut corners, which gives headings and counts the look of fresh cut lettering.</p>
+        <p><b>Who it serves.</b> Everyone fairly evenly. It has a large x-height, open shapes and is strong at 13 px. Of this round it comes closest to Atkinson's legibility while having more visible character.</p>
+        <p><b>Craft detail.</b> The cursive axis turns on single-storey <i>a</i> and <i>y</i> for water labels, a softer way to say "this is water" when there's no true italic.</p>
+        <p class="risk"><b>Watch.</b> At sharp 100 and heavy weight it can look like a tech-startup display face. Hold the sharpness to headings and counts, at sizes of 24 px and up.</p>
+      </div>
+    </div>
+    <!--MOCK-->
+  </section>
+
+  <section class="rec">
+    <h2>Recommendation: 06 National Park, tested against the bookmark</h2>
+    <p>National Park has the most honest story of the ten: it's the lettering of American public waterfronts, rarely seen in software and new to Google Fonts. It gives Harbor Desk a sense of place with no extra ornament, which is what a hiring manager remembers.</p>
+    <p>A hybrid worth trying: <b>National Park</b> for names, headings and counts, <b>Work Sans</b> for UI and prose, and <b>Atkinson Hyperlegible Mono</b> in place of IBM Plex Mono for hull IDs and slip numbers. That's still three families, and your bookmark goes where legibility matters most. Runner-up: 10 Geologica, the closest to Atkinson's legibility with more character.</p>
+    <table>
+      <tr><th></th><th>Personality</th><th>Dense-data fit</th><th>Marina-user fit</th><th>Distinctiveness (GF popularity rank)</th><th>Pairing with Work Sans</th></tr>
+      <tr><td>03 Atkinson Next (bookmark)</td><td class="m">Medium</td><td class="y">High</td><td class="y">Best (glare, age, IDs)</td><td class="y">#449</td><td class="y">Clear contrast</td></tr>
+      <tr><td>06 National Park</td><td class="y">High</td><td class="y">Good</td><td class="y">Public waterfront</td><td class="y">#764, rare</td><td class="y">Strong contrast</td></tr>
+      <tr><td>07 Commissioner</td><td class="y">High at display</td><td class="y">High (flare off)</td><td class="m">Owners, less dock staff</td><td class="y">#311</td><td class="m">Blurs at flare 0</td></tr>
+      <tr><td>08 Bitter</td><td class="m">Medium</td><td class="y">High</td><td class="y">Records, paperwork</td><td class="m">#114, dated risk</td><td class="y">Classic slab/sans</td></tr>
+      <tr><td>09 Saira</td><td class="y">High</td><td class="y">Best for numbers</td><td class="y">Helm, glanceable</td><td class="m">#50, common</td><td class="m">Can feel gamey</td></tr>
+      <tr><td>10 Geologica</td><td class="y">Medium-high</td><td class="y">High</td><td class="y">Even across users</td><td class="y">#184</td><td class="y">Clear contrast</td></tr>
+    </table>
+  </section>
+
+</div>
+
+<template id="mock">
+  <div class="stage">
+    <div class="left">
+      <div class="kpis">
+        <div class="kpi"><div class="k-row"><span class="r-label">Slips</span><span class="tag assume">ASSUME</span></div><div class="r-kpi">126</div></div>
+        <div class="kpi"><div class="k-row"><span class="r-label">Vessels</span><span class="tag">SIM</span></div><div class="r-kpi">48</div></div>
+        <div class="kpi"><div class="k-row"><span class="r-label">Needs review</span><span class="tag">SIM</span></div><div class="r-kpi" style="color:var(--warning)">1</div></div>
+      </div>
+      <div class="map">
+        <div class="pierline"></div>
+        <div class="maplabel r-map" style="left:6%;bottom:22%">Buffalo River</div>
+        <div class="maplabel r-mapalt" style="left:58%;bottom:8%">Erie Basin</div>
+        <div class="signletter r-sign">B</div>
+        <div class="dock"></div>
+        <div class="callout"><span class="r-id">B-12</span> <span class="r-small" style="color:var(--mist-200)">· Vessel present · identity unverified</span></div>
+      </div>
+      <div class="replay">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span class="r-label">Slip review · B-12</span><span class="r-btn" style="font-size:14px">Guided replay</span></div>
+        <div class="steps">
+          <div class="step on"><span class="t r-id" style="color:var(--mist-200)">08:45</span><span class="r-small">Normal</span></div>
+          <div class="step on"><span class="t r-id">09:12</span><span class="r-small" style="font-weight:600">Uncertain</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:13</span><span class="r-small">Dock check</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:18</span><span class="r-small">Staff evidence</span></div>
+          <div class="step"><span class="t r-id" style="color:var(--mist-200)">09:20</span><span class="r-small">Resolved</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="p-top"><span class="r-label">Dock B · Floating</span><span class="chip review r-chip"><i></i>Needs review</span></div>
+      <div class="slip"><span class="r-title">Slip B-12</span><span class="tag assume">ASSUME</span></div>
+      <div class="rule"></div>
+      <div class="r-label" style="margin-bottom:6px">Assigned vessel</div>
+      <div class="r-vessel">Lake Effect</div>
+      <div class="r-small" style="color:var(--mist-200);margin:2px 0 12px">29 ft cabin cruiser · <span class="r-id" style="font-size:12.5px">NY 8110 BL</span></div>
+      <dl class="kv r-body" style="margin:0">
+        <dt>Agreement</dt><dd>Seasonal</dd><dd><span class="tag">SIM</span></dd>
+        <dt>Term</dt><dd><span class="r-id" style="font-size:13px">05-01 → 10-15</span></dd><dd><span class="tag">SIM</span></dd>
+      </dl>
+      <div class="rule"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span class="r-label">Latest observation</span><span class="chip present r-chip"><i></i>Present</span></div>
+      <dl class="kv r-body" style="margin:0">
+        <dt>Source</dt><dd>Camera <span class="r-id" style="font-size:13px">C-02 · 09:12</span></dd><dd><span class="tag">SIM</span></dd>
+        <dt>Identity</dt><dd>Unverified</dd><dd></dd>
+      </dl>
+      <div class="note r-note">Possible match, not an identity: <span class="r-vessel" style="font-size:19px">Harbor Light</span>
+        <span class="staff">"Hull no. checks out, owner aboard. Moved from C-04 for pump-out." · J. Ortiz</span>
+      </div>
+      <div class="btns"><button class="btn primary r-btn">Request dock check</button><button class="btn r-btn">Confirm</button></div>
+    </div>
+  </div>
+  <div class="chartstrip">
+    <div class="chart">
+      <div class="built"></div><div class="land"></div>
+      <div class="lbl r-map" style="left:6%;top:22%;color:#0b3a5e">Lake Erie</div>
+      <div class="lbl r-mapalt" style="left:52%;top:48%;color:#0b3a5e">Buffalo River</div>
+      <div class="lbl r-id" style="right:5%;bottom:12px;color:#2a2410;font-size:12px">CHART 14833 · SIMULATED</div>
+    </div>
+    <div class="registry">
+      <div class="row hdr"><span>Slip</span><span>Vessel</span><span>Status</span></div>
+      <div class="row"><span class="r-id">B-11</span><span class="vn">Second Wind</span><span class="r-small">Docked</span></div>
+      <div class="row"><span class="r-id">B-12</span><span class="vn">Lake Effect</span><span class="r-small" style="color:#8a5a00;font-weight:600">Review</span></div>
+      <div class="row"><span class="r-id">B-14</span><span class="vn">Queen City</span><span class="r-small">Underway</span></div>
+    </div>
+  </div>
+</template>
+<script>
+  const tpl=document.getElementById('mock').innerHTML;
+  document.querySelectorAll('section.opt').forEach(s=>{s.innerHTML=s.innerHTML.replace('<!--MOCK-->',tpl)});
+</script>
+</body>
+</html>

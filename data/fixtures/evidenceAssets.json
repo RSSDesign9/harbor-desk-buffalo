@@ -1,0 +1,20 @@
+{
+ "schema": "harbor-desk/fixtures@1",
+ "generated_at": "2026-11-14T00:00:00Z",
+ "generator": "src/data/generate.ts",
+ "note": "SIM: fictional records generated deterministically by src/data/generate.ts. Not real vessels, people, observations or operations.",
+ "records": [
+  {
+   "id": "ev-7k2q",
+   "path": "assets/evidence/ev-7k2q.webp",
+   "status": "available",
+   "provenance": "SIM"
+  },
+  {
+   "id": "ev-p3m8",
+   "path": "assets/evidence/ev-p3m8.webp",
+   "status": "available",
+   "provenance": "SIM"
+  }
+ ]
+}

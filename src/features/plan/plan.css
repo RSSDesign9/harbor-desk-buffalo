@@ -1,0 +1,45 @@
+/* 2D plan (T17/T18). Dark marine by default; chart colours in the light theme (DESIGN §2.3). */
+.plan {
+  --plan-water: #0f3a4c; --plan-land: #24343f; --plan-deck: var(--c-sand-dark); --plan-berth: rgba(145, 168, 195, 0.18);
+  --plan-hull: var(--c-mist-100); --plan-line: rgba(234, 241, 244, 0.55); --plan-unknown: var(--c-sand-dark);
+  position: absolute; inset: 0; background: var(--plan-water);
+}
+[data-theme="light"] .plan {
+  --plan-water: var(--c-chart-water); --plan-land: var(--c-chart-built); --plan-deck: #6b6257; --plan-berth: rgba(255, 255, 255, 0.55);
+  --plan-hull: var(--c-ink-700); --plan-line: rgba(35, 55, 71, 0.6); --plan-unknown: #686258;
+}
+.plan-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.plan-water { fill: var(--plan-water); }
+.plan-land { fill: var(--plan-land); stroke: none; }
+.plan-headwalk { fill: none; stroke: var(--plan-deck); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.plan-slip { cursor: pointer; }
+.plan-berth { fill: var(--plan-berth); stroke: var(--plan-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.plan-slip:hover .plan-berth { stroke: var(--c-chart-cyan); stroke-width: 2; }
+.plan-slip[data-state="unknown"] .plan-berth { fill: none; stroke: var(--plan-unknown); stroke-dasharray: 4 3; }
+.plan-hull { fill: var(--plan-hull); stroke: none; pointer-events: none; }
+.plan-hull.is-stale { fill-opacity: 0.45; }
+.plan-slip[data-review] .plan-berth { stroke: var(--state-review); stroke-width: 2.5; stroke-dasharray: 6 4; }
+.plan-selected { fill: none; stroke: var(--c-signal); stroke-width: 3; vector-effect: non-scaling-stroke; pointer-events: none; }
+.plan-label { font-family: var(--f-mono); font-size: 1.6px; fill: var(--text-primary); pointer-events: none; }
+.plan-toolbar {
+  position: absolute; z-index: 2; display: flex; gap: var(--s-1); flex-wrap: wrap; padding: var(--s-1);
+  border-radius: var(--r-pill); background: var(--bg-panel-solid); border: 1px solid var(--border-hairline);
+}
+.plan-chip {
+  min-width: 44px; min-height: 44px; padding: 0 var(--s-3); border-radius: var(--r-pill); border: 0; background: transparent;
+  color: var(--text-secondary); font-weight: var(--fw-semibold); font-size: var(--fs-body-sm); cursor: pointer;
+}
+.plan-chip[aria-pressed="true"] { background: var(--text-primary); color: var(--bg-panel-solid); }
+.plan-marker {
+  position: absolute; z-index: 2; margin: 0; padding: 4px 10px; border-radius: var(--r-pill); background: var(--bg-panel-solid);
+  color: var(--text-primary); border: 1px solid var(--c-signal); font-size: var(--fs-label); white-space: nowrap; pointer-events: none;
+}
+.plan-legend {
+  position: absolute; z-index: 2; list-style: none; margin: 0; display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-3);
+  padding: var(--s-1) var(--s-3); border-radius: var(--r-sm); background: var(--bg-panel-solid); color: var(--text-primary);
+}
+.plan-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.key { width: 14px; height: 10px; border-radius: 2px; border: 1.5px solid var(--plan-line); display: inline-block; }
+.key-present { background: var(--plan-hull); border-color: var(--plan-hull); }
+.key-unknown { border-style: dashed; border-color: var(--plan-unknown); }
+.key-review { border: 2px dashed var(--state-review); }

@@ -1,0 +1,8 @@
+qa/
+design/
+scripts/
+tests/
+data/reference/
+.claude/
+.impeccable/
+*.md

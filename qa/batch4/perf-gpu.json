@@ -1,0 +1,180 @@
+{
+  "measuredAt": "2026-11-14T21:26:25.182Z",
+  "url": "http://127.0.0.1:4719",
+  "headless": true,
+  "gpuFlag": true,
+  "browser": "Chromium 159.0.8154.6",
+  "platform": "darwin arm64",
+  "results": [
+    {
+      "view": "overview",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1,
+      "drawCalls": 116,
+      "triangles": 135226,
+      "hullLods": {
+        "lod2": 15
+      },
+      "geometries": 107,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.4,
+        "max": 0.8
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 361,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.7,
+        "maxFrameMs": 16.8
+      }
+    },
+    {
+      "view": "dock-b",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1,
+      "drawCalls": 92,
+      "triangles": 179556,
+      "hullLods": {
+        "lod1": 15
+      },
+      "geometries": 109,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.3,
+        "max": 0.6
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 360,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.8,
+        "maxFrameMs": 33.3
+      }
+    },
+    {
+      "view": "b12-selected",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1,
+      "drawCalls": 82,
+      "triangles": 276736,
+      "hullLods": {
+        "lod0": 13,
+        "lod1": 2
+      },
+      "geometries": 123,
+      "textures": 6,
+      "programs": 14,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.3,
+        "max": 2.4
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 361,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.8,
+        "maxFrameMs": 16.8
+      }
+    },
+    {
+      "view": "overview",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1.75,
+      "drawCalls": 116,
+      "triangles": 135226,
+      "hullLods": {
+        "lod2": 15
+      },
+      "geometries": 107,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.5,
+        "max": 0.7
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 361,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.7,
+        "maxFrameMs": 16.8
+      }
+    },
+    {
+      "view": "dock-b",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1.75,
+      "drawCalls": 92,
+      "triangles": 179556,
+      "hullLods": {
+        "lod1": 15
+      },
+      "geometries": 109,
+      "textures": 6,
+      "programs": 13,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.5,
+        "max": 3.2
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 361,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.7,
+        "maxFrameMs": 16.8
+      }
+    },
+    {
+      "view": "b12-selected",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 2,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+      "dpr": 1.75,
+      "drawCalls": 82,
+      "triangles": 276736,
+      "hullLods": {
+        "lod0": 13,
+        "lod1": 2
+      },
+      "geometries": 123,
+      "textures": 6,
+      "programs": 14,
+      "backToBackFrameMs": {
+        "median": 0.2,
+        "p95": 0.7,
+        "max": 0.9
+      },
+      "orbit": {
+        "seconds": 6,
+        "frames": 361,
+        "medianFps": 59.88,
+        "medianFrameMs": 16.7,
+        "p95FrameMs": 16.7,
+        "maxFrameMs": 16.8
+      }
+    }
+  ]
+}

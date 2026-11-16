@@ -1,0 +1,164 @@
+{
+  "measuredAt": "2026-11-16T17:33:01.700Z",
+  "method": "Production build via vite preview; cold context, 2x display, full B-12 scenario and replay. Compressed sizes computed from dist/ with gzip -9 and brotli 11 for text; fonts and images at file size.",
+  "requestedFromOtherOrigins": [],
+  "failedRequests": [],
+  "requested": {
+    "files": 12,
+    "diskBytes": 2250339,
+    "gzipBytes": 814826,
+    "brotliBytes": 731258,
+    "byKind": {
+      "script": {
+        "files": 3,
+        "diskBytes": 1855365,
+        "gzipBytes": 458396,
+        "brotliBytes": 376183
+      },
+      "image": {
+        "files": 4,
+        "diskBytes": 251826,
+        "gzipBytes": 249969,
+        "brotliBytes": 249850
+      },
+      "style": {
+        "files": 1,
+        "diskBytes": 45385,
+        "gzipBytes": 9448,
+        "brotliBytes": 8442
+      },
+      "font": {
+        "files": 3,
+        "diskBytes": 96212,
+        "gzipBytes": 96212,
+        "brotliBytes": 96212
+      },
+      "document": {
+        "files": 1,
+        "diskBytes": 1551,
+        "gzipBytes": 801,
+        "brotliBytes": 571
+      }
+    }
+  },
+  "fonts": {
+    "files": [
+      "fonts/AtkinsonHyperlegibleMono-Variable.woff2 (15508 B)",
+      "fonts/Commissioner-Variable.woff2 (47528 B)",
+      "fonts/WorkSans-Variable.woff2 (33176 B)"
+    ],
+    "transferredBytes": 96212,
+    "budgetBytes": 200000,
+    "pass": true
+  },
+  "budget": {
+    "compressedBytes": 6000000,
+    "gzipPass": true
+  },
+  "wholeDist": {
+    "files": 24,
+    "diskBytes": 2402324,
+    "gzipBytes": 932694,
+    "brotliBytes": 846101
+  },
+  "notRequested": [
+    "THIRD-PARTY-NOTICES.txt (18487 B)",
+    "assets/Gallery-BpF3m_iK.css (1273 B)",
+    "assets/Gallery-CzXC-ApI.js (7747 B)",
+    "assets/PlanView-B4ZuIBwM.css (2798 B)",
+    "assets/PlanView-IG4njx8O.js (3665 B)",
+    "assets/evidence/ev-7k2q.webp (30578 B)",
+    "assets/evidence/ev-p3m8.webp (10960 B)",
+    "assets/poster/harbor-1600.webp (62218 B)",
+    "favicon.svg (1032 B)",
+    "fonts/AtkinsonHyperlegibleMono-OFL.txt (4436 B)",
+    "fonts/Commissioner-OFL.txt (4395 B)",
+    "fonts/WorkSans-OFL.txt (4396 B)"
+  ],
+  "files": [
+    {
+      "file": "assets/SceneRoot-DUebOQEC.js",
+      "kind": "script",
+      "diskBytes": 1135262,
+      "gzipBytes": 312140,
+      "brotliBytes": 256806
+    },
+    {
+      "file": "assets/index-DeulJJzO.js",
+      "kind": "script",
+      "diskBytes": 682573,
+      "gzipBytes": 133527,
+      "brotliBytes": 109616
+    },
+    {
+      "file": "assets/poster/harbor-2400.webp",
+      "kind": "image",
+      "diskBytes": 116010,
+      "gzipBytes": 116010,
+      "brotliBytes": 116010
+    },
+    {
+      "file": "assets/evidence/ev-7k2q@2x.webp",
+      "kind": "image",
+      "diskBytes": 109916,
+      "gzipBytes": 109916,
+      "brotliBytes": 109916
+    },
+    {
+      "file": "fonts/Commissioner-Variable.woff2",
+      "kind": "font",
+      "diskBytes": 47528,
+      "gzipBytes": 47528,
+      "brotliBytes": 47528
+    },
+    {
+      "file": "fonts/WorkSans-Variable.woff2",
+      "kind": "font",
+      "diskBytes": 33176,
+      "gzipBytes": 33176,
+      "brotliBytes": 33176
+    },
+    {
+      "file": "assets/evidence/ev-p3m8@2x.webp",
+      "kind": "image",
+      "diskBytes": 23238,
+      "gzipBytes": 23238,
+      "brotliBytes": 23238
+    },
+    {
+      "file": "fonts/AtkinsonHyperlegibleMono-Variable.woff2",
+      "kind": "font",
+      "diskBytes": 15508,
+      "gzipBytes": 15508,
+      "brotliBytes": 15508
+    },
+    {
+      "file": "assets/layout-WaKpK06w.js",
+      "kind": "script",
+      "diskBytes": 37530,
+      "gzipBytes": 12729,
+      "brotliBytes": 9761
+    },
+    {
+      "file": "assets/index-CRTKMc5a.css",
+      "kind": "style",
+      "diskBytes": 45385,
+      "gzipBytes": 9448,
+      "brotliBytes": 8442
+    },
+    {
+      "file": "assets/icons-vessels.svg",
+      "kind": "image",
+      "diskBytes": 2662,
+      "gzipBytes": 805,
+      "brotliBytes": 686
+    },
+    {
+      "file": "index.html",
+      "kind": "document",
+      "diskBytes": 1551,
+      "gzipBytes": 801,
+      "brotliBytes": 571
+    }
+  ]
+}

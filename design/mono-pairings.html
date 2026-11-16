@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Harbor Desk · Mono pairings for Commissioner and Geologica</title>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:slnt,wght,FLAR,VOLM@-12..0,100..900,0..100,0..100&family=Geologica:slnt,wght,CRSV,SHRP@-12..0,100..900,0..1,0..100&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&family=Intel+One+Mono:wght@400;500&family=Martian+Mono:wdth,wght@75..112.5,100..800&family=Azeret+Mono:wght@400;500&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f2f5f8;color:#011b2b;font-family:"Work Sans",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:48px 32px 80px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+h1{grid-column:1/-1;font-weight:600;font-size:30px;margin:0 0 4px;letter-spacing:-.01em}
+.col h2{font-size:40px;margin:0 0 14px;line-height:1.1}
+.c h2{font-family:Commissioner;font-variation-settings:"FLAR" 100;font-weight:700;letter-spacing:-.02em}
+.g h2{font-family:Geologica;font-variation-settings:"SHRP" 100;font-weight:700;letter-spacing:-.03em}
+.card{background:#011b2b;color:#fff;border-radius:12px;padding:18px 20px 16px;margin:0 0 12px}
+.card.pick{outline:3px solid #ff4d00;outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.mname{font-size:14px;font-weight:600;color:#d5dfe3}
+.verdict{font-size:13px;color:#ffac00}
+.pick .verdict{color:#ff7a3d}
+.row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.c .vn{font-family:Commissioner;font-variation-settings:"FLAR" 100;font-weight:600;font-size:24px}
+.g .vn{font-family:Geologica;font-variation-settings:"SHRP" 60;font-weight:600;font-size:24px;letter-spacing:-.015em}
+.id{font-size:calc(14px * var(--k,1));color:#fff}
+.body{font-size:14.5px;color:#d5dfe3;margin-top:8px}
+.body .id{font-size:calc(13.5px * var(--k,1))}
+.glyphs{font-size:calc(20px * var(--k,1));letter-spacing:.06em;margin-top:8px;color:#fff}
+.chip{font-size:calc(11px * var(--k,1));letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(255,172,0,.6);color:#ffac00;border-radius:99px;padding:3px 9px}
+.plex .m{font-family:"IBM Plex Mono"} .atk .m{font-family:"Atkinson Hyperlegible Mono"} .intel .m{font-family:"Intel One Mono"}
+.mart .m{font-family:"Martian Mono";font-stretch:75%;font-weight:340} .azer .m{font-family:"Azeret Mono"}
+.mart{--k:.86} .azer{--k:.92}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Which mono goes with Commissioner or Geologica</h1>
+  <!-- tpl: name, verdict, class -->
+  <div class="col c" id="c"><h2>Commissioner</h2></div>
+  <div class="col g" id="g"><h2>Geologica</h2></div>
+</div>
+<script>
+const card=(cls,name,verdict,pick)=>`<div class="card ${cls}${pick?' pick':''}"><div class="top"><span class="mname">${name}</span><span class="verdict">${verdict}</span></div>
+<div class="row"><span class="vn">Lake Effect</span><span class="m id">NY 8110 BL</span><span class="m chip">Needs review</span></div>
+<div class="body">Camera <span class="m id">C-02 · 09:12</span>, slip <span class="m id">B-12</span>, term <span class="m id">05-01 → 10-15</span></div>
+<div class="m glyphs">0O 1lI B8 S5 Z2 · 126</div></div>`;
+document.getElementById('c').insertAdjacentHTML('beforeend',
+ card('plex','IBM Plex Mono','Pick · already self-hosted',1)+
+ card('intel','Intel One Mono','Alternative · low-vision brief')+
+ card('atk','Atkinson Hyperlegible Mono','Works with both'));
+document.getElementById('g').insertAdjacentHTML('beforeend',
+ card('mart','Martian Mono · width 75%, weight 340','Pick · same geometric build',1)+
+ card('azer','Azeret Mono','Alternative · warmer')+
+ card('atk','Atkinson Hyperlegible Mono','Works with both'));
+</script>
+</body>
+</html>

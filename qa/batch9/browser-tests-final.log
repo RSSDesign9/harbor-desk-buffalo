@@ -1,0 +1,173 @@
+
+Running 70 tests using 1 worker
+
+[1/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:31:1 › axe: desktop overview, uncertain, evidence review, resolved, vessel record, replay, display menu, light theme
+[2/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:54:1 › axe: tablet and mobile layouts, plan, sheet, list and details
+[3/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:68:1 › touch targets: every visible control ≥ 24×24 CSS px; mobile workflow controls and rows ≥ 44 px tall
+[4/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:96:1 › keyboard only on tablet: requested-check path, with cancel/back, resolution and history
+[5/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:114:1 › keyboard only on mobile: direct path from the list in the sheet
+[6/70] [chromium-desktop] › tests/e2e/a11y.spec.ts:131:1 › announcements stay concise: camera movement and ambient updates are never announced
+[7/70] [chromium-desktop] › tests/e2e/failures.spec.ts:22:1 › WebGL context lost after load: the plan takes over with the same selection and open review; restart restores 3D; nothing duplicated
+[8/70] [chromium-desktop] › tests/e2e/failures.spec.ts:53:1 › WebGL unsupported (fault=webgl-unsupported): the plan is the map on desktop and the whole review works on it
+[9/70] [chromium-desktop] › tests/e2e/failures.spec.ts:64:1 › invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete
+[10/70] [chromium-desktop] › tests/e2e/failures.spec.ts:81:1 › missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged
+[11/70] [chromium-desktop] › tests/e2e/failures.spec.ts:99:1 › missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required
+[12/70] [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works
+  1) [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('tab', { name: /^Vessels/ })
+    Expected pattern: /47/
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('tab', { name: /^Vessels/ }) with timeout 5000ms
+      - waiting for getByRole('tab', { name: /^Vessels/ })
+
+
+      120 |   await expect(detail).toContainText('V-030');
+      121 |   await expect(detail).toContainText('AGR-031');
+    > 122 |   await expect(page.getByRole('tab', { name: /^Vessels/ })).toHaveText(/47/); // the set-aside vessel is not shown or counted
+          |                                                             ^
+      123 |   await page.getByRole('searchbox', { name: 'Search slips and vessels' }).fill('V-030');
+      124 |   await expect(page.getByText(/No (slips|vessels) match/)).toBeVisible();
+      125 |   await page.getByRole('searchbox', { name: 'Search slips and vessels' }).fill('');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:122:61
+
+    Error Context: test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[13/70] [chromium-desktop] › tests/e2e/failures.spec.ts:130:1 › a broken canonical scenario record is fatal: the workflow is disabled rather than guessed
+[14/70] [chromium-desktop] › tests/e2e/failures.spec.ts:144:3 › storage: storage-unavailable → “Browser storage unavailable”, an in-memory session, and the review still works
+[15/70] [chromium-desktop] › tests/e2e/failures.spec.ts:144:3 › storage: storage-corrupt → “Saved demo data was unreadable. Started fresh.”, an in-memory session, and the review still works
+[16/70] [chromium-desktop] › tests/e2e/failures.spec.ts:144:3 › storage: storage-incompatible → “Saved demo was from an older version. Started fresh.”, an in-memory session, and the review still works
+[17/70] [chromium-desktop] › tests/e2e/failures.spec.ts:153:1 › storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry
+[18/70] [chromium-desktop] › tests/e2e/failures.spec.ts:170:1 › stale, offline and unknown sources never read as empty or bookable; newer staff evidence stays distinct
+[19/70] [chromium-desktop] › tests/e2e/failures.spec.ts:196:1 › mobile with 3D failing to load: the plan is already the default and every action works
+[20/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:12:1 › fonts: only the three local variable faces load, under the 200 KB budget, from no external host
+[21/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:33:1 › gallery renders every primitive without console errors
+[22/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:43:1 › keyboard: tabs, segmented control, search escape, checkbox and tooltip
+[23/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:90:1 › loading button locks out repeat clicks and announces busy state
+[24/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:102:1 › panels fall back to solid surfaces on request
+[25/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:111:1 › reduced motion zeroes camera and micro durations
+[26/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:119:1 › storage: corrupt saved data starts fresh with a notice
+[27/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:126:1 › storage: unavailable localStorage falls back to memory and the app still works
+[28/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:139:1 › a failed 3D chunk shows a recoverable region error and “Try again” refetches it
+[29/70] [chromium-desktop] › tests/e2e/foundation.spec.ts:159:1 › hover states change the surface without changing meaning
+[30/70] [chromium-desktop] › tests/e2e/intro.spec.ts:24:1 › cold load: the poster is up before the canvas, fades once drawn, and the camera lands on Dock B
+[31/70] [chromium-desktop] › tests/e2e/intro.spec.ts:43:1 › any key skips the move straight to its end pose
+[32/70] [chromium-desktop] › tests/e2e/intro.spec.ts:52:1 › reduced motion: no move, no fade; the camera starts at Dock B
+[33/70] [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data
+  2) [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('tab', { name: /^Slips/ })
+    Expected pattern: /126/
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('tab', { name: /^Slips/ }) with timeout 5000ms
+      - waiting for getByRole('tab', { name: /^Slips/ })
+
+
+      52 |   // Counters are derived: tiles, tab labels and list rows agree with the supplied data.
+      53 |   await expect(page.locator('.summary-zone')).toContainText('/126');
+    > 54 |   await expect(page.getByRole('tab', { name: /^Slips/ })).toHaveText(/126/);
+         |                                                           ^
+      55 |   await expect(page.getByRole('tab', { name: /^Vessels/ })).toHaveText(/48/);
+      56 |   const counts: Record<string, number> = {};
+      57 |   for (const s of SITE.slips) counts[s.dock] = (counts[s.dock] ?? 0) + 1;
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/marina.spec.ts:54:59
+
+    Error Context: test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[34/70] [chromium-desktop] › tests/e2e/marina.spec.ts:71:1 › canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh)
+[35/70] [chromium-desktop] › tests/e2e/marina.spec.ts:106:1 › unknown and empty berths stay distinct; distant docks add no field of labels; scenery is not selectable
+[36/70] [chromium-desktop] › tests/e2e/marina.spec.ts:154:1 › rendering budget: draw calls stay under the aim in every view, and orbiting reuses the shadow map
+[37/70] [chromium-desktop] › tests/e2e/motion.spec.ts:35:1 › water drifts by default; Pause motion stops every ambient frame and is remembered; Resume restarts it
+[38/70] [chromium-desktop] › tests/e2e/motion.spec.ts:55:1 › a hidden tab requests no ambient frames
+[39/70] [chromium-desktop] › tests/e2e/motion.spec.ts:63:1 › reduced motion at load: still water, camera cuts, pause control explains why it is off, workflow complete
+[40/70] [chromium-desktop] › tests/e2e/motion.spec.ts:80:1 › reduced motion switched on mid-session freezes ambient motion and turns camera travel into cuts, and back
+[41/70] [chromium-desktop] › tests/e2e/release.spec.ts:6:1 › About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution
+[42/70] [chromium-desktop] › tests/e2e/release.spec.ts:41:1 › mobile reduced motion keyboard-only pending workflow and usable attribution
+[43/70] [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss
+[44/70] [chromium-desktop] › tests/e2e/release.spec.ts:83:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression
+[45/70] [chromium-desktop] › tests/e2e/responsive.spec.ts:8:1 › desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector
+[46/70] [chromium-desktop] › tests/e2e/responsive.spec.ts:32:1 › tablet 1024×768: one rail with Details / list navigation, collapsible, no collisions
+[47/70] [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; direct path resolves with taps
+[48/70] [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; pending path resolves with taps
+[49/70] [chromium-desktop] › tests/e2e/responsive.spec.ts:95:1 › changing viewport, view and theme keeps selection and the open review exactly as they were
+[50/70] [chromium-desktop] › tests/e2e/review.spec.ts:59:1 › direct path: normal → uncertain → evidence review → acknowledgment → resolution, scene and DOM in step
+[51/70] [chromium-desktop] › tests/e2e/review.spec.ts:147:1 › pending path: request twice → one task → leave, return, reload → review → resolve → one completed task
+[52/70] [chromium-desktop] › tests/e2e/review.spec.ts:192:1 › missing evidence, unchecked acknowledgment and cancel all leave the issue open
+[53/70] [chromium-desktop] › tests/e2e/review.spec.ts:222:1 › guided replay is read-only and temporally correct; Try this state branches; restart and reload reset
+[54/70] [chromium-desktop] › tests/e2e/review.spec.ts:291:1 › keyboard only: focus follows each result and every action is announced
+[55/70] [chromium-desktop] › tests/e2e/review.spec.ts:344:1 › missing thumbnail and an offline camera keep text evidence, actions and an honest presence state
+[56/70] [chromium-desktop] › tests/e2e/scene.spec.ts:53:1 › overview renders the marina with nothing selected
+[57/70] [chromium-desktop] › tests/e2e/scene.spec.ts:61:1 › clicking an EMPTY berth on the canvas selects it; inspector and list follow
+[58/70] [chromium-desktop] › tests/e2e/scene.spec.ts:80:1 › dragging across a berth orbits the camera and never selects
+[59/70] [chromium-desktop] › tests/e2e/scene.spec.ts:98:1 › a new fly-to interrupts the running one and starts from the current pose
+[60/70] [chromium-desktop] › tests/e2e/scene.spec.ts:136:1 › reduced motion cuts straight to the target
+[61/70] [chromium-desktop] › tests/e2e/scene.spec.ts:146:1 › clicks on panels never select the berth behind them
+[62/70] [chromium-desktop] › tests/e2e/scene.spec.ts:182:1 › keyboard: search B12 → Enter selects B-12; arrows + Enter move the selection; camera follows
+[63/70] [chromium-desktop] › tests/e2e/scene.spec.ts:201:1 › uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth
+[64/70] [chromium-desktop] › tests/e2e/scene.spec.ts:241:1 › no-results and invalid-selection states recover
+[65/70] [chromium-desktop] › tests/e2e/scene.spec.ts:254:1 › deep link selects a vessel; dock and needs-review filters derive from shared state
+[66/70] [chromium-desktop] › tests/e2e/scene.spec.ts:271:1 › T09 assets: detail follows camera distance, draw calls stay small, and the idle scene renders nothing
+[67/70] [chromium-desktop] › tests/e2e/scene.spec.ts:306:1 › T09 assets: no scene label, tooltip or asset request names the observed hull before verification
+[68/70] [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors
+[69/70] [chromium-desktop] › tests/e2e/nowebgl.spec.ts:10:1 › browser without WebGL: plan, list and the complete review; a plain notice; no crash
+[70/70] [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes
+  3) [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+      20 |     await page.waitForFunction(() => Boolean((window as unknown as { __harborDesk?: unknown }).__harborDesk));
+      21 |     const m = await page.evaluate(() => ({ w: innerWidth, dpr: devicePixelRatio, outer: outerWidth }));
+    > 22 |     expect(m.dpr).toBe(2); // page zoom doubles the device pixel ratio…
+         |                   ^
+      23 |     expect(m.w).toBeLessThanOrEqual(720); // …and halves the CSS viewport
+      24 |     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'mobile');
+      25 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true); // no horizontal scroll
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/zoom.spec.ts:22:19
+
+    Error Context: test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  3 failed
+    [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works 
+    [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data 
+    [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes 
+  67 passed (7.2m)

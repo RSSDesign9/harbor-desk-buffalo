@@ -1,0 +1,43 @@
+/* Dock-map legend (T29). Each swatch is a miniature plate on map water, so it matches the canvas in either theme. */
+.map-legend { display: grid; gap: var(--s-1); min-width: 0; }
+.map-legend-title { margin: 0; color: var(--text-secondary); }
+.map-legend-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-3); font-size: var(--fs-body-sm); color: var(--text-primary); }
+.map-legend-list li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; min-height: 24px; }
+.map-legend-count { color: var(--text-secondary); font-size: 12px; }
+.map-key {
+  --plate-water: #2f4a4d; /* SCENE map water: SCENE_COLORS.water darkened as in map mode */
+  width: 18px; height: 14px; flex: none; border-radius: 2px; box-sizing: border-box;
+  background-color: var(--plate-water); outline: 1px solid var(--border-hairline);
+}
+.map-key-occupied { background: var(--c-lake-sky); border: 2px solid var(--c-lake-sky); }
+.map-key-away { background: repeating-linear-gradient(135deg, var(--c-chart-cyan) 0 2.5px, var(--plate-water) 2.5px 5px); border: 2px solid var(--c-chart-cyan); }
+.map-key-reserved { background: color-mix(in srgb, var(--c-chart-green) 28%, var(--plate-water)); border: 2px dashed var(--c-chart-green); }
+.map-key-review {
+  background: repeating-linear-gradient(45deg, var(--c-warning) 0 1.5px, transparent 1.5px 4px), repeating-linear-gradient(135deg, var(--c-warning) 0 1.5px, var(--plate-water) 1.5px 4px);
+  border: 2.5px solid var(--c-warning);
+}
+.map-key-vacant { border: 1.5px solid var(--c-limestone); }
+
+/* Desktop / tablet: inside the camera panel, above the presets. */
+.view-controls[data-legend] { flex-wrap: wrap; border-radius: var(--r-md); }
+.view-controls[data-legend] .map-legend { flex: 1 1 100%; padding: var(--s-1) var(--s-2) var(--s-2); border-bottom: 1px solid var(--border-hairline); }
+.app[data-layout="desktop"] .view-controls[data-legend] { width: 480px; } /* the camera bar's layout budget (shell.css) */
+.app[data-layout="tablet"] .view-controls .map-legend-list { flex-direction: column; flex-wrap: nowrap; gap: 2px; }
+
+/* Mobile: floats over the bottom of the map row (there is no camera panel). */
+.scene-layer > .map-legend {
+  position: absolute; z-index: 2; left: var(--s-2); right: var(--s-2); bottom: var(--s-2); padding: var(--s-1) var(--s-3);
+  border-radius: var(--r-sm); background: var(--bg-panel-solid); border: 1px solid var(--border-hairline);
+  grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-3);
+}
+.scene-layer > .map-legend .map-legend-list { font-size: 12px; gap: 0 var(--s-3); }
+.scene-layer > .map-legend .map-key { width: 14px; height: 11px; }
+.app[data-layout="tablet"] .view-controls .map-legend-list { font-size: 12px; }
+.app[data-layout="tablet"] .view-controls .map-key { width: 14px; height: 11px; }
+.app[data-layout="tablet"] .view-controls .map-legend { padding: var(--s-1); }
+/* Small screens: one compact strip (the heading stays for screen readers). */
+.app[data-layout="mobile"] .scene-layer > .map-legend { display: block; left: var(--s-1); right: var(--s-1); bottom: var(--s-1); padding: 2px var(--s-2); }
+.app[data-layout="mobile"] .map-legend-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.app[data-layout="mobile"] .map-legend-list { gap: 0 var(--s-2); font-size: 11px; }
+.app[data-layout="mobile"] .map-legend-list li { min-height: 20px; gap: 4px; }
+.app[data-layout="mobile"] .map-legend-count { font-size: 11px; }
