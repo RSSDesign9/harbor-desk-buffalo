@@ -17,7 +17,7 @@ The map supports mouse navigation and arrow-key panning when focused. Display op
 
 ## Run locally
 
-Requires Node.js 22.18 or later and npm.
+Requires Node.js 24 and npm.
 
 ```sh
 npm ci

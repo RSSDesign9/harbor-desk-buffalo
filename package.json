@@ -2,10 +2,10 @@
   "name": "harbor-desk",
   "private": true,
   "version": "0.1.0",
-  "description": "Harbor Desk — independent portfolio concept: a 3D Buffalo River marina with a simulated slip-review workflow.",
+  "description": "Harbor Desk \u2014 independent portfolio concept: a 3D Buffalo River marina with a simulated slip-review workflow.",
   "type": "module",
   "engines": {
-    "node": ">=22.18"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "vite",
