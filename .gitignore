@@ -11,3 +11,6 @@ playwright-report/
 .env
 .env.*
 !.env.example
+
+# T22 showcase videos are deliverables (the root *.mp4 rule is for the authoring reference video).
+!showcase/video/*.mp4

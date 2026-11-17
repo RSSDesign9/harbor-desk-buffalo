@@ -130,7 +130,8 @@
 .app .motion-toggle { min-width: 36px; }
 
 @media (min-width: 1280px) {
-  .app .view-controls { padding: 6px; gap: 4px; }
+  /* The square icon buttons end the pill: a wider right inset keeps them clear of its curve. */
+  .app .view-controls { padding: 6px 14px 6px 6px; gap: 4px; }
   .app .topbar-place { display: none; }
 }
 @media (min-width: 768px) and (max-width: 1279.98px) {
@@ -140,7 +141,7 @@
   .app[data-layout="tablet"] .rail-nav { padding-inline: 8px; }
   .app[data-layout="tablet"] .rail-tab { padding-inline: 7px; font-size: 12px; }
   .app[data-layout="tablet"] .bottom-left-zone { width: min(280px, calc(100% - var(--rail-w) - 52px)); }
-  .app[data-layout="tablet"] .view-controls { width: auto; top: auto; bottom: 24px; }
+  .app[data-layout="tablet"] .view-controls { width: auto; top: auto; bottom: 24px; padding: var(--s-2) 14px var(--s-2) var(--s-2); }
   .app[data-layout="tablet"] .view-controls .segmented { flex-direction: row; }
   .app[data-layout="tablet"] .view-controls { flex-direction: row; }
   .app[data-layout="tablet"] .view-controls .segment { padding-inline: 12px; font-size: 12px; }

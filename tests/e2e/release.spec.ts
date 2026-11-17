@@ -26,7 +26,7 @@ test('About sources: provenance, safe links, focus, dark/light/mobile, persisten
       }
       const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
       expect(axe.violations.map((v) => `${v.id}: ${v.nodes.map(n => n.target).join(',')}`)).toEqual([]);
-      await page.screenshot({ path: `qa/batch13/about-${mobile ? 'mobile' : 'desktop'}-${light ? 'light' : 'dark'}.png` });
+      await page.screenshot({ path: `qa/handoff/about-${mobile ? 'mobile' : 'desktop'}-${light ? 'light' : 'dark'}.png` });
       await page.keyboard.press('Escape');
       await expect(dialog).not.toBeVisible();
       await expect(btn(page, mobile ? 'About / Sources' : 'About')).toBeFocused();
@@ -47,7 +47,7 @@ test('mobile reduced motion keyboard-only pending workflow and usable attributio
   await resolveByKeyboard(page, 'pending');
   expect((await session(page)).tasks).toEqual([expect.objectContaining({ status: 'completed' })]);
   await expect(page.locator('.persistent-credit')).toBeInViewport();
-  await page.screenshot({ path: 'qa/batch13/mobile-reduced-keyboard.png' });
+  await page.screenshot({ path: 'qa/handoff/mobile-reduced-keyboard.png' });
 });
 
 test('mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss', async ({ page }) => {
@@ -72,7 +72,7 @@ test('mobile opts into real 3D, selected hull remains visible above sheet, retur
   const topbar = (await page.locator('.topbar').boundingBox())!;
   expect(marker.y).toBeGreaterThanOrEqual(topbar.y + topbar.height);
   expect(marker.y + marker.height).toBeLessThanOrEqual(canvas.y + canvas.height);
-  await page.screenshot({ path: 'qa/batch13/mobile-3d.png' });
+  await page.screenshot({ path: 'qa/handoff/mobile-3d.png' });
   await btn(page, 'Display').click();
   await page.getByRole('checkbox', { name: /^Use 3D map/ }).uncheck();
   await page.keyboard.press('Escape');
@@ -102,7 +102,7 @@ test('visible GPU canvas: physical picking, list/marker/inspector sync and orbit
     await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
     await btn(page, 'Show dock-walk discrepancy').click();
     await page.waitForTimeout(1000);
-    await page.screenshot({ path: 'qa/batch13/visible-gpu-b12.png' });
+    await page.screenshot({ path: 'qa/handoff/visible-gpu-b12.png' });
     const before = await session(page);
     const p = await page.evaluate(() => window.__harborScene!.project('B-14'));
     const pose = await page.evaluate(() => window.__harborScene!.camera!.pose());
@@ -119,6 +119,6 @@ test('visible GPU canvas: physical picking, list/marker/inspector sync and orbit
     await page.mouse.click(hull!.x, hull!.y);
     await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
     await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
-    writeFileSync('qa/batch13/visible-gpu-picking.json', JSON.stringify({ browser: browser.version(), renderer, viewport: '1440x900', headless: false, passed: true }, null, 2));
+    writeFileSync('qa/handoff/visible-gpu-picking.json', JSON.stringify({ browser: browser.version(), renderer, viewport: '1440x900', headless: false, passed: true }, null, 2));
   } finally { await browser.close(); }
 });

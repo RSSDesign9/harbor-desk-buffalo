@@ -79,7 +79,7 @@ test('T30 drag and drop: verdict while dragging, drop assigns with an animated a
   await dragTo(page, 'D-01');
   await expect(page.getByTestId('drag-chip')).toContainText('D-01 · Fits');
   await expect(page.getByTestId('drag-chip')).toHaveAttribute('data-verdict', 'fits');
-  await page.screenshot({ path: 'qa/batch13/t30-drag-over-d01.png' });
+  await page.screenshot({ path: 'qa/handoff/t30-drag-over-d01.png' });
   await page.mouse.up();
   const motion = sampleMotion(page, 'ASN:ASN-0001', 4200);
   await expect(page.getByTestId('request-assigned')).toContainText('Assigned to D-01');
@@ -174,7 +174,7 @@ test('T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it
   const rows = await board.locator('li').evaluateAll((els) => els.map((e) => ({ status: e.getAttribute('data-status'), time: e.querySelector('.board-time')?.textContent ?? '' })));
   for (const r of rows) if (r.status === 'arrived') expect(r.time <= '14:00').toBe(true);
   expect(rows.some((r) => r.status === 'due')).toBe(true);
-  await page.screenshot({ path: 'qa/batch13/t31-scrub-1400-board.png' });
+  await page.screenshot({ path: 'qa/handoff/t31-scrub-1400-board.png' });
   // Back to the run: exactly as it was.
   await btn(page, 'Back to my run').click();
   expect(await session(page)).toEqual(run);

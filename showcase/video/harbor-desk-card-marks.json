@@ -1,0 +1,16 @@
+{
+  "frames": 2714,
+  "seconds": 73.77,
+  "fpsAverage": 36.8,
+  "marks": {
+    "start": 0.04,
+    "assign": 5.92,
+    "assigned": 16.55,
+    "gale": 20.16,
+    "calm": 28.74,
+    "scrub": 30.63,
+    "review": 44.11,
+    "resolved": 62.1,
+    "end": 73.77
+  }
+}

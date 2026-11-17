@@ -55,7 +55,7 @@ test('overview renders the marina with nothing selected', async ({ page }) => {
   await idle(page);
   expect(await selection(page)).toBeNull();
   expect(await page.locator('[data-testid="scene-canvas"]').getAttribute('aria-hidden')).toBe('true');
-  await page.screenshot({ path: 'qa/batch13/e2e-overview.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-overview.png' });
 });
 
 test('clicking an EMPTY berth on the canvas selects it; inspector and list follow', async ({ page }) => {
@@ -74,7 +74,7 @@ test('clicking an EMPTY berth on the canvas selects it; inspector and list follo
   await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
   await idle(page);
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
-  await page.screenshot({ path: 'qa/batch13/e2e-b12-selected-normal.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-b12-selected-normal.png' });
 });
 
 test('dragging across a berth orbits the camera and never selects', async ({ page }) => {
@@ -222,7 +222,7 @@ test('uncertain hull: picking it opens the SLIP; labels never name it; possible 
   await expect(insp.getByRole('button', { name: /possible match Harbor Light/ })).toBeVisible();
   await idle(page);
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
-  await page.screenshot({ path: 'qa/batch13/e2e-b12-selected-uncertain.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-b12-selected-uncertain.png' });
 
   // Search must not surface B-12 through the candidate.
   const search = page.getByRole('searchbox', { name: 'Search slips and vessels' });

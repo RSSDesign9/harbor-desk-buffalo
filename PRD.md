@@ -361,6 +361,8 @@ Everything below stays local and deterministic. Every new record or value is SIM
 
 A 75–90 s cut: poster → establishing move → drag-to-assign → time scrubber → dock-walk review → resolve → retained history. Keep the simulated-demo marker in frame. Per-company pitch notes stay local and are not published.
 
+*Recorded 16 Nov 2026 (T22): `showcase/video/harbor-desk-walkthrough-1600.mp4`, 77 s. The T35 gale what-if follows drag-to-assign.*
+
 ### Decisions still needed from Raj
 
 - Before T25: approve the chrome diet, the operator KPIs and single-marker labelling.

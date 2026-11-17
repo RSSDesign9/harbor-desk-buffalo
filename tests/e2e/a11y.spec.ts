@@ -20,7 +20,7 @@ async function scan(page: Page, name: string) {
 
 test.afterAll(() => {
   mkdirSync('qa/batch8', { recursive: true });
-  writeFileSync('qa/batch13/axe-results.json', JSON.stringify({ tags: TAGS, results }, null, 1));
+  writeFileSync('qa/handoff/axe-results.json', JSON.stringify({ tags: TAGS, results }, null, 1));
 });
 
 const CMDS = {

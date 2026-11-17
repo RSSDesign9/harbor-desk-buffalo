@@ -1,0 +1,1698 @@
+
+Running 95 tests using 1 worker
+
+  ✘   1 [chromium-desktop] › tests/e2e/a11y.spec.ts:31:1 › axe: desktop overview, uncertain, evidence review, resolved, vessel record, replay, display menu, light theme (30.3s)
+  ✓   2 [chromium-desktop] › tests/e2e/a11y.spec.ts:54:1 › axe: tablet and mobile layouts, plan, sheet, list and details (8.8s)
+  ✘   3 [chromium-desktop] › tests/e2e/a11y.spec.ts:68:1 › touch targets: every visible control ≥ 24×24 CSS px; mobile workflow controls and rows ≥ 44 px tall (30.1s)
+  ✘   4 [chromium-desktop] › tests/e2e/a11y.spec.ts:96:1 › keyboard only on tablet: requested-check path, with cancel/back, resolution and history (6.7s)
+  ✘   5 [chromium-desktop] › tests/e2e/a11y.spec.ts:114:1 › keyboard only on mobile: direct path from the list in the sheet (1.3s)
+  ✓   6 [chromium-desktop] › tests/e2e/a11y.spec.ts:131:1 › announcements stay concise: camera movement and ambient updates are never announced (16.3s)
+  ✘   7 [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:62:1 › T30 drag and drop: verdict while dragging, drop assigns with an animated approach (no teleport), undo sends it back (30.1s)
+  ✘   8 [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:103:1 › T30 keyboard path: Slip list → Assign, with the reason announced; held slips are never in the list (339ms)
+  ✘   9 [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:137:1 › T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it, backward never shows the future, the run is untouched (30.1s)
+  ✘  10 [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:184:1 › T31 idle frames: after scrubbing, the paused scene stops rendering; under reduced motion a jump cuts (30.1s)
+  ✓  11 [chromium-desktop] › tests/e2e/failures.spec.ts:22:1 › WebGL context lost after load: the plan takes over with the same selection and open review; restart restores 3D; nothing duplicated (14.5s)
+  ✘  12 [chromium-desktop] › tests/e2e/failures.spec.ts:53:1 › WebGL unsupported (fault=webgl-unsupported): the plan is the map on desktop and the whole review works on it (30.1s)
+  ✘  13 [chromium-desktop] › tests/e2e/failures.spec.ts:64:1 › invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete (30.1s)
+  ✘  14 [chromium-desktop] › tests/e2e/failures.spec.ts:81:1 › missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged (30.1s)
+  ✘  15 [chromium-desktop] › tests/e2e/failures.spec.ts:99:1 › missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required (30.1s)
+  ✘  16 [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works (30.2s)
+  ✓  17 [chromium-desktop] › tests/e2e/failures.spec.ts:131:1 › a broken canonical scenario record is fatal: the workflow is disabled rather than guessed (233ms)
+  ✘  18 [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-unavailable → “Browser storage unavailable”, an in-memory session, and the review still works (30.1s)
+  ✘  19 [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-corrupt → “Saved demo data was unreadable. Started fresh.”, an in-memory session, and the review still works (30.1s)
+  ✘  20 [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-incompatible → “Saved demo was from an older version. Started fresh.”, an in-memory session, and the review still works (30.1s)
+  ✘  21 [chromium-desktop] › tests/e2e/failures.spec.ts:154:1 › storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry (30.1s)
+  ✘  22 [chromium-desktop] › tests/e2e/failures.spec.ts:171:1 › stale, offline and unknown sources never read as empty or bookable; newer staff evidence stays distinct (5.3s)
+  ✘  23 [chromium-desktop] › tests/e2e/failures.spec.ts:197:1 › mobile with 3D failing to load: the plan is already the default and every action works (30.1s)
+  ✓  24 [chromium-desktop] › tests/e2e/foundation.spec.ts:12:1 › fonts: only the three local variable faces load, under the 200 KB budget, from no external host (1.0s)
+  ✓  25 [chromium-desktop] › tests/e2e/foundation.spec.ts:33:1 › gallery renders every primitive without console errors (960ms)
+  ✓  26 [chromium-desktop] › tests/e2e/foundation.spec.ts:43:1 › keyboard: tabs, segmented control, search escape, checkbox and tooltip (1.0s)
+  ✓  27 [chromium-desktop] › tests/e2e/foundation.spec.ts:90:1 › loading button locks out repeat clicks and announces busy state (2.8s)
+  ✓  28 [chromium-desktop] › tests/e2e/foundation.spec.ts:102:1 › panels fall back to solid surfaces on request (997ms)
+  ✓  29 [chromium-desktop] › tests/e2e/foundation.spec.ts:111:1 › reduced motion zeroes camera and micro durations (226ms)
+  ✓  30 [chromium-desktop] › tests/e2e/foundation.spec.ts:119:1 › storage: corrupt saved data starts fresh with a notice (244ms)
+  ✘  31 [chromium-desktop] › tests/e2e/foundation.spec.ts:126:1 › storage: unavailable localStorage falls back to memory and the app still works (5.3s)
+  ✓  32 [chromium-desktop] › tests/e2e/foundation.spec.ts:139:1 › a failed 3D chunk shows a recoverable region error and “Try again” refetches it (5.2s)
+  ✓  33 [chromium-desktop] › tests/e2e/foundation.spec.ts:159:1 › hover states change the surface without changing meaning (782ms)
+  ✓  34 [chromium-desktop] › tests/e2e/intro.spec.ts:24:1 › cold load: the poster is up before the canvas, fades once drawn, and the camera lands on Dock B (7.9s)
+  ✓  35 [chromium-desktop] › tests/e2e/intro.spec.ts:43:1 › any key skips the move straight to its end pose (6.6s)
+  ✓  36 [chromium-desktop] › tests/e2e/intro.spec.ts:52:1 › reduced motion: no move, no fade; the camera starts at Dock B (4.4s)
+  ✓  37 [chromium-desktop] › tests/e2e/keyboard-pan.spec.ts:15:1 › arrows pan every 3D preset in screen directions without changing records or zoom (12.6s)
+  ✓  38 [chromium-desktop] › tests/e2e/keyboard-pan.spec.ts:57:1 › map arrows interrupt a lens transition and repeated keys respect camera bounds (8.5s)
+  ✓  39 [chromium-desktop] › tests/e2e/keyboard-pan.spec.ts:87:1 › fallback plan pans by keyboard on mobile and resets with its zoom controls (1.1s)
+  ✘  40 [chromium-desktop] › tests/e2e/lake.spec.ts:23:1 › T35 keyboard: the gale what-if re-checks every offered slip, assigns under it, and flags an assignment that no longer fits (5.3s)
+  ✘  41 [chromium-desktop] › tests/e2e/lake.spec.ts:75:1 › T35 scene and timeline: the gale shows on the water and in the light, follows the scrubber, and the calm day is untouched (30.1s)
+  ✘  42 [chromium-desktop] › tests/e2e/lake.spec.ts:99:1 › T35 drag on the dock map under the gale: verdicts and reasons follow the what-if (9.5s)
+  ✓  43 [chromium-desktop] › tests/e2e/map.spec.ts:60:3 › map pose at 1440×900: all 126 slips visible and pickable, legend shown, a real click selects (18.5s)
+  ✓  44 [chromium-desktop] › tests/e2e/map.spec.ts:60:3 › map pose at 1024×768: all 126 slips visible and pickable, legend shown, a real click selects (17.4s)
+  ✘  45 [chromium-desktop] › tests/e2e/map.spec.ts:60:3 › map pose at 390×844: all 126 slips visible and pickable, legend shown, a real click selects (8.7s)
+  ✘  46 [chromium-desktop] › tests/e2e/map.spec.ts:95:1 › map statuses follow the scenario; presets leave the map; nothing but the camera changes (30.1s)
+  ✘  47 [chromium-desktop] › tests/e2e/map.spec.ts:126:1 › map: axe passes with the legend on desktop and mobile (13.2s)
+  ✓  48 [chromium-desktop] › tests/e2e/map.spec.ts:137:1 › mobile: a capable GPU opens on the 3D map, a low-power one on the plan; Display switches; context loss falls back (20.5s)
+  ✘  49 [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data (9.7s)
+  ✘  50 [chromium-desktop] › tests/e2e/marina.spec.ts:72:1 › canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh) (13.4s)
+  ✘  51 [chromium-desktop] › tests/e2e/marina.spec.ts:107:1 › unknown and empty berths stay distinct; distant docks add no field of labels; scenery is not selectable (14.3s)
+  ✓  52 [chromium-desktop] › tests/e2e/marina.spec.ts:155:1 › rendering budget: draw calls stay under the aim in every view, and orbiting reuses the shadow map (17.9s)
+  ✘  53 [chromium-desktop] › tests/e2e/motion.spec.ts:35:1 › water drifts by default; Pause motion stops every ambient frame and is remembered; Resume restarts it (14.0s)
+  ✓  54 [chromium-desktop] › tests/e2e/motion.spec.ts:55:1 › a hidden tab requests no ambient frames (7.5s)
+  ✘  55 [chromium-desktop] › tests/e2e/motion.spec.ts:63:1 › reduced motion at load: still water, camera cuts, pause control explains why it is off, workflow complete (11.5s)
+  ✘  56 [chromium-desktop] › tests/e2e/motion.spec.ts:80:1 › reduced motion switched on mid-session freezes ambient motion and turns camera travel into cuts, and back (14.9s)
+  ✘  57 [chromium-desktop] › tests/e2e/release.spec.ts:6:1 › About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution (30.1s)
+  ✘  58 [chromium-desktop] › tests/e2e/release.spec.ts:41:1 › mobile reduced motion keyboard-only pending workflow and usable attribution (1.3s)
+  ✘  59 [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss (30.1s)
+  ✘  60 [chromium-desktop] › tests/e2e/release.spec.ts:83:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression (8.8s)
+  ✘  61 [chromium-desktop] › tests/e2e/responsive.spec.ts:8:1 › desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector (30.1s)
+  ✘  62 [chromium-desktop] › tests/e2e/responsive.spec.ts:32:1 › tablet 1024×768: one rail with Details / list navigation, collapsible, no collisions (9.4s)
+  ✓  63 [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; direct path resolves with taps (1.1s)
+  ✓  64 [chromium-desktop] › tests/e2e/responsive.spec.ts:56:3 › mobile 390×844: plan + sheet, no 3D; pending path resolves with taps (1.1s)
+  ✓  65 [chromium-desktop] › tests/e2e/responsive.spec.ts:95:1 › changing viewport, view and theme keeps selection and the open review exactly as they were (16.4s)
+  ✘  66 [chromium-desktop] › tests/e2e/review.spec.ts:59:1 › direct path: normal → uncertain → evidence review → acknowledgment → resolution, scene and DOM in step (9.4s)
+  ✘  67 [chromium-desktop] › tests/e2e/review.spec.ts:147:1 › pending path: request twice → one task → leave, return, reload → review → resolve → one completed task (30.1s)
+  ✘  68 [chromium-desktop] › tests/e2e/review.spec.ts:192:1 › missing evidence, unchecked acknowledgment and cancel all leave the issue open (30.1s)
+  ✘  69 [chromium-desktop] › tests/e2e/review.spec.ts:222:1 › guided replay is read-only and temporally correct; Try this state branches; restart and reload reset (30.1s)
+  ✘  70 [chromium-desktop] › tests/e2e/review.spec.ts:291:1 › keyboard only: focus follows each result and every action is announced (7.0s)
+  ✘  71 [chromium-desktop] › tests/e2e/review.spec.ts:344:1 › missing thumbnail and an offline camera keep text evidence, actions and an honest presence state (30.1s)
+  ✓  72 [chromium-desktop] › tests/e2e/scene.spec.ts:53:1 › overview renders the marina with nothing selected (14.9s)
+  ✘  73 [chromium-desktop] › tests/e2e/scene.spec.ts:61:1 › clicking an EMPTY berth on the canvas selects it; inspector and list follow (14.1s)
+  ✓  74 [chromium-desktop] › tests/e2e/scene.spec.ts:80:1 › dragging across a berth orbits the camera and never selects (12.1s)
+  ✓  75 [chromium-desktop] › tests/e2e/scene.spec.ts:98:1 › a new fly-to interrupts the running one and starts from the current pose (8.0s)
+  ✓  76 [chromium-desktop] › tests/e2e/scene.spec.ts:136:1 › reduced motion cuts straight to the target (5.2s)
+  ✘  77 [chromium-desktop] › tests/e2e/scene.spec.ts:146:1 › clicks on panels never select the berth behind them (9.6s)
+  ✓  78 [chromium-desktop] › tests/e2e/scene.spec.ts:189:1 › keyboard: search B12 → Enter selects B-12; arrows + Enter move the selection; camera follows (8.5s)
+  ✘  79 [chromium-desktop] › tests/e2e/scene.spec.ts:208:1 › uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth (9.8s)
+  ✓  80 [chromium-desktop] › tests/e2e/scene.spec.ts:248:1 › no-results and invalid-selection states recover (5.3s)
+  ✘  81 [chromium-desktop] › tests/e2e/scene.spec.ts:261:1 › deep link selects a vessel; dock and needs-review filters derive from shared state (10.3s)
+  ✓  82 [chromium-desktop] › tests/e2e/scene.spec.ts:278:1 › T09 assets: detail follows camera distance, draw calls stay small, and the idle scene renders nothing (9.0s)
+  ✓  83 [chromium-desktop] › tests/e2e/scene.spec.ts:313:1 › T09 assets: no scene label, tooltip or asset request names the observed hull before verification (8.1s)
+  ✘  84 [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors (5.3s)
+  ✓  85 [chromium-desktop] › tests/e2e/workspace.spec.ts:15:1 › discrepancy-first workspace completes the evidence workflow and counts unresolved work (8.9s)
+  ✓  86 [chromium-desktop] › tests/e2e/workspace.spec.ts:48:1 › list/detail navigation preserves filters and scroll; empty is never bookable by implication (8.6s)
+  ✓  87 [chromium-desktop] › tests/e2e/workspace.spec.ts:71:1 › request detail keeps fit conditions, assignment, and undo accessible (7.7s)
+  ✓  88 [chromium-desktop] › tests/e2e/workspace.spec.ts:89:3 › workspace fits 1440×900, with accessible controls and a prominent map (12.3s)
+  ✓  89 [chromium-desktop] › tests/e2e/workspace.spec.ts:89:3 › workspace fits 1024×768, with accessible controls and a prominent map (10.7s)
+  ✓  90 [chromium-desktop] › tests/e2e/workspace.spec.ts:89:3 › workspace fits 390×844, with accessible controls and a prominent map (10.3s)
+  ✓  91 [chromium-desktop] › tests/e2e/workspace.spec.ts:89:3 › workspace fits 720×450, with accessible controls and a prominent map (10.2s)
+  ✓  92 [chromium-desktop] › tests/e2e/workspace.spec.ts:106:1 › financial estimates are available on demand in arrivals, with their meaning stated (339ms)
+  ✓  93 [chromium-desktop] › tests/e2e/workspace.spec.ts:116:1 › demo replay stays read-only and returns to the same interactive run (5.7s)
+  ✘  94 [chromium-desktop] › tests/e2e/nowebgl.spec.ts:10:1 › browser without WebGL: plan, list and the complete review; a plain notice; no crash (30.1s)
+  ✘  95 [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes (1.2s)
+
+
+  1) [chromium-desktop] › tests/e2e/a11y.spec.ts:31:1 › axe: desktop overview, uncertain, evidence review, resolved, vessel record, replay, display menu, light theme 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Guided replay', exact: true })
+
+
+      40 |   await dispatch(page, { type: 'select', selection: { kind: 'vessel', id: 'V-022' } });
+      41 |   await scan(page, 'desktop vessel record (Harbor Light)');
+    > 42 |   await btn(page, 'Guided replay').click();
+         |                                    ^
+      43 |   await page.getByRole('radio', { name: '09:12 Discrepancy' }).click();
+      44 |   await scan(page, 'desktop guided replay 09:12 (read-only)');
+      45 |   await btn(page, 'Back to my run').click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/a11y.spec.ts:42:36
+
+    Error Context: test-results/a11y-axe-desktop-overview--fe562-ay-display-menu-light-theme-chromium-desktop/error-context.md
+
+    Error Context: test-results/a11y-axe-desktop-overview--fe562-ay-display-menu-light-theme-chromium-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-axe-desktop-overview--fe562-ay-display-menu-light-theme-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-axe-desktop-overview--fe562-ay-display-menu-light-theme-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium-desktop] › tests/e2e/a11y.spec.ts:68:1 › touch targets: every visible control ≥ 24×24 CSS px; mobile workflow controls and rows ≥ 44 px tall 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.boundingBox: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Details', exact: true })
+
+
+      85 |   expect(small).toEqual([]);
+      86 |   for (const name of ['Confirm identity & resolve', 'Back to observation', 'Details', 'Slips & vessels', 'Expand sheet']) {
+    > 87 |     const box = await btn(page, name).boundingBox();
+         |                                       ^
+      88 |     expect(box, `${name} is on the page`).not.toBeNull();
+      89 |     expect(box!.height, name).toBeGreaterThanOrEqual(40);
+      90 |   }
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/a11y.spec.ts:87:39
+
+    Error Context: test-results/a11y-touch-targets-every-v-ce0d5-trols-and-rows-≥-44-px-tall-chromium-desktop/error-context.md
+
+    Error Context: test-results/a11y-touch-targets-every-v-ce0d5-trols-and-rows-≥-44-px-tall-chromium-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-touch-targets-every-v-ce0d5-trols-and-rows-≥-44-px-tall-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-touch-targets-every-v-ce0d5-trols-and-rows-≥-44-px-tall-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium-desktop] › tests/e2e/a11y.spec.ts:96:1 › keyboard only on tablet: requested-check path, with cancel/back, resolution and history 
+
+    Error: Never reached /Show dock-walk discrepancy/
+
+       at helpers.ts:44
+
+      42 |     if (name.test(label)) return;
+      43 |   }
+    > 44 |   throw new Error(`Never reached ${name}`);
+         |         ^
+      45 | }
+      46 |
+      47 | /** Complete the B-12 review with the keyboard only. `path` = direct (no dock check) or pending. */
+        at tabTo (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:44:9)
+        at resolveByKeyboard (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:49:3)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/a11y.spec.ts:103:3
+
+    Error Context: test-results/a11y-keyboard-only-on-tabl-42a7a-back-resolution-and-history-chromium-desktop/error-context.md
+
+    Error Context: test-results/a11y-keyboard-only-on-tabl-42a7a-back-resolution-and-history-chromium-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-keyboard-only-on-tabl-42a7a-back-resolution-and-history-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-keyboard-only-on-tabl-42a7a-back-resolution-and-history-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium-desktop] › tests/e2e/a11y.spec.ts:114:1 › keyboard only on mobile: direct path from the list in the sheet 
+
+    Error: Never reached /Show dock-walk discrepancy/
+
+       at helpers.ts:44
+
+      42 |     if (name.test(label)) return;
+      43 |   }
+    > 44 |   throw new Error(`Never reached ${name}`);
+         |         ^
+      45 | }
+      46 |
+      47 | /** Complete the B-12 review with the keyboard only. `path` = direct (no dock check) or pending. */
+        at tabTo (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:44:9)
+        at resolveByKeyboard (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:49:3)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/a11y.spec.ts:121:3
+
+    Error Context: test-results/a11y-keyboard-only-on-mobi-ed602--from-the-list-in-the-sheet-chromium-desktop/error-context.md
+
+    Error Context: test-results/a11y-keyboard-only-on-mobi-ed602--from-the-list-in-the-sheet-chromium-desktop/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-keyboard-only-on-mobi-ed602--from-the-list-in-the-sheet-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-keyboard-only-on-mobi-ed602--from-the-list-in-the-sheet-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:62:1 › T30 drag and drop: verdict while dragging, drop assigns with an animated approach (no teleport), undo sends it back 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.boundingBox: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByTestId('request-drag')
+
+
+      31 | /** Press the request's drag handle and move the pointer to a slip; returns before releasing. */
+      32 | async function dragTo(page: Page, slipId: string) {
+    > 33 |   const handle = (await page.getByTestId('request-drag').boundingBox())!;
+         |                                                          ^
+      34 |   const p = (await page.evaluate((id) => (window as unknown as W).__harborScene.project(id), slipId))!;
+      35 |   await page.mouse.move(handle.x + 16, handle.y + handle.height / 2);
+      36 |   await page.mouse.down();
+        at dragTo (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/assign-timeline.spec.ts:33:58)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/assign-timeline.spec.ts:66:9
+
+    Error Context: test-results/assign-timeline-T30-drag-a-ab220-teleport-undo-sends-it-back-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/assign-timeline-T30-drag-a-ab220-teleport-undo-sends-it-back-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/assign-timeline-T30-drag-a-ab220-teleport-undo-sends-it-back-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:103:1 › T30 keyboard path: Slip list → Assign, with the reason announced; held slips are never in the list 
+
+    TypeError: expect(received).toMatch(expected)
+
+    Matcher error: received value must be a string
+
+    Received has value: undefined
+
+      105 |   const list = page.getByRole('combobox', { name: 'Slip' });
+      106 |   const options = await list.locator('option').allTextContents();
+    > 107 |   expect(options[0]).toMatch(/· Fits$/);
+          |                      ^
+      108 |   expect(options.some((o) => /· Tight$/.test(o))).toBe(true);
+      109 |   expect(options.some((o) => /· No fit$/.test(o))).toBe(true);
+      110 |   expect(options.some((o) => o.startsWith('B-12'))).toBe(false);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/assign-timeline.spec.ts:107:22
+
+    Error Context: test-results/assign-timeline-T30-keyboa-9c98b-slips-are-never-in-the-list-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/assign-timeline-T30-keyboa-9c98b-slips-are-never-in-the-list-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/assign-timeline-T30-keyboa-9c98b-slips-are-never-in-the-list-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:137:1 › T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it, backward never shows the future, the run is untouched 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      138 |   await openApp(page, '', { scene: true });
+      139 |   await btn(page, 'Explore slip review').click();
+    > 140 |   await btn(page, 'Show dock-walk discrepancy').click();
+          |                                                 ^
+      141 |   const run = await session(page);
+      142 |   const scrub = page.getByRole('slider', { name: 'Day timeline' });
+      143 |   await scrub.focus();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/assign-timeline.spec.ts:140:49
+
+    Error Context: test-results/assign-timeline-T31-scrubb-d17a1-future-the-run-is-untouched-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/assign-timeline-T31-scrubb-d17a1-future-the-run-is-untouched-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/assign-timeline-T31-scrubb-d17a1-future-the-run-is-untouched-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:184:1 › T31 idle frames: after scrubbing, the paused scene stops rendering; under reduced motion a jump cuts 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.focus: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('slider', { name: 'Day timeline' })
+
+
+      185 |   await openApp(page, '', { scene: true });
+      186 |   const scrub = page.getByRole('slider', { name: 'Day timeline' });
+    > 187 |   await scrub.focus();
+          |               ^
+      188 |   await page.keyboard.press('End');
+      189 |   await page.waitForTimeout(1500);
+      190 |   const a = await frame(page);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/assign-timeline.spec.ts:187:15
+
+    Error Context: test-results/assign-timeline-T31-idle-f-1be50--reduced-motion-a-jump-cuts-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/assign-timeline-T31-idle-f-1be50--reduced-motion-a-jump-cuts-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/assign-timeline-T31-idle-f-1be50--reduced-motion-a-jump-cuts-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium-desktop] › tests/e2e/failures.spec.ts:53:1 › WebGL unsupported (fault=webgl-unsupported): the plan is the map on desktop and the whole review works on it 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      10 | async function resolveDirect(page: Page) {
+      11 |   await btn(page, 'Explore slip review').click();
+    > 12 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+      15 |   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:12:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:59:3
+
+    Error Context: test-results/failures-WebGL-unsupported-db100-he-whole-review-works-on-it-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-WebGL-unsupported-db100-he-whole-review-works-on-it-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-WebGL-unsupported-db100-he-whole-review-works-on-it-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium-desktop] › tests/e2e/failures.spec.ts:64:1 › invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Explore slip review', exact: true })
+
+
+       9 |
+      10 | async function resolveDirect(page: Page) {
+    > 11 |   await btn(page, 'Explore slip review').click();
+         |                                          ^
+      12 |   await btn(page, 'Show dock-walk discrepancy').click();
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:11:42)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:75:9
+
+    Error Context: test-results/failures-invalid-geometry--1d723-based-review-still-complete-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-invalid-geometry--1d723-based-review-still-complete-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-invalid-geometry--1d723-based-review-still-complete-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium-desktop] › tests/e2e/failures.spec.ts:81:1 › missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Explore slip review', exact: true })
+
+
+      83 |   await dispatch(page, { type: 'advanceToUncertain' });
+      84 |   await expect(page.getByText('Some boat models failed to build')).toBeVisible();
+    > 85 |   await btn(page, 'Explore slip review').click();
+         |                                          ^
+      86 |   await page.waitForFunction(() => (window as unknown as { __harborScene: { hull(id: string): { fallback?: boolean } | null } }).__harborScene.hull('B-12')?.fallback === true);
+      87 |   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
+      88 |   const before = await hull(page, 'B-12');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:85:42
+
+    Error Context: test-results/failures-missing-boat-mode-564a1-identity-workflow-unchanged-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-missing-boat-mode-564a1-identity-workflow-unchanged-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-missing-boat-mode-564a1-identity-workflow-unchanged-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium-desktop] › tests/e2e/failures.spec.ts:99:1 › missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      100 |   await openApp(page, '&fault=evidence');
+      101 |   await btn(page, 'Explore slip review').click();
+    > 102 |   await btn(page, 'Show dock-walk discrepancy').click();
+          |                                                 ^
+      103 |   await expect(page.getByTestId('camera-evidence-missing')).toContainText('Image unavailable · text evidence below');
+      104 |   await expect(page.getByTestId('camera-evidence-text')).toContainText('stern name not legible');
+      105 |   await btn(page, 'Review observation').click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:102:49
+
+    Error Context: test-results/failures-missing-evidence--7b047-wledgment-is-still-required-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-missing-evidence--7b047-wledgment-is-still-required-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-missing-evidence--7b047-wledgment-is-still-required-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Explore slip review', exact: true })
+
+
+       9 |
+      10 | async function resolveDirect(page: Page) {
+    > 11 |   await btn(page, 'Explore slip review').click();
+         |                                          ^
+      12 |   await btn(page, 'Show dock-walk discrepancy').click();
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:11:42)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:127:9
+
+    Error Context: test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-missing-provenanc-0635f--the-rest-of-the-demo-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-unavailable → “Browser storage unavailable”, an in-memory session, and the review still works 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      10 | async function resolveDirect(page: Page) {
+      11 |   await btn(page, 'Explore slip review').click();
+    > 12 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+      15 |   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:12:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:149:5
+
+    Error Context: test-results/failures-storage-storage-u-f155f--and-the-review-still-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-storage-storage-u-f155f--and-the-review-still-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-storage-storage-u-f155f--and-the-review-still-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-corrupt → “Saved demo data was unreadable. Started fresh.”, an in-memory session, and the review still works 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      10 | async function resolveDirect(page: Page) {
+      11 |   await btn(page, 'Explore slip review').click();
+    > 12 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+      15 |   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:12:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:149:5
+
+    Error Context: test-results/failures-storage-storage-c-cb66b--and-the-review-still-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-storage-storage-c-cb66b--and-the-review-still-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-storage-storage-c-cb66b--and-the-review-still-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-incompatible → “Saved demo was from an older version. Started fresh.”, an in-memory session, and the review still works 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      10 | async function resolveDirect(page: Page) {
+      11 |   await btn(page, 'Explore slip review').click();
+    > 12 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+      15 |   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:12:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:149:5
+
+    Error Context: test-results/failures-storage-storage-i-0b948--and-the-review-still-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-storage-storage-i-0b948--and-the-review-still-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-storage-storage-i-0b948--and-the-review-still-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [chromium-desktop] › tests/e2e/failures.spec.ts:154:1 › storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      155 |   await openApp(page, '&fault=storage-write');
+      156 |   await btn(page, 'Explore slip review').click();
+    > 157 |   await btn(page, 'Show dock-walk discrepancy').click();
+          |                                                 ^
+      158 |   await expect(page.getByText('Changes are no longer being saved')).toBeVisible();
+      159 |   expect((await storage(page)).lastSaveError).toMatch(/Quota/);
+      160 |   await page.getByTestId('request-dock-check').dblclick();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:157:49
+
+    Error Context: test-results/failures-storage-writes-fa-224a5-nothing-duplicated-on-retry-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-storage-writes-fa-224a5-nothing-duplicated-on-retry-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-storage-writes-fa-224a5-nothing-duplicated-on-retry-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [chromium-desktop] › tests/e2e/failures.spec.ts:171:1 › stale, offline and unknown sources never read as empty or bookable; newer staff evidence stays distinct 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('inspector').locator('.summary-grid')
+    Expected substring: "PresenceUnknown"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByTestId('inspector').locator('.summary-grid') with timeout 5000ms
+      - waiting for getByTestId('inspector').locator('.summary-grid')
+
+
+      175 |   const insp = page.getByTestId('inspector');
+      176 |   await expect(insp).toContainText('C-04 offline');
+    > 177 |   await expect(insp.locator('.summary-grid')).toContainText('PresenceUnknown');
+          |                                               ^
+      178 |   await expect(insp.locator('.summary-grid')).not.toContainText(/Bookable(Yes|Available)/);
+      179 |   await dispatch(page, { type: 'select', selection: { kind: 'slip', id: 'D-06' } });
+      180 |   await expect(insp.locator('.observation-headline .pill').first()).toHaveText('Presence unknown');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:177:47
+
+    Error Context: test-results/failures-stale-offline-and-ac7db-aff-evidence-stays-distinct-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-stale-offline-and-ac7db-aff-evidence-stays-distinct-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-stale-offline-and-ac7db-aff-evidence-stays-distinct-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [chromium-desktop] › tests/e2e/failures.spec.ts:197:1 › mobile with 3D failing to load: the plan is already the default and every action works 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      10 | async function resolveDirect(page: Page) {
+      11 |   await btn(page, 'Explore slip review').click();
+    > 12 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      13 |   await btn(page, 'Review observation').click();
+      14 |   await btn(page, 'Load simulated dock-check result').click();
+      15 |   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
+        at resolveDirect (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:12:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/failures.spec.ts:202:3
+
+    Error Context: test-results/failures-mobile-with-3D-fa-bf3d9-ault-and-every-action-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/failures-mobile-with-3D-fa-bf3d9-ault-and-every-action-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/failures-mobile-with-3D-fa-bf3d9-ault-and-every-action-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  20) [chromium-desktop] › tests/e2e/foundation.spec.ts:126:1 › storage: unavailable localStorage falls back to memory and the app still works 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.summary-zone .kpi')
+    Expected: 4
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.summary-zone .kpi') with timeout 5000ms
+      - waiting for locator('.summary-zone .kpi')
+        8 × locator resolved to 2 elements
+          - unexpected value "2"
+
+
+      133 |   await page.goto('/');
+      134 |   await expect(page.getByText('Browser storage unavailable')).toBeVisible();
+    > 135 |   await expect(page.locator('.summary-zone .kpi')).toHaveCount(4);
+          |                                                    ^
+      136 |   expect(errors).toEqual([]);
+      137 | });
+      138 |
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/foundation.spec.ts:135:52
+
+    Error Context: test-results/foundation-storage-unavail-1fcd9-ory-and-the-app-still-works-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/foundation-storage-unavail-1fcd9-ory-and-the-app-still-works-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/foundation-storage-unavail-1fcd9-ory-and-the-app-still-works-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21) [chromium-desktop] › tests/e2e/lake.spec.ts:23:1 › T35 keyboard: the gale what-if re-checks every offered slip, assigns under it, and flags an assignment that no longer fits 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('lake-conditions')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('lake-conditions') with timeout 5000ms
+      - waiting for getByTestId('lake-conditions')
+
+
+      23 | test('T35 keyboard: the gale what-if re-checks every offered slip, assigns under it, and flags an assignment that no longer fits', async ({ page }) => {
+      24 |   await openApp(page);
+    > 25 |   await expect(lake(page)).toBeVisible();
+         |                            ^
+      26 |   await expect(lake(page)).toContainText('SIM');
+      27 |   const calm = page.getByRole('radio', { name: 'Calm' });
+      28 |   await expect(calm).toBeChecked();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/lake.spec.ts:25:28
+
+    Error Context: test-results/lake-T35-keyboard-the-gale-cbc7c-ignment-that-no-longer-fits-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/lake-T35-keyboard-the-gale-cbc7c-ignment-that-no-longer-fits-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/lake-T35-keyboard-the-gale-cbc7c-ignment-that-no-longer-fits-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  22) [chromium-desktop] › tests/e2e/lake.spec.ts:75:1 › T35 scene and timeline: the gale shows on the water and in the light, follows the scrubber, and the calm day is untouched 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.check: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('radio', { name: 'SW gale (what-if)' })
+
+
+      78 |   const c = await weather(page);
+      79 |   expect(c).toMatchObject({ strength: 0, whitecaps: 0 });
+    > 80 |   await page.getByRole('radio', { name: 'SW gale (what-if)' }).check();
+         |                                                                ^
+      81 |   await expect.poll(async () => (await weather(page)).strength).toBeGreaterThan(0.9);
+      82 |   const g = await weather(page);
+      83 |   expect(g.whitecaps).toBe(1);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/lake.spec.ts:80:64
+
+    Error Context: test-results/lake-T35-scene-and-timelin-ce83a-d-the-calm-day-is-untouched-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/lake-T35-scene-and-timelin-ce83a-d-the-calm-day-is-untouched-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/lake-T35-scene-and-timelin-ce83a-d-the-calm-day-is-untouched-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  23) [chromium-desktop] › tests/e2e/lake.spec.ts:99:1 › T35 drag on the dock map under the gale: verdicts and reasons follow the what-if 
+
+    Error: expect(locator).toBeChecked() failed
+
+    Locator: getByRole('radio', { name: 'SW gale (what-if)' })
+    Expected: checked
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeChecked" getByRole('radio', { name: 'SW gale (what-if)' }) with timeout 5000ms
+      - waiting for getByRole('radio', { name: 'SW gale (what-if)' })
+
+
+       99 | test('T35 drag on the dock map under the gale: verdicts and reasons follow the what-if', async ({ page }) => {
+      100 |   await openApp(page, '&lake=sw-gale', { scene: true });
+    > 101 |   await expect(page.getByRole('radio', { name: 'SW gale (what-if)' })).toBeChecked();
+          |                                                                        ^
+      102 |   await page.getByRole('radio', { name: 'Map', exact: true }).click();
+      103 |   await page.waitForFunction(() => {
+      104 |     const h = (window as unknown as W).__harborScene;
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/lake.spec.ts:101:72
+
+    Error Context: test-results/lake-T35-drag-on-the-dock--4c892--reasons-follow-the-what-if-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/lake-T35-drag-on-the-dock--4c892--reasons-follow-the-what-if-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/lake-T35-drag-on-the-dock--4c892--reasons-follow-the-what-if-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  24) [chromium-desktop] › tests/e2e/map.spec.ts:60:3 › map pose at 390×844: all 126 slips visible and pickable, legend shown, a real click selects 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('map-legend')
+    Expected: visible
+    Error: strict mode violation: getByTestId('map-legend') resolved to 2 elements:
+        1) <section class="map-legend" data-testid="map-legend" aria-labelledby="_r_b_-h">…</section> aka getByRole('region', { name: 'Map · tonight' })
+        2) <section class="map-legend" data-testid="map-legend" aria-labelledby="_r_c_-h">…</section> aka getByLabel('Camera view').getByTestId('map-legend')
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('map-legend') with timeout 5000ms
+      - waiting for getByTestId('map-legend')
+
+
+      71 |     // Legend: five statuses, counted, adding up to every slip.
+      72 |     const legend = page.getByTestId('map-legend');
+    > 73 |     await expect(legend).toBeVisible();
+         |                          ^
+      74 |     await expect(legend.locator('li')).toHaveText([/^Occupied/, /^Away/, /^Reserved/, /^Needs review/, /^Vacant/]);
+      75 |     expect((await legendCounts(page)).reduce((a, b) => a + b, 0)).toBe(126);
+      76 |     await page.screenshot({ path: `qa/handoff/t29-map-${w}.png` });
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/map.spec.ts:73:26
+
+    Error Context: test-results/map-map-pose-at-390×844-al-2a7f2--shown-a-real-click-selects-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/map-map-pose-at-390×844-al-2a7f2--shown-a-real-click-selects-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/map-map-pose-at-390×844-al-2a7f2--shown-a-real-click-selects-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  25) [chromium-desktop] › tests/e2e/map.spec.ts:95:1 › map statuses follow the scenario; presets leave the map; nothing but the camera changes 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /Close details/ })
+
+
+      107 |   const p = await page.evaluate(() => (window as unknown as Win).__harborScene!.project('B-12'));
+      108 |   await page.mouse.move(p!.x + 1, p!.y + 1);
+    > 109 |   await page.getByRole('button', { name: /Close details/ }).click();
+          |                                                             ^
+      110 |   await page.mouse.move(p!.x, p!.y);
+      111 |   await expect(page.locator('.scene-marker-hover')).toContainText('B-12 · Needs review');
+      112 |   await expect(page.locator('.scene-marker-hover')).not.toContainText('Harbor Light');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/map.spec.ts:109:61
+
+    Error Context: test-results/map-map-statuses-follow-th-2ed53-hing-but-the-camera-changes-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/map-map-statuses-follow-th-2ed53-hing-but-the-camera-changes-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/map-map-statuses-follow-th-2ed53-hing-but-the-camera-changes-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  26) [chromium-desktop] › tests/e2e/map.spec.ts:126:1 › map: axe passes with the legend on desktop and mobile 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('map-legend')
+    Expected: visible
+    Error: strict mode violation: getByTestId('map-legend') resolved to 2 elements:
+        1) <section class="map-legend" data-testid="map-legend" aria-labelledby="_r_b_-h">…</section> aka getByRole('region', { name: 'Map · tonight' })
+        2) <section class="map-legend" data-testid="map-legend" aria-labelledby="_r_a_-h">…</section> aka getByLabel('Camera view').getByTestId('map-legend')
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('map-legend') with timeout 5000ms
+      - waiting for getByTestId('map-legend')
+
+
+      131 |   expect((await new AxeBuilder({ page }).withTags(tags).analyze()).violations.map((v) => v.id)).toEqual([]);
+      132 |   await page.setViewportSize({ width: 390, height: 844 });
+    > 133 |   await expect(page.getByTestId('map-legend')).toBeVisible();
+          |                                                ^
+      134 |   expect((await new AxeBuilder({ page }).withTags(tags).analyze()).violations.map((v) => v.id)).toEqual([]);
+      135 | });
+      136 |
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/map.spec.ts:133:48
+
+    Error Context: test-results/map-map-axe-passes-with-the-legend-on-desktop-and-mobile-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/map-map-axe-passes-with-the-legend-on-desktop-and-mobile-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/map-map-axe-passes-with-the-legend-on-desktop-and-mobile-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  27) [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.summary-zone')
+    Expected substring: "/126"
+    Received string:    "88%Occupied tonight111 of 126 slips3 / 15Arrived todayIn by 08:45. Open the arrivals board"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('.summary-zone') with timeout 5000ms
+      - waiting for locator('.summary-zone')
+        14 × locator resolved to <div class="summary-zone" aria-label="Marina overview">…</div>
+           - unexpected value "88%Occupied tonight111 of 126 slips3 / 15Arrived todayIn by 08:45. Open the arrivals board"
+
+
+      51 |
+      52 |   // Counters are derived: tiles, tab labels and list rows agree with the supplied data.
+    > 53 |   await expect(page.locator('.summary-zone')).toContainText('/126');
+         |                                               ^
+      54 |   await showList(page);
+      55 |   await expect(page.getByRole('tab', { name: /^Slips/ })).toHaveText(/126/);
+      56 |   await expect(page.getByRole('tab', { name: /^Vessels/ })).toHaveText(/113/);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/marina.spec.ts:53:47
+
+    Error Context: test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/marina-every-dock-is-in-th-a8e85-ters-and-list-from-the-data-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  28) [chromium-desktop] › tests/e2e/marina.spec.ts:72:1 › canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh) 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('listbox').getByRole('option', { selected: true })
+    Expected substring: "A-18"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('listbox').getByRole('option', { selected: true }) with timeout 5000ms
+      - waiting for getByRole('listbox').getByRole('option', { selected: true })
+
+
+      94 |       await expect.poll(() => selection(page), { message: `clicked ${id}` }).toEqual({ kind: 'slip', id });
+      95 |       await expect(page.getByTestId('inspector')).toContainText(`Slip ${id}`);
+    > 96 |       await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText(id);
+         |                                                                                       ^
+      97 |       clicked.push(id);
+      98 |       // Put the camera back so the next neighbour is clicked from the same framing.
+      99 |       await page.evaluate((q) => (window as unknown as { __harborScene: Bridge }).__harborScene.camera.jump(q), pose);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/marina.spec.ts:96:87
+
+    Error Context: test-results/marina-canvas-clicks-on-be-66887-rvive-the-merged-pick-mesh--chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/marina-canvas-clicks-on-be-66887-rvive-the-merged-pick-mesh--chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/marina-canvas-clicks-on-be-66887-rvive-the-merged-pick-mesh--chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  29) [chromium-desktop] › tests/e2e/marina.spec.ts:107:1 › unknown and empty berths stay distinct; distant docks add no field of labels; scenery is not selectable 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('inspector')
+    Expected substring: "No vessel present"
+    Received string:    "Slip A-02Dock A · fixedEmptyAssigned vesselNoneBookingAvailability not assessedSourceCamera C-01 · 09:12Assignment & slip detailsAgreementNone on recordUnsold nights7 of the next 7Dimensions and services are approximate, not surveyed.Length × width25 × 10 ftHeadwalkOSM way 934085283Depth9 ftShore power30 A"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" getByTestId('inspector') with timeout 5000ms
+      - waiting for getByTestId('inspector')
+        14 × locator resolved to <section class="panel inspector" data-testid="inspector" aria-labelledby="inspector-title">…</section>
+           - unexpected value "Slip A-02Dock A · fixedEmptyAssigned vesselNoneBookingAvailability not assessedSourceCamera C-01 · 09:12Assignment & slip detailsAgreementNone on recordUnsold nights7 of the next 7Dimensions and services are approximate, not surveyed.Length × width25 × 10 ftHeadwalkOSM way 934085283Depth9 ftShore power30 A"
+
+
+      127 |   await select(page, 'A-02');
+      128 |   await idle(page);
+    > 129 |   await expect(page.getByTestId('inspector')).toContainText('No vessel present');
+          |                                               ^
+      130 |   await expect(page.locator('.scene-marker')).toHaveCount(2); // the selection and the review marker only
+      131 |
+      132 |   // Clicking the elevator, a storage area or the open yard changes nothing: scenery has no identity.
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/marina.spec.ts:129:47
+
+    Error Context: test-results/marina-unknown-and-empty-b-f6575-s-scenery-is-not-selectable-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/marina-unknown-and-empty-b-f6575-s-scenery-is-not-selectable-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/marina-unknown-and-empty-b-f6575-s-scenery-is-not-selectable-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  30) [chromium-desktop] › tests/e2e/motion.spec.ts:35:1 › water drifts by default; Pause motion stops every ambient frame and is remembered; Resume restarts it 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByRole('button', { name: 'Motion paused' })
+    Expected: "true"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" getByRole('button', { name: 'Motion paused' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Motion paused' })
+
+
+      41 |   await toggle.click();
+      42 |   await expect(announcer(page)).toHaveText('Motion paused.');
+    > 43 |   await expect(page.getByRole('button', { name: 'Motion paused' })).toHaveAttribute('aria-pressed', 'true');
+         |                                                                     ^
+      44 |   await page.waitForTimeout(400);
+      45 |   expect(await framesOver(page, 1500)).toBe(0); // fully still
+      46 |   await page.reload();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/motion.spec.ts:43:69
+
+    Error Context: test-results/motion-water-drifts-by-def-83a16-membered-Resume-restarts-it-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/motion-water-drifts-by-def-83a16-membered-Resume-restarts-it-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/motion-water-drifts-by-def-83a16-membered-Resume-restarts-it-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  31) [chromium-desktop] › tests/e2e/motion.spec.ts:63:1 › reduced motion at load: still water, camera cuts, pause control explains why it is off, workflow complete 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator: getByRole('button', { name: 'Motion paused' })
+    Expected: disabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Motion paused' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Motion paused' })
+
+
+      67 |   expect(await framesOver(page, 1200)).toBe(0);
+      68 |   const toggle = page.getByRole('button', { name: 'Motion paused' });
+    > 69 |   await expect(toggle).toBeDisabled();
+         |                        ^
+      70 |   await expect(toggle).toHaveAttribute('title', /Reduced motion is on/);
+      71 |   expect(await moveIsCut(page, 'B-12')).toBe(true); // a cut, not a flight
+      72 |   await btn(page, 'Show dock-walk discrepancy').click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/motion.spec.ts:69:24
+
+    Error Context: test-results/motion-reduced-motion-at-l-a582a-it-is-off-workflow-complete-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/motion-reduced-motion-at-l-a582a-it-is-off-workflow-complete-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/motion-reduced-motion-at-l-a582a-it-is-off-workflow-complete-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  32) [chromium-desktop] › tests/e2e/motion.spec.ts:80:1 › reduced motion switched on mid-session freezes ambient motion and turns camera travel into cuts, and back 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator: getByRole('button', { name: 'Motion paused' })
+    Expected: disabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Motion paused' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Motion paused' })
+
+
+      85 |   await page.waitForTimeout(400);
+      86 |   expect(await framesOver(page, 1200)).toBe(0);
+    > 87 |   await expect(page.getByRole('button', { name: 'Motion paused' })).toBeDisabled();
+         |                                                                     ^
+      88 |   expect(await moveIsCut(page, 'B-12')).toBe(true);
+      89 |   await page.emulateMedia({ reducedMotion: 'no-preference' });
+      90 |   await page.waitForTimeout(300);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/motion.spec.ts:87:69
+
+    Error Context: test-results/motion-reduced-motion-swit-4e6aa-a-travel-into-cuts-and-back-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/motion-reduced-motion-swit-4e6aa-a-travel-into-cuts-and-back-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/motion-reduced-motion-swit-4e6aa-a-travel-into-cuts-and-back-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  33) [chromium-desktop] › tests/e2e/nowebgl.spec.ts:10:1 › browser without WebGL: plan, list and the complete review; a plain notice; no crash 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      16 |   await expect(page.getByTestId('plan-view')).toBeVisible();
+      17 |   await btn(page, 'Explore slip review').click();
+    > 18 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      19 |   await page.getByTestId('request-dock-check').click();
+      20 |   await btn(page, 'Review observation').click();
+      21 |   await btn(page, 'Load simulated dock-check result').click();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/nowebgl.spec.ts:18:49
+
+    Error Context: test-results/nowebgl-browser-without-We-5c299-iew-a-plain-notice-no-crash-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/nowebgl-browser-without-We-5c299-iew-a-plain-notice-no-crash-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/nowebgl-browser-without-We-5c299-iew-a-plain-notice-no-crash-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  34) [chromium-desktop] › tests/e2e/release.spec.ts:6:1 › About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'About', exact: true })
+
+
+      12 |       await page.getByRole('radio', { name: light ? /Chart/ : /Marine/ }).check();
+      13 |       await page.keyboard.press('Escape');
+    > 14 |       await btn(page, mobile ? 'About / Sources' : 'About').click();
+         |                                                             ^
+      15 |       const dialog = page.getByRole('dialog', { name: 'About Harbor Desk' });
+      16 |       await expect(dialog).toBeVisible();
+      17 |       await expect(dialog.getByRole('heading', { name: 'About Harbor Desk' })).toBeFocused();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:14:61
+
+    Error Context: test-results/release-About-sources-prov-cdeef-bile-persistent-attribution-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-About-sources-prov-cdeef-bile-persistent-attribution-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-About-sources-prov-cdeef-bile-persistent-attribution-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  35) [chromium-desktop] › tests/e2e/release.spec.ts:41:1 › mobile reduced motion keyboard-only pending workflow and usable attribution 
+
+    Error: Never reached /Show dock-walk discrepancy/
+
+       at helpers.ts:44
+
+      42 |     if (name.test(label)) return;
+      43 |   }
+    > 44 |   throw new Error(`Never reached ${name}`);
+         |         ^
+      45 | }
+      46 |
+      47 | /** Complete the B-12 review with the keyboard only. `path` = direct (no dock check) or pending. */
+        at tabTo (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:44:9)
+        at resolveByKeyboard (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/helpers.ts:49:3)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:47:3
+
+    Error Context: test-results/release-mobile-reduced-mot-33c33-flow-and-usable-attribution-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-mobile-reduced-mot-33c33-flow-and-usable-attribution-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-mobile-reduced-mot-33c33-flow-and-usable-attribution-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  36) [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      55 |   await openApp(page);
+      56 |   await btn(page, 'Explore slip review').click();
+    > 57 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      58 |   const before = await session(page);
+      59 |   await btn(page, 'Display').click();
+      60 |   await page.getByRole('checkbox', { name: /^Use 3D map/ }).check();
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:57:49
+
+    Error Context: test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-mobile-opts-into-r-abf4a-s-to-plan-without-data-loss-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  37) [chromium-desktop] › tests/e2e/release.spec.ts:83:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('listbox').getByRole('option', { selected: true })
+    Expected substring: "B-12"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('listbox').getByRole('option', { selected: true }) with timeout 5000ms
+      - waiting for getByRole('listbox').getByRole('option', { selected: true })
+
+
+       99 |     await page.mouse.click(pos!.x, pos!.y);
+      100 |     await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
+    > 101 |     await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
+          |                                                                                     ^
+      102 |     await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
+      103 |     await btn(page, 'Show dock-walk discrepancy').click();
+      104 |     await page.waitForTimeout(1000);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/release.spec.ts:101:85
+
+    Error Context: test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/release-visible-GPU-canvas-68912--and-orbit-drag-suppression-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  38) [chromium-desktop] › tests/e2e/responsive.spec.ts:8:1 › desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Explore slip review', exact: true })
+
+
+      13 |     await openApp(page, '', { scene: true });
+      14 |     await dispatch(page, { type: 'advanceToUncertain' });
+    > 15 |     await btn(page, 'Explore slip review').click();
+         |                                            ^
+      16 |     await page.waitForFunction(() => (window as unknown as { __harborScene: { camera: { flying(): boolean } } }).__harborScene.camera.flying() === false);
+      17 |     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'desktop');
+      18 |     expect(await zoneOverlaps(page)).toEqual([]);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/responsive.spec.ts:15:44
+
+    Error Context: test-results/responsive-desktop-1440×90-c20f1--scene-beside-the-inspector-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/responsive-desktop-1440×90-c20f1--scene-beside-the-inspector-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/responsive-desktop-1440×90-c20f1--scene-beside-the-inspector-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  39) [chromium-desktop] › tests/e2e/responsive.spec.ts:32:1 › tablet 1024×768: one rail with Details / list navigation, collapsible, no collisions 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('listbox')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('listbox') with timeout 5000ms
+      - waiting for getByRole('listbox')
+
+
+      34 |   await openApp(page, '', { scene: true });
+      35 |   await expect(page.locator('.app')).toHaveAttribute('data-layout', 'tablet');
+    > 36 |   await expect(page.getByRole('listbox')).toBeVisible();
+         |                                           ^
+      37 |   await page.getByRole('option', { name: /^B-12/ }).click();
+      38 |   await expect(page.locator('#inspector-title')).toBeFocused();
+      39 |   await expect(page.getByRole('listbox')).toHaveCount(0); // Details replaces the list
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/responsive.spec.ts:36:43
+
+    Error Context: test-results/responsive-tablet-1024×768-d1193-n-collapsible-no-collisions-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/responsive-tablet-1024×768-d1193-n-collapsible-no-collisions-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/responsive-tablet-1024×768-d1193-n-collapsible-no-collisions-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  40) [chromium-desktop] › tests/e2e/review.spec.ts:59:1 › direct path: normal → uncertain → evidence review → acknowledgment → resolution, scene and DOM in step 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.kpi').filter({ hasText: 'Needs review' }).locator('.data-lg')
+    Expected: "0"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.kpi').filter({ hasText: 'Needs review' }).locator('.data-lg') with timeout 5000ms
+      - waiting for locator('.kpi').filter({ hasText: 'Needs review' }).locator('.data-lg')
+
+
+      66 |
+      67 |   // Overview → Explore slip review → normal 08:45.
+    > 68 |   await expect(kpi(page, 'Needs review')).toHaveText('0');
+         |                                           ^
+      69 |   await btn(page, 'Explore slip review').click();
+      70 |   await expect(review(page)).toHaveAttribute('data-stage', 'normal');
+      71 |   await expect(review(page)).toContainText('Lake Effect departed at 08:10 (staff log).');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:68:43
+
+    Error Context: test-results/review-direct-path-normal--6f120-ution-scene-and-DOM-in-step-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-direct-path-normal--6f120-ution-scene-and-DOM-in-step-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-direct-path-normal--6f120-ution-scene-and-DOM-in-step-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  41) [chromium-desktop] › tests/e2e/review.spec.ts:147:1 › pending path: request twice → one task → leave, return, reload → review → resolve → one completed task 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      47 |   await btn(page, 'Explore slip review').click();
+      48 |   await expect(inspector(page).getByRole('heading', { name: /Slip B-12/ })).toBeVisible();
+    > 49 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      50 |   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
+      51 | }
+      52 | const imgLoaded = (page: Page, testId: string) =>
+        at toUncertain (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:49:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:149:3
+
+    Error Context: test-results/review-pending-path-reques-515bb-esolve-→-one-completed-task-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-pending-path-reques-515bb-esolve-→-one-completed-task-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-pending-path-reques-515bb-esolve-→-one-completed-task-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  42) [chromium-desktop] › tests/e2e/review.spec.ts:192:1 › missing evidence, unchecked acknowledgment and cancel all leave the issue open 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      47 |   await btn(page, 'Explore slip review').click();
+      48 |   await expect(inspector(page).getByRole('heading', { name: /Slip B-12/ })).toBeVisible();
+    > 49 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      50 |   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
+      51 | }
+      52 | const imgLoaded = (page: Page, testId: string) =>
+        at toUncertain (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:49:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:194:3
+
+    Error Context: test-results/review-missing-evidence-un-d98dc-el-all-leave-the-issue-open-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-missing-evidence-un-d98dc-el-all-leave-the-issue-open-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-missing-evidence-un-d98dc-el-all-leave-the-issue-open-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  43) [chromium-desktop] › tests/e2e/review.spec.ts:222:1 › guided replay is read-only and temporally correct; Try this state branches; restart and reload reset 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      47 |   await btn(page, 'Explore slip review').click();
+      48 |   await expect(inspector(page).getByRole('heading', { name: /Slip B-12/ })).toBeVisible();
+    > 49 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      50 |   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
+      51 | }
+      52 | const imgLoaded = (page: Page, testId: string) =>
+        at toUncertain (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:49:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:228:3
+
+    Error Context: test-results/review-guided-replay-is-re-3dceb-es-restart-and-reload-reset-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-guided-replay-is-re-3dceb-es-restart-and-reload-reset-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-guided-replay-is-re-3dceb-es-restart-and-reload-reset-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  44) [chromium-desktop] › tests/e2e/review.spec.ts:291:1 › keyboard only: focus follows each result and every action is announced 
+
+    Error: Never reached /Show dock-walk discrepancy/
+
+      302 |       if (name.test(label)) return;
+      303 |     }
+    > 304 |     throw new Error(`Never reached ${name}`);
+          |           ^
+      305 |   };
+      306 |   await page.locator('body').focus();
+      307 |   await tabTo(/Explore slip review/);
+        at tabTo (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:304:11)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:312:3
+
+    Error Context: test-results/review-keyboard-only-focus-7db27-d-every-action-is-announced-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-keyboard-only-focus-7db27-d-every-action-is-announced-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-keyboard-only-focus-7db27-d-every-action-is-announced-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  45) [chromium-desktop] › tests/e2e/review.spec.ts:344:1 › missing thumbnail and an offline camera keep text evidence, actions and an honest presence state 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Show dock-walk discrepancy', exact: true })
+
+
+      47 |   await btn(page, 'Explore slip review').click();
+      48 |   await expect(inspector(page).getByRole('heading', { name: /Slip B-12/ })).toBeVisible();
+    > 49 |   await btn(page, 'Show dock-walk discrepancy').click();
+         |                                                 ^
+      50 |   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
+      51 | }
+      52 | const imgLoaded = (page: Page, testId: string) =>
+        at toUncertain (/Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:49:49)
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/review.spec.ts:347:3
+
+    Error Context: test-results/review-missing-thumbnail-a-bcccc-nd-an-honest-presence-state-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/review-missing-thumbnail-a-bcccc-nd-an-honest-presence-state-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/review-missing-thumbnail-a-bcccc-nd-an-honest-presence-state-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  46) [chromium-desktop] › tests/e2e/scene.spec.ts:61:1 › clicking an EMPTY berth on the canvas selects it; inspector and list follow 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('inspector')
+    Expected substring: "No vessel present"
+    Received string:    "Slip B-12Dock B · floatingEmptyAssigned vesselLake EffectBookingHeld by agreementSourceCamera C-02 · 08:45Slip reviewNo open issue. Lake Effect departed at 08:10 (staff log).Scenario controlShow dock-walk discrepancyAssignment & slip details29 ft cabin cruiserAgreementSeasonalTerm1 May – 15 Oct 2026Dimensions and services are approximate, not surveyed.Length × width30 × 11 ftHeadwalkOSM way 934085288Depth7.5 ftShore power30 A"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" getByTestId('inspector') with timeout 5000ms
+      - waiting for getByTestId('inspector')
+        14 × locator resolved to <section class="panel inspector" data-testid="inspector" aria-labelledby="inspector-title">…</section>
+           - unexpected value "Slip B-12Dock B · floatingEmptyAssigned vesselLake EffectBookingHeld by agreementSourceCamera C-02 · 08:45Slip reviewNo open issue. Lake Effect departed at 08:10 (staff log).Scenario controlShow dock-walk discrepancyAssignment & slip details29 ft cabin cruiserAgreementSeasonalTerm1 May – 15 Oct 2026Dimensions and services are approximate, not surveyed.Length × width30 × 11 ftHeadwalkOSM way 934085288Depth7.5 ftShore power30 A"
+
+
+      69 |   const insp = page.getByTestId('inspector');
+      70 |   await expect(insp.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
+    > 71 |   await expect(insp).toContainText('No vessel present');
+         |                      ^
+      72 |   await expect(insp.locator('.summary-grid')).toContainText('BookableNo');
+      73 |   await expect(insp).toContainText('Lake Effect'); // assignment, shown as assignment
+      74 |   await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/scene.spec.ts:71:22
+
+    Error Context: test-results/scene-clicking-an-EMPTY-be-ce4c4-t-inspector-and-list-follow-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/scene-clicking-an-EMPTY-be-ce4c4-t-inspector-and-list-follow-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/scene-clicking-an-EMPTY-be-ce4c4-t-inspector-and-list-follow-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  47) [chromium-desktop] › tests/e2e/scene.spec.ts:146:1 › clicks on panels never select the berth behind them 
+
+    Error: could not place B-12 behind the panel
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      179 |   const underPanel = p.x > rail.x && p.x < rail.x + rail.width && p.y > rail.y && p.y < rail.y + rail.height;
+      180 |   const found = underPanel && (await hits(page, p.x, p.y)).includes('berth') ? p : null;
+    > 181 |   expect(found, 'could not place B-12 behind the panel').not.toBeNull();
+          |                                                              ^
+      182 |   await page.mouse.click(found!.x, found!.y);
+      183 |   await page.waitForTimeout(200);
+      184 |   const sel = await selection(page);
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/scene.spec.ts:181:62
+
+    Error Context: test-results/scene-clicks-on-panels-never-select-the-berth-behind-them-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/scene-clicks-on-panels-never-select-the-berth-behind-them-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/scene-clicks-on-panels-never-select-the-berth-behind-them-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  48) [chromium-desktop] › tests/e2e/scene.spec.ts:208:1 › uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.summary-zone .kpi').nth(2)
+    Expected substring: "1"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.summary-zone .kpi').nth(2) with timeout 5000ms
+      - waiting for locator('.summary-zone .kpi').nth(2)
+
+
+      209 |   await open(page);
+      210 |   expect((await dispatch(page, { type: 'advanceToUncertain' })).ok).toBe(true);
+    > 211 |   await expect(page.locator('.summary-zone .kpi').nth(2)).toContainText('1');
+          |                                                           ^
+      212 |   await dockView(page);
+      213 |   const h = (await project(page, 'B-12', 'hull'))!;
+      214 |   expect((await hits(page, h.x, h.y))[0]).toBe('Mesh'); // a hull mesh is the nearest object
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/scene.spec.ts:211:59
+
+    Error Context: test-results/scene-uncertain-hull-picki-1ea1a--Harbor-Light’s-empty-berth-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/scene-uncertain-hull-picki-1ea1a--Harbor-Light’s-empty-berth-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/scene-uncertain-hull-picki-1ea1a--Harbor-Light’s-empty-berth-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  49) [chromium-desktop] › tests/e2e/scene.spec.ts:261:1 › deep link selects a vessel; dock and needs-review filters derive from shared state 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('inspector')
+    Expected substring: "Registration"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByTestId('inspector') with timeout 5000ms
+      - waiting for getByTestId('inspector')
+
+
+      263 |   await showList(page);
+      264 |   expect(await selection(page)).toEqual({ kind: 'vessel', id: 'V-021' });
+    > 265 |   await expect(page.getByTestId('inspector')).toContainText('Registration');
+          |                                               ^
+      266 |   await expect(page.getByTestId('inspector')).toContainText('ending 42 AB');
+      267 |   await expect(page.getByTestId('inspector')).toContainText('HIN');
+      268 |   await page.getByRole('combobox', { name: 'Dock' }).selectOption('B');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/scene.spec.ts:265:47
+
+    Error Context: test-results/scene-deep-link-selects-a--76b6e-rs-derive-from-shared-state-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/scene-deep-link-selects-a--76b6e-rs-derive-from-shared-state-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/scene-deep-link-selects-a--76b6e-rs-derive-from-shared-state-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  50) [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  getByText('Buffalo River · Independent concept')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" getByText('Buffalo River · Independent concept') with timeout 5000ms
+      - waiting for getByText('Buffalo River · Independent concept')
+        8 × locator resolved to <span class="topbar-place secondary">Buffalo River · Independent concept</span>
+          - unexpected value "hidden"
+
+
+      16 |   await page.goto('/');
+      17 |   await expect(page.locator('.lockup-word')).toHaveText('Harbor Desk');
+    > 18 |   await expect(page.getByText('Buffalo River · Independent concept')).toBeVisible();
+         |                                                                       ^
+      19 |   await expect(page.getByText('Simulated demo')).toBeVisible();
+      20 |   await expect(page.getByLabel(/^Simulation time 15 Jul 2026 08:45 EDT$/)).toBeVisible();
+      21 |   const tiles = page.locator('.summary-zone .kpi');
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/shell.spec.ts:18:71
+
+    Error Context: test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/shell-shell-loads-locally--d0aff-ounts-and-no-console-errors-chromium-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  51) [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+      20 |     await page.waitForFunction(() => Boolean((window as unknown as { __harborDesk?: unknown }).__harborDesk));
+      21 |     const m = await page.evaluate(() => ({ w: innerWidth, dpr: devicePixelRatio, outer: outerWidth }));
+    > 22 |     expect(m.dpr).toBe(2); // page zoom doubles the device pixel ratio…
+         |                   ^
+      23 |     expect(m.w).toBeLessThanOrEqual(720); // …and halves the CSS viewport
+      24 |     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'mobile');
+      25 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true); // no horizontal scroll
+        at /Users/rajshah/Documents/ChatGPT/New Builds for Job Search/buffalo-marina/tests/e2e/zoom.spec.ts:22:19
+
+    Error Context: test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/zoom-real-200-browser-zoom-dec51-ng-clipped-review-completes-chromium-zoom/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  51 failed
+    [chromium-desktop] › tests/e2e/a11y.spec.ts:31:1 › axe: desktop overview, uncertain, evidence review, resolved, vessel record, replay, display menu, light theme 
+    [chromium-desktop] › tests/e2e/a11y.spec.ts:68:1 › touch targets: every visible control ≥ 24×24 CSS px; mobile workflow controls and rows ≥ 44 px tall 
+    [chromium-desktop] › tests/e2e/a11y.spec.ts:96:1 › keyboard only on tablet: requested-check path, with cancel/back, resolution and history 
+    [chromium-desktop] › tests/e2e/a11y.spec.ts:114:1 › keyboard only on mobile: direct path from the list in the sheet 
+    [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:62:1 › T30 drag and drop: verdict while dragging, drop assigns with an animated approach (no teleport), undo sends it back 
+    [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:103:1 › T30 keyboard path: Slip list → Assign, with the reason announced; held slips are never in the list 
+    [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:137:1 › T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it, backward never shows the future, the run is untouched 
+    [chromium-desktop] › tests/e2e/assign-timeline.spec.ts:184:1 › T31 idle frames: after scrubbing, the paused scene stops rendering; under reduced motion a jump cuts 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:53:1 › WebGL unsupported (fault=webgl-unsupported): the plan is the map on desktop and the whole review works on it 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:64:1 › invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:81:1 › missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:99:1 › missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:116:1 › missing provenance and a broken reference are quarantined with the reason; the rest of the demo works 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-unavailable → “Browser storage unavailable”, an in-memory session, and the review still works 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-corrupt → “Saved demo data was unreadable. Started fresh.”, an in-memory session, and the review still works 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:145:3 › storage: storage-incompatible → “Saved demo was from an older version. Started fresh.”, an in-memory session, and the review still works 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:154:1 › storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:171:1 › stale, offline and unknown sources never read as empty or bookable; newer staff evidence stays distinct 
+    [chromium-desktop] › tests/e2e/failures.spec.ts:197:1 › mobile with 3D failing to load: the plan is already the default and every action works 
+    [chromium-desktop] › tests/e2e/foundation.spec.ts:126:1 › storage: unavailable localStorage falls back to memory and the app still works 
+    [chromium-desktop] › tests/e2e/lake.spec.ts:23:1 › T35 keyboard: the gale what-if re-checks every offered slip, assigns under it, and flags an assignment that no longer fits 
+    [chromium-desktop] › tests/e2e/lake.spec.ts:75:1 › T35 scene and timeline: the gale shows on the water and in the light, follows the scrubber, and the calm day is untouched 
+    [chromium-desktop] › tests/e2e/lake.spec.ts:99:1 › T35 drag on the dock map under the gale: verdicts and reasons follow the what-if 
+    [chromium-desktop] › tests/e2e/map.spec.ts:60:3 › map pose at 390×844: all 126 slips visible and pickable, legend shown, a real click selects 
+    [chromium-desktop] › tests/e2e/map.spec.ts:95:1 › map statuses follow the scenario; presets leave the map; nothing but the camera changes 
+    [chromium-desktop] › tests/e2e/map.spec.ts:126:1 › map: axe passes with the legend on desktop and mobile 
+    [chromium-desktop] › tests/e2e/marina.spec.ts:44:1 › every dock is in the scene: one pick mesh, hulls on all five docks, counters and list from the data 
+    [chromium-desktop] › tests/e2e/marina.spec.ts:72:1 › canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh) 
+    [chromium-desktop] › tests/e2e/marina.spec.ts:107:1 › unknown and empty berths stay distinct; distant docks add no field of labels; scenery is not selectable 
+    [chromium-desktop] › tests/e2e/motion.spec.ts:35:1 › water drifts by default; Pause motion stops every ambient frame and is remembered; Resume restarts it 
+    [chromium-desktop] › tests/e2e/motion.spec.ts:63:1 › reduced motion at load: still water, camera cuts, pause control explains why it is off, workflow complete 
+    [chromium-desktop] › tests/e2e/motion.spec.ts:80:1 › reduced motion switched on mid-session freezes ambient motion and turns camera travel into cuts, and back 
+    [chromium-desktop] › tests/e2e/nowebgl.spec.ts:10:1 › browser without WebGL: plan, list and the complete review; a plain notice; no crash 
+    [chromium-desktop] › tests/e2e/release.spec.ts:6:1 › About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution 
+    [chromium-desktop] › tests/e2e/release.spec.ts:41:1 › mobile reduced motion keyboard-only pending workflow and usable attribution 
+    [chromium-desktop] › tests/e2e/release.spec.ts:53:1 › mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss 
+    [chromium-desktop] › tests/e2e/release.spec.ts:83:1 › visible GPU canvas: physical picking, list/marker/inspector sync and orbit drag suppression 
+    [chromium-desktop] › tests/e2e/responsive.spec.ts:8:1 › desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector 
+    [chromium-desktop] › tests/e2e/responsive.spec.ts:32:1 › tablet 1024×768: one rail with Details / list navigation, collapsible, no collisions 
+    [chromium-desktop] › tests/e2e/review.spec.ts:59:1 › direct path: normal → uncertain → evidence review → acknowledgment → resolution, scene and DOM in step 
+    [chromium-desktop] › tests/e2e/review.spec.ts:147:1 › pending path: request twice → one task → leave, return, reload → review → resolve → one completed task 
+    [chromium-desktop] › tests/e2e/review.spec.ts:192:1 › missing evidence, unchecked acknowledgment and cancel all leave the issue open 
+    [chromium-desktop] › tests/e2e/review.spec.ts:222:1 › guided replay is read-only and temporally correct; Try this state branches; restart and reload reset 
+    [chromium-desktop] › tests/e2e/review.spec.ts:291:1 › keyboard only: focus follows each result and every action is announced 
+    [chromium-desktop] › tests/e2e/review.spec.ts:344:1 › missing thumbnail and an offline camera keep text evidence, actions and an honest presence state 
+    [chromium-desktop] › tests/e2e/scene.spec.ts:61:1 › clicking an EMPTY berth on the canvas selects it; inspector and list follow 
+    [chromium-desktop] › tests/e2e/scene.spec.ts:146:1 › clicks on panels never select the berth behind them 
+    [chromium-desktop] › tests/e2e/scene.spec.ts:208:1 › uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth 
+    [chromium-desktop] › tests/e2e/scene.spec.ts:261:1 › deep link selects a vessel; dock and needs-review filters derive from shared state 
+    [chromium-desktop] › tests/e2e/shell.spec.ts:4:1 › shell loads locally with labels, derived counts and no console errors 
+    [chromium-zoom] › tests/e2e/zoom.spec.ts:11:1 › real 200 % browser zoom on a 1440×900 window: compact layout, nothing clipped, review completes 
+  44 passed (22.3m)
+e2e exit 1

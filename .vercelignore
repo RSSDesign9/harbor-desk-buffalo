@@ -6,3 +6,7 @@ data/reference/
 *.md
 .env*
 .vercel/
+showcase/
+test-results/
+playwright-report/
+*.mp4

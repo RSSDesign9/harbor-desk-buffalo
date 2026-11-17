@@ -2092,3 +2092,83 @@ Raj chose option E. Built as a **what-if lens** on the T30 fit verdicts, not as 
 - Unverified: M1 MacBook Air, non-Chromium browsers, spoken screen-reader use of the new switch.
 
 **Next:** T22 (demonstration package). The gale switch is a candidate beat for the cut list, after drag-to-assign.
+
+## T22–T23 — Demonstration package and handoff (16 Nov 2026)
+
+Raj asked for T22 and T23 on the assumption that Harbor Desk will appear in the **Experiments** section of rssdesign.org (`/experiments`). He also asked for a product guide, separate from the build/run docs. Done on top of his two commits after T35: `9c328bb1` (arrow-key panning) and `b2dc232d` (map-first workspace refresh).
+
+### UI fixes requested during the batch
+
+- **Camera bar right inset.** The square Reset and Pause buttons sat 6 px from the pill's curved end. The right inset is now 14 px on desktop and on the tablet row (`src/app/workspace.css`).
+- **About dialog text overflowed** off the right edge. The dialog sits inside the top bar in the DOM, and the bar's `white-space: nowrap` was inherited. The dialog now resets it (`src/features/about/about.css`). Checked at 1440×900: scroll width equals client width.
+
+### T22 — showcase package (`showcase/`)
+
+- **Walkthrough:** `video/harbor-desk-walkthrough-1600.mp4`, 77.2 s, 1600×1000, H.264 CRF 17.
+  - **Cut:** poster → establishing move → Northern Tern from Tasks → Map → drag over A-01 (No fit) and D-01 (Fits) → drop and sail-in → SW gale what-if, then Overview → Calm → day timeline to 20:00 and back (read-only) → Return to my run → Explore slip review → Review observation → Load dock-check result → acknowledge → Confirm → agreement unchanged → Activity history.
+  - **Labels:** captions and a pointer are drawn by the recording script into the recorded page only. The app's “Demo data” label stays in frame.
+- **Card loop:** `video/harbor-desk-card-1600.mp4`, 28.2 s, about 1.09 Mbit/s, no captions, five segments with 0.35 s crossfades. Poster: `video/harbor-desk-card-poster.jpg`.
+- **Stills:** `stills/01-overview` … `05-resolved` at 1600×1000 and @2x (3200×2000), production build on the real GPU, motion paused. `contact-sheet.jpg` is the reduced-motion alternative.
+- **Experiments card:** `experiments-card/card.html` plus notes, matching the playground markup: title, date, description, three chips, Try it live and Walkthrough.
+  - Checked by serving the real `/experiments` page with the card inserted, using a read-only local server. No portfolio file was changed.
+  - Screenshots: `qa/handoff/card-preview-1440.png` and `card-preview-390.png`.
+  - The live URL is a placeholder until a deployment exists.
+  - The page's experiment counter is hard-coded at 5, so the notes say to change it to 6.
+- **Copy:** `CASE-STUDY.md` leads with craft and then the evidence model (the AI pattern), followed by problem, hypothesis, users, why spatial, data decisions, what works, what's simulated and the next research step. It also has alt text. Every figure names its source; there are no impact claims.
+- **Pitch notes:** `pitch/`, one page each for Dockwa, Harba, DockMaster, Molo/Storable and Snag-A-Slip. Local only.
+  - Company facts come from DOCKWA-ANALYSIS, or are marked unverified.
+  - The notes flag what was not built: away-boat resale (D), the OSM onboarding flow (F) and the arrival flythrough (G).
+- **Recording method:**
+  - `scripts/record-walkthrough.ts` drives the production build through its real UI.
+  - Pointer moves are time-based, so a move lasts its planned time under load.
+  - Frames come from Chromium's DevTools screencast, about 36 fps, and are encoded to 30 fps CFR by ffmpeg using the frame timestamps. No video framework was added.
+- **Fixes on the way:**
+  - The first take wrote to a literal `New%20Builds…` folder because `URL.pathname` keeps `%20`. Both scripts now use `fileURLToPath`; the stray folder (only this run's output) was removed.
+  - Fixed-step glides ran about 3× slower than planned (a 103 s take).
+  - Captions covered the map legend; they now sit above the camera bar.
+  - The Demo controls tray closes itself on leaving replay, so a second "close" click reopened it; the script now checks before clicking.
+- **`.gitignore`:** `*.mp4` was ignored (for the authoring reference video), so `!showcase/video/*.mp4` was added.
+- **Browser test screenshots** now go to `qa/handoff/`, so T35's `qa/batch13/` evidence stays intact.
+
+### T23 — documentation and handoff
+
+- **`README.md`:**
+  - requirements, install, dev, build and preview;
+  - the test commands and their caveats (stop 4719 first, `--workers=1`, lite tier, zoom on DPR 4);
+  - using the demo, controls and URL options;
+  - local persistence (`harbor-desk:session`, `harbor-desk:prefs`);
+  - architecture and the main decisions;
+  - a regeneration table (fixtures, tokens, geometry, assets, poster, evidence, showcase);
+  - deployment notes, provenance, known limitations, a document index and credits.
+- **`PRODUCT-GUIDE.md`** (Raj's request):
+  - what it is and the hypothesis;
+  - who it is for, as a role table (owner/GM, dockmaster, dock staff, front office), all labelled as hypotheses;
+  - a tour of the screen;
+  - core functionality: slip review, both branches; assignment by list and by drag; Conditions & what-if; the day timeline; registry; arrivals and revenue estimates;
+  - a recommended 3-minute path, best setup, controls and tips, and what it is not.
+- **Deployment.** While this batch ran, Raj published the app as the public repository `RSSDesign9/harbor-desk-buffalo`, which starts from a snapshot of `b2dc232d`. It is live at https://harbor-desk-buffalo-rssdesign.vercel.app, with its own `vercel.json`, `.vercelignore`, Node 24 pin and lockfile fixes.
+  - Those validated files replaced the drafts written here; the draft cache headers were dropped as untested on Vercel. `showcase/`, test output and videos were added to `.vercelignore`.
+  - The README's deployment section describes the real setup.
+- The app ships only `public/` and `src/` imports, as before.
+
+### Verification
+
+- **Full check passes on this tree:** 15 fixture files 0 / 0, tokens, assets, typecheck, lint, **240 / 240** unit tests in 28 files, and the build ([check.log](qa/handoff/check.log)).
+- **Clean install** of the published repository: `npm ci` (238 packages) and Playwright ran from a fresh clone. The clean-copy build and unit tests with the T22–T23 changes are recorded under “Publishing”.
+- **Browser suite (`--workers=1`): 44 passed, 51 failed** ([browser-tests.log](qa/handoff/browser-tests.log)).
+  - **The failures are the pre-refresh journeys.** They expect the request card always visible, the scrubber outside a tray, the earlier review buttons, the old rail and the KPI tiles. The workspace refresh (`b2dc232d`) moved or replaced all of these, and its own validation ran only the focused journeys (DESIGN.md §17).
+  - **Proof:** two of them, the T30 keyboard path and keyboard-only on mobile, fail identically on a clean clone of the published snapshot, which has none of this batch's changes.
+  - **What passes:** all of `workspace.spec` (9) and `keyboard-pan.spec` (3), plus `intro`, most of `foundation` and `scene`, and the map journeys.
+  - **Failing by spec:** failures 11, review 6, a11y 4, assign-timeline 4, release 4, scene 4, lake 3, map 3, marina 3, motion 3, responsive 2, foundation 1, nowebgl 1, shell 1, zoom 1. The zoom spec also has its known DPR 4 problem.
+  - **Not a regression check:** the two CSS fixes in this batch touch only padding and wrapping.
+  - **Still open:** rewriting these specs for the new workspace, recorded as a follow-up.
+- **Media checked frame by frame on contact sheets:** all five beats are visible in the walkthrough and the card, captions never cover the legend or panels, and the 1600×1000 stills are legible.
+- **Not re-measured after the workspace refresh:** transfer size, frame pacing and panel coverage. Gate D and T35 figures still stand for the scene; the shell layout is new.
+
+### Publishing (Raj's request, 16 Nov 2026)
+
+- **Harbor Desk repository:** the T22–T23 changes were applied on top of `RSSDesign9/harbor-desk-buffalo` `main` (`5d568f8`) and pushed. Its validated deploy files were kept.
+  - `showcase/pitch/` stays local, as T22 specifies.
+  - Before the push, a fresh clone with these changes passed `npm ci` and the full `npm run check`: 240 / 240 unit tests, and the build.
+- **Portfolio:** the Harbor Desk card is first on rssdesign.org/experiments, with Try it live (the Vercel app) and Source (the public repository). The counter goes from 5 to 6. Pushed to `RSSDesign9/rssdesign-org` `main`, which Vercel deploys to www.rssdesign.org.
+- **Raj's earlier choice** was to hold the card until the app was deployed. It already was (HTTP 200 at the live URL), so the card went up.

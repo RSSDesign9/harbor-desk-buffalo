@@ -25,7 +25,7 @@ test('desktop 1440×900 and 1280×800: no zone collisions; the selected boat sta
     expect(p.y < bottom.y || p.x > bottom.x + bottom.width).toBe(true);
     // Nothing else is on top of the boat's screen point.
     expect(await page.evaluate(([x, y]) => document.elementFromPoint(x!, y!)?.tagName, [p.x, p.y])).toBe('CANVAS');
-    await page.screenshot({ path: `qa/batch13/e2e-desktop-${w}-uncertain.png` });
+    await page.screenshot({ path: `qa/handoff/e2e-desktop-${w}-uncertain.png` });
   }
 });
 
@@ -49,7 +49,7 @@ test('tablet 1024×768: one rail with Details / list navigation, collapsible, no
   expect(await zoneOverlaps(page)).toEqual([]);
   await btn(page, 'Show panel').click();
   await expect(page.locator('#inspector-title')).toBeVisible();
-  await page.screenshot({ path: 'qa/batch13/e2e-tablet-1024-details.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-tablet-1024-details.png' });
 });
 
 for (const path of ['direct', 'pending'] as const) {
@@ -84,7 +84,7 @@ for (const path of ['direct', 'pending'] as const) {
     expect(s.decisions).toHaveLength(1);
     expect(s.tasks.map((t) => t.status)).toEqual(path === 'pending' ? ['completed'] : []);
     await expect(page.getByTestId('activity-trail')).toContainText('Camera C-02 · second source · possible match Harbor Light');
-    await page.screenshot({ path: `qa/batch13/e2e-mobile-390-resolved-${path}.png` });
+    await page.screenshot({ path: `qa/handoff/e2e-mobile-390-resolved-${path}.png` });
     // Back to the list keeps the record selected and the sheet scrolls from the top.
     await btn(page, 'Slips & vessels').click();
     await expect(page.getByRole('listbox')).toBeFocused();
@@ -114,5 +114,5 @@ test('changing viewport, view and theme keeps selection and the open review exac
   await page.getByRole('radio', { name: 'Map', exact: true }).click();
   expect(await session(page)).toEqual(before);
   await expect(page.getByRole('checkbox', { name: /I reviewed the staff evidence/ })).toBeChecked();
-  await page.screenshot({ path: 'qa/batch13/e2e-desktop-light-solid-review.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-desktop-light-solid-review.png' });
 });

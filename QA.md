@@ -2,6 +2,20 @@
 
 Newest review first. Gate D (T34) covers v1.1, Phase 4.5 (T24–T33). The Gate C release review (Batch 8) follows unchanged as history.
 
+## T22–T23 handoff check (16 November 2026)
+
+On the map-first workspace (`b2dc232d`), plus this batch's two CSS fixes (camera bar right inset, About dialog wrapping). Raw outputs are in `qa/handoff/`.
+
+| Check | Result | Status |
+|---|---|---|
+| `npm run check` | 240 / 240 unit tests, 0 fixture errors, lint, typecheck, build | Pass |
+| Browser journeys, `--workers=1` | **44 passed, 51 failed.** The failures are pre-refresh specs that expect the old layout; two of them were reproduced on the published snapshot, which has no changes from this batch. `workspace.spec` 9 / 9 and `keyboard-pan.spec` 3 / 3 pass | **Open:** the old journeys need rewriting for the new workspace |
+| About dialog at 1440×900 | Scroll width = client width (718 px); paragraphs wrap | Pass |
+| Camera bar | Right inset 14 px (was 6 px) on desktop and the tablet row | Pass |
+| Showcase media | Walkthrough 77.2 s, 1600×1000, about 36 fps captured, 30 fps CFR. Card 28.2 s, 1.09 Mbit/s. Five stills at 1× and 2× | Pass |
+| Card in the real `/experiments` page | 1440×900 and 390×844 ([card-preview-1440](qa/handoff/card-preview-1440.png), [card-preview-390](qa/handoff/card-preview-390.png)) | Pass |
+| Transfer, frame pacing, panel coverage | Not re-measured after the workspace refresh | Unverified |
+
 ## T35 addendum — Buffalo seiche and gale what-if (16 November 2026)
 
 T35 option E against the Gate D budgets. Details: BUILD-LOG “T35”; raw outputs in `qa/batch13/`. Same device and method as Gate D (M3 Max, visible Metal window, production build).

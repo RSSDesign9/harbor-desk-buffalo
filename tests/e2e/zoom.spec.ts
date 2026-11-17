@@ -43,8 +43,8 @@ test('real 200 % browser zoom on a 1440×900 window: compact layout, nothing cli
     const metrics = await cdp.send('Page.getLayoutMetrics');
     const shot = await cdp.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true,
       clip: { x: 0, y: 0, width: metrics.layoutViewport.clientWidth, height: metrics.layoutViewport.clientHeight, scale: 1 } });
-    writeFileSync('qa/batch13/e2e-zoom200-resolved.png', Buffer.from(shot.data, 'base64'));
-    writeFileSync('qa/batch13/zoom-metrics.json', JSON.stringify({ metrics, dom: m }, null, 2));
+    writeFileSync('qa/handoff/e2e-zoom200-resolved.png', Buffer.from(shot.data, 'base64'));
+    writeFileSync('qa/handoff/zoom-metrics.json', JSON.stringify({ metrics, dom: m }, null, 2));
   } finally {
     await ctx.close();
   }

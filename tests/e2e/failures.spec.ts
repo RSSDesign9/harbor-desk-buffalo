@@ -37,7 +37,7 @@ test('WebGL context lost after load: the plan takes over with the same selection
   await expect(page.getByTestId('plan-marker')).toHaveText('B-12 · Vessel present · identity unverified');
   await expect(page.getByRole('checkbox', { name: /I reviewed the staff evidence/ })).toBeChecked();
   expect(await session(page)).toEqual(before);
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-context-lost.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-context-lost.png' });
   await btn(page, 'Restart 3D view').click();
   await page.waitForFunction(() => Boolean((window as unknown as { __harborScene?: { camera: unknown } }).__harborScene?.camera), undefined, { timeout: 20_000 });
   await expect(page.locator('.notice-title', { hasText: '3D view stopped' })).toHaveCount(0);
@@ -58,7 +58,7 @@ test('WebGL unsupported (fault=webgl-unsupported): the plan is the map on deskto
   await expect(page.locator('.view-controls')).toHaveCount(0); // no 3D camera controls without 3D
   await resolveDirect(page);
   await expect(page.getByTestId('plan-marker')).toHaveText('B-12 · Lake Effect');
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-no-webgl-desktop.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-no-webgl-desktop.png' });
 });
 
 test('invalid geometry (fault=geometry): no map is drawn, the list and record-based review still complete', async ({ page }) => {
@@ -75,7 +75,7 @@ test('invalid geometry (fault=geometry): no map is drawn, the list and record-ba
   await resolveDirect(page);
   expect((await session(page)).decisions).toHaveLength(1);
   expect(errors).toEqual([]); // contained by the error boundaries: no uncaught page error
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-geometry.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-geometry.png' });
 });
 
 test('missing boat model (fault=model): plain grey stand-ins, a visible note, no implied identity, workflow unchanged', async ({ page }) => {
@@ -93,7 +93,7 @@ test('missing boat model (fault=model): plain grey stand-ins, a visible note, no
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Lake Effect');
   const after = await hull(page, 'B-12');
   expect(after).toMatchObject({ key: before!.key, position: before!.position, fallback: true, nameBoards: 0 }); // never a name on a stand-in
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-model-fallback.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-model-fallback.png' });
 });
 
 test('missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required', async ({ page }) => {
@@ -125,7 +125,7 @@ test('missing provenance and a broken reference are quarantined with the reason;
   await expect(page.getByText(/No (slips|vessels) match/)).toBeVisible();
   await page.getByRole('searchbox', { name: 'Search slips and vessels' }).fill('');
   await resolveDirect(page);
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-quarantine.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-quarantine.png' });
 });
 
 test('a broken canonical scenario record is fatal: the workflow is disabled rather than guessed', async ({ page }) => {
@@ -191,7 +191,7 @@ test('stale, offline and unknown sources never read as empty or bookable; newer 
   await expect(insp.locator('.summary-grid')).toContainText('BookableNo');
   await expect(page.getByTestId('staff-evidence')).toContainText('Demo dock staff · 09:18');
   expect(await auditCount(page)).toBe(n + 1); // only the staff-evidence event
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-stale-offline.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-stale-offline.png' });
 });
 
 test('mobile with 3D failing to load: the plan is already the default and every action works', async ({ page }) => {
@@ -201,5 +201,5 @@ test('mobile with 3D failing to load: the plan is already the default and every 
   await expect(page.getByTestId('plan-view')).toBeVisible();
   await resolveDirect(page);
   expect((await session(page)).decisions).toHaveLength(1);
-  await page.screenshot({ path: 'qa/batch13/e2e-recovery-mobile.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-recovery-mobile.png' });
 });

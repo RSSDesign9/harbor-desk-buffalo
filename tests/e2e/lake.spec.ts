@@ -39,7 +39,7 @@ test('T35 keyboard: the gale what-if re-checks every offered slip, assigns under
   expect(gale[0]).toBe('D-01 · Tight');
   expect(gale.slice(1).every((o) => o.endsWith('· No fit'))).toBe(true);
   await expect(page.locator('.request-why')).toContainText('Tight: Draft 4.5\u00a0ft in 5.5\u00a0ft of water at the 18:45 low (7\u00a0ft assumed, −1.5\u00a0ft)');
-  await page.screenshot({ path: 'qa/batch13/e2e-gale-request.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-gale-request.png' });
   const axe = await new AxeBuilder({ page }).include('[data-testid="request-card"]').withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
   expect(axe.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
 
@@ -120,7 +120,7 @@ test('T35 drag on the dock map under the gale: verdicts and reasons follow the w
   expect((await state(page)).interactive.assignments).toEqual([]);
   await dragTo('D-01');
   await expect(page.getByTestId('drag-chip')).toContainText('D-01 · Tight');
-  await page.screenshot({ path: 'qa/batch13/e2e-gale-drag-d01.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-gale-drag-d01.png' });
   await page.mouse.up();
   await expect(page.getByTestId('request-assigned')).toContainText('Assigned to D-01');
   expect((await state(page)).interactive.assignments).toEqual([expect.objectContaining({ slipId: 'D-01', lake: 'sw-gale' })]);

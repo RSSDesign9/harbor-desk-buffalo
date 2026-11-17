@@ -73,7 +73,7 @@ for (const [w, h] of [[1440, 900], [1024, 768], [390, 844]] as const) {
     await expect(legend).toBeVisible();
     await expect(legend.locator('li')).toHaveText([/^Occupied/, /^Away/, /^Reserved/, /^Needs review/, /^Vacant/]);
     expect((await legendCounts(page)).reduce((a, b) => a + b, 0)).toBe(126);
-    await page.screenshot({ path: `qa/batch13/t29-map-${w}.png` });
+    await page.screenshot({ path: `qa/handoff/t29-map-${w}.png` });
     // A real pointer click on the first and last berths of the frontage selects them (no store shortcut).
     const mapView = await page.evaluate(() => (window as unknown as Win).__harborScene!.camera!.pose());
     for (const id of ['A-01', 'E-10']) {
@@ -110,7 +110,7 @@ test('map statuses follow the scenario; presets leave the map; nothing but the c
   await page.mouse.move(p!.x, p!.y);
   await expect(page.locator('.scene-marker-hover')).toContainText('B-12 · Needs review');
   await expect(page.locator('.scene-marker-hover')).not.toContainText('Harbor Light');
-  await page.screenshot({ path: 'qa/batch13/t29-map-uncertain-zoomed.png' });
+  await page.screenshot({ path: 'qa/handoff/t29-map-uncertain-zoomed.png' });
   // Leaving the map: the lens opens back to 30°, plates and legend go.
   await page.getByRole('radio', { name: 'Dock B', exact: true }).click();
   await page.waitForFunction(() => {
@@ -172,5 +172,5 @@ test('mobile: a capable GPU opens on the 3D map, a low-power one on the plan; Di
   await expect(page.getByTestId('plan-view')).toBeVisible();
   await expect(page.getByRole('button', { name: 'Restart 3D view' })).toBeVisible();
   expect(await session(page)).toEqual(before);
-  await page.screenshot({ path: 'qa/batch13/t29-mobile-context-lost.png' });
+  await page.screenshot({ path: 'qa/handoff/t29-mobile-context-lost.png' });
 });

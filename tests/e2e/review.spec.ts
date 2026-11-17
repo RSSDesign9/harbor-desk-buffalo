@@ -130,7 +130,7 @@ test('direct path: normal → uncertain → evidence review → acknowledgment �
   await expect(page.getByTestId('activity-trail')).toContainText('Vessel present · identity unverifiedCamera C-02 · second source · possible match Harbor Light');
   await page.getByTestId('original-observation').locator('summary').click();
   await expect(page.getByTestId('original-observation')).toContainText('Possible match at the time: Harbor Light');
-  await page.screenshot({ path: 'qa/batch13/e2e-resolved-direct.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-resolved-direct.png' });
 
   // Harbor Light's record and berth: unchanged, and no phantom boat at B-14.
   const fx = (await st(page)).fixtures;
@@ -186,7 +186,7 @@ test('pending path: request twice → one task → leave, return, reload → rev
   expect(s.audit.filter((a) => a.type === 'dock_check_completed')).toHaveLength(1);
   expect(s.decisions).toHaveLength(1);
   await expect(page.locator('.stage-strip li[data-state="done"]')).toHaveCount(4);
-  await page.screenshot({ path: 'qa/batch13/e2e-resolved-pending.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-resolved-pending.png' });
 });
 
 test('missing evidence, unchecked acknowledgment and cancel all leave the issue open', async ({ page }) => {
@@ -338,7 +338,7 @@ test('keyboard only: focus follows each result and every action is announced', a
   // The focused heading has a visible focus indicator.
   const outline = await page.locator('#resolution-heading').evaluate((el) => getComputedStyle(el).outlineStyle);
   expect(outline).not.toBe('none');
-  await page.screenshot({ path: 'qa/batch13/e2e-keyboard-resolved.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-keyboard-resolved.png' });
 });
 
 test('missing thumbnail and an offline camera keep text evidence, actions and an honest presence state', async ({ page }) => {

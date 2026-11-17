@@ -1,6 +1,8 @@
 .about-trigger.link-btn { display: block; min-height: 32px; font-size: 12px; }
 .about-trigger.btn { min-height: 40px; } /* top bar, beside Display */
 .about-dialog { width: min(720px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); padding: 0; color: var(--text-primary); background: var(--bg-panel-solid); border: 1px solid var(--border-strong); border-radius: var(--r-md); box-shadow: var(--shadow-panel); overflow: auto; font-size: var(--fs-body-sm); }
+/* The dialog is opened from the top bar and sits inside it in the DOM: reset the bar's nowrap so text wraps. */
+.about-dialog { white-space: normal; text-align: start; overflow-x: hidden; overflow-wrap: break-word; }
 .about-dialog::backdrop { background: rgb(0 0 0 / 55%); }
 .about-header { position: sticky; top: 0; display: flex; gap: var(--s-3); justify-content: space-between; align-items: center; padding: var(--s-4); background: var(--bg-panel-solid); border-bottom: 1px solid var(--border-hairline); z-index: 1; }
 .about-header h2 { font-size: var(--fs-h5); }

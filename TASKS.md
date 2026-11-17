@@ -495,7 +495,17 @@ Requirements: [PRD §15](PRD.md) (F15–F23). Rationale and model guide: [IMPROV
 
 ### T22 — Prepare the demonstration package
 
-- [ ] Complete. **Depends on:** Gate D (T34), plus T35 if chosen. **PRD:** §12.
+- [x] Complete (16 Nov 2026, see BUILD-LOG “T22–T23”). Packaged for the **Experiments** section of rssdesign.org (`/experiments`), as Raj asked, in [showcase/](showcase/README.md):
+  - **Walkthrough:** a 77 s captioned video at 1600×1000, following the v1.1 cut list plus the T35 gale beat after drag-to-assign.
+  - **Card loop:** 28 s uncaptioned, with its poster.
+  - **Stills:** five at 1600×1000 and @2x (overview, assign, uncertain, gale, resolved), plus a contact sheet as the reduced-motion option.
+  - **Experiments card:** a ready-to-paste card matching the existing playground markup, previewed inside the real page at 1440 and 390 px without editing the portfolio repo.
+  - **Copy:** [CASE-STUDY.md](showcase/CASE-STUDY.md), which leads with craft and the evidence model.
+  - **Pitch notes:** one page per company, local only.
+  - **How it was recorded:** the app was driven through its real UI by `scripts/record-walkthrough.ts`, using Chromium's own screencast and ffmpeg, so no video framework was added. Stills come from `scripts/capture-showcase.ts`. Both run on the production build and the real GPU.
+  - **Done-when:** media opens; text is legible at 1600×1000; the full workflow is visible; SIM and “Demo data” labels stay in frame; the copy states measurements with their source and claims no impact.
+  - **Portfolio:** at Raj's later request the card was added to rssdesign.org/experiments as the first experiment, and the T22–T23 edits were pushed to the Harbor Desk repository (see BUILD-LOG).
+  - **Was:** **Depends on:** Gate D (T34), plus T35 if chosen. **PRD:** §12.
 
 **v1.1 additions:**
 - Record a 75–90 s video with this cut list: poster → establishing move → drag-to-assign → scrubber → dock-walk review → resolve.
@@ -510,7 +520,13 @@ Write concise portfolio copy: problem/hypothesis, intended user, why spatial con
 
 ### T23 — Deliver build/run documentation and close the checklist
 
-- [ ] Complete. **Depends on:** T22.
+- [x] Complete (16 Nov 2026, see BUILD-LOG “T22–T23”).
+  - [README.md](README.md) covers install, dev, build and test; controls and URL options; replay, reset and persistence; architecture; data and asset regeneration; provenance; known limitations; links.
+  - Deployment: the public repository [RSSDesign9/harbor-desk-buffalo](https://github.com/RSSDesign9/harbor-desk-buffalo) (created by Raj from `b2dc232d`) deploys to https://harbor-desk-buffalo-rssdesign.vercel.app. Its validated `vercel.json`, `.vercelignore` and Node 24 pin were adopted, and the README describes them.
+  - Also, at Raj's request: [PRODUCT-GUIDE.md](PRODUCT-GUIDE.md), covering what Harbor Desk is, who it is for (owner/GM, dockmaster, dock staff, front office), core functionality and how to use it best.
+  - A clean copy of the documented source installed, built and passed the unit tests (BUILD-LOG).
+  - Still pending, as before: M1 MacBook Air, spoken screen reader, physical touch, Safari and Firefox, and the optional research below.
+  - **Was:** **Depends on:** T22.
 
 Write `README.md` with install/dev/build/test instructions, controls, replay/reset behavior, local persistence, architecture, asset regeneration, provenance, known limitations, and links to PRD/design/source/QA artifacts. Include static-host/Vercel deployment configuration and notes if needed, without creating a deployment. Do not put secrets or authoring video/image bundles into the shipped app.
 

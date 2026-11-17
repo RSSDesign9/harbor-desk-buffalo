@@ -25,7 +25,7 @@
 | 11 | Signature interactions | T30–T32 | The "why 3D" and the Dockwa fluency |
 | 12 | Environment realism | T33–T34 | Your hyperrealism pass. It comes after the interactions so lighting can follow the time scrubber |
 | 13 | One extra wow (pick one) | T35 | Optional; **E chosen and built 16 Nov 2026** |
-| 14 | Package | T22–T23 (reframed) | Capture once, at the end |
+| 14 | Package | T22–T23 (reframed) | Capture once, at the end. **Done 16 Nov 2026:** `showcase/`, README, PRODUCT-GUIDE |
 
 A parallel human task runs alongside: **book a 20-minute dockmaster call** before Batch 11, so A/B/C can use real vocabulary.
 

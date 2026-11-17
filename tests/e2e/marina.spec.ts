@@ -66,7 +66,7 @@ test('every dock is in the scene: one pick mesh, hulls on all five docks, counte
   await select(page, 'E-03');
   await expect(page.getByTestId('inspector')).toContainText('Slip E-03');
   await expect(page.getByTestId('inspector')).not.toContainText('outlined only');
-  await page.screenshot({ path: 'qa/batch13/e2e-e03-selected.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-e03-selected.png' });
 });
 
 test('canvas clicks on berths of every dock select exactly that slip (per-berth IDs survive the merged pick mesh)', async ({ page }) => {
@@ -117,7 +117,7 @@ test('unknown and empty berths stay distinct; distant docks add no field of labe
   await dispatch(page, { type: 'advanceToUncertain' });
   await expect(page.locator('.scene-marker')).toHaveCount(1);
   await expect(page.locator('.scene-marker')).toHaveText('B-12 · Needs review');
-  await page.screenshot({ path: 'qa/batch13/e2e-overview-uncertain.png' });
+  await page.screenshot({ path: 'qa/handoff/e2e-overview-uncertain.png' });
 
   // Unknown vs empty in words, not colour alone.
   await select(page, 'C-05');
