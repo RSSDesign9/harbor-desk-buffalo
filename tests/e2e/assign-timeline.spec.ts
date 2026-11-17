@@ -3,7 +3,7 @@
  * Real pointer drags and real keys; the store is read only to check outcomes.
  */
 import { expect, test, type Page } from '@playwright/test';
-import { announcer, btn, frame, openApp, session } from './helpers.ts';
+import { announcer, btn, demoControls, explore, frame, needsReview, openApp, openRequest, session } from './helpers.ts';
 
 type Pose = { e: number; n: number; yaw: number; kind: string };
 type W = {
@@ -20,6 +20,7 @@ const w = (page: Page) => page.evaluate(() => (window as unknown as W).__harborD
 
 async function openMap(page: Page) {
   await openApp(page, '', { scene: true });
+  await openRequest(page); // the request card opens from Tasks since the workspace refresh
   await page.getByRole('radio', { name: 'Map', exact: true }).click();
   await page.waitForFunction(() => {
     const h = (window as unknown as W).__harborScene;
@@ -102,6 +103,7 @@ test('T30 drag and drop: verdict while dragging, drop assigns with an animated a
 
 test('T30 keyboard path: Slip list → Assign, with the reason announced; held slips are never in the list', async ({ page }) => {
   await openApp(page);
+  await openRequest(page);
   const list = page.getByRole('combobox', { name: 'Slip' });
   const options = await list.locator('option').allTextContents();
   expect(options[0]).toMatch(/· Fits$/);
@@ -136,22 +138,21 @@ test('T30 keyboard path: Slip list → Assign, with the reason announced; held s
 
 test('T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it, backward never shows the future, the run is untouched', async ({ page }) => {
   await openApp(page, '', { scene: true });
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  await explore(page);
   const run = await session(page);
+  await demoControls(page);
   const scrub = page.getByRole('slider', { name: 'Day timeline' });
   await scrub.focus();
   await page.keyboard.press('End');
   await expect(scrub).toHaveAttribute('aria-valuetext', /^22:00 EDT · B-12 resolved/);
   await expect(page.locator('.sim-time')).toContainText('22:00');
   await expect(page.getByTestId('scenario-panel')).toHaveAttribute('data-mode', 'replay');
-  await expect(page.locator('.kpi', { hasText: 'Arrivals' })).toContainText('15/15');
-  await expect(page.getByTestId('request-card')).toContainText('Read-only here');
+  await expect(page.locator('.kpi', { hasText: 'Arrived today' })).toContainText(/15\s*\/\s*15/);
   // Home: 06:00, nothing has happened yet.
   await page.keyboard.press('Home');
   await expect(scrub).toHaveAttribute('aria-valuetext', '06:00 EDT');
-  await expect(page.locator('.kpi', { hasText: 'Arrivals' })).toContainText('0/15');
-  await expect(page.locator('.kpi', { hasText: 'Needs review' })).toContainText('0');
+  await expect(page.locator('.kpi', { hasText: 'Arrived today' })).toContainText(/0\s*\/\s*15/);
+  await expect(needsReview(page)).toHaveText('0');
   // Arrow keys step a minute at a time: 09:11 has no issue; 09:12 has it. Backward again: gone.
   await setScrub(page, 3 * 60 + 11);
   await expect(scrub).toHaveAttribute('aria-valuetext', '09:11 EDT');
@@ -159,30 +160,35 @@ test('T31 scrubber by keyboard: read-only scripted day, KPIs and board follow it
   await expect(inspector).not.toContainText('Identity unverified');
   await page.keyboard.press('ArrowRight');
   await expect(scrub).toHaveAttribute('aria-valuetext', '09:12 EDT · B-12 needs review');
-  await expect(page.locator('.kpi', { hasText: 'Needs review' })).toContainText('1');
+  await expect(needsReview(page)).toHaveText('1');
   await expect(inspector).toContainText('Identity unverified');
   await page.keyboard.press('ArrowLeft');
   await expect(scrub).toHaveAttribute('aria-valuetext', '09:11 EDT');
-  await expect(page.locator('.kpi', { hasText: 'Needs review' })).toContainText('0');
+  await expect(needsReview(page)).toHaveText('0');
   await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
   await expect(inspector).not.toContainText('Identity unverified');
   // The board shows logged arrivals with times and bookings as “due”, never a later check-in time.
   await setScrub(page, 8 * 60);
-  await page.locator('.kpi', { hasText: 'Arrivals' }).click();
+  await btn(page, /Open the arrivals board/).click();
   const board = page.getByTestId('arrivals-board');
-  await expect(board).toContainText('by 14:00');
+  await expect(board).toContainText('As of 14:00');
   const rows = await board.locator('li').evaluateAll((els) => els.map((e) => ({ status: e.getAttribute('data-status'), time: e.querySelector('.board-time')?.textContent ?? '' })));
   for (const r of rows) if (r.status === 'arrived') expect(r.time <= '14:00').toBe(true);
   expect(rows.some((r) => r.status === 'due')).toBe(true);
   await page.screenshot({ path: 'qa/handoff/t31-scrub-1400-board.png' });
+  // The incoming request is read-only in replay.
+  await openRequest(page);
+  await expect(page.getByTestId('request-card')).toContainText('Read-only here');
+  await expect(btn(page, 'Assign')).toHaveCount(0);
   // Back to the run: exactly as it was.
-  await btn(page, 'Back to my run').click();
+  await btn(page, 'Return to my run').click();
   expect(await session(page)).toEqual(run);
   await expect(page.locator('.sim-time')).toContainText('09:12');
 });
 
 test('T31 idle frames: after scrubbing, the paused scene stops rendering; under reduced motion a jump cuts', async ({ page }) => {
   await openApp(page, '', { scene: true });
+  await demoControls(page);
   const scrub = page.getByRole('slider', { name: 'Day timeline' });
   await scrub.focus();
   await page.keyboard.press('End');

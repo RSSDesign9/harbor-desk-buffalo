@@ -19,13 +19,15 @@ test('real 200 % browser zoom on a 1440×900 window: compact layout, nothing cli
     await page.goto('http://127.0.0.1:4719/?debug');
     await page.waitForFunction(() => Boolean((window as unknown as { __harborDesk?: unknown }).__harborDesk));
     const m = await page.evaluate(() => ({ w: innerWidth, dpr: devicePixelRatio, outer: outerWidth }));
-    expect(m.dpr).toBe(2); // page zoom doubles the device pixel ratio…
-    expect(m.w).toBeLessThanOrEqual(720); // …and halves the CSS viewport
+    // 200 % page zoom halves the CSS viewport against the window. (The DPR doubles too, but from the display's own
+    // ratio: 2 on a standard screen, 4 on Retina, so an absolute DPR check failed on this machine.)
+    expect(Math.round(m.outer / m.w)).toBe(2);
+    expect(m.dpr).toBeGreaterThanOrEqual(2);
+    expect(m.w).toBeLessThanOrEqual(720);
     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'mobile');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true); // no horizontal scroll
     expect(await zoneOverlaps(page)).toEqual([]);
-    await page.getByRole('button', { name: 'Explore slip review', exact: true }).click();
-    await page.getByRole('button', { name: 'Show dock-walk discrepancy' }).click();
+    await page.getByRole('button', { name: 'Explore slip review', exact: true }).click(); // opens the 09:12 discrepancy
     await page.getByRole('button', { name: 'Review observation' }).click();
     await page.getByRole('button', { name: 'Load simulated dock-check result' }).click();
     await page.getByRole('checkbox', { name: /I reviewed the staff evidence/ }).check();

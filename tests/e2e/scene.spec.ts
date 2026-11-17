@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { expect, test, type Page } from '@playwright/test';
-import { showList } from './helpers.ts';
+import { needsReview, presencePill, showList } from './helpers.ts';
 
 const SITE = JSON.parse(readFileSync(new URL('../../data/derived/site-runtime.json', import.meta.url), 'utf8')) as { slips: { id: string; centroid: [number, number] }[] };
 /** Scene-space (x, z) of a slip centroid: x = east, z = −north. */
@@ -68,10 +68,11 @@ test('clicking an EMPTY berth on the canvas selects it; inspector and list follo
   expect(await selection(page)).toEqual({ kind: 'slip', id: 'B-12' });
   const insp = page.getByTestId('inspector');
   await expect(insp.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
-  await expect(insp).toContainText('No vessel present');
-  await expect(insp.locator('.summary-grid')).toContainText('BookableNo');
+  await expect(presencePill(page)).toHaveText('Empty');
+  await expect(insp.locator('.slip-situation')).toContainText('BookingHeld by agreement');
   await expect(insp).toContainText('Lake Effect'); // assignment, shown as assignment
-  await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
+  // The list stays mounted behind Details: its selected row follows the canvas.
+  await expect(page.locator('[role="listbox"] [role="option"][aria-selected="true"]')).toContainText('B-12');
   await idle(page);
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
   await page.screenshot({ path: 'qa/handoff/e2e-b12-selected-normal.png' });
@@ -147,7 +148,8 @@ test('clicks on panels never select the berth behind them', async ({ page }) => 
   await open(page);
   await showList(page); // a full-height panel to hide the berth behind
   await dockView(page);
-  const rail = (await page.locator('.rail .registry').boundingBox())!;
+  // The workspace panel (its list scrolls inside it, so the list element itself runs far below the viewport).
+  const rail = (await page.locator('.rail').boundingBox())!;
   const goal = { x: rail.x + rail.width / 2, y: rail.y + rail.height * 0.6 };
   // Shift camera + target together by (dx, dz) and solve the screen-space Jacobian to put B-12 under the panel.
   const base = await page.evaluate(() => window.__harborScene!.camera!.pose());
@@ -208,7 +210,7 @@ test('keyboard: search B12 → Enter selects B-12; arrows + Enter move the selec
 test('uncertain hull: picking it opens the SLIP; labels never name it; possible match frames Harbor Light’s empty berth', async ({ page }) => {
   await open(page);
   expect((await dispatch(page, { type: 'advanceToUncertain' })).ok).toBe(true);
-  await expect(page.locator('.summary-zone .kpi').nth(2)).toContainText('1');
+  await expect(needsReview(page)).toHaveText('1');
   await dockView(page);
   const h = (await project(page, 'B-12', 'hull'))!;
   expect((await hits(page, h.x, h.y))[0]).toBe('Mesh'); // a hull mesh is the nearest object
@@ -219,7 +221,8 @@ test('uncertain hull: picking it opens the SLIP; labels never name it; possible 
   const insp = page.getByTestId('inspector');
   await expect(insp.locator('.observation-headline').first()).toHaveText('PresentIdentity unverified');
   await expect(insp).toContainText('Camera C-02 · 09:12');
-  await expect(insp.getByRole('button', { name: /possible match Harbor Light/ })).toBeVisible();
+  // The inspector never names the candidate outside the evidence comparison (workspace refresh dropped the link).
+  await expect(insp.locator('.slip-situation')).not.toContainText('Harbor Light');
   await idle(page);
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
   await page.screenshot({ path: 'qa/handoff/e2e-b12-selected-uncertain.png' });
@@ -230,9 +233,9 @@ test('uncertain hull: picking it opens the SLIP; labels never name it; possible 
   await page.getByRole('tab', { name: /^Slips/ }).click();
   await expect(options(page)).toHaveCount(1);
   await expect(options(page).first()).toContainText('B-14');
-  await search.fill('');
-
-  await insp.getByRole('button', { name: /possible match Harbor Light/ }).click();
+  // Open the possible match's own record from the Vessels list: it frames Harbor Light's berth, not B-12.
+  await page.getByRole('tab', { name: /^Vessels/ }).click();
+  await options(page).filter({ hasText: 'Harbor Light' }).click(); // (typing in search would reopen the list)
   expect(await selection(page)).toEqual({ kind: 'vessel', id: 'V-022' });
   await expect(page.getByTestId('inspector')).toContainText('Away · departed 08:30');
   await idle(page);
@@ -260,11 +263,11 @@ test('no-results and invalid-selection states recover', async ({ page }) => {
 
 test('deep link selects a vessel; dock and needs-review filters derive from shared state', async ({ page }) => {
   await open(page, '&select=V21');
-  await showList(page);
   expect(await selection(page)).toEqual({ kind: 'vessel', id: 'V-021' });
   await expect(page.getByTestId('inspector')).toContainText('Registration');
   await expect(page.getByTestId('inspector')).toContainText('ending 42 AB');
   await expect(page.getByTestId('inspector')).toContainText('HIN');
+  await showList(page); // list and details share the workspace now: read the record first
   await page.getByRole('combobox', { name: 'Dock' }).selectOption('B');
   await page.getByRole('tab', { name: /^Slips/ }).click();
   await expect(options(page)).toHaveCount(37);

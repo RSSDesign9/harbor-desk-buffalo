@@ -3,7 +3,7 @@
  * 390×844. Real 200 % browser zoom is in zoom.spec.ts (its own project: no emulated device).
  */
 import { expect, test } from '@playwright/test';
-import { btn, dispatch, ISSUE, openApp, session, zoneOverlaps } from './helpers.ts';
+import { btn, dispatch, explore, ISSUE, openApp, session, zoneOverlaps } from './helpers.ts';
 
 test('desktop 1440×900 and 1280×800: no zone collisions; the selected boat stays in the open scene beside the inspector', async ({ page }) => {
   for (const [w, h] of [[1440, 900], [1280, 800]] as const) {
@@ -11,8 +11,7 @@ test('desktop 1440×900 and 1280×800: no zone collisions; the selected boat sta
     await openApp(page, '', { scene: true });
     await page.evaluate(() => localStorage.removeItem('harbor-desk:session')); // each size starts from the seed
     await openApp(page, '', { scene: true });
-    await dispatch(page, { type: 'advanceToUncertain' });
-    await btn(page, 'Explore slip review').click();
+    await explore(page); // Tasks → the 09:12 discrepancy at B-12
     await page.waitForFunction(() => (window as unknown as { __harborScene: { camera: { flying(): boolean } } }).__harborScene.camera.flying() === false);
     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'desktop');
     expect(await zoneOverlaps(page)).toEqual([]);
@@ -33,14 +32,16 @@ test('tablet 1024×768: one rail with Details / list navigation, collapsible, no
   await page.setViewportSize({ width: 1024, height: 768 });
   await openApp(page, '', { scene: true });
   await expect(page.locator('.app')).toHaveAttribute('data-layout', 'tablet');
+  await expect(page.getByTestId('task-queue')).toBeVisible(); // the workspace opens on Tasks
+  await btn(page, 'Slips & vessels').click();
   await expect(page.getByRole('listbox')).toBeVisible();
   await page.getByRole('option', { name: /^B-12/ }).click();
   await expect(page.locator('#inspector-title')).toBeFocused();
   await expect(page.getByRole('listbox')).toHaveCount(0); // Details replaces the list
-  await btn(page, 'Slips & vessels').click();
+  await btn(page, 'Back to slips & vessels').click();
   await expect(page.getByRole('listbox')).toBeFocused();
   expect((await session(page)).selection).toEqual({ kind: 'slip', id: 'B-12' }); // back keeps the selection
-  await btn(page, 'Details').click();
+  await page.getByRole('option', { name: /^B-12/ }).click(); // and the selected row reopens its details
   await expect(page.locator('#inspector-title')).toBeVisible();
   expect(await zoneOverlaps(page)).toEqual([]);
   await btn(page, 'Hide panel').click();

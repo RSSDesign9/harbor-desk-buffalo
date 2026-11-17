@@ -346,7 +346,8 @@ function ShellBody() {
   // The map legend rides in the camera panel on desktop and tablet (one zone, so it cannot collide with
   // another), and floats over the map on mobile, where there is no camera panel.
   const legend = use3d && mapMode ? <MapLegend /> : null;
-  const viewControls = use3d ? <ViewControls legend={legend} /> : null;
+  // Mobile hides the camera bar and shows the legend over the map instead: render it once, where it is seen.
+  const viewControls = use3d ? <ViewControls legend={mode !== 'mobile' ? legend : null} /> : null;
 
   const showTasks = () => { ui.setPane('tasks'); focusSoon('tasks-tab'); };
   const back = () => {

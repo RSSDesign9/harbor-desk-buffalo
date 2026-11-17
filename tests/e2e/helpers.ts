@@ -30,6 +30,45 @@ export async function showList(page: Page) {
 }
 export const btn = (page: Page, name: string | RegExp) => page.getByRole('button', { name, exact: typeof name === 'string' });
 
+// ---------- map-first workspace (16 Nov 2026 refresh) ----------
+/** Tasks → “Explore slip review” opens the 09:12 discrepancy at B-12 directly (no separate normal-stage step). */
+export async function explore(page: Page) {
+  await btn(page, 'Explore slip review').click();
+  await expect(page.getByTestId('slip-review')).toHaveAttribute('data-stage', 'uncertain');
+}
+/** Select B-12 at its normal stage (search), then show the dock-walk discrepancy from the inspector. */
+export async function exploreFromNormal(page: Page) {
+  const search = page.getByRole('searchbox', { name: 'Search slips and vessels' });
+  await search.fill('B12');
+  await search.press('Enter');
+  await expect(page.getByTestId('slip-review')).toHaveAttribute('data-stage', 'normal');
+  await btn(page, 'Show dock-walk discrepancy').click();
+  await expect(page.getByTestId('slip-review')).toHaveAttribute('data-stage', 'uncertain');
+}
+/** The Tasks queue's “Needs review” count (replaces the old Needs-review KPI tile). Readable while hidden. */
+export const needsReview = (page: Page) => page.getByTestId('task-queue').locator('.task-section h2', { hasText: 'Needs review' }).locator('span');
+/** The Tasks queue row for a slip's issue: “Vessel identity needs review” or “Dock check pending”. */
+export const taskRow = (page: Page, slipId: string) => page.getByTestId('task-queue').locator('.task-row', { hasText: `Slip ${slipId}` });
+/** The inspector's presence pill: Present, Empty, Camera offline or Presence unknown. */
+export const presencePill = (page: Page) => page.getByTestId('inspector').locator('.slip-situation .pill').first();
+/** Open (or keep open) the collapsed Demo controls tray. */
+export async function demoControls(page: Page) {
+  const tray = page.locator('.demo-tray');
+  if (!(await tray.evaluate((d) => (d as HTMLDetailsElement).open))) await tray.locator('> summary').click();
+}
+/** Open the incoming request from Tasks. */
+export async function openRequest(page: Page, name = 'Northern Tern') {
+  const tasks = page.locator('#tasks-tab');
+  if ((await tasks.getAttribute('aria-pressed')) !== 'true' || (await page.getByTestId('task-queue').isHidden())) await tasks.click();
+  await page.getByRole('button', { name: new RegExp(`^${name}`) }).click();
+  await expect(page.getByTestId('request-card')).toBeVisible();
+}
+/** Reveal the request's lake what-if (a disclosure since the refresh). */
+export async function openConditions(page: Page) {
+  const d = page.locator('.request-card details', { hasText: 'Conditions' });
+  if (!(await d.evaluate((el) => (el as HTMLDetailsElement).open))) await d.locator('> summary').click();
+}
+
 /** Tab until the focused element's accessible text matches (labels of inputs included). */
 export async function tabTo(page: Page, name: RegExp, max = 120) {
   for (let i = 0; i < max; i++) {
@@ -46,9 +85,11 @@ export async function tabTo(page: Page, name: RegExp, max = 120) {
 
 /** Complete the B-12 review with the keyboard only. `path` = direct (no dock check) or pending. */
 export async function resolveByKeyboard(page: Page, path: 'direct' | 'pending') {
-  await tabTo(page, /Show dock-walk discrepancy/);
+  // The Tasks invitation opens the discrepancy and moves focus to the slip's title.
+  await tabTo(page, /Explore slip review/);
   await page.keyboard.press('Enter');
-  await expect(page.locator('#review-heading')).toBeFocused();
+  await expect(page.locator('#inspector-title')).toBeFocused();
+  await expect(page.getByTestId('slip-review')).toHaveAttribute('data-stage', 'uncertain');
   if (path === 'pending') {
     await tabTo(page, /^Request dock check$/);
     await page.keyboard.press('Enter');

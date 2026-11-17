@@ -40,14 +40,14 @@ test('water drifts by default; Pause motion stops every ambient frame and is rem
   await expect(toggle).toHaveAttribute('aria-pressed', 'false');
   await toggle.click();
   await expect(announcer(page)).toHaveText('Motion paused.');
-  await expect(page.getByRole('button', { name: 'Motion paused' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByRole('button', { name: 'Resume motion' })).toHaveAttribute('aria-pressed', 'true');
   await page.waitForTimeout(400);
   expect(await framesOver(page, 1500)).toBe(0); // fully still
   await page.reload();
   await page.waitForFunction(() => Boolean((window as unknown as { __harborScene?: { camera: unknown } }).__harborScene?.camera));
   await page.waitForTimeout(1200);
   expect(await framesOver(page, 1200)).toBe(0); // remembered across reloads
-  await page.getByRole('button', { name: 'Motion paused' }).click();
+  await page.getByRole('button', { name: 'Resume motion' }).click();
   await expect(announcer(page)).toHaveText('Motion resumed.');
   expect(await framesOver(page, 1500)).toBeGreaterThan(3);
 });
@@ -65,7 +65,7 @@ test('reduced motion at load: still water, camera cuts, pause control explains w
   await openApp(page, '', { scene: true });
   await page.waitForTimeout(1000);
   expect(await framesOver(page, 1200)).toBe(0);
-  const toggle = page.getByRole('button', { name: 'Motion paused' });
+  const toggle = page.getByRole('button', { name: 'Resume motion' });
   await expect(toggle).toBeDisabled();
   await expect(toggle).toHaveAttribute('title', /Reduced motion is on/);
   expect(await moveIsCut(page, 'B-12')).toBe(true); // a cut, not a flight
@@ -84,7 +84,7 @@ test('reduced motion switched on mid-session freezes ambient motion and turns ca
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.waitForTimeout(400);
   expect(await framesOver(page, 1200)).toBe(0);
-  await expect(page.getByRole('button', { name: 'Motion paused' })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Resume motion' })).toBeDisabled();
   expect(await moveIsCut(page, 'B-12')).toBe(true);
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.waitForTimeout(300);

@@ -5,11 +5,12 @@
  * plain words, and no domain invariant moves (no duplicate task/decision/audit, no bypassed acknowledgment).
  */
 import { expect, test, type Page } from '@playwright/test';
-import { btn, dispatch, hull, ISSUE, openApp, session, showList, storage } from './helpers.ts';
+import { btn, dispatch, explore, hull, ISSUE, openApp, presencePill, session, showList, storage, taskRow } from './helpers.ts';
 
 async function resolveDirect(page: Page) {
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  // From whatever pane is showing, back to Tasks; the invitation opens the discrepancy directly.
+  if (await page.getByTestId('task-queue').isHidden()) await page.locator('#tasks-tab').click();
+  await explore(page);
   await btn(page, 'Review observation').click();
   await btn(page, 'Load simulated dock-check result').click();
   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled(); // no failure path skips acknowledgment
@@ -82,7 +83,7 @@ test('missing boat model (fault=model): plain grey stand-ins, a visible note, no
   await openApp(page, '&fault=model', { scene: true });
   await dispatch(page, { type: 'advanceToUncertain' });
   await expect(page.getByText('Some boat models failed to build')).toBeVisible();
-  await btn(page, 'Explore slip review').click();
+  await taskRow(page, 'B-12').click(); // the issue already exists: open it from the Tasks queue
   await page.waitForFunction(() => (window as unknown as { __harborScene: { hull(id: string): { fallback?: boolean } | null } }).__harborScene.hull('B-12')?.fallback === true);
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
   const before = await hull(page, 'B-12');
@@ -98,8 +99,7 @@ test('missing boat model (fault=model): plain grey stand-ins, a visible note, no
 
 test('missing evidence images (fault=evidence): text evidence and actions stay; acknowledgment is still required', async ({ page }) => {
   await openApp(page, '&fault=evidence');
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  await explore(page);
   await expect(page.getByTestId('camera-evidence-missing')).toContainText('Image unavailable · text evidence below');
   await expect(page.getByTestId('camera-evidence-text')).toContainText('stern name not legible');
   await btn(page, 'Review observation').click();
@@ -153,8 +153,7 @@ for (const [fault, message] of [
 
 test('storage writes failing mid-session: one plain notice, usability kept, nothing duplicated on retry', async ({ page }) => {
   await openApp(page, '&fault=storage-write');
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  await explore(page);
   await expect(page.getByText('Changes are no longer being saved')).toBeVisible();
   expect((await storage(page)).lastSaveError).toMatch(/Quota/);
   await page.getByTestId('request-dock-check').dblclick();
@@ -174,8 +173,8 @@ test('stale, offline and unknown sources never read as empty or bookable; newer 
   await dispatch(page, { type: 'select', selection: { kind: 'slip', id: 'C-05' } });
   const insp = page.getByTestId('inspector');
   await expect(insp).toContainText('C-04 offline');
-  await expect(insp.locator('.summary-grid')).toContainText('PresenceUnknown');
-  await expect(insp.locator('.summary-grid')).not.toContainText(/Bookable(Yes|Available)/);
+  await expect(presencePill(page)).toHaveText('Camera offline'); // unknown, never “Empty”
+  await expect(insp.locator('.slip-situation')).toContainText(/Booking(Held by agreement|Availability not assessed)/); // never “available”
   await dispatch(page, { type: 'select', selection: { kind: 'slip', id: 'D-06' } });
   await expect(insp.locator('.observation-headline .pill').first()).toHaveText('Presence unknown');
   await expect(insp).toContainText('Last confirmed: Silver Lining · presence unknown'); // last known, kept apart from current
@@ -187,8 +186,8 @@ test('stale, offline and unknown sources never read as empty or bookable; newer 
   await btn(page, 'Review observation').click();
   await btn(page, 'Load simulated dock-check result').click();
   await expect(insp).toContainText('Last reported present at 09:12 · current presence unknown');
-  await expect(insp.locator('.summary-grid')).toContainText('PresenceUnknown');
-  await expect(insp.locator('.summary-grid')).toContainText('BookableNo');
+  await expect(presencePill(page)).toHaveText('Camera offline');
+  await expect(insp.locator('.slip-situation')).toContainText('BookingHeld by agreement');
   await expect(page.getByTestId('staff-evidence')).toContainText('Demo dock staff · 09:18');
   expect(await auditCount(page)).toBe(n + 1); // only the staff-evidence event
   await page.screenshot({ path: 'qa/handoff/e2e-recovery-stale-offline.png' });

@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { btn, needsReview } from './helpers.ts';
 
 // Production build: honesty labels visible, dataset counts derived, local-only network, clean console.
 test('shell loads locally with labels, derived counts and no console errors', async ({ page }) => {
@@ -15,17 +16,22 @@ test('shell loads locally with labels, derived counts and no console errors', as
 
   await page.goto('/');
   await expect(page.locator('.lockup-word')).toHaveText('Harbor Desk');
-  await expect(page.getByText('Buffalo River · Independent concept')).toBeVisible();
-  await expect(page.getByText('Simulated demo')).toBeVisible();
+  // Workspace refresh (DESIGN §17): the place line is hidden on desktop (kept in the title); the persistent
+  // honesty label is “Demo data”, which opens About / Sources.
+  await expect(page).toHaveTitle(/Independent concept/);
+  await expect(page.getByText('Buffalo River · Independent concept')).toBeAttached();
+  await expect(btn(page, 'Demo data')).toBeVisible();
   await expect(page.getByLabel(/^Simulation time 15 Jul 2026 08:45 EDT$/)).toBeVisible();
   const tiles = page.locator('.summary-zone .kpi');
-  await expect(tiles).toHaveCount(4);
-  // Operator KPIs (T25, T28): occupancy from agreements, check-ins for the day, open reviews, money on unconfirmed berths.
-  await expect(tiles.nth(0)).toContainText('Occupancy88%Tonight · 111/126');
-  // T31: check-ins logged by the clock, of the day's plan; the tile opens the arrivals board.
-  await expect(tiles.nth(1)).toContainText('Arrivals3/15In by 08:45');
-  await expect(tiles.nth(2)).toContainText('Needs review0');
-  await expect(tiles.nth(3)).toContainText('Revenue at risk$0');
+  await expect(tiles).toHaveCount(2);
+  // Overview strip (refresh): occupancy from agreements and check-ins by the clock, values above labels.
+  await expect(tiles.nth(0)).toContainText('88%Occupied tonight111 of 126 slips');
+  await expect(tiles.nth(1)).toContainText(/3\s*\/\s*15Arrived todayIn by 08:45/);
+  // Open reviews are counted in Tasks; money on unconfirmed berths lives in the arrivals board.
+  await expect(needsReview(page)).toHaveText('0');
+  await btn(page, /Open the arrivals board/).click();
+  await page.getByText('Revenue estimates', { exact: true }).click();
+  await expect(page.getByTestId('arrivals-board')).toContainText('Value under review$0');
   await expect(page.getByRole('link', { name: 'OpenStreetMap contributors' })).toBeVisible();
   await expect(page.locator('canvas')).toBeVisible({ timeout: 15_000 });
   await page.waitForLoadState('networkidle');

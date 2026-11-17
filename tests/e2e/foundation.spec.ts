@@ -132,7 +132,7 @@ test('storage: unavailable localStorage falls back to memory and the app still w
   const errors = await trackErrors(page);
   await page.goto('/');
   await expect(page.getByText('Browser storage unavailable')).toBeVisible();
-  await expect(page.locator('.summary-zone .kpi')).toHaveCount(4);
+  await expect(page.locator('.summary-zone .kpi')).toHaveCount(2); // the overview strip (workspace refresh)
   expect(errors).toEqual([]);
 });
 

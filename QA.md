@@ -9,7 +9,7 @@ On the map-first workspace (`b2dc232d`), plus this batch's two CSS fixes (camera
 | Check | Result | Status |
 |---|---|---|
 | `npm run check` | 240 / 240 unit tests, 0 fixture errors, lint, typecheck, build | Pass |
-| Browser journeys, `--workers=1` | **44 passed, 51 failed.** The failures are pre-refresh specs that expect the old layout; two of them were reproduced on the published snapshot, which has no changes from this batch. `workspace.spec` 9 / 9 and `keyboard-pan.spec` 3 / 3 pass | **Open:** the old journeys need rewriting for the new workspace |
+| Browser journeys, `--workers=1` | First run: 44 passed, 51 failed, all pre-refresh specs expecting the old layout (two reproduced on the published snapshot). **After rewriting them for the map-first workspace: 95 / 95** in 13.6 min ([browser-tests-fixed.log](qa/handoff/browser-tests-fixed.log)), including the 200 % zoom journey | Pass |
 | About dialog at 1440×900 | Scroll width = client width (718 px); paragraphs wrap | Pass |
 | Camera bar | Right inset 14 px (was 6 px) on desktop and the tablet row | Pass |
 | Showcase media | Walkthrough 77.2 s, 1600×1000, about 36 fps captured, 30 fps CFR. Card 28.2 s, 1.09 Mbit/s. Five stills at 1× and 2× | Pass |

@@ -106,7 +106,9 @@ test('map statuses follow the scenario; presets leave the map; nothing but the c
   const before = await session(page);
   const p = await page.evaluate(() => (window as unknown as Win).__harborScene!.project('B-12'));
   await page.mouse.move(p!.x + 1, p!.y + 1);
-  await page.getByRole('button', { name: /Close details/ }).click();
+  // The workspace has no deselect control (Back keeps the record); clear the selection through the store so the
+  // hover label, not the selected marker, shows. Only the selection differs, and the comparison below ignores it.
+  await dispatch(page, { type: 'select', selection: null });
   await page.mouse.move(p!.x, p!.y);
   await expect(page.locator('.scene-marker-hover')).toContainText('B-12 · Needs review');
   await expect(page.locator('.scene-marker-hover')).not.toContainText('Harbor Light');

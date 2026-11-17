@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { demoControls, needsReview, presencePill, taskRow } from './helpers.ts';
 
 /**
  * Batch 5 (T11–T13) journeys on the production build. Real DOM controls, real store, real canvas (the
@@ -40,13 +41,12 @@ const idle = (page: Page) => page.waitForFunction(() => (window as unknown as Wi
 const review = (page: Page) => page.getByTestId('slip-review');
 const inspector = (page: Page) => page.getByTestId('inspector');
 const announcer = (page: Page) => page.getByTestId('announcer');
-const kpi = (page: Page, label: string) => page.locator('.kpi', { hasText: label }).locator('.data-lg');
 const btn = (page: Page, name: string | RegExp) => page.getByRole('button', { name, exact: typeof name === 'string' });
 
+/** Map-first workspace: the Tasks invitation opens the 09:12 discrepancy at B-12 directly. */
 async function toUncertain(page: Page) {
   await btn(page, 'Explore slip review').click();
   await expect(inspector(page).getByRole('heading', { name: /Slip B-12/ })).toBeVisible();
-  await btn(page, 'Show dock-walk discrepancy').click();
   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
 }
 const imgLoaded = (page: Page, testId: string) =>
@@ -64,13 +64,16 @@ test('direct path: normal → uncertain → evidence review → acknowledgment �
   await open(page);
   const fixturesBefore = JSON.stringify((await st(page)).fixtures.observations);
 
-  // Overview → Explore slip review → normal 08:45.
-  await expect(kpi(page, 'Needs review')).toHaveText('0');
-  await btn(page, 'Explore slip review').click();
+  // B-12 selected by search → normal 08:45: empty, assigned, held by agreement.
+  await expect(needsReview(page)).toHaveText('0');
+  const search = page.getByRole('searchbox', { name: 'Search slips and vessels' });
+  await search.fill('B12');
+  await search.press('Enter');
   await expect(review(page)).toHaveAttribute('data-stage', 'normal');
   await expect(review(page)).toContainText('Lake Effect departed at 08:10 (staff log).');
-  await expect(inspector(page).locator('.summary-grid')).toContainText('AgreementAssigned');
-  await expect(inspector(page).locator('.summary-grid')).toContainText('BookableNo');
+  await expect(presencePill(page)).toHaveText('Empty');
+  await expect(inspector(page).locator('.slip-situation')).toContainText('Assigned vesselLake Effect');
+  await expect(inspector(page).locator('.slip-situation')).toContainText('BookingHeld by agreement');
   expect(await hull(page)).toBeNull(); // no boat drawn at B-12
   await idle(page);
 
@@ -78,8 +81,7 @@ test('direct path: normal → uncertain → evidence review → acknowledgment �
   await btn(page, 'Show dock-walk discrepancy').click();
   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
   await expect(inspector(page).locator('.observation-headline').first()).toHaveText('PresentIdentity unverified');
-  await expect(inspector(page).locator('.possible-match')).toContainText('Harbor Light');
-  await expect(kpi(page, 'Needs review')).toHaveText('1');
+  await expect(needsReview(page)).toHaveText('1');
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
   expect(await imgLoaded(page, 'camera-evidence')).toBeGreaterThan(0);
   await expect(page.getByTestId('camera-evidence').locator('img')).toHaveAttribute('alt', /no name is legible/);
@@ -90,6 +92,9 @@ test('direct path: normal → uncertain → evidence review → acknowledgment �
   // Evidence review: camera evidence alone cannot confirm.
   await btn(page, 'Review observation').click();
   await expect(page.getByTestId('comparison')).toContainText('B-14');
+  // The possible match is named only in the comparison, labelled as such (never as an identity).
+  await expect(page.getByTestId('comparison')).toContainText('Harbor Light');
+  await expect(page.getByTestId('comparison')).toContainText('possible match');
   await expect(btn(page, 'Confirm identity & resolve')).toBeDisabled();
   await expect(page.getByTestId('confirm-hint')).toHaveText('Needs staff evidence.');
   expect(await dispatch(page, { type: 'confirmIdentity', issueId: ISSUE })).toMatchObject({ ok: false, reason: 'evidence_unavailable' });
@@ -122,11 +127,12 @@ test('direct path: normal → uncertain → evidence review → acknowledgment �
   await page.waitForFunction(() => ((window as unknown as Win).__harborScene.hull('B-12')?.nameBoards ?? 0) > 0);
   const after = await hull(page);
   expect({ ...after, nameBoards: 0 }).toEqual({ ...before, nameBoards: 0 });
-  await expect(kpi(page, 'Needs review')).toHaveText('0');
+  await expect(needsReview(page)).toHaveText('0');
 
   // Resolution summary, retained observation and candidate, unchanged agreement.
   await expect(page.getByTestId('resolution-agreement')).toHaveText('Unchanged · Seasonal B-12');
   await expect(page.getByTestId('candidate-note')).toHaveText('Harbor Light, the possible match, is unchanged: assigned B-14, departed 08:30.');
+  await page.locator('summary', { hasText: 'Activity history' }).click();
   await expect(page.getByTestId('activity-trail')).toContainText('Vessel present · identity unverifiedCamera C-02 · second source · possible match Harbor Light');
   await page.getByTestId('original-observation').locator('summary').click();
   await expect(page.getByTestId('original-observation')).toContainText('Possible match at the time: Harbor Light');
@@ -157,16 +163,17 @@ test('pending path: request twice → one task → leave, return, reload → rev
   expect(s.tasks).toEqual([expect.objectContaining({ id: 'TSK-0001', status: 'pending' })]);
   expect(s.audit.filter((a) => a.type === 'dock_check_requested')).toHaveLength(1);
   expect(s.issues[0]!.state).toBe('pending_check');
-  await expect(kpi(page, 'Needs review')).toHaveText('1');
+  await expect(needsReview(page)).toHaveText('1');
   await expect(page.getByTestId('request-dock-check')).toHaveCount(0);
 
   // Selection changes and return keep the unresolved state.
   await page.getByRole('searchbox', { name: 'Search slips and vessels' }).fill('B14');
   await page.getByRole('searchbox', { name: 'Search slips and vessels' }).press('Enter');
   await expect(inspector(page).getByRole('heading', { name: /Slip B-14/ })).toBeVisible();
-  await btn(page, 'Explore slip review').click();
+  await page.locator('#tasks-tab').click();
+  await expect(taskRow(page, 'B-12')).toContainText('Dock check pending');
+  await taskRow(page, 'B-12').click();
   await expect(page.getByTestId('task-status')).toContainText('Dock checkTSK-0001');
-  await expect(inspector(page).locator('.inspector-head .pill')).toHaveText('Dock check pending');
 
   // Refresh restores the interactive session; waiting never resolves anything.
   await page.reload();
@@ -180,6 +187,7 @@ test('pending path: request twice → one task → leave, return, reload → rev
   await btn(page, 'Load simulated dock-check result').click();
   await page.getByRole('checkbox', { name: /I reviewed the staff evidence/ }).check();
   await btn(page, 'Confirm identity & resolve').click();
+  await page.locator('summary', { hasText: 'Activity history' }).click();
   await expect(page.getByTestId('activity-trail')).toContainText('Dock check completedTSK-0001 closed');
   s = (await st(page)).interactive;
   expect(s.tasks).toEqual([expect.objectContaining({ id: 'TSK-0001', status: 'completed' })]);
@@ -215,8 +223,8 @@ test('missing evidence, unchecked acknowledgment and cancel all leave the issue 
   expect(s.issues[0]!.state).toBe('open');
   expect(s.decisions).toEqual([]);
   expect(s.acknowledgedEvidenceIds).toEqual([]);
-  await expect(kpi(page, 'Needs review')).toHaveText('1');
-  await expect(inspector(page).locator('.inspector-head .pill')).toHaveText('Needs review');
+  await expect(needsReview(page)).toHaveText('1');
+  await expect(taskRow(page, 'B-12')).toContainText('Vessel identity needs review');
 });
 
 test('guided replay is read-only and temporally correct; Try this state branches; restart and reload reset', async ({ page }) => {
@@ -229,15 +237,16 @@ test('guided replay is read-only and temporally correct; Try this state branches
   await page.getByTestId('request-dock-check').click();
   const run = (await st(page)).interactive;
 
+  await demoControls(page);
   await btn(page, 'Guided replay').click();
   await expect(page.getByTestId('scenario-panel')).toHaveAttribute('data-mode', 'replay');
   await expect(page.getByTestId('replay-banner')).toHaveText(/08:45 snapshot · read-only/);
   await expect(review(page)).toHaveAttribute('data-stage', 'normal');
   await expect(page.getByTestId('readonly-note')).toBeVisible();
   await expect(btn(page, 'Show dock-walk discrepancy')).toHaveCount(0);
-  await expect(page.locator('.sim-time .label')).toHaveText('Replay time');
+  await expect(page.locator('.sim-time .label')).toHaveText('Replay');
 
-  await page.getByRole('radio', { name: '09:12 Discrepancy' }).click();
+  await page.getByRole('radio', { name: 'Discrepancy' }).click();
   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
   await expect(page.getByTestId('task-status')).toHaveCount(0); // the interactive task is not in the snapshot
   await expect(btn(page, 'Review observation')).toHaveCount(0);
@@ -245,25 +254,27 @@ test('guided replay is read-only and temporally correct; Try this state branches
   expect(await dispatch(page, { type: 'requestDockCheck', issueId: ISSUE })).toMatchObject({ ok: false, reason: 'replay_read_only' });
 
   expect(staffPhoto).toEqual([]); // nothing from 09:18 has been fetched for an earlier snapshot
-  await page.getByRole('radio', { name: '09:20 Resolved' }).click();
+  await page.getByRole('radio', { name: 'Resolved' }).click();
   await expect(page.getByTestId('resolution-headline')).toHaveText('Lake Effect confirmed at B-12');
+  await page.locator('summary', { hasText: 'Activity history' }).click();
   await expect(page.getByTestId('activity-trail')).toContainText('Dock check completed');
   // Backward: the 09:12 snapshot shows nothing from 09:13 onward.
-  await page.getByRole('radio', { name: '09:12 Discrepancy' }).click();
+  await page.getByRole('radio', { name: 'Discrepancy' }).click();
   await expect(inspector(page)).not.toContainText('42 AB');
   await expect(inspector(page)).not.toContainText('confirmed at B-12');
   await expect(page.getByTestId('activity-trail')).not.toContainText('Staff evidence received');
   await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Vessel present · identity unverified');
-  await expect(kpi(page, 'Needs review')).toHaveText('1');
+  await expect(needsReview(page)).toHaveText('1');
 
   // Viewing replay never touched the interactive run.
   expect((await st(page)).interactive).toEqual(run);
-  await btn(page, 'Back to my run').click();
+  await btn(page, 'Return to my run').click();
   await expect(page.getByTestId('task-status')).toContainText('TSK-0001');
 
   // Try this state: an isolated branch from 09:12.
+  await demoControls(page);
   await btn(page, 'Guided replay').click();
-  await page.getByRole('radio', { name: '09:12 Discrepancy' }).click();
+  await page.getByRole('radio', { name: 'Discrepancy' }).click();
   await btn(page, 'Try this state').click();
   let s = (await st(page)).interactive;
   expect(s).toMatchObject({ branchId: 'branch-1', clock: '2026-07-15T13:12:00Z', tasks: [], decisions: [] });
@@ -276,12 +287,13 @@ test('guided replay is read-only and temporally correct; Try this state branches
   await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
 
   // Restart: seed state, nothing selected, storage cleared; reload keeps the seed.
+  await demoControls(page);
   await btn(page, 'Restart demo').click();
   await expect(btn(page, 'Explore slip review')).toBeFocused();
   s = (await st(page)).interactive;
   expect(s).toMatchObject({ branchId: 'main', clock: '2026-07-15T12:45:00Z', selection: null, issues: [], tasks: [], decisions: [], acknowledgedEvidenceIds: [] });
   await expect(inspector(page)).toHaveCount(0);
-  await expect(kpi(page, 'Needs review')).toHaveText('0');
+  await expect(needsReview(page)).toHaveText('0');
   expect(await page.evaluate(() => localStorage.getItem('harbor-desk:session'))).toBeNull();
   await page.reload();
   await page.waitForFunction(() => Boolean((window as unknown as Partial<Win>).__harborDesk));
@@ -304,15 +316,12 @@ test('keyboard only: focus follows each result and every action is announced', a
     throw new Error(`Never reached ${name}`);
   };
   await page.locator('body').focus();
+  // The Tasks invitation opens the discrepancy: focus moves to the slip's title and the result is announced.
   await tabTo(/Explore slip review/);
   await page.keyboard.press('Enter');
   await expect(page.locator('#inspector-title')).toBeFocused();
-  await expect(announcer(page)).toContainText('Slip B-12 selected');
-
-  await tabTo(/Show dock-walk discrepancy/);
-  await page.keyboard.press('Enter');
-  await expect(page.locator('#review-heading')).toBeFocused();
-  await expect(announcer(page)).toHaveText('09:12: dock walk marked B-12 Occupied; camera C-02 shows a vessel, identity unverified. Review issue opened.');
+  await expect(review(page)).toHaveAttribute('data-stage', 'uncertain');
+  await expect(announcer(page)).toContainText(/Discrepancy at B-12|Slip B-12 selected/);
 
   await tabTo(/^Request dock check$/);
   await page.keyboard.press('Enter');
@@ -358,8 +367,8 @@ test('missing thumbnail and an offline camera keep text evidence, actions and an
   await btn(page, 'Review observation').click();
   await btn(page, 'Load simulated dock-check result').click();
   // 09:18: the 09:12 frame is stale and the camera is offline → unknown, never empty. Staff evidence is separate.
-  await expect(inspector(page).locator('.summary-grid')).toContainText('PresenceUnknown');
-  await expect(inspector(page).locator('.observation-headline .pill').first()).toHaveText('Camera offline');
+  await expect(presencePill(page)).toHaveText('Camera offline');
+  await expect(inspector(page).locator('.slip-situation')).toContainText('current presence unknown');
   await expect(page.getByTestId('staff-evidence')).toContainText('Demo dock staff · 09:18');
   expect(await imgLoaded(page, 'staff-photo')).toBeGreaterThan(0);
 
@@ -367,6 +376,6 @@ test('missing thumbnail and an offline camera keep text evidence, actions and an
   await btn(page, 'Confirm identity & resolve').click();
   // The recent staff verification stays valid while the camera is offline.
   await expect(inspector(page)).toContainText('SourceStaff check · 09:18');
-  await expect(inspector(page).locator('.summary-grid')).toContainText('PresencePresent');
+  await expect(presencePill(page)).toHaveText('Present');
   await expect(inspector(page)).toContainText('C-02 offline');
 });

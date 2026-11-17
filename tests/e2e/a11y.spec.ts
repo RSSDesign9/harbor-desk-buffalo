@@ -7,7 +7,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { announcer, btn, dispatch, ISSUE, openApp, resolveByKeyboard, tabTo } from './helpers.ts';
+import { announcer, btn, demoControls, dispatch, ISSUE, openApp, resolveByKeyboard, tabTo } from './helpers.ts';
 
 const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 const results: Record<string, { violations: number; passes: number; incomplete: number; ids: string[] }> = {};
@@ -39,10 +39,11 @@ test('axe: desktop overview, uncertain, evidence review, resolved, vessel record
   await scan(page, 'desktop resolved (summary, original observation, trail)');
   await dispatch(page, { type: 'select', selection: { kind: 'vessel', id: 'V-022' } });
   await scan(page, 'desktop vessel record (Harbor Light)');
+  await demoControls(page);
   await btn(page, 'Guided replay').click();
-  await page.getByRole('radio', { name: '09:12 Discrepancy' }).click();
+  await page.getByRole('radio', { name: 'Discrepancy' }).click();
   await scan(page, 'desktop guided replay 09:12 (read-only)');
-  await btn(page, 'Back to my run').click();
+  await btn(page, 'Return to my run').click();
   await btn(page, 'Display').click();
   await scan(page, 'desktop display menu open');
   await page.getByRole('radio', { name: /Chart/ }).check();
@@ -83,10 +84,11 @@ test('touch targets: every visible control ≥ 24×24 CSS px; mobile workflow co
       .filter((t) => (t.w < 24 || t.h < 24) && !t.inline),
   );
   expect(small).toEqual([]);
-  for (const name of ['Confirm identity & resolve', 'Back to observation', 'Details', 'Slips & vessels', 'Expand sheet']) {
+  // Workspace refresh: the sheet's tabs are Tasks and Slips & vessels (Details opens from either).
+  for (const name of ['Confirm identity & resolve', 'Back to observation', /^Tasks \d/, 'Slips & vessels', 'Expand sheet']) {
     const box = await btn(page, name).boundingBox();
     expect(box, `${name} is on the page`).not.toBeNull();
-    expect(box!.height, name).toBeGreaterThanOrEqual(40);
+    expect(box!.height, String(name)).toBeGreaterThanOrEqual(40);
   }
   await btn(page, 'Slips & vessels').click();
   const row = (await page.getByRole('listbox').getByRole('option').first().boundingBox())!;
@@ -97,15 +99,14 @@ test('keyboard only on tablet: requested-check path, with cancel/back, resolutio
   await page.setViewportSize({ width: 1024, height: 768 });
   await openApp(page, '', { scene: true });
   await page.locator('body').focus();
-  await tabTo(page, /Explore slip review/);
-  await page.keyboard.press('Enter');
-  await expect(page.locator('#inspector-title')).toBeFocused();
-  await resolveByKeyboard(page, 'pending');
+  await resolveByKeyboard(page, 'pending'); // starts from the Tasks invitation
   await tabTo(page, /^Original observation$/);
   await page.keyboard.press('Enter');
   await expect(page.getByTestId('original-observation')).toHaveAttribute('open', '');
   await expect(page.getByTestId('activity-trail')).toContainText('Dock check completed');
-  // Restart by keyboard: focus lands on the entry point again.
+  // Restart by keyboard: open the Demo controls tray, then Restart; focus lands on the entry point again.
+  await tabTo(page, /^Demo controls$/);
+  await page.keyboard.press('Enter');
   await tabTo(page, /^Restart demo$/);
   await page.keyboard.press('Enter');
   await expect(page.locator('#explore-slip-review')).toBeFocused();
@@ -115,10 +116,7 @@ test('keyboard only on mobile: direct path from the list in the sheet', async ({
   await page.setViewportSize({ width: 390, height: 844 });
   await openApp(page);
   await page.locator('body').focus();
-  await tabTo(page, /Explore slip review/);
-  await page.keyboard.press('Enter');
-  await expect(page.locator('#inspector-title')).toBeFocused();
-  await resolveByKeyboard(page, 'direct');
+  await resolveByKeyboard(page, 'direct'); // starts from the Tasks invitation in the sheet
   await expect(page.getByTestId('task-note')).toHaveCount(0);
   // Every focused control was scrolled into view inside the sheet (no focus behind an overlay).
   const vis = await page.evaluate(() => {

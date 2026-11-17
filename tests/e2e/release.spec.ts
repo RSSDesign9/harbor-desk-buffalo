@@ -1,7 +1,7 @@
 import { chromium, expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { writeFileSync } from 'node:fs';
-import { openApp, btn, session, showList, tabTo, resolveByKeyboard } from './helpers.ts';
+import { openApp, btn, explore, session, showList, resolveByKeyboard } from './helpers.ts';
 
 test('About sources: provenance, safe links, focus, dark/light/mobile, persistent attribution', async ({ page }) => {
   await openApp(page);
@@ -11,7 +11,7 @@ test('About sources: provenance, safe links, focus, dark/light/mobile, persisten
       await btn(page, 'Display').click();
       await page.getByRole('radio', { name: light ? /Chart/ : /Marine/ }).check();
       await page.keyboard.press('Escape');
-      await btn(page, mobile ? 'About / Sources' : 'About').click();
+      await btn(page, 'Demo data').click(); // the persistent disclosure opens About / Sources on every layout
       const dialog = page.getByRole('dialog', { name: 'About Harbor Desk' });
       await expect(dialog).toBeVisible();
       await expect(dialog.getByRole('heading', { name: 'About Harbor Desk' })).toBeFocused();
@@ -29,11 +29,10 @@ test('About sources: provenance, safe links, focus, dark/light/mobile, persisten
       await page.screenshot({ path: `qa/handoff/about-${mobile ? 'mobile' : 'desktop'}-${light ? 'light' : 'dark'}.png` });
       await page.keyboard.press('Escape');
       await expect(dialog).not.toBeVisible();
-      await expect(btn(page, mobile ? 'About / Sources' : 'About')).toBeFocused();
+      await expect(btn(page, 'Demo data')).toBeFocused();
     }
   }
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  await explore(page);
   await expect(page.locator('.persistent-credit')).toBeInViewport();
   await expect(page.locator('.persistent-credit a')).toHaveAttribute('href', 'https://www.openstreetmap.org/copyright');
 });
@@ -42,9 +41,7 @@ test('mobile reduced motion keyboard-only pending workflow and usable attributio
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await openApp(page);
-  await tabTo(page, /Explore slip review/);
-  await page.keyboard.press('Enter');
-  await resolveByKeyboard(page, 'pending');
+  await resolveByKeyboard(page, 'pending'); // starts from the Tasks invitation
   expect((await session(page)).tasks).toEqual([expect.objectContaining({ status: 'completed' })]);
   await expect(page.locator('.persistent-credit')).toBeInViewport();
   await page.screenshot({ path: 'qa/handoff/mobile-reduced-keyboard.png' });
@@ -53,8 +50,7 @@ test('mobile reduced motion keyboard-only pending workflow and usable attributio
 test('mobile opts into real 3D, selected hull remains visible above sheet, returns to plan without data loss', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await openApp(page);
-  await btn(page, 'Explore slip review').click();
-  await btn(page, 'Show dock-walk discrepancy').click();
+  await explore(page);
   const before = await session(page);
   await btn(page, 'Display').click();
   await page.getByRole('checkbox', { name: /^Use 3D map/ }).check();
@@ -98,8 +94,11 @@ test('visible GPU canvas: physical picking, list/marker/inspector sync and orbit
     expect(pos).not.toBeNull();
     await page.mouse.click(pos!.x, pos!.y);
     await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();
-    await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
     await expect(page.locator('.scene-marker-selected')).toHaveText('B-12 · Empty · assigned');
+    // List and details share the workspace: Back shows the list with the picked slip selected.
+    await btn(page, 'Back to slips & vessels').click();
+    await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText('B-12');
+    await page.getByRole('listbox').getByRole('option', { selected: true }).click();
     await btn(page, 'Show dock-walk discrepancy').click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'qa/handoff/visible-gpu-b12.png' });
@@ -113,8 +112,10 @@ test('visible GPU canvas: physical picking, list/marker/inspector sync and orbit
     await page.waitForTimeout(500);
     expect((await session(page)).selection).toEqual(before.selection);
     expect(await page.evaluate(() => window.__harborScene!.camera!.pose())).not.toEqual(pose);
-    // Deselect through UI, then pick the actual observed hull (no store substitute).
-    await page.getByRole('button', { name: /Close details/ }).click();
+    // Select another berth through the canvas, then pick the actual observed hull (no store substitute).
+    const b14 = await page.evaluate(() => window.__harborScene!.project('B-14'));
+    await page.mouse.click(b14!.x, b14!.y);
+    await expect(page.getByRole('heading', { name: 'Slip B-14' })).toBeVisible();
     const hull = await page.evaluate(() => window.__harborScene!.project('B-12', 'hull'));
     await page.mouse.click(hull!.x, hull!.y);
     await expect(page.getByRole('heading', { name: 'Slip B-12' })).toBeVisible();

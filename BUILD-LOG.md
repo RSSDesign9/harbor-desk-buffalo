@@ -2161,7 +2161,7 @@ Raj asked for T22 and T23 on the assumption that Harbor Desk will appear in the 
   - **What passes:** all of `workspace.spec` (9) and `keyboard-pan.spec` (3), plus `intro`, most of `foundation` and `scene`, and the map journeys.
   - **Failing by spec:** failures 11, review 6, a11y 4, assign-timeline 4, release 4, scene 4, lake 3, map 3, marina 3, motion 3, responsive 2, foundation 1, nowebgl 1, shell 1, zoom 1. The zoom spec also has its known DPR 4 problem.
   - **Not a regression check:** the two CSS fixes in this batch touch only padding and wrapping.
-  - **Still open:** rewriting these specs for the new workspace, recorded as a follow-up.
+  - **Fixed afterwards:** see “Browser journeys rewritten for the map-first workspace” below.
 - **Media checked frame by frame on contact sheets:** all five beats are visible in the walkthrough and the card, captions never cover the legend or panels, and the 1600×1000 stills are legible.
 - **Not re-measured after the workspace refresh:** transfer size, frame pacing and panel coverage. Gate D and T35 figures still stand for the scene; the shell layout is new.
 
@@ -2172,3 +2172,34 @@ Raj asked for T22 and T23 on the assumption that Harbor Desk will appear in the 
   - Before the push, a fresh clone with these changes passed `npm ci` and the full `npm run check`: 240 / 240 unit tests, and the build.
 - **Portfolio:** the Harbor Desk card is first on rssdesign.org/experiments, with Try it live (the Vercel app) and Source (the public repository). The counter goes from 5 to 6. Pushed to `RSSDesign9/rssdesign-org` `main`, which Vercel deploys to www.rssdesign.org.
 - **Raj's earlier choice** was to hold the card until the app was deployed. It already was (HTTP 200 at the live URL), so the card went up.
+
+### Browser journeys rewritten for the map-first workspace (Raj's request, 16 Nov 2026)
+
+The 51 pre-refresh journeys now follow the new workspace. The invariants they guard are unchanged: presence vs identity, append-only history, no duplicate tasks or decisions, acknowledgment before confirmation, read-only replay, and keyboard parity.
+
+**Result:** **95 / 95** in 13.6 min ([browser-tests-fixed.log](qa/handoff/browser-tests-fixed.log)). `npm run check` passes with 240 / 240 unit tests ([check-tests-fixed.log](qa/handoff/check-tests-fixed.log)).
+
+- **Shared helpers** in `tests/e2e/helpers.ts`:
+  - `explore()`: the Tasks invitation opens the 09:12 discrepancy directly.
+  - `exploreFromNormal()`
+  - `needsReview()`: the Tasks count, replacing the old KPI tile.
+  - `taskRow()`: the queue row, replacing the inspector's review badge.
+  - `presencePill()`: replaces the removed summary grid.
+  - `demoControls()`: opens the collapsed tray.
+  - `openRequest()` and `openConditions()`: the request opens from Tasks, and the what-if is a disclosure.
+  - `resolveByKeyboard()` now starts from the invitation.
+- **Equivalents for removed UI:**
+
+| Old check | New equivalent |
+|---|---|
+| Summary grid (Presence / Agreement / Bookable) | Presence pill, “Assigned vessel”, “Booking: Held by agreement / Availability not assessed” |
+| “Close details” | Back (keeps the record), or another canvas pick |
+| “Details” tab | Reopening the selected row |
+| About | Demo data |
+| Possible-match link | The evidence comparison, plus the vessel list |
+| SIM tag on the lake row | The card's “assumed depths… verify” note (DESIGN §17) |
+| Selected list row while Details shows | The still-mounted list's `aria-selected` row |
+
+- **Kept:** the direct-path journey still selects B-12 at its normal stage (by search) to cover “Show dock-walk discrepancy”.
+- **App fix:** on mobile the map legend was also rendered inside the hidden camera bar, so it existed twice. `Shell.tsx` now passes it to the camera bar only on desktop and tablet.
+- **`zoom.spec`:** it asserted a device pixel ratio of exactly 2, which fails on Retina (4), so it never passed on this machine. It now asserts the real effect of 200 % zoom (window width twice the CSS viewport, DPR ≥ 2) and passes.

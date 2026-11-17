@@ -58,7 +58,8 @@ The preview serves `dist/` at http://127.0.0.1:4719. The port is dedicated and s
 Notes:
 
 - The browser journeys run headless on SwiftShader, so they exercise the **lite** rendering tier. Performance and look are checked separately on a real GPU with the `--gpu` scripts below.
-- `tests/e2e/zoom.spec.ts` opens a real 200% browser zoom. On a display that reports a device pixel ratio of 4 (some Retina setups) its first assertion fails for environmental reasons. See QA.md.
+- `tests/e2e/zoom.spec.ts` opens a real 200% browser zoom in a visible window. It checks the CSS viewport against the window, so it passes on standard and Retina displays.
+- `release.spec.ts` (GPU picking) and `zoom.spec.ts` open visible browser windows while they run.
 
 ## Using the demo
 

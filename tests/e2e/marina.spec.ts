@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { expect, test, type Page } from '@playwright/test';
-import { showList } from './helpers.ts';
+import { presencePill, showList } from './helpers.ts';
 
 /**
  * Batch 6 (T14–T16) journeys on the production build, driving the REAL canvas with mouse events: the full
@@ -50,7 +50,7 @@ test('every dock is in the scene: one pick mesh, hulls on all five docks, counte
   expect(inv.hulls).toBeLessThan(113); // away vessels are not drawn, so fewer hulls than registry records
 
   // Counters are derived: tiles, tab labels and list rows agree with the supplied data.
-  await expect(page.locator('.summary-zone')).toContainText('/126');
+  await expect(page.locator('.summary-zone')).toContainText('of 126 slips');
   await showList(page);
   await expect(page.getByRole('tab', { name: /^Slips/ })).toHaveText(/126/);
   await expect(page.getByRole('tab', { name: /^Vessels/ })).toHaveText(/113/);
@@ -93,7 +93,8 @@ test('canvas clicks on berths of every dock select exactly that slip (per-berth 
       await page.mouse.click(p.x, p.y);
       await expect.poll(() => selection(page), { message: `clicked ${id}` }).toEqual({ kind: 'slip', id });
       await expect(page.getByTestId('inspector')).toContainText(`Slip ${id}`);
-      await expect(page.getByRole('listbox').getByRole('option', { selected: true })).toContainText(id);
+      // The list stays mounted behind Details (workspace refresh): its selected row follows the canvas.
+      await expect(page.locator('[role="listbox"] [role="option"][aria-selected="true"]')).toContainText(id);
       clicked.push(id);
       // Put the camera back so the next neighbour is clicked from the same framing.
       await page.evaluate((q) => (window as unknown as { __harborScene: Bridge }).__harborScene.camera.jump(q), pose);
@@ -122,11 +123,11 @@ test('unknown and empty berths stay distinct; distant docks add no field of labe
   // Unknown vs empty in words, not colour alone.
   await select(page, 'C-05');
   await idle(page);
-  await expect(page.getByTestId('inspector')).toContainText(/Presence unknown|Camera offline/);
-  await expect(page.getByTestId('inspector')).not.toContainText('No vessel present');
+  await expect(presencePill(page)).toHaveText(/Presence unknown|Camera offline/);
+  await expect(presencePill(page)).not.toHaveText('Empty');
   await select(page, 'A-02');
   await idle(page);
-  await expect(page.getByTestId('inspector')).toContainText('No vessel present');
+  await expect(presencePill(page)).toHaveText('Empty');
   await expect(page.locator('.scene-marker')).toHaveCount(2); // the selection and the review marker only
 
   // Clicking the elevator, a storage area or the open yard changes nothing: scenery has no identity.

@@ -4,7 +4,7 @@
  */
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { announcer, btn, openApp, session } from './helpers.ts';
+import { announcer, btn, demoControls, openApp, openConditions, openRequest, session } from './helpers.ts';
 
 type W = {
   __harborScene: { project(id: string): { x: number; y: number } | null; camera: { flying(): boolean } | null; map(): { mode: boolean; mix: number }; weather(): { toward: [number, number]; strength: number; whitecaps: number; sunIntensity: number } };
@@ -22,8 +22,12 @@ const setScrub = (page: Page, minutes: number) =>
 
 test('T35 keyboard: the gale what-if re-checks every offered slip, assigns under it, and flags an assignment that no longer fits', async ({ page }) => {
   await openApp(page);
+  await openRequest(page);
+  await openConditions(page); // the what-if is a disclosure inside the request since the workspace refresh
   await expect(lake(page)).toBeVisible();
-  await expect(lake(page)).toContainText('SIM');
+  // DESIGN §17: no routine SIM badge; the card states that fit uses assumed inputs and must be verified.
+  await expect(page.getByTestId('request-card')).toContainText('assumed depths');
+  await expect(page.getByTestId('request-card')).toContainText('Verify before a real assignment');
   const calm = page.getByRole('radio', { name: 'Calm' });
   await expect(calm).toBeChecked();
   expect((await slipOptions(page))[0]).toBe('D-01 · Fits');
@@ -62,6 +66,7 @@ test('T35 keyboard: the gale what-if re-checks every offered slip, assigns under
   await page.getByRole('combobox', { name: 'Slip' }).selectOption('D-19');
   await btn(page, 'Assign').click();
   await expect(page.getByTestId('request-assigned')).toContainText('Assigned to D-19');
+  await openConditions(page); // the assigned card renders its own Conditions disclosure, closed
   await page.getByRole('radio', { name: 'SW gale (what-if)' }).check();
   await expect(page.getByTestId('request-drift')).toContainText('Under the SW gale what-if D-19 is a no fit: Draft 4.5\u00a0ft in 4\u00a0ft of water at the 18:45 low');
   const s = await state(page);
@@ -74,6 +79,8 @@ test('T35 keyboard: the gale what-if re-checks every offered slip, assigns under
 
 test('T35 scene and timeline: the gale shows on the water and in the light, follows the scrubber, and the calm day is untouched', async ({ page }) => {
   await openApp(page, '', { scene: true });
+  await openRequest(page);
+  await openConditions(page);
   // Calm: no wind on the water, authored light.
   const c = await weather(page);
   expect(c).toMatchObject({ strength: 0, whitecaps: 0 });
@@ -86,6 +93,7 @@ test('T35 scene and timeline: the gale shows on the water and in the light, foll
   expect(g.toward[1]).toBeLessThan(-0.5);
 
   // Scrub to 20:00: read-only replay, the wind has eased, the level is below still water, and the switch still works.
+  await demoControls(page);
   await setScrub(page, 14 * 60);
   await expect(page.getByTestId('lake-now')).toContainText(/^20:00 · .* level −/);
   expect((await state(page)).view.mode).toBe('replay');
@@ -98,6 +106,8 @@ test('T35 scene and timeline: the gale shows on the water and in the light, foll
 
 test('T35 drag on the dock map under the gale: verdicts and reasons follow the what-if', async ({ page }) => {
   await openApp(page, '&lake=sw-gale', { scene: true });
+  await openRequest(page);
+  await openConditions(page);
   await expect(page.getByRole('radio', { name: 'SW gale (what-if)' })).toBeChecked();
   await page.getByRole('radio', { name: 'Map', exact: true }).click();
   await page.waitForFunction(() => {
